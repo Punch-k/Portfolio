@@ -6,7 +6,7 @@ Welcome to the source code for my professional portfolio. This repository houses
 
 **As a Bonus** - I coded this mini-game to simulate cumulative operational risk. Dodging obstacles represents successfully navigating daily supply chain bottlenecks. However, when you hit an obstacle, the game doesn't just instantly end. Instead, you accumulate **SLA Penalties** (negative points).!
 
-🔗 **[View the Live Portfolio Here](https://punch-k.github.io/Prapanch_Punch_Kokkalemada/)**
+🔗 **[View the Live Portfolio Here](https://punch-k.github.io/Portfolio/)**
 
 ## 🏗️ Architecture & Tech Stack
 This project was built to ensure lightning-fast load times and complete control over the UI/UX.
