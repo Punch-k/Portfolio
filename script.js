@@ -1764,7 +1764,6 @@ if(tlLine&&expSection){
 
 // 24. FLOATING CONNECT PILL -- appears after hero
 const floatCta=document.getElementById('float-cta');
-const readTime=document.getElementById('read-time');
 window.addEventListener('scroll',()=>{
   const show=window.scrollY>window.innerHeight*.6;
   if(floatCta)floatCta.classList.toggle('show',show);
