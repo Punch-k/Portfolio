@@ -313,7 +313,7 @@ body::after { content: ''; position: fixed; inset: -100%; width: 300%; height: 3
   display: flex; 
   justify-content: center; 
   align-items: center; 
-  padding: 12rem 2rem; /* Massive vertical breathing room to center it */
+  padding: 6rem 0rem; /* Massive vertical breathing room to center it */
   position: relative; 
   overflow: hidden; 
 }
