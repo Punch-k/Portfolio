@@ -336,7 +336,6 @@ body::after { content: ''; position: fixed; inset: -100%; width: 300%; height: 3
   display: inline-block; 
   font-family: 'Averia Libre', serif; /* The new font */
   font-size: clamp(2.5rem, 5vw, 4.5rem); /* Resized to fit the screen elegantly */
-  word-spacing: 0.28em; 
   line-height: 1.1; 
   color: #ffffff; /* Bright white by default */
   /* GSAP Start state: dim, offset upward, blurred */
