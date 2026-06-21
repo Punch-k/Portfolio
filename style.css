@@ -703,8 +703,6 @@ body::after { content: ''; position: fixed; inset: -100%; width: 300%; height: 3
 .float-btn:hover { background: #e0bb5a; transform: scale(1.04); }
 .float-btn svg { flex-shrink: 0; }
 
-/* ─── READING TIME INDICATOR ──────────────────────────────── */
-#read-time { position: fixed; top: 50%; right: calc(1.6rem + 20px); transform: translateY(-50%); z-index: 290; font-size: .5rem; letter-spacing: .14em; text-transform: uppercase; color: rgba(237,233,224,.2); writing-mode: vertical-rl; text-orientation: mixed; pointer-events: none; transition: opacity .3s; }
 
 /* ─── MOBILE MENU ─────────────────────────────────────────── */
 #nav-toggle { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 36px; height: 36px; cursor: pointer; z-index: 600; background: none; border: none; padding: 4px; -webkit-tap-highlight-color: transparent; }
