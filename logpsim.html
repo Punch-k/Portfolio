@@ -85,7 +85,7 @@
 
     <footer class="site-footer" role="contentinfo">
         <div class="footer-left">
-            <span class="ft-logo">MBA Candidate © 2026 · Broad College of Business</span>
+            <span class="ft-logo">LOGPSim v2.2 — Engineered by Prapanch Kokkalemada</span>
         </div>
         <nav class="footer-links" aria-label="Footer links">
             <a href="mailto:kokkalem@msu.edu" class="ft-link">E-MAIL</a>
@@ -391,9 +391,9 @@
         @media (prefers-reduced-motion: reduce){.lg-bokeh{animation:none !important}}`}</style>
       {dots.map(([l,t,s,c,o,dur],i)=>(<div key={i} className="lg-bokeh" style={{position:"absolute",left:l,top:t,width:s,height:s,
         borderRadius:"50%",background:c,opacity:o,filter:"blur(46px)",animation:`lgFloat ${dur} ease-in-out infinite`,pointerEvents:"none"}}/>))}
-      <div onClick={e=>e.stopPropagation()} style={{position:"relative",maxWidth:760,maxHeight:"84vh",overflowY:"auto",
-        background:"rgba(255,255,254,0.94)",border:`1px solid ${T.ink}`,padding:"28px 32px",boxShadow:"0 30px 80px rgba(0,0,0,0.35)"}}>
-       <div style={Sty.eyebrow}>OPERATOR'S BRIEF — LOGPSIM v1.0</div>
+      <div onClick={e=>e.stopPropagation()} style={{position:"relative",maxWidth:760,maxHeight:"70vh",overflowY:"auto",
+        background:"rgba(255,255,254,0.94)",border:`1px solid ${T.ink}`,padding:"12px 32px 28px 32px",boxShadow:"0 30px 80px rgba(0,0,0,0.35)"}}>
+       <div style={Sty.eyebrow}>OPERATOR'S BRIEF — LOGPSIM v2.2</div>
        <h2 style={{...Sty.h2,fontSize:28,margin:"6px 0 14px"}}>How the game <span style={Sty.h2i}>works.</span></h2>
        <p><strong>Objective.</strong> Run a two-product manufacturer for 12 weeks against three rival firms. Your score is the <em>performance index</em>: year-to-date market share × year-to-date logistics variance (your logistics budget — 40% of gross profit — minus every logistics dollar you spend).</p>
        <p><strong>The loop, each week.</strong> Set prices and promotion by region → order materials from six suppliers (quantity breaks, three transport modes, stochastic transit reliability) → schedule production (regular runs land in two weeks; expediting and rush runs cost premiums; plant utilization far from 100% is penalized) → ship finished goods to your DCs (premium freight arrives overnight and is sellable the same week) → the market clears, and stockouts bleed share to rivals.</p>
@@ -422,22 +422,7 @@
      </svg>);
     }
 
-    function Footer(){
-     return(<footer style={Sty.foot}>
-      <div><div style={Sty.footLbl}>Current Base</div><div style={Sty.footVal}>East Lansing, MI</div></div>
-      <div><div style={Sty.footLbl}>System Status</div><div style={{...Sty.footVal,color:"#7CE0A3"}}>● Active — Open to Full-Time · May 2026</div></div>
-      <div><div style={Sty.footLbl}>Build</div><div style={Sty.footVal}>LOGPSim v1.0 — designed & engineered by Prapanch Kokkalemada</div></div>
-      <div style={{flex:1}}/>
-      <div>
-       <a style={Sty.footLink} href="https://punch-k.github.io/Portfolio/" target="_blank" rel="noreferrer">Portfolio</a>
-       <a style={Sty.footLink} href="https://linkedin.com/in/prapanchkokkalemada/" target="_blank" rel="noreferrer">LinkedIn</a>
-       <a style={Sty.footLink} href="mailto:kokkalem@msu.edu">E-mail</a>
-       <span style={{...Sty.footVal,opacity:0.5,marginLeft:6}}>© 2026</span>
-      </div>
-     </footer>);
-    }
-
-    function Setup({onStart}){
+       function Setup({onStart}){
      const [dcs,setDcs]=useState([{market:19,cap:1500},{market:23,cap:2000},{market:28,cap:1500}]);
      const [alloc,setAlloc]=useState([{sp:666,wo:666},{sp:668,wo:668},{sp:666,wo:666}]);
      const [plantAlloc,setPlantAlloc]=useState({sp:0,wo:0});
