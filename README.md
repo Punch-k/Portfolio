@@ -4,8 +4,7 @@ Welcome to the source code for my professional portfolio. This repository houses
 
 **The Objective:** To build a dynamic, website portfolio that provides me with the right models to stress test business valuation. This repository showcases visual models I've developed, both through personal interest and professional experience - all with traditional GithubPage.
 
-**As a Bonus** - I coded this mini-game to simulate cumulative operational risk. Dodging obstacles represents successfully navigating daily supply chain bottlenecks. However, when you hit an obstacle, the game doesn't just instantly end. Instead, you accumulate **SLA Penalties** (negative points).!
-
+**As a Bonus** - I coded this mini-game to simulate cumulative operational risk. Dodging obstacles represents successfully navigating daily supply chain bottlenecks.
 🔗 **[View the Live Portfolio Here](https://punch-k.github.io/Portfolio/)**
 
 ## 🏗️ Architecture & Tech Stack
