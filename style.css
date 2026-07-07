@@ -715,22 +715,7 @@ body::after { content: ''; position: fixed; inset: -100%; width: 300%; height: 3
   .scroll-hint { left: 1.4rem; bottom: 1.5rem; }
   .mq-item { font-size: 1.6rem; }
   .intro-copy { padding-left: 1.4rem; padding-right: 1.4rem; padding-top: 3rem; padding-bottom: 3rem; }
-
-  .stat-strip { display: grid; grid-template-columns: repeat(2, 1fr); } 
-    .stat-strip-item { border-bottom: 1px solid var(--line); } 
-    .stat-strip-item:nth-child(even) { border-right: none; } 
-    .scrub-text { text-align: justify; hyphens: auto; } 
-    .game-wrap, .mq-wrap { margin-bottom: 4rem; } 
-    .agency-quote-wrap { display: flex; flex-direction: column; align-items: center; padding: 0 1rem; } 
-    .aq-line { margin: 0 0 0.5rem 0; line-height: 1.3; white-space: normal; } 
-    .aq-word { font-size: clamp(1.6rem, 7vw, 2.5rem); } 
-    .sim-wrap { max-width: 100vw; overflow-x: hidden; } 
-    .sim-body { grid-template-columns: minmax(0, 1fr); width: 100%; } 
-    .sim-output-panel, .sim-inputs-panel { max-width: 100%; overflow-x: hidden; }
-    .scrub-text, .scrub-text p { text-align: justify !important; hyphens: auto; text-justify: inter-word; } /* 1. Targets the <p> directly and forces perfect justification */
-    .mq-wrap { margin-bottom: 0 !important; } /* 2. Kills the excessive empty space bleeding out below the marquee */
-    .agency-quote-wrap { display: flex; flex-direction: column; align-items: center; padding: 3rem 1rem 6rem 1rem !important; margin: 0 auto !important; } /* 2. Perfectly balances top/bottom spacing around the quote */
-
+  
   /* The layout stacks for mobile */
   .scrub-layout { gap: 2rem; }
   .connect-grid { grid-template-columns: 1fr; gap: 4rem; }
