@@ -51,7 +51,7 @@ The Concept: Often related to the classic "Traveling Salesperson Problem," this 
 
 
 
-## 📬 ENGINEER | 2026 MBA Marketing & Operations | Implementation
+## 📬 ENGINEER | 2026 MBA Supply Chain | Marketing Operations | Process Improvement
 Connect with me through the contact links on the live portfolio!
 .
 .
@@ -63,4 +63,16 @@ Connect with me through the contact links on the live portfolio!
 ![Build Status](https://img.shields.io/github/actions/workflow/status/Punch-k/Portfolio/pages/pages-build-deployment?style=flat-square&label=Deploy%20Status&color=4ade80)
 ![Lighthouse Score](https://img.shields.io/badge/Lighthouse-100%2F100-success?style=flat-square)
 ![Dependencies](https://img.shields.io/badge/Dependencies-Zero-blue?style=flat-square)
-![License](https://img.shields.io/badge/License-MIT-gray?style=flat-square)
+
+## ©️ Copyright & License
+
+Copyright (c) 2026 Prapanch Kokkalemada. All Rights Reserved.
+
+This repository, including the portfolio design, source code, and all embedded operational simulators (including LOGPSim, the Inventory Optimization Lab, the Queue & Staffing Dynamics Lab, and the DCF Valuation Simulator), is protected by copyright. You may not copy, clone, distribute, modify, reproduce, or use these files, either wholly or in part, without explicit written permission.
+
+
+
+
+
+
+
