@@ -722,7 +722,9 @@ body::after { content: ''; position: fixed; inset: -100%; width: 300%; height: 3
   .exp-header { grid-template-columns: 1fr; gap: 1.2rem; }
   .exp-card-grid { grid-template-columns: 1fr; gap: 1.2rem; }
   .sim-body { grid-template-columns: 1fr; }
-  
+  .stat-strip-item { padding: 2rem 1.5rem; } /* Reduces the overall height and width spacing inside each stat block */
+    .stat-strip-l { text-transform: lowercase; } /* Converts the primary descriptive text lines to small case letters */
+    .stat-strip-l em { text-transform: capitalize; } /* Preserves proper capitalization for the italicized project names below it */
   /* Horizontal scroll for the card deck to fix mobile overflow */
   .tw-card-container {
       justify-content: flex-start;
