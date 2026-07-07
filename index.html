@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -67,7 +67,9 @@
         <span class="loader-word">portfolio.exe</span>
         <span class="loader-word">sourcing.xls</span>
         <span class="loader-word">query_met.sql</span>
-        </div>
+        <!-- Duplicated first word for seamless loop -->
+        <span class="loader-word">portfolio.exe</span>
+      </div>
     </div>
   </div>
   
@@ -111,29 +113,31 @@
 
 <!-- ── MOBILE MENU ───────────────────────────────────── -->
 <nav id="mobile-menu" role="navigation" aria-label="Mobile menu">
-        <a href="#scrub-section">Home</a>
-        <a href="#section-cases">Cases</a>
-        <a href="#section-skills">Skills</a>
-        <a href="#gtm-simulators">Simulator</a>
-        <a href="#section-get-in-touch">Contact</a>
-        <a href="#section-get-in-touch" class="mob-cta">Let's Connect ↗</a>
-    </nav>
+    <a href="#scrub-section">Home</a>
+    <a href="#section-cases">Cases</a>
+    <a href="#section-skills">Skills</a>
+    <a href="#gtm-simulators">Simulator</a>
+    <a href="logpsim.html">LOGPSim</a>
+    <a href="#section-get-in-touch">Contact</a>
+    <a href="#section-get-in-touch" class="mob-cta">Let's Connect ↗</a>
+</nav>
 
 <!-- ── MAIN NAV ──────────────────────────────────────── -->
 <nav id="mainnav" role="navigation" aria-label="Primary navigation">
-        <a class="nav-logo" href="#">PRAPANCH <span>KOKKALEMADA</span></a>
-        <ul class="nav-links">
-            <li><a href="#section-intro">About</a></li>
-            <li><a href="#section-cases">Research</a></li>
-            <li><a href="#gtm-simulators">Simulator</a></li> 
-            <li><a href="#section-skills">Skills</a></li>
-            <li><a href="about.html">Gallery</a></li>
-        </ul>
-        <a class="nav-cta" href="#section-get-in-touch"><span>Let's Connect ↗</span></a>
-        <button id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
-            <span></span><span></span><span></span>
-        </button>
-    </nav>
+    <a class="nav-logo" href="#">PRAPANCH <span>KOKKALEMADA</span></a>
+    <ul class="nav-links">
+        <li><a href="#section-intro">About</a></li>
+        <li><a href="#section-cases">Research</a></li>
+        <li><a href="#gtm-simulators">Simulator</a></li> 
+        <li><a href="logpsim.html">LOGPSim</a></li>
+        <li><a href="#section-skills">Skills</a></li>
+        <li><a href="about.html">Gallery</a></li>
+    </ul>
+    <a class="nav-cta" href="#section-get-in-touch"><span>Let's Connect ↗</span></a>
+    <button id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
 
 <!-- ── I. HERO ───────────────────────────────────────── -->
 <section id="section-intro" aria-label="Hero">
@@ -204,7 +208,7 @@
           HI-SCORE: <span id="bonusEl" class="game-bonus-val" style="color: #888;">0000m</span>
         </div>
       </div>
-      <canvas id="canvas" width="860" height="360" class="game-canvas" aria-label="Logistics mini-game — click to start"></canvas>
+      <canvas id="canvas" width="860" height="360" class="game-canvas" aria-label="Logistics mini-game — click to start" style="max-width: 100%;"></canvas>
       <div class="game-footer">
         <div id="hint" class="game-hint">
           CHROME DINO-INSPIRED GAME. CLICK THE TRUCK OR PRESS <b class="hint-key">SPACE</b> to jump.
@@ -217,16 +221,29 @@
         </p>
       </div>
     </div>
-    <!-- ── MARQUEE ────────────────────────────────────────── -->
+    
+<!-- ── MARQUEE ────────────────────────────────────────── -->
 <div class="mq-wrap" aria-hidden="true">
-  <div class="mq-track">
-    <span class="mq-item">CHANGE MANAGEMENT</span><span class="mq-item hi">✺</span>
-    <span class="mq-item">DATA STORYTELLING</span><span class="mq-item hi">✺</span>
-    <span class="mq-item">MARKET INTELLIGENCE</span><span class="mq-item hi">✺</span>
-    <span class="mq-item">SALES &amp; OPS PLANNING</span><span class="mq-item hi">✺</span>
-    <span class="mq-item">GTM EXECUTION</span><span class="mq-item hi">✺</span>
-    <span class="mq-item">DEMAND FORECASTING</span><span class="mq-item hi">✺</span>
-  </div>
+    <div class="mq-track">
+        <!-- Set 1 -->
+        <div class="mq-content">
+            <span class="mq-item">CHANGE MANAGEMENT</span><span class="mq-item hi">✺</span>
+            <span class="mq-item">DATA STORYTELLING</span><span class="mq-item hi">✺</span>
+            <span class="mq-item">MARKET INTELLIGENCE</span><span class="mq-item hi">✺</span>
+            <span class="mq-item">SALES &amp; OPS PLANNING</span><span class="mq-item hi">✺</span>
+            <span class="mq-item">GTM EXECUTION</span><span class="mq-item hi">✺</span>
+            <span class="mq-item">DEMAND FORECASTING</span><span class="mq-item hi">✺</span>
+        </div>
+        <!-- Set 2 (Exact Duplicate for the seamless loop) -->
+        <div class="mq-content">
+            <span class="mq-item">CHANGE MANAGEMENT</span><span class="mq-item hi">✺</span>
+            <span class="mq-item">DATA STORYTELLING</span><span class="mq-item hi">✺</span>
+            <span class="mq-item">MARKET INTELLIGENCE</span><span class="mq-item hi">✺</span>
+            <span class="mq-item">SALES &amp; OPS PLANNING</span><span class="mq-item hi">✺</span>
+            <span class="mq-item">GTM EXECUTION</span><span class="mq-item hi">✺</span>
+            <span class="mq-item">DEMAND FORECASTING</span><span class="mq-item hi">✺</span>
+        </div>
+    </div>
 </div>
 
     <!-- ── Quote ─── -->     
@@ -249,7 +266,7 @@
     </div>
     <div class="aq-author">
       <div>
-        <span class="aq-word">— Eliyahu</span>&nbsp;
+        <span class="aq-word">— Eliyahu</span>&nbsp;
         <span class="aq-word">M.</span>&nbsp;
         <span class="aq-word">Goldratt</span>
       </div>
@@ -529,9 +546,9 @@
               <div class="scom-body" id="scom-body">--</div>
               <div class="scom-insight" id="scom-insight"></div>
             </div>
-            <div class="sim-sensitivity">
+            <div class="sim-sensitivity" style="overflow-x: auto;">
               <div class="ssens-header">Sensitivity Analysis — What If You Change One Variable?</div>
-              <table class="ssens-table" id="ssens-table">
+              <table class="ssens-table" id="ssens-table" style="min-width: 500px;">
                 <thead><tr><th>Scenario</th><th>EOQ</th><th>Safety Stock</th><th>Total Cost</th><th>vs. Base</th></tr></thead>
                 <tbody id="ssens-body"></tbody>
               </table>
@@ -723,7 +740,7 @@
               <div class="dcf-val-card base active-val"><span class="dcf-vc-label">Base Case</span><span class="dcf-vc-value" id="d-out-base">--</span><span class="dcf-vc-sub">Your inputs</span></div>
               <div class="dcf-val-card bull"><span class="dcf-vc-label">Bull Case</span><span class="dcf-vc-value" id="d-out-bull">--</span><span class="dcf-vc-sub">WACC −200bps</span></div>
             </div>
-            <div class="sim-metrics-row" style="grid-template-columns:repeat(4,1fr);">
+            <div class="sim-metrics-row" style="grid-template-columns:repeat(auto-fit, minmax(100px, 1fr));">
               <div class="sim-metric"><span class="sm-label">Enterprise Value (DCF)</span><span class="sm-value" id="d-out-ev">--</span><span class="sm-unit">$K</span></div>
               <div class="sim-metric"><span class="sm-label">NPV of FCFs</span><span class="sm-value" id="d-out-npv">--</span><span class="sm-unit">$K</span></div>
               <div class="sim-metric"><span class="sm-label">Terminal Value (PV)</span><span class="sm-value" id="d-out-tv">--</span><span class="sm-unit">$K</span></div>
@@ -827,11 +844,11 @@
         </div>
 
         <div class="faq-item">
-          <button class="faq-btn" aria-expanded="false" aria-controls="faq-a2">
+          <button class="faq-btn" aria-expanded="false" aria-controls="faq-a3">
             <span class="faq-question">Q3. Could you elaborate on a situation where you took a significant calculated risk.</span>
             <span class="faq-icon" aria-hidden="true">+</span>
           </button>
-          <div class="faq-content" id="faq-a2" role="region">
+          <div class="faq-content" id="faq-a3" role="region">
             <p class="faq-answer">A. I drove the shift toward a Just-In-Time (JIT) delivery model. In the Canadian tire market, where 
               seasonal demand is highly volatile and winter weather constantly threatens supply lines, stripping away safety stock is a 
               massive commercial risk. To mitigate this, I restructured our vendor development strategy. By collaborating directly with 
@@ -841,11 +858,11 @@
         </div>
 
         <div class="faq-item">
-          <button class="faq-btn" aria-expanded="false" aria-controls="faq-a3">
+          <button class="faq-btn" aria-expanded="false" aria-controls="faq-a4">
             <span class="faq-question">Q4. What is your status regarding US Work Authorization?</span>
             <span class="faq-icon" aria-hidden="true">+</span>
           </button>
-          <div class="faq-content" id="faq-a3" role="region">
+          <div class="faq-content" id="faq-a4" role="region">
             <p class="faq-answer">A. Canadian Citizen on OPT (EAD Approved); eligible for TN (Trade NAFTA) status under the USMCA. 
               (TN Visa allows for immediate work authorization upon receiving a job offer; no administrative involvement from the employer.</p>
           </div>
@@ -899,6 +916,6 @@
 <!-- ── SCRIPTS ────────────────────────────────────────── -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-     <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
