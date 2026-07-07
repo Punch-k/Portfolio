@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGPSim | Prapanch Kokkalemada</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=4">
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KE4GVETS40"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-KE4GVETS40');
+    </script>
+</head>
+<body>
+    <div id="preloader" role="status" aria-label="Page loading">
+        <div class="card">
+            <div class="loader">
+                <p>Loading..</p>
+                <div class="words">
+                    <span class="loader-word">portfolio.exe</span>
+                    <span class="loader-word">sourcing.xls</span>
+                    <span class="loader-word">query_met.sql</span>
+                </div>
+            </div>
+        </div>
+        <div id="ltext" style="display: none;">00%</div>
+    </div>
+
+    <div id="aura" aria-hidden="true"></div>
+    <div id="sprog" aria-hidden="true"></div>
+    <div id="cdot" aria-hidden="true"></div>
+    <div id="cring" aria-hidden="true"></div>
+    <div id="ctip" aria-hidden="true"></div>
+
+    <div id="float-cta">
+        <a class="float-btn" href="index.html#gtm-simulators">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+                <circle cx="5" cy="5" r="4" stroke="currentColor" stroke-width="1"/>
+                <line x1="5" y1="2" x2="5" y2="8" stroke="currentColor" stroke-width="1"/>
+                <line x1="2" y1="5" x2="8" y2="5" stroke="currentColor" stroke-width="1"/>
+            </svg>
+            Efficiency models!
+        </a>
+    </div>
+
+    <nav id="mobile-menu" role="navigation" aria-label="Mobile menu">
+        <a href="index.html#scrub-section">Home</a>
+        <a href="index.html#section-cases">Cases</a>
+        <a href="index.html#section-skills">Skills</a>
+        <a href="index.html#gtm-simulators">Simulator</a>
+        <a href="index.html#section-get-in-touch">Contact</a>
+        <a href="index.html#section-get-in-touch" class="mob-cta">Let's Connect ↗</a>
+    </nav>
+
+    <nav id="mainnav" role="navigation" aria-label="Primary navigation">
+        <a class="nav-logo" href="index.html">PRAPANCH <span>KOKKALEMADA</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html#section-intro">About</a></li>
+            <li><a href="index.html#section-cases">Research</a></li>
+            <li><a href="index.html#gtm-simulators">Simulator</a></li>
+            <li><a href="index.html#section-skills">Skills</a></li>
+            <li><a href="about.html">Gallery</a></li>
+        </ul>
+        <a class="nav-cta" href="index.html#section-get-in-touch"><span>Let's Connect ↗</span></a>
+        <button id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <section id="simulator-container" style="padding-top: 100px; min-height: 100vh; position: relative; z-index: 2;">
+        <div id="root"></div>
+    </section>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-left">
+            <span class="ft-logo">MBA Candidate © 2026 · Broad College of Business</span>
+        </div>
+        <nav class="footer-links" aria-label="Footer links">
+            <a href="mailto:kokkalem@msu.edu" class="ft-link">E-MAIL</a>
+            <a href="https://linkedin.com/in/prapanchkokkalemada/" class="ft-link" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+            <a href="https://broad.campusgroups.com/gscma/events/" class="ft-link" target="_blank" rel="noopener noreferrer">🏅&nbsp;GSCMA</a>
+            <button class="ft-top-btn" id="footer-top-btn" aria-label="Scroll to top of page">↑ Top</button>
+        </nav>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+
+    <script type="text/babel">
+        const { useState } = React;
+        
+        // --- PASTE THE ENTIRE REACT CODE HERE ---
+       
+/* ============================ LOGPSim ============================
+       A standalone logistics strategy simulation.
+       Designed & built for the portfolio of Prapanch Kokkalemada.
+       Engine: 12-week competitive supply chain vs. three rival firms.
+    ================================================================== */
+
+    // ---------- Core data ----------
+    const DEMAND = {1:188,2:135,3:113,4:135,5:120,6:143,7:128,8:135,9:210,10:165,11:195,12:165,13:120,14:180,15:105,16:98,17:128,18:165,19:195,20:165,21:180,22:105,23:195,24:150,25:165,26:135,27:120,28:150,29:168,30:105,31:173,32:165,33:135,34:128,35:158,36:180};
+    const SEASON = [0,1.0,0.95,0.9,0.85,0.9,1.0,1.05,1.1,1.15,1.1,1.0,1.0];
+    const WEEKS = 12;
+    const NAME = {sp:"Apex",wo:"Volt"}; // premium / value product lines
+    const MATS = ["polymer","steel","rubber","aluminum"];
+    const MAT_STD = {polymer:0.9,steel:0.5,rubber:2.35,aluminum:4.75};
+    const BOM = {sp:{polymer:6,steel:8,rubber:6,aluminum:4,hrs:5,std:100,w:25,ref:400},
+                 wo:{polymer:10,steel:12,rubber:0,aluminum:4,hrs:4,std:80,w:20,ref:200}};
+    const SUPPLIERS = [
+     {id:1,name:"Meridian Polymers",mat:"polymer",p1:1.05,brk:30000,p2:0.90},
+     {id:2,name:"Cascade Polymers",mat:"polymer",p1:1.10,brk:20000,p2:0.95},
+     {id:3,name:"Ironline Steel",mat:"steel",p1:0.60,brk:20000,p2:0.55},
+     {id:4,name:"Foundry Steelworks",mat:"steel",p1:0.60,brk:50000,p2:0.50},
+     {id:5,name:"Halcyon Rubber",mat:"rubber",p1:2.50,brk:12000,p2:2.35},
+     {id:6,name:"Argent Aluminum",mat:"aluminum",p1:5.00,brk:12000,p2:4.75},
+    ];
+    const IN_FREIGHT = {
+     1:{rail:[7.30,4.75],cheap:[6.40,5.30],rel:[7.10,6.50]},
+     2:{rail:[6.90,3.00],cheap:[6.20,5.15],rel:[6.80,6.00]},
+     3:{rail:[7.50,3.70],cheap:[6.30,5.90],rel:[7.00,6.40]},
+     4:{rail:[7.10,4.40],cheap:[6.10,5.65],rel:[6.90,6.00]},
+     5:{rail:[11.75,4.50],cheap:[9.20,7.50],rel:[11.35,9.80]},
+     6:{rail:[13.05,5.25],cheap:[11.25,8.75],rel:[12.20,10.10]},
+    };
+    const IN_TRANSIT = {
+     1:{rail:[1,2],cheap:[2,1],rel:[1,1]}, 2:{rail:[2,2],cheap:[1,1],rel:[1,1]},
+     3:{rail:[2,3],cheap:[3,2],rel:[1,1]}, 4:{rail:[1,3],cheap:[2,2],rel:[1,1]},
+     5:{rail:[2,4],cheap:[2,1],rel:[1,1]}, 6:{rail:[2,4],cheap:[2,2],rel:[1,1]},
+    };
+    const IN_REL = {rail:[.94,.03,.03,0],cheap:[.88,.06,.05,.01],rel:[.96,.02,.02,0]};
+    const FG_FREIGHT = {
+     cheap:{L:[4.80,5.20,6.32,6.64,7.20,7.52],T:[3.00,3.56,3.88,4.04,4.48,4.64]},
+     rel:{L:[5.20,5.68,6.52,7.12,7.65,8.00],T:[3.20,3.68,4.08,4.56,4.88,5.52]},
+     prem:{L:[7.12,7.36,8.40,9.16,9.60,10.48],T:[6.40,7.20,8.00,8.60,8.96,9.68]},
+    };
+    const FG_REL = {cheap:[.88,.06,.05,.01],rel:[.96,.02,.02,0],prem:[.99,.01,0,0]};
+    const CUST_RATE = [4,13,21,27,33,36,39];
+    const UTIL_PTS = [[0,300000],[50,75000],[75,18750],[90,3000],[100,0],[115,6750],[120,12000]];
+
+    const COORDS = (()=>{const c={};let m=1;
+     [[6,200],[12,400],[18,600]].forEach(([n,r],ri)=>{for(let i=0;i<n;i++){
+       const a=(2*Math.PI*i)/n + ri*0.26; c[m]={x:r*Math.cos(a),y:r*Math.sin(a),ring:ri+1}; m++;}});
+     c[37]={x:0,y:0,ring:0}; return c;})();
+    const dist=(a,b)=>Math.hypot(COORDS[a].x-COORDS[b].x,COORDS[a].y-COORDS[b].y);
+    const bucket=(mi)=>Math.min(5,Math.max(0,Math.ceil(mi/200)-1));
+    const custRate=(mi)=>mi<=50?CUST_RATE[0]:CUST_RATE[Math.min(6,Math.ceil(mi/200))];
+    const REGION_OF=(m)=>COORDS[m].ring;
+
+    const fmt=(n)=>Math.round(n).toLocaleString();
+    const money=(n)=>(n<0?"-$":"$")+Math.abs(Math.round(n)).toLocaleString();
+    let seed=42; const rnd=()=>{seed=(seed*1103515245+12345)%2147483648; return seed/2147483648;};
+    const delayPick=(p)=>{const r=rnd();let a=0;for(let i=0;i<4;i++){a+=p[i];if(r<=a)return i;}return 0;};
+    const utilCharge=(pct)=>{if(pct<=0)return UTIL_PTS[0][1];
+     for(let i=1;i<UTIL_PTS.length;i++){const[a,ca]=UTIL_PTS[i-1],[b,cb]=UTIL_PTS[i];
+      if(pct<=b)return ca+(cb-ca)*(pct-a)/(b-a);}
+     return 12000+(pct-120)*900;};
+    const truckSplit=(lbs)=>{let tl=Math.floor(lbs/11000),rem=lbs-tl*11000;if(rem>=9000){tl++;rem=0;}return{tl,rem};};
+    const inFreightCost=(sup,mode,lbs)=>{const[l,t]=IN_FREIGHT[sup][mode];const{tl,rem}=truckSplit(lbs);return(tl*11000*t+rem*l)/100+50;};
+    const fgFreightCost=(mode,mi,lbs)=>{const b=bucket(Math.max(200,mi));const T=FG_FREIGHT[mode].T[b],L=FG_FREIGHT[mode].L[b];const{tl,rem}=truckSplit(lbs);return(tl*11000*T+rem*L)/100+50;};
+
+    const initGame=(dcs)=>({
+     phase:"play",week:1,capacity:10000,capPending:[],
+     mat:{polymer:14000,steel:12000,rubber:5500,aluminum:10000},
+     matOpen:[
+      {mat:"polymer",qty:15000,arrive:1},{mat:"steel",qty:10000,arrive:1},{mat:"rubber",qty:6000,arrive:1},{mat:"aluminum",qty:10000,arrive:1},
+      {mat:"polymer",qty:10000,arrive:2},{mat:"steel",qty:10000,arrive:2},{mat:"rubber",qty:6000,arrive:2},{mat:"aluminum",qty:10000,arrive:2},
+      {mat:"steel",qty:10000,arrive:3},{mat:"rubber",qty:6000,arrive:3},{mat:"aluminum",qty:10000,arrive:3},
+      {mat:"rubber",qty:7500,arrive:4},{mat:"aluminum",qty:10000,arrive:4},{mat:"aluminum",qty:10000,arrive:5}],
+     plant:{sp:dcs.plantSp,wo:dcs.plantWo},
+     schedule:{1:{sp:900,wo:900},2:{sp:900,wo:900}},
+     dcs:dcs.list.map(d=>({...d,inbound:[]})),
+     svc:{1:0.95,2:0.95,3:0.95},
+     share:{},
+     ai:[{name:"Northbridge Ltd."},{name:"Vector Freight Co."},{name:"Atlas Consumer"}].map(a=>({...a,svc:0.95,ytdVar:0,ytdShare:0.25})),
+     ytd:{variance:0,revenue:0,sold:0,industry:0},
+     history:[],
+    });
+
+    function advanceWeek(g,d){
+     const w=g.week, S=SEASON[w];
+     const E={expedite:0,orderPlace:0,ppv:0,inbound:0,matCarry:0,matFixed:900,matHandle:0,matDemur:0,
+              orderProc:0,fgCarry:0,custFreight:0,fgFixedPlant:2500,fgFixedDC:0,fgHandle:0,fgDemur:0,capChg:0,util:0};
+     const ng=JSON.parse(JSON.stringify(g));
+
+     ng.capPending=ng.capPending.filter(c=>{if(c.week<=w){ng.capacity=Math.min(14000,ng.capacity+c.hrs);return false;}return true;});
+     if(d.capChange){const hrs=Math.max(-5000,Math.min(14000-ng.capacity,d.capChange));
+       if(hrs!==0){E.capChg+=Math.abs(hrs)*50;ng.capPending.push({week:w+2,hrs});}}
+
+     ng.matOpen=ng.matOpen.filter(o=>{if(o.arrive<=w){ng.mat[o.mat]+=o.qty;return false;}return true;});
+
+     d.orders.slice(0,6).forEach(o=>{
+      if(!o.qty||o.qty<=0)return;
+      const sup=SUPPLIERS.find(s=>s.id===o.sup); if(!sup)return;
+      const unit=o.qty>=sup.brk?sup.p2:sup.p1;
+      E.orderPlace+=50;
+      E.ppv+=(unit-MAT_STD[sup.mat])*o.qty;
+      E.inbound+=inFreightCost(sup.id,o.mode,o.qty);
+      const tt=IN_TRANSIT[sup.id][o.mode][o.qty>=9000?1:0];
+      ng.matOpen.push({mat:sup.mat,qty:o.qty,arrive:w+tt+delayPick(IN_REL[o.mode])});
+     });
+
+     const addSched=(wk,sp,wo)=>{if(!ng.schedule[wk])ng.schedule[wk]={sp:0,wo:0};
+       ng.schedule[wk].sp=Math.max(0,ng.schedule[wk].sp+sp);ng.schedule[wk].wo=Math.max(0,ng.schedule[wk].wo+wo);};
+     addSched(w+2,d.reg.sp,d.reg.wo);
+     if(d.exp.sp||d.exp.wo){addSched(w+1,d.exp.sp,d.exp.wo);E.expedite+=2*(Math.abs(d.exp.sp)+Math.abs(d.exp.wo));}
+     if(d.rush.sp||d.rush.wo){addSched(w,d.rush.sp,d.rush.wo);E.expedite+=3.5*(Math.abs(d.rush.sp)+Math.abs(d.rush.wo));}
+     let plan={...(ng.schedule[w]||{sp:0,wo:0})};
+     const maxHrs=ng.capacity*1.2;
+     let hrs=plan.sp*5+plan.wo*4;
+     if(hrs>maxHrs){const k=maxHrs/hrs;plan.sp=Math.floor(plan.sp*k);plan.wo=Math.floor(plan.wo*k);}
+     let scale=1;
+     MATS.forEach(m=>{const need=plan.sp*BOM.sp[m]+plan.wo*BOM.wo[m];
+       if(need>0&&need>ng.mat[m])scale=Math.min(scale,ng.mat[m]/need);});
+     if(scale<1){const cutS=plan.sp-Math.floor(plan.sp*scale),cutW=plan.wo-Math.floor(plan.wo*scale);
+       plan.sp-=cutS;plan.wo-=cutW;E.expedite+=3.5*(cutS+cutW);}
+     let matUsed=0;
+     MATS.forEach(m=>{const use=plan.sp*BOM.sp[m]+plan.wo*BOM.wo[m];ng.mat[m]-=use;matUsed+=use;});
+     E.matHandle+=matUsed*0.06;
+     ng.plant.sp+=plan.sp; ng.plant.wo+=plan.wo;
+     hrs=plan.sp*5+plan.wo*4;
+     E.util+=utilCharge(100*hrs/ng.capacity);
+     const stdProd=plan.sp*100+plan.wo*80;
+
+     d.ships.slice(0,6).forEach(s=>{
+      const dc=ng.dcs[s.dc]; if(!dc)return;
+      const sp=Math.min(s.sp||0,ng.plant.sp), wo=Math.min(s.wo||0,ng.plant.wo);
+      if(sp+wo<=0)return;
+      ng.plant.sp-=sp; ng.plant.wo-=wo;
+      const lbs=sp*25+wo*20;
+      E.orderProc+=fgFreightCost(s.mode,dist(37,dc.market),lbs);
+      E.fgHandle+=(sp+wo)*1.5;
+      const delay=delayPick(FG_REL[s.mode]);
+      if(s.mode==="prem"&&delay===0){dc.sp+=sp;dc.wo+=wo;}
+      else dc.inbound.push({arrive:w+Math.max(1,(s.mode==="prem"?0:1)+delay),sp,wo});
+     });
+
+     ng.dcs.forEach(dc=>{dc.inbound=dc.inbound.filter(sh=>{if(sh.arrive<=w){dc.sp+=sh.sp;dc.wo+=sh.wo;return false;}return true;});});
+
+     const aiPrices={};
+     ng.ai.forEach((a,i)=>{aiPrices[i]={sp:Math.round(400*(0.93+rnd()*0.14)),wo:Math.round(200*(0.93+rnd()*0.14))};});
+     let revenue=0, sold=0, industry=0;
+     const regionSales={1:{sp:0,wo:0},2:{sp:0,wo:0},3:{sp:0,wo:0}};
+     const marketsServed=new Set();
+     const assign={};
+     Object.keys(DEMAND).forEach(m=>{let best=-1,bd=1e9;
+       ng.dcs.forEach((dc,i)=>{const dd=dist(+m,dc.market);if(dd<bd){bd=dd;best=i;}});assign[m]=best;});
+     const dcMarkets=ng.dcs.map((dc,i)=>Object.keys(DEMAND).filter(m=>assign[m]===i)
+       .sort((a,b)=>dist(+a,dc.market)-dist(+b,dc.market)));
+     ["sp","wo"].forEach(P=>{
+      const elast=P==="sp"?2.2:4.0, ref=BOM[P].ref;
+      [1,2,3].forEach(r=>{
+       const myP=Math.max(50,Math.min(999,d.prices[r][P]||ref));
+       const promo=w>=3?(d.promo[r]||0):0;
+       const all=[myP,...ng.ai.map((a,i)=>aiPrices[i][P])];
+       const indAvg=all.reduce((a,b)=>a+b,0)/4;
+       const indFactor=Math.max(0.6,Math.min(1.6,Math.pow(ref/indAvg,0.7)));
+       const promoBoost=1+0.18*Math.sqrt(promo/12000);
+       const key=r+P; const prior=ng.share[key]??0.25;
+       const scores=[Math.pow(ref/myP,elast)*promoBoost*ng.svc[r],
+         ...ng.ai.map((a,i)=>Math.pow(ref/aiPrices[i][P],elast)*1.05*a.svc)];
+       const tot=scores.reduce((a,b)=>a+b,0);
+       let myShare=0.4*prior+0.6*(scores[0]/tot);
+       let demandR=0,soldR=0;
+       Object.keys(DEMAND).forEach(m=>{if(REGION_OF(+m)!==r)return;
+         demandR+=Math.round(DEMAND[m]*S*indFactor);});
+       industry+=demandR;
+       ng.dcs.forEach((dc,i)=>{
+        dcMarkets[i].forEach(m=>{if(REGION_OF(+m)!==r)return;
+         const md=Math.round(DEMAND[m]*S*indFactor);
+         const want=Math.round(md*myShare);
+         const got=Math.min(want,dc[P]);
+         if(got>0){dc[P]-=got;soldR+=got;revenue+=got*myP;
+           E.custFreight+=got*BOM[P].w/100*custRate(dist(+m,dc.market));
+           marketsServed.add(m);
+           E.fgHandle+=got*1.5;}
+        });});
+       sold+=soldR; regionSales[r][P]+=soldR;
+       const fill=demandR>0?soldR/Math.max(1,Math.round(demandR*myShare)):1;
+       ng.svc[r]=Math.max(0.6,Math.min(1.05,0.85*ng.svc[r]+0.15*(0.9+0.15*Math.min(1,fill))));
+       ng.share[key]=demandR>0?Math.max(0.02,soldR/demandR):prior;
+      });
+     });
+     E.custFreight+=marketsServed.size*50;
+     ng.ai.forEach(a=>{a.svc=Math.max(0.85,Math.min(1.02,a.svc+(rnd()-0.5)*0.04));});
+
+     const matVal=MATS.reduce((a,m)=>a+ng.mat[m]*MAT_STD[m],0);
+     E.matCarry=matVal*0.20/52;
+     const matTot=MATS.reduce((a,m)=>a+ng.mat[m],0);
+     if(matTot>45000)E.matDemur=(matTot-45000)*0.16;
+     let fgVal=ng.plant.sp*100+ng.plant.wo*80;
+     ng.dcs.forEach(dc=>{fgVal+=dc.sp*100+dc.wo*80+dc.inbound.reduce((a,s)=>a+s.sp*100+s.wo*80,0);
+       E.fgFixedDC+=dc.cap*0.5;
+       const over=dc.sp+dc.wo-dc.cap; if(over>0)E.fgDemur+=over*6.4;});
+     const plantOver=ng.plant.sp+ng.plant.wo-5000; if(plantOver>0)E.fgDemur+=plantOver*6.4;
+     E.fgCarry=fgVal*0.30/52;
+
+     const promoTotal=w>=3?[1,2,3].reduce((a,r)=>a+(d.promo[r]||0),0):0;
+     const grossProfit=revenue-stdProd-E.capChg-promoTotal;
+     const budget=0.4*grossProfit;
+     const logistics=Object.keys(E).reduce((a,k)=>k==="capChg"?a:a+E[k],0);
+     const variance=budget-logistics;
+     const wkShare=industry>0?sold/industry:0;
+     ng.ytd.variance+=variance; ng.ytd.revenue+=revenue; ng.ytd.sold+=sold; ng.ytd.industry+=industry;
+     ng.ai.forEach((a)=>{const aShare=(1-wkShare)/3*(0.9+rnd()*0.2);
+       a.ytdShare=(a.ytdShare*(w-1)+aShare)/w;
+       a.ytdVar+=revenue*(0.35+rnd()*0.25)*(0.08+rnd()*0.06);});
+     ng.history.push({week:w,revenue,stdProd,promoTotal,grossProfit,budget,expenses:E,logistics,variance,
+       sold,industry,share:wkShare,produced:plan,regionSales});
+     ng.week=w+1;
+     if(ng.week>WEEKS)ng.phase="end";
+     return ng;
+    }
+
+    // ---------- Design tokens: editorial-brutalist, matched to punch-k.github.io ----------
+    const T={ink:"#141414",paper:"#F3F2EE",panel:"#FFFFFF",line:"#D8D6CF",dim:"#6E6C66",
+     accent:"#FF4D00",good:"#1D7A46",bad:"#C2281B",
+     mono:"ui-monospace,SFMono-Regular,Menlo,Consolas,monospace",
+     serif:"Georgia,'Times New Roman',serif",
+     sans:"'Helvetica Neue',Helvetica,Arial,sans-serif"};
+
+    const Sty={
+     wrap:{minHeight:"100vh",background:T.paper,color:T.ink,fontFamily:T.sans,fontSize:14,display:"flex",flexDirection:"column"},
+     head:{padding:"22px 28px 14px",borderBottom:`1px solid ${T.ink}`,display:"flex",alignItems:"flex-end",gap:20,flexWrap:"wrap"},
+     brand:{margin:0,fontSize:34,fontWeight:800,letterSpacing:"-0.02em",lineHeight:1},
+     brandI:{fontFamily:T.serif,fontStyle:"italic",fontWeight:400},
+     eyebrow:{fontFamily:T.mono,fontSize:11,letterSpacing:"0.12em",textTransform:"uppercase",color:T.dim},
+     ticker:{borderBottom:`1px solid ${T.ink}`,overflow:"hidden",whiteSpace:"nowrap",background:T.ink,color:T.paper,
+       fontFamily:T.mono,fontSize:11,letterSpacing:"0.1em",padding:"6px 0",textTransform:"uppercase"},
+     tabs:{display:"flex",gap:0,flexWrap:"wrap",borderBottom:`1px solid ${T.ink}`},
+     tab:(on)=>({padding:"10px 18px",cursor:"pointer",fontFamily:T.mono,fontSize:12,letterSpacing:"0.08em",
+       textTransform:"uppercase",borderRight:`1px solid ${T.line}`,
+       background:on?T.ink:"transparent",color:on?T.paper:T.ink}),
+     panel:{background:T.panel,border:`1px solid ${T.line}`,margin:"18px 28px",padding:20},
+     card:{background:T.panel,border:`1px solid ${T.line}`,padding:"12px 14px"},
+     kpi:{fontFamily:T.mono,fontSize:22,fontWeight:700,letterSpacing:"-0.01em"},
+     lbl:{fontFamily:T.mono,fontSize:10,textTransform:"uppercase",letterSpacing:"0.12em",color:T.dim},
+     h2:{fontSize:22,fontWeight:800,margin:"0 0 4px",letterSpacing:"-0.01em"},
+     h2i:{fontFamily:T.serif,fontStyle:"italic",fontWeight:400},
+     th:{textAlign:"right",padding:"6px 10px",fontFamily:T.mono,fontSize:10,textTransform:"uppercase",letterSpacing:"0.1em",borderBottom:`1px solid ${T.ink}`,color:T.dim},
+     thL:{textAlign:"left",padding:"6px 10px",fontFamily:T.mono,fontSize:10,textTransform:"uppercase",letterSpacing:"0.1em",borderBottom:`1px solid ${T.ink}`,color:T.dim},
+     td:{textAlign:"right",padding:"5px 10px",fontFamily:T.mono,fontSize:13,borderBottom:`1px solid ${T.line}`},
+     tdL:{textAlign:"left",padding:"5px 10px",fontSize:13,borderBottom:`1px solid ${T.line}`},
+     inp:{width:78,padding:"5px 7px",border:`1px solid ${T.ink}`,fontFamily:T.mono,fontSize:13,textAlign:"right",background:"#fff",borderRadius:0},
+     sel:{padding:"5px 7px",border:`1px solid ${T.ink}`,fontSize:12,background:"#fff",borderRadius:0,fontFamily:T.mono},
+     btn:{background:T.ink,color:T.paper,border:`1px solid ${T.ink}`,padding:"11px 22px",fontFamily:T.mono,
+       fontSize:12,letterSpacing:"0.1em",textTransform:"uppercase",cursor:"pointer",borderRadius:0},
+     btnA:{background:T.accent,color:"#fff",border:`1px solid ${T.accent}`,padding:"11px 22px",fontFamily:T.mono,
+       fontSize:12,letterSpacing:"0.1em",textTransform:"uppercase",cursor:"pointer",borderRadius:0,fontWeight:700},
+     btn2:{background:"transparent",color:T.ink,border:`1px solid ${T.ink}`,padding:"6px 12px",fontFamily:T.mono,
+       fontSize:11,letterSpacing:"0.08em",textTransform:"uppercase",cursor:"pointer",borderRadius:0},
+     report:{fontFamily:T.mono,fontSize:12.5,whiteSpace:"pre",overflowX:"auto",background:"#FFFEF9",
+       border:`1px solid ${T.ink}`,padding:"16px 18px",lineHeight:1.55},
+     foot:{marginTop:"auto",borderTop:`1px solid ${T.ink}`,background:T.ink,color:T.paper,padding:"26px 28px",
+       display:"flex",flexWrap:"wrap",gap:24,alignItems:"flex-end"},
+     footLbl:{fontFamily:T.mono,fontSize:10,letterSpacing:"0.14em",textTransform:"uppercase",opacity:0.55,marginBottom:4},
+     footVal:{fontFamily:T.mono,fontSize:13},
+     footLink:{color:T.paper,fontFamily:T.mono,fontSize:12,letterSpacing:"0.1em",textTransform:"uppercase",
+       textDecoration:"none",borderBottom:`1px solid ${T.accent}`,paddingBottom:2,marginRight:18},
+    };
+
+    const emptyDecisions=()=>({
+     prices:{1:{sp:400,wo:200},2:{sp:400,wo:200},3:{sp:400,wo:200}},
+     promo:{1:0,2:0,3:0},
+     orders:[{},{},{},{},{},{}].map(()=>({sup:1,qty:0,mode:"rel"})),
+     reg:{sp:0,wo:0},exp:{sp:0,wo:0},rush:{sp:0,wo:0},
+     ships:[{},{},{},{},{},{}].map(()=>({dc:0,mode:"rel",sp:0,wo:0})),
+     capChange:0,
+    });
+
+    // ---------- Bokeh instruction overlay (signature element) ----------
+    function BokehOverlay({onClose}){
+     const dots=[["18%","12%",190,"#FF4D00",0.20,"14s"],["70%","8%",260,"#1D7A46",0.14,"18s"],
+      ["8%","62%",230,"#FF4D00",0.12,"16s"],["62%","58%",300,"#2E5BFF",0.10,"20s"],["40%","30%",160,"#FFB800",0.16,"12s"]];
+     return(<div onClick={onClose} style={{position:"fixed",inset:0,zIndex:50,
+       background:"rgba(20,20,20,0.55)",backdropFilter:"blur(10px)",WebkitBackdropFilter:"blur(10px)",
+       display:"flex",alignItems:"center",justifyContent:"center",padding:20,overflow:"hidden"}}>
+      <style>{`@keyframes lgFloat{0%{transform:translate(0,0)}50%{transform:translate(26px,-34px)}100%{transform:translate(0,0)}}
+        @media (prefers-reduced-motion: reduce){.lg-bokeh{animation:none !important}}`}</style>
+      {dots.map(([l,t,s,c,o,dur],i)=>(<div key={i} className="lg-bokeh" style={{position:"absolute",left:l,top:t,width:s,height:s,
+        borderRadius:"50%",background:c,opacity:o,filter:"blur(46px)",animation:`lgFloat ${dur} ease-in-out infinite`,pointerEvents:"none"}}/>))}
+      <div onClick={e=>e.stopPropagation()} style={{position:"relative",maxWidth:760,maxHeight:"84vh",overflowY:"auto",
+        background:"rgba(255,255,254,0.94)",border:`1px solid ${T.ink}`,padding:"28px 32px",boxShadow:"0 30px 80px rgba(0,0,0,0.35)"}}>
+       <div style={Sty.eyebrow}>OPERATOR'S BRIEF — LOGPSIM v1.0</div>
+       <h2 style={{...Sty.h2,fontSize:28,margin:"6px 0 14px"}}>How the game <span style={Sty.h2i}>works.</span></h2>
+       <p><strong>Objective.</strong> Run a two-product manufacturer for 12 weeks against three rival firms. Your score is the <em>performance index</em>: year-to-date market share × year-to-date logistics variance (your logistics budget — 40% of gross profit — minus every logistics dollar you spend).</p>
+       <p><strong>The loop, each week.</strong> Set prices and promotion by region → order materials from six suppliers (quantity breaks, three transport modes, stochastic transit reliability) → schedule production (regular runs land in two weeks; expediting and rush runs cost premiums; plant utilization far from 100% is penalized) → ship finished goods to your DCs (premium freight arrives overnight and is sellable the same week) → the market clears, and stockouts bleed share to rivals.</p>
+       <p><strong>Products.</strong> {NAME.sp} is the premium line ($400 reference, moderately price-sensitive). {NAME.wo} is the value line ($200 reference, highly price-sensitive). Both consume shared materials and plant hours — the mix is a real trade-off.</p>
+       <p><strong>Cost physics to respect.</strong> Materials carry at 20%/yr and finished goods at 30%/yr (including in transit); warehouses charge fixed, handling, and demurrage fees; every order and shipment carries a $50 documentation charge; an idle plant costs up to $300K a week. Just-in-time flow with reliable carriers is usually the winning posture — premium freight only when a stockout threatens.</p>
+       <p><strong>Design phase.</strong> Before week 1 you place up to three distribution centers, size them, and split 2,000 units of each product across the network. Locations are permanent. Choose against the demand map, not by symmetry.</p>
+       <div style={{marginTop:18}}><button style={Sty.btnA} onClick={onClose}>Close brief → run operations</button></div>
+      </div>
+     </div>);
+    }
+
+    function MapView({dcs,pick,onPick,small}){
+     const size=small?260:420;
+     return(<svg viewBox="-750 -750 1500 1500" width="100%" style={{maxWidth:size,display:"block"}}>
+      <circle cx={0} cy={0} r={40} fill={T.ink}/>
+      <text x={0} y={6} textAnchor="middle" fontSize={30} fill={T.paper} fontFamily={T.mono}>HQ</text>
+      {Object.keys(DEMAND).map(m=>{const c=COORDS[m];const isDC=dcs?.some(d=>d.market===+m);
+       return(<g key={m} onClick={()=>onPick&&onPick(+m)} style={{cursor:onPick?"pointer":"default"}}>
+        <circle cx={c.x} cy={c.y} r={38+DEMAND[m]/6} fill={isDC?T.accent:pick===+m?"#FFB800":"#fff"}
+          stroke={T.ink} strokeWidth={isDC?7:2.5}/>
+        <text x={c.x} y={c.y-2} textAnchor="middle" fontSize={30} fontWeight={700}
+          fill={isDC?"#fff":T.ink} fontFamily={T.mono}>{m}</text>
+        <text x={c.x} y={c.y+30} textAnchor="middle" fontSize={24}
+          fill={isDC?"#FFE3D4":T.dim} fontFamily={T.mono}>{DEMAND[m]}</text>
+       </g>);})}
+     </svg>);
+    }
+
+    function Footer(){
+     return(<footer style={Sty.foot}>
+      <div><div style={Sty.footLbl}>Current Base</div><div style={Sty.footVal}>East Lansing, MI</div></div>
+      <div><div style={Sty.footLbl}>System Status</div><div style={{...Sty.footVal,color:"#7CE0A3"}}>● Active — Open to Full-Time · May 2026</div></div>
+      <div><div style={Sty.footLbl}>Build</div><div style={Sty.footVal}>LOGPSim v1.0 — designed & engineered by Prapanch Kokkalemada</div></div>
+      <div style={{flex:1}}/>
+      <div>
+       <a style={Sty.footLink} href="https://punch-k.github.io/Portfolio/" target="_blank" rel="noreferrer">Portfolio</a>
+       <a style={Sty.footLink} href="https://linkedin.com/in/prapanchkokkalemada/" target="_blank" rel="noreferrer">LinkedIn</a>
+       <a style={Sty.footLink} href="mailto:kokkalem@msu.edu">E-mail</a>
+       <span style={{...Sty.footVal,opacity:0.5,marginLeft:6}}>© 2026</span>
+      </div>
+     </footer>);
+    }
+
+    function Setup({onStart}){
+     const [dcs,setDcs]=useState([{market:19,cap:1500},{market:23,cap:2000},{market:28,cap:1500}]);
+     const [alloc,setAlloc]=useState([{sp:666,wo:666},{sp:668,wo:668},{sp:666,wo:666}]);
+     const [plantAlloc,setPlantAlloc]=useState({sp:0,wo:0});
+     const [picking,setPicking]=useState(null);
+     const totSp=plantAlloc.sp+alloc.reduce((a,x)=>a+(x?.sp||0),0);
+     const totWo=plantAlloc.wo+alloc.reduce((a,x)=>a+(x?.wo||0),0);
+     const active=dcs.filter(Boolean);
+     const valid=active.length>=1&&totSp===2000&&totWo===2000&&
+       active.every((d,i)=>(alloc[i]?.sp||0)+(alloc[i]?.wo||0)<=d.cap)&&
+       new Set(active.map(d=>d.market)).size===active.length;
+     return(<div style={Sty.panel}>
+      <div style={Sty.eyebrow}>PHASE 0 — NETWORK DESIGN</div>
+      <h2 style={Sty.h2}>Design the network. <span style={Sty.h2i}>Then live with it.</span></h2>
+      <p style={{maxWidth:720,color:T.dim}}>Place up to three distribution centers, size their capacity, and allocate 2,000 {NAME.sp}s and 2,000 {NAME.wo}s across the plant warehouse and DCs. Locations lock for all 12 weeks — markets auto-assign to their nearest DC, and pricing regions follow the three demand rings.</p>
+      <div style={{display:"flex",gap:28,flexWrap:"wrap"}}>
+       <div><div style={Sty.lbl}>Demand map — click to place the selected DC</div>
+        <MapView dcs={active} pick={picking!=null?dcs[picking]?.market:null}
+          onPick={(m)=>{if(picking==null)return;const nd=[...dcs];nd[picking]={...(nd[picking]||{cap:1500}),market:m};setDcs(nd);}}/>
+       </div>
+       <div style={{flex:1,minWidth:320}}>
+        <table style={{borderCollapse:"collapse",width:"100%"}}>
+         <thead><tr><th style={Sty.thL}>Facility</th><th style={Sty.th}>Market</th><th style={Sty.th}>Capacity</th><th style={Sty.th}>{NAME.sp}</th><th style={Sty.th}>{NAME.wo}</th><th style={Sty.th}></th></tr></thead>
+         <tbody>
+          <tr><td style={Sty.tdL}>Plant warehouse (HQ)</td><td style={Sty.td}>—</td><td style={Sty.td}>5,000</td>
+           <td style={Sty.td}><input style={Sty.inp} type="number" value={plantAlloc.sp} onChange={e=>setPlantAlloc({...plantAlloc,sp:+e.target.value||0})}/></td>
+           <td style={Sty.td}><input style={Sty.inp} type="number" value={plantAlloc.wo} onChange={e=>setPlantAlloc({...plantAlloc,wo:+e.target.value||0})}/></td><td style={Sty.td}/></tr>
+          {[0,1,2].map(i=>(<tr key={i}>
+           <td style={Sty.tdL}>DC {String(i+1).padStart(2,"0")} {dcs[i]&&<button style={{...Sty.btn2,marginLeft:6,padding:"2px 8px"}} onClick={()=>setPicking(i)}>{picking===i?"click map…":"move"}</button>}</td>
+           <td style={Sty.td}>{dcs[i]?dcs[i].market:<button style={Sty.btn2} onClick={()=>{const nd=[...dcs];nd[i]={market:1,cap:1500};setDcs(nd);setPicking(i);}}>add</button>}</td>
+           <td style={Sty.td}>{dcs[i]&&<input style={Sty.inp} type="number" value={dcs[i].cap} onChange={e=>{const nd=[...dcs];nd[i]={...nd[i],cap:+e.target.value||0};setDcs(nd);}}/>}</td>
+           <td style={Sty.td}>{dcs[i]&&<input style={Sty.inp} type="number" value={alloc[i]?.sp||0} onChange={e=>{const na=[...alloc];na[i]={...na[i],sp:+e.target.value||0};setAlloc(na);}}/>}</td>
+           <td style={Sty.td}>{dcs[i]&&<input style={Sty.inp} type="number" value={alloc[i]?.wo||0} onChange={e=>{const na=[...alloc];na[i]={...na[i],wo:+e.target.value||0};setAlloc(na);}}/>}</td>
+           <td style={Sty.td}>{dcs[i]&&<button style={Sty.btn2} onClick={()=>{const nd=[...dcs];nd[i]=null;setDcs(nd);const na=[...alloc];na[i]=null;setAlloc(na);}}>×</button>}</td>
+          </tr>))}
+         </tbody></table>
+        <p style={{fontFamily:T.mono,fontSize:13}}>Allocated — {NAME.sp}: {totSp}/2000 · {NAME.wo}: {totWo}/2000</p>
+        {!valid&&<p style={{color:T.bad,fontSize:13}}>Requires ≥1 DC, unique locations, exactly 2,000 of each product allocated, and DC allocations within capacity.</p>}
+        <button style={{...Sty.btnA,opacity:valid?1:0.35}} disabled={!valid}
+         onClick={()=>{const list=[];dcs.forEach((d,i)=>{if(d)list.push({market:d.market,cap:d.cap,sp:alloc[i]?.sp||0,wo:alloc[i]?.wo||0});});
+          onStart({list,plantSp:plantAlloc.sp,plantWo:plantAlloc.wo});}}>Lock design → Week 01</button>
+       </div>
+      </div>
+     </div>);
+    }
+
+    function Statement({h}){
+     const E=h.expenses;
+     const L=(label,val,indent=0)=>`${" ".repeat(indent)}${label.padEnd(38-indent,".")}${String(money(val)).padStart(13)}\n`;
+     let s="";
+     s+="            L O G P S I M   O P E R A T I O N S   L E D G E R\n";
+     s+=`                     FINANCIAL STATEMENT — WEEK ${String(h.week).padStart(2,"0")}\n\n`;
+     s+=L("COMPANY REVENUE",h.revenue);
+     s+=L("Standard production",-h.stdProd,2);
+     s+=L("Promotion & marketing",-h.promoTotal,2);
+     s+=L("Capacity change charges",-E.capChg,2);
+     s+=L("GROSS PROFIT",h.grossProfit);
+     s+="—".repeat(53)+"\n";
+     s+=L("LOGISTICS BUDGET (40% of GP)",h.budget);
+     s+=L("Expediting / utilization",E.expedite+E.util,2);
+     s+=L("Order placement",E.orderPlace,2);
+     s+=L("Purchase price variance",E.ppv,2);
+     s+=L("Inbound transportation",E.inbound,2);
+     s+=L("Material carrying (20%/yr)",E.matCarry,2);
+     s+=L("Material whse fixed + handling",E.matFixed+E.matHandle,2);
+     s+=L("Material demurrage",E.matDemur,2);
+     s+=L("Outbound shipping (plant→DC)",E.orderProc,2);
+     s+=L("Customer freight",E.custFreight,2);
+     s+=L("FG carrying (30%/yr)",E.fgCarry,2);
+     s+=L("FG whse fixed (plant+DC)",E.fgFixedPlant+E.fgFixedDC,2);
+     s+=L("FG handling",E.fgHandle,2);
+     s+=L("FG demurrage & detention",E.fgDemur,2);
+     s+=L("TOTAL LOGISTICS EXPENSES",h.logistics);
+     s+="—".repeat(53)+"\n";
+     s+=L("LOGISTICS VARIANCE",h.variance);
+     return <div style={Sty.report}>{s}</div>;
+    }
+
+    function App(){
+     const [game,setGame]=useState(null);
+     const [dec,setDec]=useState(emptyDecisions());
+     const [tab,setTab]=useState("dash");
+     const [brief,setBrief]=useState(true);
+
+     const Header=({sub})=>(<header style={Sty.head}>
+      <div>
+       <div style={Sty.eyebrow}>Operations · Logistics · Strategy</div>
+       <h1 style={Sty.brand}>LOGP<span style={{color:T.accent}}>Sim</span> <span style={Sty.brandI}>— run the network.</span></h1>
+      </div>
+      <span style={{flex:1}}/>
+      <div style={{display:"flex",gap:10,alignItems:"center"}}>
+       <button style={Sty.btn2} onClick={()=>setBrief(true)}>Operator's brief</button>
+       {sub}
+      </div>
+     </header>);
+
+     const Ticker=()=>{const items=["FLOW BEATS STOCK","JIT ✺ DEMAND SENSING ✺ MODE MIX ✺ FILL RATE ✺ VARIANCE DISCIPLINE","IMPROVEMENTS OFF THE BOTTLENECK ARE AN ILLUSION","CARRYING COST NEVER SLEEPS"];
+      return(<div style={Sty.ticker}><span style={{display:"inline-block",paddingLeft:"100%",animation:"lgTick 28s linear infinite"}}>
+       {items.join("  ✺  ")+"  ✺  "+items.join("  ✺  ")}</span>
+       <style>{`@keyframes lgTick{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+        @media (prefers-reduced-motion: reduce){[style*="lgTick"]{animation:none !important}}`}</style></div>);};
+
+     if(!game)return(<div style={Sty.wrap}>
+      <Header/>
+      <Ticker/>
+      {brief&&<BokehOverlay onClose={()=>setBrief(false)}/>}
+      <Setup onStart={(d)=>setGame(initGame(d))}/>
+      <Footer/>
+     </div>);
+
+     const w=game.week, last=game.history[game.history.length-1];
+     const ytdShare=game.ytd.industry>0?game.ytd.sold/game.ytd.industry:0;
+     const index=ytdShare*100*game.ytd.variance;
+     const advance=()=>{setGame(advanceWeek(game,dec));
+      setDec(d=>({...emptyDecisions(),prices:JSON.parse(JSON.stringify(d.prices)),promo:{...d.promo}}));setTab("dash");};
+     const num=(v,fn)=><input style={Sty.inp} type="number" value={v} onChange={e=>fn(+e.target.value||0)}/>;
+     const Tabs=[["dash","I. Dashboard"],["mkt","II. Marketing"],["proc","III. Procurement"],["prod","IV. Production"],["ship","V. Distribution"],["rep","VI. Ledger"]];
+
+     return(<div style={Sty.wrap}>
+      <Header sub={game.phase!=="end"&&<button style={Sty.btnA} onClick={advance}>Commit → run week {String(w).padStart(2,"0")}</button>}/>
+      <Ticker/>
+      {brief&&<BokehOverlay onClose={()=>setBrief(false)}/>}
+
+      {game.phase==="end"?(
+       <div style={Sty.panel}>
+        <div style={Sty.eyebrow}>FINAL STANDINGS — 12 WEEKS</div>
+        <h2 style={Sty.h2}>Performance index. <span style={Sty.h2i}>Share × variance.</span></h2>
+        <table style={{borderCollapse:"collapse"}}><thead><tr><th style={Sty.thL}>Firm</th><th style={Sty.th}>YTD share</th><th style={Sty.th}>YTD variance</th><th style={Sty.th}>Index</th></tr></thead>
+         <tbody>
+          {[{name:"YOUR FIRM",share:ytdShare,v:game.ytd.variance},...game.ai.map(a=>({name:a.name,share:a.ytdShare,v:a.ytdVar}))]
+           .map(f=>({...f,idx:f.share*100*f.v})).sort((a,b)=>b.idx-a.idx)
+           .map((f,i)=>(<tr key={f.name} style={f.name==="YOUR FIRM"?{background:"#FFF0E8"}:null}>
+            <td style={Sty.tdL}>{String(i+1).padStart(2,"0")} — {f.name}</td><td style={Sty.td}>{(f.share*100).toFixed(1)}%</td>
+            <td style={Sty.td}>{money(f.v)}</td><td style={{...Sty.td,fontWeight:700}}>{fmt(f.idx)}</td></tr>))}
+         </tbody></table>
+        <p style={{marginTop:16,maxWidth:640}}>{index>=Math.max(...game.ai.map(a=>a.ytdShare*100*a.ytdVar))?
+          "Your firm leads the division. Flow discipline paid.":
+          "A rival edged you out. Audit where variance leaked — freight mode mix, carrying cost, and stockouts are the usual suspects."}</p>
+        <button style={Sty.btn} onClick={()=>{setGame(null);setDec(emptyDecisions());}}>New campaign</button>
+       </div>
+      ):(<>
+      <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(160px,1fr))",gap:1,background:T.line,borderBottom:`1px solid ${T.ink}`}}>
+       {[["Week",`${String(w).padStart(2,"0")} / ${WEEKS} · ×${SEASON[Math.min(w,12)]}`,T.ink],
+         ["YTD variance",money(game.ytd.variance),game.ytd.variance>=0?T.good:T.bad],
+         ["YTD share",(ytdShare*100).toFixed(1)+"%",T.ink],
+         ["Perf. index",fmt(index),T.accent],
+         ["Plant FG",fmt(game.plant.sp+game.plant.wo)+" u",T.ink],
+         ["Capacity",fmt(game.capacity)+" hrs",T.ink]]
+        .map(([l,v,c])=>(<div key={l} style={{...Sty.card,border:"none"}}><div style={Sty.lbl}>{l}</div><div style={{...Sty.kpi,color:c}}>{v}</div></div>))}
+      </div>
+
+      <nav style={Sty.tabs}>{Tabs.map(([k,l])=><div key={k} style={Sty.tab(tab===k)} onClick={()=>setTab(k)}>{l}</div>)}</nav>
+
+      {tab==="dash"&&<div style={Sty.panel}>
+       <div style={{display:"flex",gap:28,flexWrap:"wrap"}}>
+        <div><div style={Sty.lbl}>Network</div><MapView dcs={game.dcs} small/></div>
+        <div style={{flex:1,minWidth:300}}>
+         <div style={Sty.lbl}>Inventory position</div>
+         <table style={{borderCollapse:"collapse",width:"100%"}}>
+          <thead><tr><th style={Sty.thL}>Facility</th><th style={Sty.th}>{NAME.sp}</th><th style={Sty.th}>{NAME.wo}</th><th style={Sty.th}>Cap</th><th style={Sty.th}>Inbound</th></tr></thead>
+          <tbody>
+           <tr><td style={Sty.tdL}>Plant whse (HQ)</td><td style={Sty.td}>{fmt(game.plant.sp)}</td><td style={Sty.td}>{fmt(game.plant.wo)}</td><td style={Sty.td}>5,000</td><td style={Sty.td}>—</td></tr>
+           {game.dcs.map((dc,i)=>(<tr key={i}><td style={Sty.tdL}>DC {String(i+1).padStart(2,"0")} · mkt {dc.market}</td>
+            <td style={Sty.td}>{fmt(dc.sp)}</td><td style={Sty.td}>{fmt(dc.wo)}</td><td style={Sty.td}>{fmt(dc.cap)}</td>
+            <td style={Sty.td}>{fmt(dc.inbound.reduce((a,s)=>a+s.sp+s.wo,0))}</td></tr>))}
+          </tbody></table>
+         <div style={{...Sty.lbl,marginTop:16}}>Materials — warehouse cap 45,000</div>
+         <table style={{borderCollapse:"collapse",width:"100%"}}>
+          <thead><tr><th style={Sty.thL}>Material</th><th style={Sty.th}>On hand</th><th style={Sty.th}>Wk {w}</th><th style={Sty.th}>Wk {w+1}</th><th style={Sty.th}>Later</th></tr></thead>
+          <tbody>{MATS.map(m=>{const due=(k)=>game.matOpen.filter(o=>o.mat===m&&(k==="later"?o.arrive>=w+2:o.arrive===k)).reduce((a,o)=>a+o.qty,0);
+           return(<tr key={m}><td style={Sty.tdL}>{m}</td><td style={Sty.td}>{fmt(game.mat[m])}</td>
+            <td style={Sty.td}>{fmt(due(w))}</td><td style={Sty.td}>{fmt(due(w+1))}</td><td style={Sty.td}>{fmt(due("later"))}</td></tr>);})}
+          </tbody></table>
+         <div style={{...Sty.lbl,marginTop:16}}>Production schedule</div>
+         <div style={{fontFamily:T.mono,fontSize:13}}>
+          {[w,w+1,w+2].map(k=>{const s=game.schedule[k]||{sp:0,wo:0};return `Wk ${k}: ${s.sp} ${NAME.sp} / ${s.wo} ${NAME.wo}   `;})}
+         </div>
+        </div>
+       </div>
+      </div>}
+
+      {tab==="mkt"&&<div style={Sty.panel}>
+       <h2 style={Sty.h2}>Marketing. <span style={Sty.h2i}>Price is a demand lever.</span></h2>
+       <p style={{fontSize:13,color:T.dim,maxWidth:680}}>{NAME.wo} is highly price-sensitive; {NAME.sp} moderately. Promotion unlocks in week 3 and shows diminishing returns (~10% of gross sales is the industry norm). Price bounds $50–$999.</p>
+       <table style={{borderCollapse:"collapse"}}>
+        <thead><tr><th style={Sty.thL}>Region</th><th style={Sty.th}>{NAME.sp} $</th><th style={Sty.th}>{NAME.wo} $</th><th style={Sty.th}>Promotion $</th><th style={Sty.th}>Last wk sold</th></tr></thead>
+        <tbody>{[1,2,3].map(r=>(<tr key={r}>
+         <td style={Sty.tdL}>R{r} — {r===1?"inner":r===2?"middle":"outer"} ring</td>
+         <td style={Sty.td}>{num(dec.prices[r].sp,v=>setDec({...dec,prices:{...dec.prices,[r]:{...dec.prices[r],sp:v}}}))}</td>
+         <td style={Sty.td}>{num(dec.prices[r].wo,v=>setDec({...dec,prices:{...dec.prices,[r]:{...dec.prices[r],wo:v}}}))}</td>
+         <td style={Sty.td}>{w>=3?num(dec.promo[r],v=>setDec({...dec,promo:{...dec.promo,[r]:v}})):<span style={{opacity:0.4,fontFamily:T.mono,fontSize:12}}>WK 3+</span>}</td>
+         <td style={Sty.td}>{last?`${fmt(last.regionSales[r].sp)} / ${fmt(last.regionSales[r].wo)}`:"—"}</td>
+        </tr>))}</tbody></table>
+      </div>}
+
+      {tab==="proc"&&<div style={Sty.panel}>
+       <h2 style={Sty.h2}>Procurement. <span style={Sty.h2i}>Buy the break, not the pile.</span></h2>
+       <p style={{fontSize:13,color:T.dim}}>Up to 6 orders/week · $50 placement each · paying above standard cost books purchase-price variance · 20%/yr carrying on week-end inventory.</p>
+       <table style={{borderCollapse:"collapse",width:"100%"}}>
+        <thead><tr><th style={Sty.thL}>#</th><th style={Sty.thL}>Supplier</th><th style={Sty.th}>Unit / break / unit</th><th style={Sty.thL}>Mode</th><th style={Sty.th}>Qty</th><th style={Sty.th}>Transit</th></tr></thead>
+        <tbody>{dec.orders.map((o,i)=>{const sup=SUPPLIERS.find(s=>s.id===o.sup);
+         const tt=IN_TRANSIT[o.sup][o.mode][(o.qty||0)>=9000?1:0];
+         return(<tr key={i}><td style={Sty.td}>{String(i+1).padStart(2,"0")}</td>
+          <td style={Sty.tdL}><select style={Sty.sel} value={o.sup} onChange={e=>{const no=[...dec.orders];no[i]={...o,sup:+e.target.value};setDec({...dec,orders:no});}}>
+           {SUPPLIERS.map(s=><option key={s.id} value={s.id}>{s.name} — {s.mat}</option>)}</select></td>
+          <td style={Sty.td}>${sup.p1.toFixed(2)} / {fmt(sup.brk)} / ${sup.p2.toFixed(2)}</td>
+          <td style={Sty.tdL}><select style={Sty.sel} value={o.mode} onChange={e=>{const no=[...dec.orders];no[i]={...o,mode:e.target.value};setDec({...dec,orders:no});}}>
+           <option value="rail">Rail</option><option value="cheap">Economy truck</option><option value="rel">Reliable truck</option></select></td>
+          <td style={Sty.td}>{num(o.qty,v=>{const no=[...dec.orders];no[i]={...o,qty:v};setDec({...dec,orders:no});})}</td>
+          <td style={Sty.td}>{o.qty>0?`${tt} wk`:"—"}</td></tr>);})}
+        </tbody></table>
+       <p style={{fontFamily:T.mono,fontSize:12,color:T.dim}}>STD COSTS — polymer $0.90 · steel $0.50 · rubber $2.35 · aluminum $4.75</p>
+      </div>}
+
+      {tab==="prod"&&<div style={Sty.panel}>
+       <h2 style={Sty.h2}>Production. <span style={Sty.h2i}>Idle plants bill you.</span></h2>
+       <p style={{fontSize:13,color:T.dim,maxWidth:720}}>Regular orders run in week {w+2}. Expedited (+$2/u) run week {w+1}; rush (+$3.50/u) run this week. {NAME.sp} = 5 hrs, {NAME.wo} = 4 hrs. Capacity {fmt(game.capacity)} hrs, max output 120% ({fmt(game.capacity*1.2)} hrs). Utilization away from 100% is charged — a dark plant costs up to $300K.</p>
+       <table style={{borderCollapse:"collapse"}}>
+        <thead><tr><th style={Sty.thL}>Order type</th><th style={Sty.th}>Runs in</th><th style={Sty.th}>Δ {NAME.sp}</th><th style={Sty.th}>Δ {NAME.wo}</th></tr></thead>
+        <tbody>
+         {[["Regular","reg",w+2],["Expedited","exp",w+1],["Rush","rush",w]].map(([l,k,wk])=>(<tr key={k}>
+          <td style={Sty.tdL}>{l}</td><td style={Sty.td}>wk {wk}</td>
+          <td style={Sty.td}>{num(dec[k].sp,v=>setDec({...dec,[k]:{...dec[k],sp:v}}))}</td>
+          <td style={Sty.td}>{num(dec[k].wo,v=>setDec({...dec,[k]:{...dec[k],wo:v}}))}</td></tr>))}
+        </tbody></table>
+       <div style={{marginTop:14}}>
+        <span style={Sty.lbl}>Capacity change — net hrs · $50/hr · 2-wk lead · 14,000 max: </span>
+        {num(dec.capChange,v=>setDec({...dec,capChange:v}))}
+       </div>
+       <div style={{fontFamily:T.mono,fontSize:13,marginTop:12}}>
+        WK {w} PLAN: {(game.schedule[w]?.sp||0)+dec.rush.sp} {NAME.sp} / {(game.schedule[w]?.wo||0)+dec.rush.wo} {NAME.wo}
+        = {((game.schedule[w]?.sp||0)+dec.rush.sp)*5+((game.schedule[w]?.wo||0)+dec.rush.wo)*4} hrs
+       </div>
+      </div>}
+
+      {tab==="ship"&&<div style={Sty.panel}>
+       <h2 style={Sty.h2}>Distribution. <span style={Sty.h2i}>Freight is a service decision.</span></h2>
+       <p style={{fontSize:13,color:T.dim,maxWidth:720}}>Up to 6 plant→DC shipments ($50 + freight each). Economy/Reliable arrive next week with reliability risk; Premium arrives overnight — sellable this week. FG carrying (30%/yr) applies in transit. {NAME.sp} 25 lb, {NAME.wo} 20 lb; full trucks (9–11k lb) ride TL rates.</p>
+       <table style={{borderCollapse:"collapse"}}>
+        <thead><tr><th style={Sty.thL}>#</th><th style={Sty.thL}>Destination</th><th style={Sty.thL}>Mode</th><th style={Sty.th}>{NAME.sp}</th><th style={Sty.th}>{NAME.wo}</th><th style={Sty.th}>Est. cost</th></tr></thead>
+        <tbody>{dec.ships.map((s,i)=>{const dc=game.dcs[s.dc];const lbs=(s.sp||0)*25+(s.wo||0)*20;
+         const est=lbs>0?fgFreightCost(s.mode,dist(37,dc.market),lbs):0;
+         return(<tr key={i}><td style={Sty.td}>{String(i+1).padStart(2,"0")}</td>
+          <td style={Sty.tdL}><select style={Sty.sel} value={s.dc} onChange={e=>{const ns=[...dec.ships];ns[i]={...s,dc:+e.target.value};setDec({...dec,ships:ns});}}>
+           {game.dcs.map((d,j)=><option key={j} value={j}>DC {String(j+1).padStart(2,"0")} — mkt {d.market}</option>)}</select></td>
+          <td style={Sty.tdL}><select style={Sty.sel} value={s.mode} onChange={e=>{const ns=[...dec.ships];ns[i]={...s,mode:e.target.value};setDec({...dec,ships:ns});}}>
+           <option value="cheap">Economy</option><option value="rel">Reliable</option><option value="prem">Premium — o/n</option></select></td>
+          <td style={Sty.td}>{num(s.sp,v=>{const ns=[...dec.ships];ns[i]={...s,sp:v};setDec({...dec,ships:ns});})}</td>
+          <td style={Sty.td}>{num(s.wo,v=>{const ns=[...dec.ships];ns[i]={...s,wo:v};setDec({...dec,ships:ns});})}</td>
+          <td style={Sty.td}>{est?money(est):"—"}</td></tr>);})}
+        </tbody></table>
+       <p style={{fontFamily:T.mono,fontSize:12,color:T.dim}}>PLANT FG AVAILABLE — {fmt(game.plant.sp)} {NAME.sp} / {fmt(game.plant.wo)} {NAME.wo} (this week's production adds before shipments deduct)</p>
+      </div>}
+
+      {tab==="rep"&&<div style={Sty.panel}>
+       {game.history.length===0?<p style={{color:T.dim}}>No weeks committed yet. The ledger opens after your first week runs.</p>:(<>
+        <h2 style={Sty.h2}>The ledger. <span style={Sty.h2i}>Variance tells the truth.</span></h2>
+        <Statement h={last}/>
+        <div style={{...Sty.lbl,margin:"18px 0 6px"}}>Weekly trend</div>
+        <table style={{borderCollapse:"collapse",width:"100%"}}>
+         <thead><tr><th style={Sty.th}>Wk</th><th style={Sty.th}>Revenue</th><th style={Sty.th}>Gross profit</th><th style={Sty.th}>Budget</th><th style={Sty.th}>Expenses</th><th style={Sty.th}>Variance</th><th style={Sty.th}>Share</th><th style={Sty.th}>Sold</th></tr></thead>
+         <tbody>{game.history.map(h=>(<tr key={h.week}>
+          <td style={Sty.td}>{String(h.week).padStart(2,"0")}</td><td style={Sty.td}>{money(h.revenue)}</td><td style={Sty.td}>{money(h.grossProfit)}</td>
+          <td style={Sty.td}>{money(h.budget)}</td><td style={Sty.td}>{money(h.logistics)}</td>
+          <td style={{...Sty.td,color:h.variance<0?T.bad:T.good,fontWeight:700}}>{money(h.variance)}</td>
+          <td style={Sty.td}>{(h.share*100).toFixed(1)}%</td><td style={Sty.td}>{fmt(h.sold)}</td></tr>))}
+         </tbody></table></>)}
+      </div>}
+      </>)}
+      <Footer/>
+     </div>);
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
+           
+    </script>
+</body>
+</html>
