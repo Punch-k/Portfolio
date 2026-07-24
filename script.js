@@ -238,7 +238,7 @@ if (isDesktop) {
     const evasiveWords = document.querySelectorAll('.hero-hl .word');
     document.addEventListener('mousemove', e => {
         if (window.scrollY > window.innerHeight) return;
-        evusiveWords.forEach(word => {
+        evasiveWords.forEach(word => {
             if (!word.classList.contains('show')) return;
             const rect = word.getBoundingClientRect();
             const dx = e.clientX - (rect.left + rect.width / 2), dy = e.clientY - (rect.top + rect.height / 2);
