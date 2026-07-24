@@ -228,7 +228,7 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeVid(); 
 const mqTrack = document.querySelector('.mq-track');
 const bmqTrack = document.querySelector('.bmq-track');
 window.addEventListener('scroll', () => {
-    const offset = (window.scrollY * .08) % 50;
+    const offset = (window.scrollY * .03) % 50;
     if (mqTrack) mqTrack.style.transform = `translateX(-${offset}%)`;
     if (bmqTrack) bmqTrack.style.transform = `translateX(-${50 - offset}%)`;
 }, { passive: true });
@@ -1147,25 +1147,29 @@ document.querySelectorAll('.tile-flip').forEach(tile => {
     var GOLD = '#c9a84c', W = 0, H = 0, balls = [], mouseX = -9999, mouseY = -9999;
     var raf = null, started = false, tooltip = { text: '', x: 0, y: 0, alpha: 0, timer: null };
 
-    var SKILLS = [
-        { t: 'GTM Execution', c: 1 }, { t: 'Demand Forecasting', c: 1 }, { t: 'Pricing Strategy', c: 1 },
-        { t: 'Inventory Optimization', c: 1 }, { t: 'JIT Delivery Models', c: 1 }, { t: 'A/B Testing', c: 1 },
-        { t: 'Media Analytics', c: 1 }, { t: 'Tableau', c: 1 }, { t: 'Power BI', c: 1 },
-        { t: 'RevOps', c: 1 }, { t: 'HubSpot', c: 1 }, { t: 'Agile (Certified)', c: 1 },
-        { t: 'Market Sizing', c: 0 }, { t: 'Competitive Analysis', c: 0 }, { t: 'Data Storytelling', c: 0 },
-        { t: 'Channel Economics', c: 0 }, { t: 'M&A Deal Analysis', c: 0 }, { t: 'Vendor Development', c: 0 },
-        { t: 'Capacity Planning', c: 0 }, { t: 'Scrum (Certified)', c: 0 }, { t: 'Tariff Modeling', c: 0 },
-        { t: 'Cost Modeling', c: 0 }, { t: 'Process Mapping', c: 0 }, { t: 'Content Strategy', c: 0 },
-        { t: 'Voice of Customer', c: 0 }, { t: 'Buyer Persona Mapping', c: 0 }, { t: 'Brand Positioning', c: 0 },
-        { t: 'Financial Modeling', c: 0 }, { t: 'KPI Dashboard Design', c: 0 }, { t: 'Sensitivity Analysis', c: 0 },
-        { t: 'Lean Operations', c: 0 }, { t: 'Waterfall PM', c: 0 }, { t: 'Risk Mitigation', c: 0 }
-    ];
+    // Category ring colors: 'strategy' reuses the page's own gold accent (most core
+    // skills are strategy work, so this is also the "default" look); the other three
+    // get their own hue so the pit actually encodes skill type, not just core/other.
+    var CATS = {
+        strategy:   { label: 'Strategy & GTM',          color: '#c9a84c' },
+        analytics:  { label: 'Analytics & Tools',       color: '#4a90e2' },
+        operations: { label: 'Operations & Process',    color: '#3fb8af' },
+        methods:    { label: 'Methods & Certifications', color: '#9b7fd4' }
+    };
 
-    function abbr(str) {
-        var w = str.replace(/[()]/g, '').split(/[\s/&+]+/), a = '';
-        for (var i = 0; i < w.length && a.length < 3; i++) { if (w[i].length > 0) a += w[i][0].toUpperCase(); }
-        return a;
-    }
+    var SKILLS = [
+        { t: 'GTM Execution', c: 1, cat: 'strategy' }, { t: 'Demand Forecasting', c: 1, cat: 'analytics' }, { t: 'Pricing Strategy', c: 1, cat: 'strategy' },
+        { t: 'Inventory Optimization', c: 1, cat: 'operations' }, { t: 'JIT Delivery Models', c: 1, cat: 'operations' }, { t: 'A/B Testing', c: 1, cat: 'analytics' },
+        { t: 'Media Analytics', c: 1, cat: 'analytics' }, { t: 'Tableau', c: 1, cat: 'analytics' }, { t: 'Power BI', c: 1, cat: 'analytics' },
+        { t: 'RevOps', c: 1, cat: 'operations' }, { t: 'HubSpot', c: 1, cat: 'methods' }, { t: 'Agile (Certified)', c: 1, cat: 'methods' },
+        { t: 'Market Sizing', c: 0, cat: 'strategy' }, { t: 'Competitive Analysis', c: 0, cat: 'strategy' }, { t: 'Data Storytelling', c: 0, cat: 'analytics' },
+        { t: 'Channel Economics', c: 0, cat: 'strategy' }, { t: 'M&A Deal Analysis', c: 0, cat: 'strategy' }, { t: 'Vendor Development', c: 0, cat: 'operations' },
+        { t: 'Capacity Planning', c: 0, cat: 'operations' }, { t: 'Scrum (Certified)', c: 0, cat: 'methods' }, { t: 'Tariff Modeling', c: 0, cat: 'operations' },
+        { t: 'Cost Modeling', c: 0, cat: 'analytics' }, { t: 'Process Mapping', c: 0, cat: 'operations' }, { t: 'Content Strategy', c: 0, cat: 'strategy' },
+        { t: 'Voice of Customer', c: 0, cat: 'strategy' }, { t: 'Buyer Persona Mapping', c: 0, cat: 'strategy' }, { t: 'Brand Positioning', c: 0, cat: 'strategy' },
+        { t: 'Financial Modeling', c: 0, cat: 'analytics' }, { t: 'KPI Dashboard Design', c: 0, cat: 'analytics' }, { t: 'Sensitivity Analysis', c: 0, cat: 'analytics' },
+        { t: 'Lean Operations', c: 0, cat: 'operations' }, { t: 'Waterfall PM', c: 0, cat: 'methods' }, { t: 'Risk Mitigation', c: 0, cat: 'operations' }
+    ];
 
     function shortLabel(str) {
         if (str.length <= 11) return str;
@@ -1192,7 +1196,7 @@ document.querySelectorAll('.tile-flip').forEach(tile => {
         balls = SKILLS.map(function (s) {
             var r = s.c ? 36 : 24;
             return {
-                t: s.t, ab: abbr(s.t), lb: shortLabel(s.t), c: s.c, r: r,
+                t: s.t, lb: shortLabel(s.t), c: s.c, cat: s.cat, r: r,
                 x: r + Math.random() * Math.max(1, W - r * 2),
                 y: H * 0.15 + Math.random() * H * 0.55,
                 vx: (Math.random() - .5) * 1.2, vy: (Math.random() - .5) * 1.2
@@ -1268,22 +1272,18 @@ document.querySelectorAll('.tile-flip').forEach(tile => {
     }
 
     function dr(b) {
+        var ringColor = (CATS[b.cat] || CATS.strategy).color;
         ctx.beginPath(); ctx.arc(b.x, b.y, b.r, 0, Math.PI * 2);
         if (b.c) {
             ctx.fillStyle = GOLD; ctx.fill();
+            ctx.lineWidth = 2.5; ctx.strokeStyle = ringColor; ctx.stroke();
             ctx.beginPath(); ctx.arc(b.x - b.r * .28, b.y - b.r * .3, b.r * .38, 0, Math.PI * 2);
             ctx.fillStyle = 'rgba(255,255,255,0.11)'; ctx.fill();
             drawWrappedText(ctx, b.t, b.x, b.y, b.r * 1.55, '400', 10, '#0a0b0d');
         } else {
             ctx.fillStyle = 'rgba(10,11,13,0.97)'; ctx.fill();
-            ctx.lineWidth = 1; ctx.strokeStyle = 'rgba(201,168,76,0.4)'; ctx.stroke();
-            ctx.font = '600 12px "DM Sans",sans-serif';
-            ctx.fillStyle = GOLD;
-            ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-            ctx.fillText(b.ab, b.x, b.y - 4);
-            ctx.font = '400 7px "DM Sans",sans-serif';
-            ctx.fillStyle = 'rgba(201,168,76,0.5)';
-            ctx.fillText(b.lb, b.x, b.y + 6);
+            ctx.lineWidth = 2; ctx.strokeStyle = ringColor; ctx.stroke();
+            drawWrappedText(ctx, b.lb, b.x, b.y, b.r * 1.7, '600', 10, ringColor);
         }
     }
 

@@ -478,8 +478,12 @@ body::after { content: ''; position: fixed; inset: -100%; width: 300%; height: 3
 
 /* ─── SKILLS BALL PIT ─────────────────────────────────────── */
 #section-skills { padding: clamp(2.5rem, 5vw, 3.5rem) clamp(1.2rem, 3vw, 2rem); border-top: 1px solid var(--line); position: relative; z-index: 2; background: var(--bg); overflow: hidden; }
-#skills-pit-wrap { width: 100%; position: relative; background: transparent; overflow: hidden; margin-top: 0; }
+#skills-pit-wrap { width: 100%; position: relative; background: transparent; overflow: visible; margin-top: 0; }
 #skills-canvas { display: block; width: 100%; cursor: none; }
+.skills-legend { display: flex; flex-wrap: wrap; gap: 1.2rem; list-style: none; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--line); font-size: .68rem; letter-spacing: .04em; color: var(--muted); }
+.skills-legend li { display: flex; align-items: center; gap: .5rem; }
+.skills-legend-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--dot); box-shadow: 0 0 6px var(--dot); flex-shrink: 0; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 
 /* ─── SECTION TRANSITION LINES ───────────────────────────── */
 .sec-rule { height: 1px; background: var(--gold); width: 0; margin-bottom: 2rem; transition: width 1s var(--ease); box-shadow: 0 0 6px rgba(201,168,76,.4); }
