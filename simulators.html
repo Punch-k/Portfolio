@@ -1,303 +1,87 @@
 <!DOCTYPE html>
-<!-- =========Intro===== -->
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Prapanch Kokkalemada",
-  "jobTitle": "Strategy & Operations Specialist",
-  "url": "https://punch-k.github.io/Portfolio/",
-  "image": "https://punch-k.github.io/Portfolio/AboutIMG/About1.jpeg",
-  "sameAs": ["https://www.linkedin.com/in/prapanchk/", "https://github.com/Punch-k"],
-  "knowsAbout": ["Process Optimization", "Business Strategy", "Digital Transformation", "Power BI"],
-  "alumniOf": {
-    "@type": "CollegeorUniversityorOrganization",
-    "name": "Michigan State University"
-  }
-}
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Simulators | Prapanch Kokkalemada</title>
 
-<title>Prapanch Kokkalemada | Punch K</title>
+    <meta name="description" content="Interactive operations models by Prapanch Kokkalemada — EOQ inventory optimization, queue &amp; staffing dynamics, and DCF valuation labs.">
+    <meta property="og:title" content="Interactive Simulators — Prapanch Kokkalemada">
+    <meta property="og:description" content="Run real operations models: inventory optimization (EOQ), queue &amp; staffing dynamics, and DCF valuation.">
+    <meta property="og:image" content="https://punch-k.github.io/Portfolio/AboutIMG/About1.jpeg">
+    <meta property="og:url" content="https://punch-k.github.io/Portfolio/simulators.html">
+    <link rel="canonical" href="https://punch-k.github.io/Portfolio/simulators.html">
 
-   <!-- ── SEO Meta ───────────────────────────────────────── -->
-  <meta name="description" content="STEM MBA Candidate at Michigan State University. Specialist in Supply Chain, Digital Strategy, and Operations Transformation. Fix the Ops. Scale the Business.">
-  <link rel="canonical" href="https://punch-k.github.io/Portfolio/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=4">
 
-   <!-- ── Open Graph / LinkedIn / Twitter ───────────────── -->
-  <meta property="og:title" content="Prapanch Kokkalemada — Strategy & Operations Transformation">
-  <meta property="og:description" content="MBA candidate at Broad College of Business specializing in Supply Chain, Digital Strategy, and Operations Transformation.">
-  <meta property="og:image" content="https://punch-k.github.io/Portfolio/AboutIMG/About1.jpeg">
-  <meta property="og:url" content="https://punch-k.github.io/Portfolio/">
-  <meta property="og:type" content="website">
-  
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Prapanch Kokkalemada — Strategy & Operations Transformation">
-  <meta name="twitter:description" content="Fix the Ops. Scale the Business. MBA candidate specializing in supply chain and operations strategy.">
-  <meta name="twitter:image" content="https://punch-k.github.io/Portfolio/AboutIMG/About1.jpeg">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KE4GVETS40"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-KE4GVETS40');
+    </script>
 
- 
-  <!-- ── Fonts: preconnect first, then stylesheet ───────── -->
- <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
-   <!-- ── Stylesheet ────────────────────────────────────── -->
-  <link rel="stylesheet" href="style.css?v=4">
-
-  <!-- ── Google Analytics ──────────────────────────────── -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KE4GVETS40"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-KE4GVETS40');
-  </script>
+    <style>
+        body { background: var(--bg); color: var(--fg); font-family: var(--sans); margin: 0; padding: 0; overflow-x: hidden; }
+        .sim-page-nav { position: fixed; top: 0; left: 0; width: 100%; padding: 1.5rem 4rem; display: flex; justify-content: space-between; align-items: center; background: rgba(10, 11, 13, 0.85); backdrop-filter: blur(12px); z-index: 100; border-bottom: 1px solid rgba(237,233,224,0.05); box-sizing: border-box; }
+        .sim-page-nav .nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; width: 100%; }
+        .sim-page-nav .nav-logo { font-family: 'Bebas Neue', sans-serif !important; font-weight: 700 !important; font-size: 1.5rem; letter-spacing: 0.1em !important; text-decoration: none; color: #fff; }
+        .sim-page-nav .nav-logo span { color: var(--gold); }
+        .sim-page-nav .nav-links { display: flex; gap: 2rem; }
+        .sim-page-nav .nav-links a { font-family: 'Bebas Neue', sans-serif; font-weight: 500; font-size: 0.85rem !important; text-decoration: none; color: inherit; transition: color 0.3s; }
+        .sim-page-nav .nav-links a:hover, .sim-page-nav .nav-links a.active { color: var(--gold); }
+        .sim-page-nav .nav-connect { border: 1px solid var(--gold); color: var(--gold); padding: 0.6rem 1.5rem; border-radius: 50px; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; transition: all 0.3s ease; }
+        .sim-page-nav .nav-connect:hover { background: var(--gold); color: var(--bg); }
+        @media (max-width: 900px) { .sim-page-nav .nav-links { display: none; } .sim-page-nav { padding: 1rem 1.5rem; } }
+        .sim-page-hero { padding: 10rem 2rem 3rem; max-width: 900px; margin: 0 auto; text-align: left; }
+        .sim-page-breadcrumbs { display: flex; gap: 0.5rem; color: rgba(237,233,224,0.6); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1.5rem; }
+        .sim-page-breadcrumbs a { color: var(--gold); text-decoration: none; }
+        .sim-page-hero h1 { font-family: var(--display); font-size: clamp(2.5rem, 6vw, 4.5rem); color: var(--fg); margin: 0 0 1rem; line-height: 1.05; }
+        .sim-page-hero h1 em { color: var(--gold); font-style: italic; }
+        .sim-page-hero p { font-size: 1.05rem; color: rgba(237,233,224,0.6); max-width: 700px; line-height: 1.7; font-weight: 300; }
+    </style>
 </head>
 <body>
 
-<!-- ── PRELOADER ──────────────────────────────────────── -->
-<div id="preloader" role="status" aria-label="Page loading">
-  <div class="card">
-    <div class="loader">
-      <p>Loading...</p>
-      <div class="words">
-        <span class="loader-word">portfolio.exe</span>
-        <span class="loader-word">sourcing.xls</span>
-        <span class="loader-word">query_met.sql</span>
-        <!-- Duplicated first word for seamless loop -->
-        <span class="loader-word">portfolio.exe</span>
-      </div>
-    </div>
-  </div>
-  
-  <div id="ltext" style="display: none;">00%</div>
+<!-- These elements aren't visually part of this page's design, but script.js
+     (shared across the whole site) expects them to exist — #vmodal in particular
+     is accessed unguarded at top-level, and its absence would throw and silently
+     break the simulator Run buttons below. Kept invisible/inert here on purpose. -->
+<div id="vmodal" role="dialog" aria-modal="true" aria-label="Video player">
+  <video id="vmodvid" controls></video>
+  <button id="vmodal-close" aria-label="Close video">✕ Close</button>
 </div>
-<!-- ── AMBIENT / CURSOR / SCROLL CHROME ──────────────── -->
 <div id="aura" aria-hidden="true"></div>
 <div id="sprog" aria-hidden="true"></div>
 <div id="cdot" aria-hidden="true"></div>
 <div id="cring" aria-hidden="true"></div>
 <div id="ctip" aria-hidden="true"></div>
 
-<!-- ── FLOATING CONNECT PILL ─────────────────────────── -->
-<div id="float-cta">
-  <a class="float-btn" href="simulators.html">
-    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
-      <circle cx="5" cy="5" r="4" stroke="currentColor" stroke-width="1"/>
-      <line x1="5" y1="2" x2="5" y2="8" stroke="currentColor" stroke-width="1"/>
-      <line x1="2" y1="5" x2="8" y2="5" stroke="currentColor" stroke-width="1"/>
-    </svg>
-    Efficiency models!
-  </a>
-</div>
-
-<!-- ── SECTION-DOT NAV ───────────────────────────────── -->
-<nav id="sdots" role="navigation" aria-label="Page section navigation">
-  <div class="sdot act" data-target="section-intro"           data-lbl="Home"       role="link" tabindex="0" aria-label="Jump to Home"></div>
-  <div class="sdot"     data-target="section-experience"      data-lbl="Experience" role="link" tabindex="0" aria-label="Jump to Experience"></div>
-  <div class="sdot"     data-target="section-cases"           data-lbl="Cases"      role="link" tabindex="0" aria-label="Jump to Cases"></div>
-  <div class="sdot"     data-target="section-brand-experience" data-lbl="Education" role="link" tabindex="0" aria-label="Jump to Education"></div>
-  <div class="sdot"     data-target="section-skills"          data-lbl="Skills"     role="link" tabindex="0" aria-label="Jump to Skills"></div>
-  <!-- Simulators moved to simulators.html — this dot only worked as a same-page scroll target,
-       so it's retired here (not deleted) rather than left pointing at nothing.
-  <div class="sdot"     data-target="gtm-simulators"          data-lbl="Simulator"  role="link" tabindex="0" aria-label="Jump to Simulator"></div>
-  -->
-  <div class="sdot"     data-target="section-get-in-touch"    data-lbl="Contact"    role="link" tabindex="0" aria-label="Jump to Contact"></div>
+<nav class="sim-page-nav">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">PRAPANCH <span>KOKKALEMADA</span></a>
+        <div class="nav-links">
+            <a href="index.html#section-intro">ABOUT</a>
+            <a href="index.html#section-cases">RESEARCH</a>
+            <a href="simulators.html" class="active">SIMULATORS</a>
+            <a href="index.html#section-skills">SKILLS</a>
+            <a href="about.html">GALLERY</a>
+        </div>
+        <a href="mailto:kokkalem@msu.edu" class="nav-connect">LET'S CONNECT ↗</a>
+    </div>
 </nav>
 
-<!-- ── VIDEO MODAL ───────────────────────────────────── -->
-<div id="vmodal" role="dialog" aria-modal="true" aria-label="Video player">
-  <video id="vmodvid" controls></video>
-  <button id="vmodal-close" aria-label="Close video">✕ Close</button>
+<div class="sim-page-hero">
+    <div class="sim-page-breadcrumbs"><a href="index.html">Portfolio</a> / Simulators</div>
+    <h1>Interactive <em>Operations Models.</em></h1>
+    <p>Three self-contained models built from real operations problems — run them with your own inputs. Looking for the full 12-week supply chain network game? <a href="scopsim.html" style="color:var(--gold);">Open SCOPSim ↗</a> (best on a laptop/desktop screen).</p>
 </div>
 
-<!-- ── MOBILE MENU ───────────────────────────────────── -->
-<nav id="mobile-menu" role="navigation" aria-label="Mobile menu">
-    <a href="#scrub-section">Home</a>
-    <a href="#section-cases">Cases</a>
-    <a href="#section-skills">Skills</a>
-    <a href="simulators.html">Simulator</a>
-    <a href="#section-get-in-touch">Contact</a>
-    <a href="#section-get-in-touch" class="mob-cta">Let's Connect ↗</a>
-</nav>
-
-<!-- ── MAIN NAV ──────────────────────────────────────── -->
-<nav id="mainnav" role="navigation" aria-label="Primary navigation">
-    <a class="nav-logo" href="#">PRAPANCH <span>KOKKALEMADA</span></a>
-    <ul class="nav-links">
-        <li><a href="#section-intro">About</a></li>
-        <li><a href="#section-cases">Research</a></li>
-        <li><a href="simulators.html">Simulator</a></li>
-        <li><a href="#section-skills">Skills</a></li>
-        <li><a href="about.html">Gallery</a></li>
-    </ul>
-    <a class="nav-cta" href="#section-get-in-touch"><span>Let's Connect ↗</span></a>
-    <button id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
-        <span></span><span></span><span></span>
-    </button>
-</nav>
-
-<!-- ── I. HERO ───────────────────────────────────────── -->
-<section id="section-intro" aria-label="Hero">
-  <div id="hero-bg" role="img" aria-label="MSU Spartan Stadium"></div>
-  <div class="hero-content">
-    <p class="hero-eyebrow" id="h-eyebrow">Supply Chain Management · Strategic Transformation · Enterprise Compliance </p>
-    <h1 class="hero-hl" id="h-hl">
-      <span class="line-mask">
-        <span class="word" style="transition-delay:.2s">Process</span>&nbsp;<span class="word" style="transition-delay:.4s">Design</span>
-      </span>
-      <em><span class="line-mask">
-        <span class="word" style="transition-delay:.5s">Value</span>&nbsp;<span class="word" style="transition-delay:.7s">Creation</span>
-      </span></em>
-    </h1>
-    <p class="hero-sub" id="h-sub">
-      Operations Research, Business Dev, Marketing, and Product Strategy,<Br> Prapanch (or Punch, 
-      to his friends) has delivered measurable strategy pipelines via process automation and standardized workstreams. 
-      </p>
-    <div class="hero-actions" id="h-act">
-      <a class="btn-pri mag" href="scopsim.html"><span>View My Work ↗</span></a>
-    </div>
-  </div>
-  <div class="scroll-hint" aria-hidden="true"><div class="scroll-line"></div> Scroll to Explore 🔻</div>
-</section>
-
-<!-- ── STAT STRIP ─────────────────────────────────────── -->
-<div class="stat-strip" role="list" aria-label="Key achievements">
-  <div class="stat-strip-item" role="listitem">
-    <div class="stat-strip-n"><span data-count="3" data-sfx="MM">0%</span></div>
-    <div class="stat-strip-l">Overhead Reduced<br><em style="font-family: 'EB Garamond', serif;">Enterprise Performance</em></div>
-  </div>
-  <div class="stat-strip-item" role="listitem">
-    <div class="stat-strip-n"><span data-count="60" data-sfx="%">0%</span></div>
-    <div class="stat-strip-l">Reporting time reduction<br><em style="font-family: 'EB Garamond', serif;">Risk Assessment</em></div>
-  </div>
-  <div class="stat-strip-item" role="listitem">
-    <div class="stat-strip-n"><span data-count="15" data-sfx="+">0%</span></div>
-    <div class="stat-strip-l">Assets Produced<br><em style="font-family: 'EB Garamond', serif;">Dashboards Building</em></div>
-  </div>
-  <div class="stat-strip-item" role="listitem">
-    <div class="stat-strip-n"><span data-count="90" data-sfx="Days">0%</span></div>
-    <div class="stat-strip-l">Time-to-Market<br><em style="font-family: 'EB Garamond', serif;">New Product Strategy</em></div>
-  </div>
-  <div class="stat-strip-item" role="listitem">
-    <div class="stat-strip-n"><span data-count="30" data-sfx="%">0%</span></div>
-    <div class="stat-strip-l">Media engagement growth<br><em style="font-family: 'EB Garamond', serif;">Targeted ads Project</em></div>
-  </div>
-</div>
-
-<!-- ── SCRUB INTRO ────────────────────────────────────── -->
-<div class="intro-copy" id="scrub-section">
-  <div class="scrub-layout">
-    <div class="scrub-text-col">
-      <h3 class="scrub-heading" data-a="up" style="font-family: var(--display); font-size: clamp(3rem, 6vw, 5rem); text-transform: uppercase; line-height: 1.1; margin-bottom: 1rem;color: #ffffff;">About</h3>
-     <p class="body-xl scrub-text" id="scrub-text" data-a="up" data-delay="100">
-       Translating insights into strategic and tactical opportunities for improvement. Working in cross-functional, 
-       fast-paced environments with a good understanding of lean and agile frameworks.
-     </p>
-        <br>
-    </div>
-
-    <!-- TRUCK GAME WRAPPER — styles in style.css under ─── TRUCK GAME ─── -->
-    <div id="gameWrap" data-a="up" data-delay="200" class="game-wrap">
-      <div id="header" class="game-header">
-        <div id="brand" class="game-brand">SUPPLY &amp; CO.</div>
-        <div id="scoreboard" class="game-scoreboard">
-          DISTANCE: <span id="scoreEl" class="game-score-val">0000m</span> &nbsp;
-          HI-SCORE: <span id="bonusEl" class="game-bonus-val" style="color: #888;">0000m</span>
-        </div>
-      </div>
-      <canvas id="canvas" width="860" height="360" class="game-canvas" aria-label="Logistics mini-game — click to start" style="max-width: 100%;"></canvas>
-      <div class="game-footer">
-        <div id="hint" class="game-hint">
-          CHROME DINO-INSPIRED GAME. CLICK THE TRUCK OR PRESS <b class="hint-key">SPACE</b> to jump.
-        </div>
-       <p class="game-subtitle" style="color: #ffffff; opacity: 1;">
-          <em>AI Fluency: Framework & Foundations <Br>Certificate Validation Information </em>
-          <a href="https://verify.skilljar.com/c/qnyuy78jb8jo" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
-            <img src="Theme Arrow.png" class="game-arrow" alt="Link to AI Certificate" style="cursor: pointer; transition: transform 0.3s ease;">
-          </a>
-        </p>
-      </div>
-    </div>
-    
-<!-- ── MARQUEE ────────────────────────────────────────── -->
-<div class="mq-wrap" aria-hidden="true">
-    <div class="mq-track">
-        <!-- Set 1 -->
-        <div class="mq-content">
-            <span class="mq-item">CHANGE MANAGEMENT</span><span class="mq-item hi">✺</span>
-            <span class="mq-item">DATA STORYTELLING</span><span class="mq-item hi">✺</span>
-            <span class="mq-item">MARKET INTELLIGENCE</span><span class="mq-item hi">✺</span>
-            <span class="mq-item">SALES &amp; OPS PLANNING</span><span class="mq-item hi">✺</span>
-            <span class="mq-item">GTM EXECUTION</span><span class="mq-item hi">✺</span>
-            <span class="mq-item">DEMAND FORECASTING</span><span class="mq-item hi">✺</span>
-        </div>
-        <!-- Set 2 (Exact Duplicate for the seamless loop) -->
-        <div class="mq-content">
-            <span class="mq-item">CHANGE MANAGEMENT</span><span class="mq-item hi">✺</span>
-            <span class="mq-item">DATA STORYTELLING</span><span class="mq-item hi">✺</span>
-            <span class="mq-item">MARKET INTELLIGENCE</span><span class="mq-item hi">✺</span>
-            <span class="mq-item">SALES &amp; OPS PLANNING</span><span class="mq-item hi">✺</span>
-            <span class="mq-item">GTM EXECUTION</span><span class="mq-item hi">✺</span>
-            <span class="mq-item">DEMAND FORECASTING</span><span class="mq-item hi">✺</span>
-        </div>
-    </div>
-</div>
-
- 
-<!-- ── III. CASE STUDIES ───────────────────────────────── -->
-<section id="section-cases" class="section-cases-shell" aria-labelledby="cases-heading">
-  <div class="exp-layout">
-    <div class="exp-header" data-a="up">
-      <div>
-        <p class="sec-num">II. Case Studies</p>
-        <h2 id="cases-heading">Real Problems.<br><em>Real Solutions</em></h2>
-      </div>
-      <p>Focused on Business Process Re-engineering, Supply Chain Analytics, and Strategic Sourcing.
-         Each card flips to reveal the full Problem–Action–Result breakdown.</p>
-    </div>
-
-    <!-- CARD DECK — styles in style.css under ─── TW CARD DECK ─── -->
-    <div class="tw-card-container" aria-label="Case study card deck">
-    <a href="./aldi-walmart-case.html" target="_blank" rel="noopener noreferrer" class="tw-card tw-rot-1" aria-label="Aldi vs. Walmart: Strategic Cost Leadership case study">
-        <img src="1.png" alt="Strategic Cost Leadership: Aldi Vs Walmart" loading="lazy">
-    </a>
-    <a href="./boeing-safety-crisis-case.html" target="_blank" rel="noopener noreferrer" class="tw-card tw-rot-2" aria-label="Boeing: Safety Crisis case study">
-        <img src="2.png" alt="Boeing: Safety Crisis — Manufacturing Crisis, Governance and Quality Control" loading="lazy">
-    </a>
-    <a href="./kfc-logistics-failure-case.html" target="_blank" rel="noopener noreferrer" class="tw-card tw-rot-3" aria-label="KFC's Logistics Failure case study">
-        <img src="3.png" alt="KFC's Logistics Failure — Supply Chain Fragility, Risks of 3PL Transitions" loading="lazy">
-    </a>
-    <a href="./zara-fast-fashion-case.html" target="_blank" rel="noopener noreferrer" class="tw-card tw-rot-4" aria-label="Can Zara Fast-Forward Fashion case study">
-        <img src="4.png" alt="Can Zara Fast-Forward Fashion — Vertical Integration, Responsive Manufacturing" loading="lazy">
-    </a>
-    <a href="./lg-wroclaw-nearshoring-case.html" target="_blank" rel="noopener noreferrer" class="tw-card tw-rot-5" aria-label="LG Wroclaw case study">
-        <img src="5.png" alt="LG Wroclaw — Regional Supply, Evaluating Strategic Nearshoring" loading="lazy">
-    </a>
-</div>
-
-    <div class="cases-disclaimer">
-      <p class="cases-disclaimer-text">
-        <strong>Disclaimer:</strong> The case studies presented above are for academic and demonstrative purposes.
-        Data and insights were synthesized from various public domain sources, industry reports, and hypothetical
-        business scenarios to illustrate strategic framework application.
-        All trademarks and brand assets belong to their respective owners.
-      </p>
-    </div>
-  </div>
-</section>
-
-    
 <!-- ── V. SIMULATORS ─────────────────────────────────── -->
-<!-- Moved to simulators.html (linked from the "Simulator" nav item above) so this page stays
-     lighter and the labs get their own dedicated, mobile-friendly page. Wrapped in a <template>
-     (inert, not rendered or executed) rather than deleted, in case this ever needs to move back —
-     a plain HTML comment can't be used here since the section contains its own inner comments,
-     which would close the wrapper early. -->
-<template id="gtm-simulators-disabled">
 <section id="gtm-simulators" aria-labelledby="sim-heading">
   <div class="sim-wrap">
     <div class="exp-layout">
@@ -747,172 +531,8 @@
     </div><!-- /tab-panel-dcf -->
 
   </div><!-- /sim-wrap -->
-</section>
-</template><!-- /gtm-simulators-disabled -->
+</section><!-- /gtm-simulators -->
 
-  <!-- ── VI. SKILLS & TOOLS ──────────────────────────────── -->
-<section id="section-skills" aria-labelledby="skills-heading">
-  <div class="exp-layout">
-    <div class="exp-header" data-a="up">
-      <div>
-        <p class="sec-num" data-a="up">III. Areas of Expertise &amp; Tools</p>
-        <h2 id="skills-heading">Core Skills.<em>Competencies</em></h2>
-      </div>
-      <p>Drag the cursor across the pit — the balls scatter. Gold-filled balls are core, ring-fill balls are supporting; the ring color always encodes the skill category below.</p>
-    </div>
-    <div id="skills-pit-wrap">
-      <canvas id="skills-canvas" aria-label="Interactive skills ball pit, grouped into four categories — hover to scatter, click a ball to reveal skill name"></canvas>
-      <ul class="skills-legend" aria-hidden="true">
-        <li><span class="skills-legend-dot" style="--dot:#c9a84c"></span>Strategy &amp; GTM</li>
-        <li><span class="skills-legend-dot" style="--dot:#4a90e2"></span>Analytics &amp; Tools</li>
-        <li><span class="skills-legend-dot" style="--dot:#3fb8af"></span>Operations &amp; Process</li>
-        <li><span class="skills-legend-dot" style="--dot:#9b7fd4"></span>Methods &amp; Certifications</li>
-      </ul>
-      <ul class="sr-only">
-        <li>Strategy &amp; GTM: GTM Execution, Pricing Strategy, Market Sizing, Competitive Analysis, Channel Economics, M&amp;A Deal Analysis, Content Strategy, Voice of Customer, Buyer Persona Mapping, Brand Positioning</li>
-        <li>Analytics &amp; Tools: Demand Forecasting, A/B Testing, Media Analytics, Tableau, Power BI, Data Storytelling, Cost Modeling, Financial Modeling, KPI Dashboard Design, Sensitivity Analysis</li>
-        <li>Operations &amp; Process: Inventory Optimization, JIT Delivery Models, RevOps, Vendor Development, Capacity Planning, Tariff Modeling, Process Mapping, Lean Operations, Risk Mitigation</li>
-        <li>Methods &amp; Certifications: HubSpot, Agile (Certified), Scrum (Certified), Waterfall PM</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ── VIII. CONTACT ──────────────────────────────────── -->
-<section id="section-get-in-touch" class="contact-section-shell" aria-labelledby="contact-heading">
-
-  <div class="connect-grid">
-
-    <div class="ct-content" data-a="up">
-      <div class="sec-eyebrow-row">
-        <span class="sec-eyebrow-label">Let's Connect</span>
-        <div class="sec-eyebrow-line"></div>
-      </div>
-
-      <h2 class="contact-display-heading" id="contact-heading">
-        Struggling with Execution?<br><em class="contact-display-em">Let's Connect!</em>
-      </h2>
-   
-      <!-- FAQ ACCORDION -->
-      <div class="faq-wrapper" style="border-top: 1px solid var(--line);">
-
-        <div class="faq-item" style="border-bottom: 1px solid var(--line);">
-          <button class="faq-btn" aria-expanded="false" aria-controls="faq-a1">
-            <span class="faq-question">Q1. How would you describe your past experiences?</span>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-content" id="faq-a1" role="region">
-            <p class="faq-answer"> As a Civil Engineer, I learned the complex, capital-intensive realities of the Utilities sector firsthand. 
-              But graduating into the unpredictability of 2020 demanded a pivot. I adapted by transitioning into marketing and 
-              Sales Operations within the automotive industry, shifting my focus from physical infrastructure to business strategy. 
-              Today, my STEM MBA serves as the bridge between those two worlds. I specialize in taking raw, 
-              "bottom-up" technical data and translating it into high-level, C-suite strategies that drive measurable margin growth.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-btn" aria-expanded="false" aria-controls="faq-a2">
-            <span class="faq-question">Q2. As an MBA candidate, why did you code this entire portfolio from scratch?</span>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-content" id="faq-a2" role="region">
-            <p class="faq-answer">It is about <strong>creative autonomy and systemic understanding</strong>. 
-              Before pivoting into the automotive industry, I operated at the intersection of design and digital commerce. Building 
-              digital assets for franchise businesses and launching Shopify ecosystems for entrepreneurs. Assisting with targeted ads, 
-              SEO Google Analytics, and customer journey mapping.  
-            <br><br>
-            Coding this portfolio from first principles was a fun project alongside my MBA. "freewill" the design to match my strategic 
-              brand while demonstrating a fundamental truth: to showcase my understanding of technical architecture behind marekting analytics
-              and simulation models. In a world of templates, I choose to build the sustained system.
-        </p>          
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-btn" aria-expanded="false" aria-controls="faq-a3">
-            <span class="faq-question">Q3. Could you elaborate on a situation where you took a significant calculated risk.</span>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-content" id="faq-a3" role="region">
-            <p class="faq-answer">I drove the shift toward a Just-In-Time (JIT) delivery model. In the Canadian automotive market, where 
-              seasonal demand is highly volatile and winter weather constantly threatens supply lines, stripping away safety stock is a 
-              massive commercial risk. To mitigate this, I restructured our vendor development strategy. By collaborating directly with 
-              upstream supplier R&D teams and running rigorous cost models, we executed the shift successfully. The result was a 10–15% 
-              reduction in stockouts, improving shelf availability during our peak seasons.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-btn" aria-expanded="false" aria-controls="faq-a4">
-            <span class="faq-question">Q4. What is your status Authorization?</span>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-content" id="faq-a4" role="region">
-            <p class="faq-answer">A. As a Canadian Citizen on OPT (EAD Approved); eligible for TN (Trade NAFTA) status under the USMCA.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="ct-visual" data-a="up" data-delay="200">
-
-      <div class="photo-portrait-frame">
-        <img src="sparty.jpg"
-             alt="Punch Kokkalemada with Sparty at Michigan State University"
-             class="contact-portrait-img"
-             loading="lazy"
-             data-hover-img>
-        <div class="portrait-location-badge">
-          <span class="portrait-location-eyebrow">Current Base</span>
-          <span class="portrait-location-city">Atlanta, GA</span>
-        </div>
-      </div>
-
-      <div class="ct-status-badge">
-        <div class="ct-status-dot-wrap" aria-hidden="true">
-          <span class="ct-status-dot"></span>
-          <span class="ct-status-pulse"></span>
-        </div>
-        <div class="ct-status-text">
-          <span class="ct-status-eyebrow">System Status: </span>
-          <span class="ct-status-label">Open to Full-Time · May 2026</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>   
-<!-- ── Quote ─── --> 
-<div class="agency-quote-section" id="agency-quote" aria-hidden="true" style="margin: 2rem auto; display: flex; justify-content: center; text-align: center; width: 100%;"> 
-    <div class="agency-quote-wrap" style="display: flex; flex-direction: column; align-items: center;"> 
-        <div class="aq-line"> 
-            <span class="aq-word">“Improvements</span>&nbsp; 
-            <span class="aq-word">made</span>&nbsp; 
-            <span class="aq-word">anywhere</span> 
-        </div> 
-        <div class="aq-line"> 
-            <span class="aq-word">besides</span>&nbsp; 
-            <span class="aq-word">the</span>&nbsp; 
-            <span class="aq-word"><em>bottleneck</em></span> 
-        </div> 
-        <div class="aq-line"> 
-            <span class="aq-word">are</span>&nbsp; 
-            <span class="aq-word">an</span>&nbsp; 
-            <span class="aq-word"><em>illusion.</em>"</span> 
-        </div> 
-        <div class="aq-author" style="display: flex; flex-direction: column; align-items: center; margin-top: 1rem;"> 
-            <div> 
-                <span class="aq-word">— Eliyahu</span>&nbsp; 
-                <span class="aq-word">M.</span>&nbsp; 
-                <span class="aq-word">Goldratt</span> 
-            </div> 
-            <div style="font-family: var(--sans); font-size: 0.75rem; letter-spacing: 0.2em; color: var(--muted); margin-top: 0.5rem;"> 
-                <span class="aq-word">Creator</span> <span class="aq-word">of</span> <span class="aq-word">the</span> <span class="aq-word">Theory</span> <span class="aq-word">of</span> <span class="aq-word">Constraints</span> 
-            </div> 
-        </div> 
-    </div> 
-</div>
 <!-- ── FOOTER ─────────────────────────────────────────── -->
 <footer class="site-footer" role="contentinfo">
   <div class="footer-left">
