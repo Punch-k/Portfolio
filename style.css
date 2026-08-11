@@ -264,6 +264,7 @@ body::after { content: ''; position: fixed; inset: -100%; width: 300%; height: 3
 .game-canvas { width: 100%; height: auto; background: var(--arcade-bg); border: 1px solid rgba(237,233,224,.1); border-bottom: none; border-radius: 8px 8px 0 0; cursor: pointer; display: block; }
 .game-footer { background: rgba(17,17,17,.8); border: 1px solid rgba(237,233,224,.1); border-radius: 0 0 8px 8px; padding: 1.2rem; display: flex; flex-direction: column; align-items: center; gap: 12px; box-shadow: inset 0 15px 15px -15px rgba(0,0,0,.5); text-align: center; }
 .game-hint { font-size: 11px; color: var(--arcade-fg); letter-spacing: 1px; font-family: 'Share Tech Mono', monospace; transition: opacity .5s; }
+.game-caption { font-size: 11px; color: rgba(136,136,136,.75); letter-spacing: .4px; font-family: 'Share Tech Mono', monospace; margin-top: .4rem; }
 .hint-key { color: var(--gold); }
 .game-subtitle { color: var(--gold); font-family: var(--sans); font-size: clamp(0.85rem, 2vw, 1rem); margin: 0; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 10px; }
 .game-arrow { height: 2.6em; }
@@ -802,3 +803,9 @@ body::after { content: ''; position: fixed; inset: -100%; width: 300%; height: 3
 @media (max-width: 600px) {
   .sim-link-banner { padding: 1.3rem 1.4rem; margin: 0 1rem 3rem; }
 }
+
+/* ─── CASE STUDY DISCLAIMER ────────────────────────────────
+   Sits directly above the Sources list on each case-study page — the homepage
+   card view already carries this caveat, but a reader landing on the page
+   itself (search, shared link, the simulator deep-links) never saw it before. */
+.case-disclaimer { font-size: .78rem; color: rgba(237,233,224,.4); line-height: 1.7; font-style: italic; margin-bottom: 1.2rem; }
