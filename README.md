@@ -67,7 +67,7 @@ Connect with me through the contact links on the live portfolio!
 
 Copyright (c) 2026 Prapanch Kokkalemada. All Rights Reserved.
 
-This repository, including the portfolio design, source code, and all embedded operational simulators (including LOGPSim, the Inventory Optimization Lab, the Queue & Staffing Dynamics Lab, and the DCF Valuation Simulator), is protected by copyright. You may not copy, clone, distribute, modify, reproduce, or use these files, either wholly or in part, without explicit written permission.
+This repository, including the portfolio design, source code, and all embedded operational simulators (including SCOPSim, the Inventory Optimization Lab, the Queue & Staffing Dynamics Lab, and the DCF Valuation Simulator), is protected by copyright. You may not copy, clone, distribute, modify, reproduce, or use these files, either wholly or in part, without explicit written permission.
 
 
 
