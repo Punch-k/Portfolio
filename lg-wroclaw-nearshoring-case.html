@@ -30,8 +30,8 @@
         /* .nav-logo styling now comes solely from the shared style.css rule -- no local
            override here, so this page can't silently drift from the rest of the site again. */
         .nav-links { display: flex; gap: 2rem; }
-        .nav-links a { font-family: 'Bebas Neue', sans-serif; font-weight: 500; font-size: 0.85rem !important; text-decoration: none; color: inherit; transition: color 0.3s; }
-        .nav-links a:hover { color: var(--gold); }
+        /* .nav-links a styling now comes solely from the shared style.css rule -- no
+           local override here, so this page can't silently drift from the rest of the site. */
         .nav-connect { border: 1px solid var(--gold); color: var(--gold); padding: 0.6rem 1.5rem; border-radius: 50px; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; transition: all 0.3s ease; }
         .nav-connect:hover { background: var(--gold); color: var(--bg); }
         @media (max-width: 900px) { .nav-links { display: none; } .case-nav { padding: 1rem 1.5rem; } #case-menu-toggle { display: block !important; } }

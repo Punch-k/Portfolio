@@ -147,10 +147,10 @@ body::after { content: ''; position: fixed; inset: -100%; width: 300%; height: 3
 #mainnav { position: fixed; top: 0; left: 0; right: 0; z-index: 500; padding: 1.65rem 3rem; display: flex; justify-content: space-between; align-items: center; transition: background .45s, backdrop-filter .45s, padding .4s; }
 #mainnav.stk { background: rgba(10,11,13,.88); backdrop-filter: blur(20px); padding: 1rem 3rem; border-bottom: 1px solid var(--line); }
 .nav-logo {
-  font-family: 'Bebas Neue', sans-serif !important;
-  font-weight: 700 !important;
-  font-size: 1.5rem;
-  letter-spacing: 0.1em !important;
+  font-family: 'Times New Roman', Times, serif !important;
+  font-weight: 600 !important;
+  font-size: 1.3rem;
+  letter-spacing: 0.05em !important;
   text-decoration: none;
   color: #fff;
   text-transform: uppercase;
