@@ -502,8 +502,14 @@ body::after { content: ''; position: fixed; inset: -100%; width: 300%; height: 3
 .sim-tab-btn.active { color: var(--fg); border-bottom-color: var(--gold); }
 .sim-tab-btn .stb-num { font-family: var(--display); font-size: .8rem; color: var(--gold); letter-spacing: .06em; opacity: .6; transition: opacity .25s; }
 .sim-tab-btn.active .stb-num { opacity: 1; }
-.sim-tab-panel { display: none; }
-.sim-tab-panel.active { display: block; }
+/* Labs are stacked on the page one after another rather than hidden behind tabs;
+   the offset accounts for the fixed nav so an anchor jump doesn't land the heading
+   underneath it. */
+.sim-tab-panel { display: block; scroll-margin-top: 110px; }
+.sim-tab-panel + .sim-tab-panel { margin-top: 6rem; padding-top: 5rem; border-top: 1px solid var(--line); }
+.sim-section-head { margin-bottom: 2.5rem; scroll-margin-top: 110px; }
+.sim-section-head h3 { font-family: var(--display); font-size: clamp(1.8rem, 3.4vw, 2.6rem); color: var(--fg); margin: 0; line-height: 1.15; }
+.sim-section-head p { font-size: .9rem; color: rgba(237,233,224,.5); max-width: 640px; margin-top: .6rem; line-height: 1.7; }
 
 /* Guide strip */
 .sim-guide { display: flex; align-items: center; gap: .75rem; margin-bottom: 2.8rem; flex-wrap: wrap; }
@@ -783,4 +789,16 @@ body::after { content: ''; position: fixed; inset: -100%; width: 300%; height: 3
 
 @media (prefers-reduced-motion: reduce) {
   * { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+}
+
+/* ─── CASE STUDY → SIMULATOR DEEP-LINK BANNER ─────────────── */
+/* Shared here (not duplicated per case-study file) so the link styling stays
+   consistent no matter which case study it's dropped into. */
+.sim-link-banner { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; max-width: 1000px; margin: 0 auto 4rem; padding: 1.6rem 2rem; border: 1px solid rgba(201,168,76,.3); border-radius: 8px; background: rgba(201,168,76,.05); }
+.sim-link-banner-text { font-size: .95rem; color: rgba(237,233,224,.8); }
+.sim-link-banner-text strong { color: var(--gold); font-weight: 500; }
+.sim-link-banner-btn { display: inline-flex; align-items: center; gap: .5rem; flex-shrink: 0; background: var(--gold); color: var(--bg); text-decoration: none; font-family: var(--sans); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; font-weight: 500; padding: .75rem 1.4rem; border-radius: 4px; transition: background .25s, transform .25s; }
+.sim-link-banner-btn:hover { background: var(--gold-hover); transform: scale(1.03); }
+@media (max-width: 600px) {
+  .sim-link-banner { padding: 1.3rem 1.4rem; margin: 0 1rem 3rem; }
 }

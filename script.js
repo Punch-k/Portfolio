@@ -636,11 +636,17 @@ document.querySelectorAll('.tile-flip').forEach(tile => {
     const FG_DIM = 'rgba(237,233,224,0.07)', FG = 'rgba(237,233,224,0.35)';
     let qCharts = {};
 
+    // Labs used to be shown one-at-a-time (tab-switched); they're now all stacked on the
+    // page at once, so this just jumps to + highlights the target section instead of
+    // toggling visibility. Kept the name/signature so the "carry results to next lab"
+    // buttons and the quick-nav pills didn't need to change how they call this.
     window.switchSimTab = function (tab) {
         ['inv', 'queue', 'dcf'].forEach(t => {
-            document.getElementById('tab-panel-' + t).classList.toggle('active', t === tab);
-            document.getElementById('tab-btn-' + t).classList.toggle('active', t === tab);
+            var btn = document.getElementById('tab-btn-' + t);
+            if (btn) btn.classList.toggle('active', t === tab);
         });
+        var panel = document.getElementById('tab-panel-' + tab);
+        if (panel) panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
     };
 
     function setQGuideStep(n) {

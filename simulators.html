@@ -91,10 +91,11 @@
           <h2 id="sim-heading">Data in Action.<br><em>Interactive Models</em></h2>
         </div>
         <p>Strategic growth relies on mastering the trade-offs between operational efficiency and financial performance.<br>
-           <br>Two interactive models built from real-world operations problems.
+           <br>Three interactive models built from real-world operations problems, stacked below one after another.
            <em>Inventory Lab</em> uses EOQ and safety stock logic applied at Ward Tires.
            <em>Queue &amp; Staffing Lab</em> models the staffing trade-off from Six Flags — finding the right number
-           of servers without over-spending on idle capacity.</p>
+           of servers without over-spending on idle capacity.
+           <em>Financial &amp; DCF Lab</em> builds a discounted cash flow valuation for a mid-market acquisition target.</p>
       </div>
     </div>
 
@@ -114,8 +115,14 @@
       </button>
     </div>
 
-    <!-- ══ TAB 1: INVENTORY ════════════════════════════ -->
+    <!-- ══ LAB 1: INVENTORY ════════════════════════════ -->
     <div class="sim-tab-panel active" id="tab-panel-inv" role="tabpanel" aria-labelledby="tab-btn-inv">
+
+      <div class="sim-section-head" id="inventory-lab">
+        <p class="sec-num">01. Inventory Lab</p>
+        <h3>EOQ &amp; Safety Stock</h3>
+        <p>Find the order quantity that minimises total inventory cost, and the safety stock needed to hit a target service level.</p>
+      </div>
 
       <div class="sim-scenario-card">
         <div class="ssc-eyebrow">Hypothetical Scenario</div>
@@ -319,8 +326,13 @@
       </div>
     </div><!-- /tab-panel-inv -->
 
-    <!-- ══ TAB 2: QUEUE & STAFFING ═════════════════════ -->
+    <!-- ══ LAB 2: QUEUE & STAFFING ═════════════════════ -->
     <div class="sim-tab-panel" id="tab-panel-queue" role="tabpanel" aria-labelledby="tab-btn-queue">
+      <div class="sim-section-head" id="queue-staffing-lab">
+        <p class="sec-num">02. Queue &amp; Staffing Lab</p>
+        <h3>Servers vs. Wait Time</h3>
+        <p>Simulate customer queueing to find the staffing level that balances wait time against the cost of idle labour.</p>
+      </div>
       <div class="sim-scenario-card">
         <div class="ssc-eyebrow">Hypothetical Scenario</div>
         <div class="ssc-body">
@@ -428,8 +440,13 @@
       </div>
     </div><!-- /tab-panel-queue -->
 
-    <!-- ══ TAB 3: DCF VALUATION ════════════════════════ -->
+    <!-- ══ LAB 3: DCF VALUATION ════════════════════════ -->
     <div class="sim-tab-panel" id="tab-panel-dcf" role="tabpanel" aria-labelledby="tab-btn-dcf">
+      <div class="sim-section-head" id="financial-dcf-lab">
+        <p class="sec-num">03. Financial &amp; DCF Lab</p>
+        <h3>Acquisition Valuation</h3>
+        <p>Build a discounted cash flow model — NPV, IRR, and a WACC/terminal-growth valuation range — for a mid-market acquisition target.</p>
+      </div>
       <div class="sim-scenario-card">
         <div class="ssc-eyebrow">Hypothetical Scenario</div>
         <div class="ssc-body">
