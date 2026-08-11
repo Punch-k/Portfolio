@@ -1144,7 +1144,7 @@ document.querySelectorAll('.tile-flip').forEach(tile => {
     var canvas = document.getElementById('skills-canvas');
     if (!canvas) return;
     var ctx = canvas.getContext('2d');
-    var GOLD = '#c9a84c', W = 0, H = 0, balls = [], mouseX = -9999, mouseY = -9999;
+    var GOLD = '#c9a84c', W = 0, H = 0, SCALE = 1, balls = [], mouseX = -9999, mouseY = -9999;
     var raf = null, started = false, tooltip = { text: '', x: 0, y: 0, alpha: 0, timer: null };
 
     // Category ring colors: 'strategy' reuses the page's own gold accent (most core
@@ -1186,7 +1186,11 @@ document.querySelectorAll('.tile-flip').forEach(tile => {
     function setup() {
         var dpr = window.devicePixelRatio || 1;
         W = canvas.parentElement.offsetWidth || window.innerWidth;
-        H = Math.max(300, Math.min(500, W * 0.36));
+        // Ball radii below are tuned for desktop widths; on narrow screens the same
+        // 32-ball count packs in far too dense, so shrink balls and give them more
+        // vertical room to breathe instead of clipping/overlapping at the canvas edge.
+        SCALE = W < 420 ? 0.62 : (W < 700 ? 0.82 : 1);
+        H = W < 420 ? Math.max(420, Math.min(560, W * 1.1)) : Math.max(300, Math.min(500, W * 0.36));
         canvas.style.width = W + 'px'; canvas.style.height = H + 'px';
         canvas.width = Math.floor(W * dpr); canvas.height = Math.floor(H * dpr);
         ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
@@ -1194,7 +1198,7 @@ document.querySelectorAll('.tile-flip').forEach(tile => {
 
     function mk() {
         balls = SKILLS.map(function (s) {
-            var r = s.c ? 36 : 24;
+            var r = (s.c ? 36 : 24) * SCALE;
             return {
                 t: s.t, lb: shortLabel(s.t), c: s.c, cat: s.cat, r: r,
                 x: r + Math.random() * Math.max(1, W - r * 2),
@@ -1279,11 +1283,11 @@ document.querySelectorAll('.tile-flip').forEach(tile => {
             ctx.lineWidth = 2.5; ctx.strokeStyle = ringColor; ctx.stroke();
             ctx.beginPath(); ctx.arc(b.x - b.r * .28, b.y - b.r * .3, b.r * .38, 0, Math.PI * 2);
             ctx.fillStyle = 'rgba(255,255,255,0.11)'; ctx.fill();
-            drawWrappedText(ctx, b.t, b.x, b.y, b.r * 1.55, '400', 10, '#0a0b0d');
+            drawWrappedText(ctx, b.t, b.x, b.y, b.r * 1.55, '400', Math.max(8, 10 * SCALE), '#0a0b0d');
         } else {
             ctx.fillStyle = 'rgba(10,11,13,0.97)'; ctx.fill();
             ctx.lineWidth = 2; ctx.strokeStyle = ringColor; ctx.stroke();
-            drawWrappedText(ctx, b.lb, b.x, b.y, b.r * 1.7, '600', 10, ringColor);
+            drawWrappedText(ctx, b.lb, b.x, b.y, b.r * 1.7, '600', Math.max(8, 10 * SCALE), ringColor);
         }
     }
 

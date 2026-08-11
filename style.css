@@ -750,6 +750,11 @@ body::after { content: ''; position: fixed; inset: -100%; width: 300%; height: 3
   footer { padding: 1.8rem 1.4rem; flex-direction: column; align-items: flex-start; gap: 1.5rem; }
   .case-flip { min-width: calc(85vw); }
   .case-flip:hover .case-inner { transform: none; }
+
+  /* The floating CTA is fixed at bottom-right and overlaps footer contact links
+     and other content on narrow screens; the mobile menu already has a Simulator
+     link, so just hide the redundant floating shortcut instead of repositioning it. */
+  #float-cta { display: none; }
 }
 
 @media (max-width: 600px) {

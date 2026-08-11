@@ -39,7 +39,7 @@
         .nav-links a:hover { color: var(--gold); }
         .nav-connect { border: 1px solid var(--gold); color: var(--gold); padding: 0.6rem 1.5rem; border-radius: 50px; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; transition: all 0.3s ease; }
         .nav-connect:hover { background: var(--gold); color: var(--bg); }
-        @media (max-width: 900px) { .nav-links { display: none; } .case-nav { padding: 1rem 1.5rem; } }
+        @media (max-width: 900px) { .nav-links { display: none; } .case-nav { padding: 1rem 1.5rem; } #case-menu-toggle { display: block !important; } }
 
         /* ── HERO & BREADCRUMBS ── */
         .hero { height: 75vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; padding: 0 2rem; border-bottom: 1px solid var(--line); }
@@ -71,7 +71,7 @@
         @media (max-width: 900px) { .case-layout { grid-template-columns: 1fr; } .case-sidebar { display: none; } }
 
         /* ── CONTENT STYLES ── */
-        .article-body h2 { font-family: var(--display); font-size: 2.8rem; color: var(--fg); margin-top: 0; margin-bottom: 1.5rem; line-height: 1.1; position: relative; padding-top: 4rem; }
+        .article-body h2 { font-family: var(--display); font-size: clamp(1.9rem, 7vw, 2.8rem); color: var(--fg); margin-top: 0; margin-bottom: 1.5rem; line-height: 1.15; position: relative; padding-top: 4rem; }
         .article-body p { font-size: 1.15rem; color: rgba(237,233,224,0.8); line-height: 1.8; margin-bottom: 2rem; font-weight: 300; }
         .gsap-reveal { opacity: 0; transform: translateY(40px); }
 
@@ -102,6 +102,16 @@
         .next-project h2 { font-family: var(--display); font-size: clamp(3rem, 5vw, 5rem); color: var(--gold); margin: 0; transition: transform 0.4s; }
         .next-project:hover h2 { transform: translateY(-10px); }
 
+        @media (max-width: 600px) {
+            .case-layout { padding: 0 1.2rem 4rem; }
+            .exec-summary { padding: 1.5rem; margin: -2rem 1rem 3rem; }
+            .comp-tabs { flex-wrap: wrap; gap: .5rem; }
+            .comp-tab { font-size: 1.1rem; padding: .7rem 1.2rem; }
+            .stat-num { font-size: clamp(2.2rem, 12vw, 4rem); }
+            .pull-quote { padding: 1.8rem 1.2rem; }
+            .pull-quote p { font-size: 1.4rem; }
+            .hero { padding: 0 1.2rem; }
+        }
         @media print {
             body { background: white; color: black; }
             .case-nav, #reading-progress, .case-sidebar, .next-project, #section-get-in-touch, .site-footer, #back-to-top { display: none !important; }
