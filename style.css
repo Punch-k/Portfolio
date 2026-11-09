@@ -444,6 +444,26 @@ body::after { content: ''; position: fixed; inset: -100%; width: 300%; height: 3
 .tw-ct-cta { font-size: .65rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
 
 .cases-disclaimer { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 2rem 3rem; text-align: center; }
+
+/* Dashboards and Code table under the case study deck */
+.dash-table-wrap { max-width: 1100px; margin: 0 auto 3rem; padding: 0 2rem; }
+.dash-table-wrap .sec-num { margin-bottom: 1.2rem; }
+.dash-table { width: 100%; border-collapse: collapse; font-size: .85rem; }
+.dash-table th { text-align: left; font-size: .58rem; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); font-weight: 500; padding: .7rem .8rem; border-bottom: 1px solid var(--line); }
+.dash-table td { padding: 1rem .8rem; border-bottom: 1px solid var(--line); color: rgba(237,233,224,.65); vertical-align: top; line-height: 1.6; }
+.dash-table td:first-child a { font-family: var(--display); font-size: 1.15rem; color: var(--fg); text-decoration: none; }
+.dash-table td:first-child a:hover { color: var(--gold); }
+.dash-table td a { color: var(--gold); text-decoration: none; white-space: nowrap; }
+.dash-table td a:hover { text-decoration: underline; }
+.dash-table td[data-label="Tools"] { font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+@media (max-width: 900px) {
+  .dash-table-wrap { padding: 0; }
+  .dash-table thead { display: none; }
+  .dash-table, .dash-table tbody, .dash-table tr, .dash-table td { display: block; width: 100%; }
+  .dash-table tr { border-bottom: 1px solid var(--line); padding: 1rem 0; }
+  .dash-table td { border: none; padding: .25rem 0; }
+  .dash-table td[data-label="Dashboard"], .dash-table td[data-label="Code"] { display: inline-block; width: auto; margin-right: 1.2rem; }
+}
 .cases-disclaimer-text { font-size: .7rem; color: rgba(237,233,224,.35); line-height: 1.6; font-family: var(--sans); letter-spacing: .02em; }
 
 /* Flip cards */
