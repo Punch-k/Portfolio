@@ -432,6 +432,16 @@ body::after { content: ''; position: fixed; inset: -100%; width: 300%; height: 3
 .tw-rot-3 { transform: rotate(8deg); }
 .tw-rot-4 { transform: rotate(-5deg); }
 .tw-rot-5 { transform: rotate(3deg); }
+/* 8-card deck: same fan, overlap tightened so all cards fit the screen width (desktop only; mobile scrolls) */
+.tw-deck-8 .tw-card + .tw-card { margin-left: calc((100vw - 4rem - clamp(260px,22vw,420px)) / 7 - clamp(260px,22vw,420px)); }
+/* Minimal text tile for the new case studies. Same size, border and radius as the image cards. */
+.tw-card-text { display: flex; flex-direction: column; justify-content: flex-end; gap: .7rem; padding: 1.6rem 1.4rem; background: linear-gradient(180deg, var(--bg2) 0%, #14130f 100%); color: var(--fg); }
+.tw-ct-eyebrow { font-size: .58rem; letter-spacing: .22em; text-transform: uppercase; color: var(--gold); margin-bottom: auto; }
+.tw-ct-title { font-family: var(--display); font-size: clamp(1.6rem, 2.2vw, 2.3rem); line-height: 1.05; color: var(--fg); }
+.tw-ct-title em { display: block; color: var(--gold); font-style: italic; }
+.tw-ct-sub { font-size: .8rem; line-height: 1.55; color: rgba(237,233,224,.6); }
+.tw-ct-tools { font-size: .6rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); border-top: 1px solid var(--line); padding-top: .7rem; }
+.tw-ct-cta { font-size: .65rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
 
 .cases-disclaimer { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 2rem 3rem; text-align: center; }
 .cases-disclaimer-text { font-size: .7rem; color: rgba(237,233,224,.35); line-height: 1.6; font-family: var(--sans); letter-spacing: .02em; }
@@ -740,18 +750,30 @@ body::after { content: ''; position: fixed; inset: -100%; width: 300%; height: 3
   .exp-card-grid { grid-template-columns: 1fr; gap: 1.2rem; }
   .sim-body { grid-template-columns: 1fr; }
   .stat-strip-item { padding: 2rem 1.5rem; } /* Reduces the overall height and width spacing inside each stat block */
+  /* 2 x 2 grid on phones so the four stats never push the page wider than the screen */
+  .stat-strip { flex-wrap: wrap; }
+  .stat-strip-item { flex: 1 1 50%; min-width: 0; border-bottom: 1px solid var(--line); }
+  .stat-strip-item:nth-child(2n) { border-right: none; }
     .stat-strip-l { text-transform: lowercase; } /* Converts the primary descriptive text lines to small case letters */
     .stat-strip-l em { text-transform: capitalize; } /* Preserves proper capitalization for the italicized project names below it */
+  /* #section-cases is a flex item; without min-width: 0 it grows to the width of the card row */
+  #section-cases { min-width: 0; }
   /* Horizontal scroll for the card deck to fix mobile overflow */
   .tw-card-container {
       justify-content: flex-start;
       overflow-x: auto;
       padding: 2rem 1rem 4rem;
-      margin-left: 0;
-      width: 100vw;
+      /* bleed into the section padding instead of adding 100vw on top of it (that made the page wider than the phone) */
+      /* run edge to edge on phones: cancel the intro-copy padding (1.4rem) and the section padding */
+      width: auto;
+      margin-left: calc(-1 * (1.4rem + clamp(1.2rem, 3vw, 2rem)));
+      margin-right: calc(-1 * (1.4rem + clamp(1.2rem, 3vw, 2rem)));
+      padding-left: 1.4rem; padding-right: 1.4rem;
+      scroll-padding: 0 1.4rem;
+      scrollbar-width: none;
       scroll-snap-type: x mandatory;
   }
-  .tw-card + .tw-card { margin-left: 1rem; }
+  .tw-card + .tw-card, .tw-deck-8 .tw-card + .tw-card { margin-left: 1rem; }
   .tw-card { scroll-snap-align: center; }
 
   footer { padding: 1.8rem 1.4rem; flex-direction: column; align-items: flex-start; gap: 1.5rem; }
