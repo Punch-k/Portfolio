@@ -1,0 +1,1821 @@
+month,naics,category,metric,value,unit,fred_series,ratio_level
+2015-01,4413,"Auto parts, accessory and tire stores",sales_nsa,6464,USD millions,MRTSSM4413USN,
+2015-02,4413,"Auto parts, accessory and tire stores",sales_nsa,6566,USD millions,MRTSSM4413USN,
+2015-03,4413,"Auto parts, accessory and tire stores",sales_nsa,7526,USD millions,MRTSSM4413USN,
+2015-04,4413,"Auto parts, accessory and tire stores",sales_nsa,7503,USD millions,MRTSSM4413USN,
+2015-05,4413,"Auto parts, accessory and tire stores",sales_nsa,7470,USD millions,MRTSSM4413USN,
+2015-06,4413,"Auto parts, accessory and tire stores",sales_nsa,7862,USD millions,MRTSSM4413USN,
+2015-07,4413,"Auto parts, accessory and tire stores",sales_nsa,7989,USD millions,MRTSSM4413USN,
+2015-08,4413,"Auto parts, accessory and tire stores",sales_nsa,7645,USD millions,MRTSSM4413USN,
+2015-09,4413,"Auto parts, accessory and tire stores",sales_nsa,7403,USD millions,MRTSSM4413USN,
+2015-10,4413,"Auto parts, accessory and tire stores",sales_nsa,7743,USD millions,MRTSSM4413USN,
+2015-11,4413,"Auto parts, accessory and tire stores",sales_nsa,7149,USD millions,MRTSSM4413USN,
+2015-12,4413,"Auto parts, accessory and tire stores",sales_nsa,7070,USD millions,MRTSSM4413USN,
+2016-01,4413,"Auto parts, accessory and tire stores",sales_nsa,6735,USD millions,MRTSSM4413USN,
+2016-02,4413,"Auto parts, accessory and tire stores",sales_nsa,7106,USD millions,MRTSSM4413USN,
+2016-03,4413,"Auto parts, accessory and tire stores",sales_nsa,7957,USD millions,MRTSSM4413USN,
+2016-04,4413,"Auto parts, accessory and tire stores",sales_nsa,7464,USD millions,MRTSSM4413USN,
+2016-05,4413,"Auto parts, accessory and tire stores",sales_nsa,7578,USD millions,MRTSSM4413USN,
+2016-06,4413,"Auto parts, accessory and tire stores",sales_nsa,7943,USD millions,MRTSSM4413USN,
+2016-07,4413,"Auto parts, accessory and tire stores",sales_nsa,7538,USD millions,MRTSSM4413USN,
+2016-08,4413,"Auto parts, accessory and tire stores",sales_nsa,7993,USD millions,MRTSSM4413USN,
+2016-09,4413,"Auto parts, accessory and tire stores",sales_nsa,7486,USD millions,MRTSSM4413USN,
+2016-10,4413,"Auto parts, accessory and tire stores",sales_nsa,7584,USD millions,MRTSSM4413USN,
+2016-11,4413,"Auto parts, accessory and tire stores",sales_nsa,7268,USD millions,MRTSSM4413USN,
+2016-12,4413,"Auto parts, accessory and tire stores",sales_nsa,7466,USD millions,MRTSSM4413USN,
+2017-01,4413,"Auto parts, accessory and tire stores",sales_nsa,6828,USD millions,MRTSSM4413USN,
+2017-02,4413,"Auto parts, accessory and tire stores",sales_nsa,6744,USD millions,MRTSSM4413USN,
+2017-03,4413,"Auto parts, accessory and tire stores",sales_nsa,8136,USD millions,MRTSSM4413USN,
+2017-04,4413,"Auto parts, accessory and tire stores",sales_nsa,7472,USD millions,MRTSSM4413USN,
+2017-05,4413,"Auto parts, accessory and tire stores",sales_nsa,7917,USD millions,MRTSSM4413USN,
+2017-06,4413,"Auto parts, accessory and tire stores",sales_nsa,7932,USD millions,MRTSSM4413USN,
+2017-07,4413,"Auto parts, accessory and tire stores",sales_nsa,7690,USD millions,MRTSSM4413USN,
+2017-08,4413,"Auto parts, accessory and tire stores",sales_nsa,8048,USD millions,MRTSSM4413USN,
+2017-09,4413,"Auto parts, accessory and tire stores",sales_nsa,7613,USD millions,MRTSSM4413USN,
+2017-10,4413,"Auto parts, accessory and tire stores",sales_nsa,7738,USD millions,MRTSSM4413USN,
+2017-11,4413,"Auto parts, accessory and tire stores",sales_nsa,7562,USD millions,MRTSSM4413USN,
+2017-12,4413,"Auto parts, accessory and tire stores",sales_nsa,7211,USD millions,MRTSSM4413USN,
+2018-01,4413,"Auto parts, accessory and tire stores",sales_nsa,7043,USD millions,MRTSSM4413USN,
+2018-02,4413,"Auto parts, accessory and tire stores",sales_nsa,6842,USD millions,MRTSSM4413USN,
+2018-03,4413,"Auto parts, accessory and tire stores",sales_nsa,8089,USD millions,MRTSSM4413USN,
+2018-04,4413,"Auto parts, accessory and tire stores",sales_nsa,7553,USD millions,MRTSSM4413USN,
+2018-05,4413,"Auto parts, accessory and tire stores",sales_nsa,8172,USD millions,MRTSSM4413USN,
+2018-06,4413,"Auto parts, accessory and tire stores",sales_nsa,7988,USD millions,MRTSSM4413USN,
+2018-07,4413,"Auto parts, accessory and tire stores",sales_nsa,7964,USD millions,MRTSSM4413USN,
+2018-08,4413,"Auto parts, accessory and tire stores",sales_nsa,8297,USD millions,MRTSSM4413USN,
+2018-09,4413,"Auto parts, accessory and tire stores",sales_nsa,7568,USD millions,MRTSSM4413USN,
+2018-10,4413,"Auto parts, accessory and tire stores",sales_nsa,8201,USD millions,MRTSSM4413USN,
+2018-11,4413,"Auto parts, accessory and tire stores",sales_nsa,7677,USD millions,MRTSSM4413USN,
+2018-12,4413,"Auto parts, accessory and tire stores",sales_nsa,7001,USD millions,MRTSSM4413USN,
+2019-01,4413,"Auto parts, accessory and tire stores",sales_nsa,7085,USD millions,MRTSSM4413USN,
+2019-02,4413,"Auto parts, accessory and tire stores",sales_nsa,6994,USD millions,MRTSSM4413USN,
+2019-03,4413,"Auto parts, accessory and tire stores",sales_nsa,8205,USD millions,MRTSSM4413USN,
+2019-04,4413,"Auto parts, accessory and tire stores",sales_nsa,8075,USD millions,MRTSSM4413USN,
+2019-05,4413,"Auto parts, accessory and tire stores",sales_nsa,8316,USD millions,MRTSSM4413USN,
+2019-06,4413,"Auto parts, accessory and tire stores",sales_nsa,7951,USD millions,MRTSSM4413USN,
+2019-07,4413,"Auto parts, accessory and tire stores",sales_nsa,8231,USD millions,MRTSSM4413USN,
+2019-08,4413,"Auto parts, accessory and tire stores",sales_nsa,8445,USD millions,MRTSSM4413USN,
+2019-09,4413,"Auto parts, accessory and tire stores",sales_nsa,7658,USD millions,MRTSSM4413USN,
+2019-10,4413,"Auto parts, accessory and tire stores",sales_nsa,8374,USD millions,MRTSSM4413USN,
+2019-11,4413,"Auto parts, accessory and tire stores",sales_nsa,7694,USD millions,MRTSSM4413USN,
+2019-12,4413,"Auto parts, accessory and tire stores",sales_nsa,7194,USD millions,MRTSSM4413USN,
+2020-01,4413,"Auto parts, accessory and tire stores",sales_nsa,7308,USD millions,MRTSSM4413USN,
+2020-02,4413,"Auto parts, accessory and tire stores",sales_nsa,7045,USD millions,MRTSSM4413USN,
+2020-03,4413,"Auto parts, accessory and tire stores",sales_nsa,7226,USD millions,MRTSSM4413USN,
+2020-04,4413,"Auto parts, accessory and tire stores",sales_nsa,6735,USD millions,MRTSSM4413USN,
+2020-05,4413,"Auto parts, accessory and tire stores",sales_nsa,8227,USD millions,MRTSSM4413USN,
+2020-06,4413,"Auto parts, accessory and tire stores",sales_nsa,8995,USD millions,MRTSSM4413USN,
+2020-07,4413,"Auto parts, accessory and tire stores",sales_nsa,8994,USD millions,MRTSSM4413USN,
+2020-08,4413,"Auto parts, accessory and tire stores",sales_nsa,8719,USD millions,MRTSSM4413USN,
+2020-09,4413,"Auto parts, accessory and tire stores",sales_nsa,8396,USD millions,MRTSSM4413USN,
+2020-10,4413,"Auto parts, accessory and tire stores",sales_nsa,8496,USD millions,MRTSSM4413USN,
+2020-11,4413,"Auto parts, accessory and tire stores",sales_nsa,7654,USD millions,MRTSSM4413USN,
+2020-12,4413,"Auto parts, accessory and tire stores",sales_nsa,7707,USD millions,MRTSSM4413USN,
+2021-01,4413,"Auto parts, accessory and tire stores",sales_nsa,7584,USD millions,MRTSSM4413USN,
+2021-02,4413,"Auto parts, accessory and tire stores",sales_nsa,7307,USD millions,MRTSSM4413USN,
+2021-03,4413,"Auto parts, accessory and tire stores",sales_nsa,10152,USD millions,MRTSSM4413USN,
+2021-04,4413,"Auto parts, accessory and tire stores",sales_nsa,9744,USD millions,MRTSSM4413USN,
+2021-05,4413,"Auto parts, accessory and tire stores",sales_nsa,9227,USD millions,MRTSSM4413USN,
+2021-06,4413,"Auto parts, accessory and tire stores",sales_nsa,9536,USD millions,MRTSSM4413USN,
+2021-07,4413,"Auto parts, accessory and tire stores",sales_nsa,9561,USD millions,MRTSSM4413USN,
+2021-08,4413,"Auto parts, accessory and tire stores",sales_nsa,9676,USD millions,MRTSSM4413USN,
+2021-09,4413,"Auto parts, accessory and tire stores",sales_nsa,9299,USD millions,MRTSSM4413USN,
+2021-10,4413,"Auto parts, accessory and tire stores",sales_nsa,9693,USD millions,MRTSSM4413USN,
+2021-11,4413,"Auto parts, accessory and tire stores",sales_nsa,9281,USD millions,MRTSSM4413USN,
+2021-12,4413,"Auto parts, accessory and tire stores",sales_nsa,9418,USD millions,MRTSSM4413USN,
+2022-01,4413,"Auto parts, accessory and tire stores",sales_nsa,8820,USD millions,MRTSSM4413USN,
+2022-02,4413,"Auto parts, accessory and tire stores",sales_nsa,8624,USD millions,MRTSSM4413USN,
+2022-03,4413,"Auto parts, accessory and tire stores",sales_nsa,10611,USD millions,MRTSSM4413USN,
+2022-04,4413,"Auto parts, accessory and tire stores",sales_nsa,10109,USD millions,MRTSSM4413USN,
+2022-05,4413,"Auto parts, accessory and tire stores",sales_nsa,10372,USD millions,MRTSSM4413USN,
+2022-06,4413,"Auto parts, accessory and tire stores",sales_nsa,10477,USD millions,MRTSSM4413USN,
+2022-07,4413,"Auto parts, accessory and tire stores",sales_nsa,10085,USD millions,MRTSSM4413USN,
+2022-08,4413,"Auto parts, accessory and tire stores",sales_nsa,10899,USD millions,MRTSSM4413USN,
+2022-09,4413,"Auto parts, accessory and tire stores",sales_nsa,10523,USD millions,MRTSSM4413USN,
+2022-10,4413,"Auto parts, accessory and tire stores",sales_nsa,10472,USD millions,MRTSSM4413USN,
+2022-11,4413,"Auto parts, accessory and tire stores",sales_nsa,10056,USD millions,MRTSSM4413USN,
+2022-12,4413,"Auto parts, accessory and tire stores",sales_nsa,9868,USD millions,MRTSSM4413USN,
+2023-01,4413,"Auto parts, accessory and tire stores",sales_nsa,9538,USD millions,MRTSSM4413USN,
+2023-02,4413,"Auto parts, accessory and tire stores",sales_nsa,9369,USD millions,MRTSSM4413USN,
+2023-03,4413,"Auto parts, accessory and tire stores",sales_nsa,10922,USD millions,MRTSSM4413USN,
+2023-04,4413,"Auto parts, accessory and tire stores",sales_nsa,10548,USD millions,MRTSSM4413USN,
+2023-05,4413,"Auto parts, accessory and tire stores",sales_nsa,11289,USD millions,MRTSSM4413USN,
+2023-06,4413,"Auto parts, accessory and tire stores",sales_nsa,11461,USD millions,MRTSSM4413USN,
+2023-07,4413,"Auto parts, accessory and tire stores",sales_nsa,10931,USD millions,MRTSSM4413USN,
+2023-08,4413,"Auto parts, accessory and tire stores",sales_nsa,11800,USD millions,MRTSSM4413USN,
+2023-09,4413,"Auto parts, accessory and tire stores",sales_nsa,10973,USD millions,MRTSSM4413USN,
+2023-10,4413,"Auto parts, accessory and tire stores",sales_nsa,11455,USD millions,MRTSSM4413USN,
+2023-11,4413,"Auto parts, accessory and tire stores",sales_nsa,10787,USD millions,MRTSSM4413USN,
+2023-12,4413,"Auto parts, accessory and tire stores",sales_nsa,10107,USD millions,MRTSSM4413USN,
+2024-01,4413,"Auto parts, accessory and tire stores",sales_nsa,10195,USD millions,MRTSSM4413USN,
+2024-02,4413,"Auto parts, accessory and tire stores",sales_nsa,9975,USD millions,MRTSSM4413USN,
+2024-03,4413,"Auto parts, accessory and tire stores",sales_nsa,11184,USD millions,MRTSSM4413USN,
+2024-04,4413,"Auto parts, accessory and tire stores",sales_nsa,11333,USD millions,MRTSSM4413USN,
+2024-05,4413,"Auto parts, accessory and tire stores",sales_nsa,11595,USD millions,MRTSSM4413USN,
+2024-06,4413,"Auto parts, accessory and tire stores",sales_nsa,11183,USD millions,MRTSSM4413USN,
+2024-07,4413,"Auto parts, accessory and tire stores",sales_nsa,11487,USD millions,MRTSSM4413USN,
+2024-08,4413,"Auto parts, accessory and tire stores",sales_nsa,11802,USD millions,MRTSSM4413USN,
+2024-09,4413,"Auto parts, accessory and tire stores",sales_nsa,10811,USD millions,MRTSSM4413USN,
+2024-10,4413,"Auto parts, accessory and tire stores",sales_nsa,11557,USD millions,MRTSSM4413USN,
+2024-11,4413,"Auto parts, accessory and tire stores",sales_nsa,10730,USD millions,MRTSSM4413USN,
+2024-12,4413,"Auto parts, accessory and tire stores",sales_nsa,10399,USD millions,MRTSSM4413USN,
+2025-01,4413,"Auto parts, accessory and tire stores",sales_nsa,10243,USD millions,MRTSSM4413USN,
+2025-02,4413,"Auto parts, accessory and tire stores",sales_nsa,9842,USD millions,MRTSSM4413USN,
+2025-03,4413,"Auto parts, accessory and tire stores",sales_nsa,11525,USD millions,MRTSSM4413USN,
+2025-04,4413,"Auto parts, accessory and tire stores",sales_nsa,11567,USD millions,MRTSSM4413USN,
+2025-05,4413,"Auto parts, accessory and tire stores",sales_nsa,11860,USD millions,MRTSSM4413USN,
+2025-06,4413,"Auto parts, accessory and tire stores",sales_nsa,11381,USD millions,MRTSSM4413USN,
+2025-07,4413,"Auto parts, accessory and tire stores",sales_nsa,11573,USD millions,MRTSSM4413USN,
+2025-08,4413,"Auto parts, accessory and tire stores",sales_nsa,11680,USD millions,MRTSSM4413USN,
+2025-09,4413,"Auto parts, accessory and tire stores",sales_nsa,11316,USD millions,MRTSSM4413USN,
+2025-10,4413,"Auto parts, accessory and tire stores",sales_nsa,11635,USD millions,MRTSSM4413USN,
+2025-11,4413,"Auto parts, accessory and tire stores",sales_nsa,10738,USD millions,MRTSSM4413USN,
+2025-12,4413,"Auto parts, accessory and tire stores",sales_nsa,10976,USD millions,MRTSSM4413USN,
+2026-01,4413,"Auto parts, accessory and tire stores",sales_nsa,10433,USD millions,MRTSSM4413USN,
+2026-02,4413,"Auto parts, accessory and tire stores",sales_nsa,10207,USD millions,MRTSSM4413USN,
+2026-03,4413,"Auto parts, accessory and tire stores",sales_nsa,11868,USD millions,MRTSSM4413USN,
+2026-04,4413,"Auto parts, accessory and tire stores",sales_nsa,11913,USD millions,MRTSSM4413USN,
+2026-05,4413,"Auto parts, accessory and tire stores",sales_nsa,11731,USD millions,MRTSSM4413USN,
+2026-06,4413,"Auto parts, accessory and tire stores",sales_nsa,12262,USD millions,MRTSSM4413USN,
+2026-07,4413,"Auto parts, accessory and tire stores",sales_nsa,12325,USD millions,MRTSSM4413USN,
+2026-08,4413,"Auto parts, accessory and tire stores",sales_nsa,12437,USD millions,MRTSSM4413USN,
+2015-01,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.09,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2015-02,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.13,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2015-03,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.04,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2015-04,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.05,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2015-05,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.04,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2015-06,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.06,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2015-07,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.06,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2015-08,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.06,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2015-09,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.09,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2015-10,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.12,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2015-11,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.1,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2015-12,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.12,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2016-01,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.15,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2016-02,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.12,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2016-03,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.21,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2016-04,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.21,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2016-05,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.21,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2016-06,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.21,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2016-07,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.19,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2016-08,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.19,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2016-09,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.18,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2016-10,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.2,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2016-11,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.24,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2016-12,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.16,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2017-01,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.2,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2017-02,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.24,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2017-03,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.3,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2017-04,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.29,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2017-05,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.29,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2017-06,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.28,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2017-07,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.28,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2017-08,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.34,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2017-09,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.21,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2017-10,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.19,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2017-11,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.2,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2017-12,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.21,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2018-01,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.23,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2018-02,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.25,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2018-03,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.23,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2018-04,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.24,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2018-05,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.23,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2018-06,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.25,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2018-07,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.25,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2018-08,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.28,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2018-09,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.32,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2018-10,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.32,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2018-11,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.3,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2018-12,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.29,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2019-01,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.38,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2019-02,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.34,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2019-03,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.28,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2019-04,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.33,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2019-05,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.29,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2019-06,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.3,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2019-07,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.31,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2019-08,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.25,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2019-09,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.31,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2019-10,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.29,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2019-11,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.19,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2019-12,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.21,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2020-01,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.22,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2020-02,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.19,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2020-03,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,3.13,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2020-04,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,3.31,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2020-05,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.89,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2020-06,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.62,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2020-07,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.66,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2020-08,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.67,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2020-09,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.66,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2020-10,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.7,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2020-11,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.75,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2020-12,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.72,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2021-01,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.67,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2021-02,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.67,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2021-03,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.34,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2021-04,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.21,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2021-05,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.16,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2021-06,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.19,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2021-07,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.24,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2021-08,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.26,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2021-09,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.21,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2021-10,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.18,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2021-11,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.21,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2021-12,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.33,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2022-01,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.27,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2022-02,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.28,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2022-03,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.31,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2022-04,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.26,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2022-05,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.32,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2022-06,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.34,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2022-07,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.42,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2022-08,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.42,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2022-09,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.46,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2022-10,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.45,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2022-11,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.52,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2022-12,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.6,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2023-01,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.47,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2023-02,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.55,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2023-03,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.61,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2023-04,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.62,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2023-05,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.65,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2023-06,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.64,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2023-07,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.7,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2023-08,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.74,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2023-09,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.76,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2023-10,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.84,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2023-11,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.9,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2023-12,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.97,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2024-01,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.99,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2024-02,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.98,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2024-03,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.03,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2024-04,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.07,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2024-05,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.06,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2024-06,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.16,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2024-07,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.09,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2024-08,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.11,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2024-09,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.13,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2024-10,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.07,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2024-11,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.99,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2024-12,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.95,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2025-01,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.97,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2025-02,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,2.02,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2025-03,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.87,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2025-04,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.86,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2025-05,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.96,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2025-06,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.96,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2025-07,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.92,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2025-08,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.91,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2025-09,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.93,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2025-10,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.98,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2025-11,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.94,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2025-12,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.93,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2026-01,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.95,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2026-02,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.93,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2026-03,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.94,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2026-04,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.97,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2026-05,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.96,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2026-06,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.93,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2026-07,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.98,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2026-08,4413,"Auto parts, accessory and tire stores",inv_sales_ratio_sa,1.98,months of sales,MRTSIR441USS,441 Motor vehicle and parts dealers
+2015-01,444,Building materials and garden stores,sales_nsa,20571,USD millions,MRTSSM444USN,
+2015-02,444,Building materials and garden stores,sales_nsa,19341,USD millions,MRTSSM444USN,
+2015-03,444,Building materials and garden stores,sales_nsa,25741,USD millions,MRTSSM444USN,
+2015-04,444,Building materials and garden stores,sales_nsa,30525,USD millions,MRTSSM444USN,
+2015-05,444,Building materials and garden stores,sales_nsa,32231,USD millions,MRTSSM444USN,
+2015-06,444,Building materials and garden stores,sales_nsa,30642,USD millions,MRTSSM444USN,
+2015-07,444,Building materials and garden stores,sales_nsa,29655,USD millions,MRTSSM444USN,
+2015-08,444,Building materials and garden stores,sales_nsa,26938,USD millions,MRTSSM444USN,
+2015-09,444,Building materials and garden stores,sales_nsa,26707,USD millions,MRTSSM444USN,
+2015-10,444,Building materials and garden stores,sales_nsa,27486,USD millions,MRTSSM444USN,
+2015-11,444,Building materials and garden stores,sales_nsa,25913,USD millions,MRTSSM444USN,
+2015-12,444,Building materials and garden stores,sales_nsa,26071,USD millions,MRTSSM444USN,
+2016-01,444,Building materials and garden stores,sales_nsa,21269,USD millions,MRTSSM444USN,
+2016-02,444,Building materials and garden stores,sales_nsa,22391,USD millions,MRTSSM444USN,
+2016-03,444,Building materials and garden stores,sales_nsa,28908,USD millions,MRTSSM444USN,
+2016-04,444,Building materials and garden stores,sales_nsa,31287,USD millions,MRTSSM444USN,
+2016-05,444,Building materials and garden stores,sales_nsa,33425,USD millions,MRTSSM444USN,
+2016-06,444,Building materials and garden stores,sales_nsa,32902,USD millions,MRTSSM444USN,
+2016-07,444,Building materials and garden stores,sales_nsa,28929,USD millions,MRTSSM444USN,
+2016-08,444,Building materials and garden stores,sales_nsa,28673,USD millions,MRTSSM444USN,
+2016-09,444,Building materials and garden stores,sales_nsa,27595,USD millions,MRTSSM444USN,
+2016-10,444,Building materials and garden stores,sales_nsa,27272,USD millions,MRTSSM444USN,
+2016-11,444,Building materials and garden stores,sales_nsa,27249,USD millions,MRTSSM444USN,
+2016-12,444,Building materials and garden stores,sales_nsa,25634,USD millions,MRTSSM444USN,
+2017-01,444,Building materials and garden stores,sales_nsa,22227,USD millions,MRTSSM444USN,
+2017-02,444,Building materials and garden stores,sales_nsa,22330,USD millions,MRTSSM444USN,
+2017-03,444,Building materials and garden stores,sales_nsa,29011,USD millions,MRTSSM444USN,
+2017-04,444,Building materials and garden stores,sales_nsa,31030,USD millions,MRTSSM444USN,
+2017-05,444,Building materials and garden stores,sales_nsa,35374,USD millions,MRTSSM444USN,
+2017-06,444,Building materials and garden stores,sales_nsa,33198,USD millions,MRTSSM444USN,
+2017-07,444,Building materials and garden stores,sales_nsa,29852,USD millions,MRTSSM444USN,
+2017-08,444,Building materials and garden stores,sales_nsa,30094,USD millions,MRTSSM444USN,
+2017-09,444,Building materials and garden stores,sales_nsa,28786,USD millions,MRTSSM444USN,
+2017-10,444,Building materials and garden stores,sales_nsa,29477,USD millions,MRTSSM444USN,
+2017-11,444,Building materials and garden stores,sales_nsa,29002,USD millions,MRTSSM444USN,
+2017-12,444,Building materials and garden stores,sales_nsa,26572,USD millions,MRTSSM444USN,
+2018-01,444,Building materials and garden stores,sales_nsa,23451,USD millions,MRTSSM444USN,
+2018-02,444,Building materials and garden stores,sales_nsa,23465,USD millions,MRTSSM444USN,
+2018-03,444,Building materials and garden stores,sales_nsa,29738,USD millions,MRTSSM444USN,
+2018-04,444,Building materials and garden stores,sales_nsa,32064,USD millions,MRTSSM444USN,
+2018-05,444,Building materials and garden stores,sales_nsa,38047,USD millions,MRTSSM444USN,
+2018-06,444,Building materials and garden stores,sales_nsa,35127,USD millions,MRTSSM444USN,
+2018-07,444,Building materials and garden stores,sales_nsa,33338,USD millions,MRTSSM444USN,
+2018-08,444,Building materials and garden stores,sales_nsa,32263,USD millions,MRTSSM444USN,
+2018-09,444,Building materials and garden stores,sales_nsa,29533,USD millions,MRTSSM444USN,
+2018-10,444,Building materials and garden stores,sales_nsa,32684,USD millions,MRTSSM444USN,
+2018-11,444,Building materials and garden stores,sales_nsa,30146,USD millions,MRTSSM444USN,
+2018-12,444,Building materials and garden stores,sales_nsa,27761,USD millions,MRTSSM444USN,
+2019-01,444,Building materials and garden stores,sales_nsa,26848,USD millions,MRTSSM444USN,
+2019-02,444,Building materials and garden stores,sales_nsa,24230,USD millions,MRTSSM444USN,
+2019-03,444,Building materials and garden stores,sales_nsa,30232,USD millions,MRTSSM444USN,
+2019-04,444,Building materials and garden stores,sales_nsa,34422,USD millions,MRTSSM444USN,
+2019-05,444,Building materials and garden stores,sales_nsa,37709,USD millions,MRTSSM444USN,
+2019-06,444,Building materials and garden stores,sales_nsa,33916,USD millions,MRTSSM444USN,
+2019-07,444,Building materials and garden stores,sales_nsa,34091,USD millions,MRTSSM444USN,
+2019-08,444,Building materials and garden stores,sales_nsa,32719,USD millions,MRTSSM444USN,
+2019-09,444,Building materials and garden stores,sales_nsa,30277,USD millions,MRTSSM444USN,
+2019-10,444,Building materials and garden stores,sales_nsa,32942,USD millions,MRTSSM444USN,
+2019-11,444,Building materials and garden stores,sales_nsa,30043,USD millions,MRTSSM444USN,
+2019-12,444,Building materials and garden stores,sales_nsa,28812,USD millions,MRTSSM444USN,
+2020-01,444,Building materials and garden stores,sales_nsa,27082,USD millions,MRTSSM444USN,
+2020-02,444,Building materials and garden stores,sales_nsa,26322,USD millions,MRTSSM444USN,
+2020-03,444,Building materials and garden stores,sales_nsa,32337,USD millions,MRTSSM444USN,
+2020-04,444,Building materials and garden stores,sales_nsa,36080,USD millions,MRTSSM444USN,
+2020-05,444,Building materials and garden stores,sales_nsa,42768,USD millions,MRTSSM444USN,
+2020-06,444,Building materials and garden stores,sales_nsa,42366,USD millions,MRTSSM444USN,
+2020-07,444,Building materials and garden stores,sales_nsa,39665,USD millions,MRTSSM444USN,
+2020-08,444,Building materials and garden stores,sales_nsa,36950,USD millions,MRTSSM444USN,
+2020-09,444,Building materials and garden stores,sales_nsa,37263,USD millions,MRTSSM444USN,
+2020-10,444,Building materials and garden stores,sales_nsa,37913,USD millions,MRTSSM444USN,
+2020-11,444,Building materials and garden stores,sales_nsa,35086,USD millions,MRTSSM444USN,
+2020-12,444,Building materials and garden stores,sales_nsa,34974,USD millions,MRTSSM444USN,
+2021-01,444,Building materials and garden stores,sales_nsa,31561,USD millions,MRTSSM444USN,
+2021-02,444,Building materials and garden stores,sales_nsa,29965,USD millions,MRTSSM444USN,
+2021-03,444,Building materials and garden stores,sales_nsa,44116,USD millions,MRTSSM444USN,
+2021-04,444,Building materials and garden stores,sales_nsa,47919,USD millions,MRTSSM444USN,
+2021-05,444,Building materials and garden stores,sales_nsa,47827,USD millions,MRTSSM444USN,
+2021-06,444,Building materials and garden stores,sales_nsa,46356,USD millions,MRTSSM444USN,
+2021-07,444,Building materials and garden stores,sales_nsa,42575,USD millions,MRTSSM444USN,
+2021-08,444,Building materials and garden stores,sales_nsa,40906,USD millions,MRTSSM444USN,
+2021-09,444,Building materials and garden stores,sales_nsa,40237,USD millions,MRTSSM444USN,
+2021-10,444,Building materials and garden stores,sales_nsa,40837,USD millions,MRTSSM444USN,
+2021-11,444,Building materials and garden stores,sales_nsa,41011,USD millions,MRTSSM444USN,
+2021-12,444,Building materials and garden stores,sales_nsa,39651,USD millions,MRTSSM444USN,
+2022-01,444,Building materials and garden stores,sales_nsa,34840,USD millions,MRTSSM444USN,
+2022-02,444,Building materials and garden stores,sales_nsa,34531,USD millions,MRTSSM444USN,
+2022-03,444,Building materials and garden stores,sales_nsa,45819,USD millions,MRTSSM444USN,
+2022-04,444,Building materials and garden stores,sales_nsa,47603,USD millions,MRTSSM444USN,
+2022-05,444,Building materials and garden stores,sales_nsa,51815,USD millions,MRTSSM444USN,
+2022-06,444,Building materials and garden stores,sales_nsa,49759,USD millions,MRTSSM444USN,
+2022-07,444,Building materials and garden stores,sales_nsa,45021,USD millions,MRTSSM444USN,
+2022-08,444,Building materials and garden stores,sales_nsa,46716,USD millions,MRTSSM444USN,
+2022-09,444,Building materials and garden stores,sales_nsa,44162,USD millions,MRTSSM444USN,
+2022-10,444,Building materials and garden stores,sales_nsa,44576,USD millions,MRTSSM444USN,
+2022-11,444,Building materials and garden stores,sales_nsa,42162,USD millions,MRTSSM444USN,
+2022-12,444,Building materials and garden stores,sales_nsa,40374,USD millions,MRTSSM444USN,
+2023-01,444,Building materials and garden stores,sales_nsa,36402,USD millions,MRTSSM444USN,
+2023-02,444,Building materials and garden stores,sales_nsa,35263,USD millions,MRTSSM444USN,
+2023-03,444,Building materials and garden stores,sales_nsa,43501,USD millions,MRTSSM444USN,
+2023-04,444,Building materials and garden stores,sales_nsa,45017,USD millions,MRTSSM444USN,
+2023-05,444,Building materials and garden stores,sales_nsa,52820,USD millions,MRTSSM444USN,
+2023-06,444,Building materials and garden stores,sales_nsa,48344,USD millions,MRTSSM444USN,
+2023-07,444,Building materials and garden stores,sales_nsa,43838,USD millions,MRTSSM444USN,
+2023-08,444,Building materials and garden stores,sales_nsa,45884,USD millions,MRTSSM444USN,
+2023-09,444,Building materials and garden stores,sales_nsa,41707,USD millions,MRTSSM444USN,
+2023-10,444,Building materials and garden stores,sales_nsa,43770,USD millions,MRTSSM444USN,
+2023-11,444,Building materials and garden stores,sales_nsa,41604,USD millions,MRTSSM444USN,
+2023-12,444,Building materials and garden stores,sales_nsa,38334,USD millions,MRTSSM444USN,
+2024-01,444,Building materials and garden stores,sales_nsa,34281,USD millions,MRTSSM444USN,
+2024-02,444,Building materials and garden stores,sales_nsa,35321,USD millions,MRTSSM444USN,
+2024-03,444,Building materials and garden stores,sales_nsa,40470,USD millions,MRTSSM444USN,
+2024-04,444,Building materials and garden stores,sales_nsa,46828,USD millions,MRTSSM444USN,
+2024-05,444,Building materials and garden stores,sales_nsa,50729,USD millions,MRTSSM444USN,
+2024-06,444,Building materials and garden stores,sales_nsa,45536,USD millions,MRTSSM444USN,
+2024-07,444,Building materials and garden stores,sales_nsa,46138,USD millions,MRTSSM444USN,
+2024-08,444,Building materials and garden stores,sales_nsa,44741,USD millions,MRTSSM444USN,
+2024-09,444,Building materials and garden stores,sales_nsa,42053,USD millions,MRTSSM444USN,
+2024-10,444,Building materials and garden stores,sales_nsa,46866,USD millions,MRTSSM444USN,
+2024-11,444,Building materials and garden stores,sales_nsa,41945,USD millions,MRTSSM444USN,
+2024-12,444,Building materials and garden stores,sales_nsa,38729,USD millions,MRTSSM444USN,
+2025-01,444,Building materials and garden stores,sales_nsa,34429,USD millions,MRTSSM444USN,
+2025-02,444,Building materials and garden stores,sales_nsa,32944,USD millions,MRTSSM444USN,
+2025-03,444,Building materials and garden stores,sales_nsa,41665,USD millions,MRTSSM444USN,
+2025-04,444,Building materials and garden stores,sales_nsa,47273,USD millions,MRTSSM444USN,
+2025-05,444,Building materials and garden stores,sales_nsa,49214,USD millions,MRTSSM444USN,
+2025-06,444,Building materials and garden stores,sales_nsa,45963,USD millions,MRTSSM444USN,
+2025-07,444,Building materials and garden stores,sales_nsa,45372,USD millions,MRTSSM444USN,
+2025-08,444,Building materials and garden stores,sales_nsa,42258,USD millions,MRTSSM444USN,
+2025-09,444,Building materials and garden stores,sales_nsa,42128,USD millions,MRTSSM444USN,
+2025-10,444,Building materials and garden stores,sales_nsa,44245,USD millions,MRTSSM444USN,
+2025-11,444,Building materials and garden stores,sales_nsa,39779,USD millions,MRTSSM444USN,
+2025-12,444,Building materials and garden stores,sales_nsa,39985,USD millions,MRTSSM444USN,
+2026-01,444,Building materials and garden stores,sales_nsa,35407,USD millions,MRTSSM444USN,
+2026-02,444,Building materials and garden stores,sales_nsa,34164,USD millions,MRTSSM444USN,
+2026-03,444,Building materials and garden stores,sales_nsa,44054,USD millions,MRTSSM444USN,
+2026-04,444,Building materials and garden stores,sales_nsa,48855,USD millions,MRTSSM444USN,
+2026-05,444,Building materials and garden stores,sales_nsa,49861,USD millions,MRTSSM444USN,
+2026-06,444,Building materials and garden stores,sales_nsa,49977,USD millions,MRTSSM444USN,
+2026-07,444,Building materials and garden stores,sales_nsa,47548,USD millions,MRTSSM444USN,
+2026-08,444,Building materials and garden stores,sales_nsa,44570,USD millions,MRTSSM444USN,
+2015-01,444,Building materials and garden stores,inv_sales_ratio_sa,1.8,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2015-02,444,Building materials and garden stores,inv_sales_ratio_sa,1.89,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2015-03,444,Building materials and garden stores,inv_sales_ratio_sa,1.82,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2015-04,444,Building materials and garden stores,inv_sales_ratio_sa,1.82,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2015-05,444,Building materials and garden stores,inv_sales_ratio_sa,1.81,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2015-06,444,Building materials and garden stores,inv_sales_ratio_sa,1.85,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2015-07,444,Building materials and garden stores,inv_sales_ratio_sa,1.79,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2015-08,444,Building materials and garden stores,inv_sales_ratio_sa,1.8,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2015-09,444,Building materials and garden stores,inv_sales_ratio_sa,1.81,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2015-10,444,Building materials and garden stores,inv_sales_ratio_sa,1.82,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2015-11,444,Building materials and garden stores,inv_sales_ratio_sa,1.8,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2015-12,444,Building materials and garden stores,inv_sales_ratio_sa,1.76,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2016-01,444,Building materials and garden stores,inv_sales_ratio_sa,1.76,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2016-02,444,Building materials and garden stores,inv_sales_ratio_sa,1.76,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2016-03,444,Building materials and garden stores,inv_sales_ratio_sa,1.73,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2016-04,444,Building materials and garden stores,inv_sales_ratio_sa,1.79,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2016-05,444,Building materials and garden stores,inv_sales_ratio_sa,1.83,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2016-06,444,Building materials and garden stores,inv_sales_ratio_sa,1.76,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2016-07,444,Building materials and garden stores,inv_sales_ratio_sa,1.78,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2016-08,444,Building materials and garden stores,inv_sales_ratio_sa,1.81,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2016-09,444,Building materials and garden stores,inv_sales_ratio_sa,1.79,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2016-10,444,Building materials and garden stores,inv_sales_ratio_sa,1.8,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2016-11,444,Building materials and garden stores,inv_sales_ratio_sa,1.8,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2016-12,444,Building materials and garden stores,inv_sales_ratio_sa,1.81,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2017-01,444,Building materials and garden stores,inv_sales_ratio_sa,1.79,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2017-02,444,Building materials and garden stores,inv_sales_ratio_sa,1.76,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2017-03,444,Building materials and garden stores,inv_sales_ratio_sa,1.78,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2017-04,444,Building materials and garden stores,inv_sales_ratio_sa,1.76,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2017-05,444,Building materials and garden stores,inv_sales_ratio_sa,1.78,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2017-06,444,Building materials and garden stores,inv_sales_ratio_sa,1.78,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2017-07,444,Building materials and garden stores,inv_sales_ratio_sa,1.78,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2017-08,444,Building materials and garden stores,inv_sales_ratio_sa,1.78,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2017-09,444,Building materials and garden stores,inv_sales_ratio_sa,1.72,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2017-10,444,Building materials and garden stores,inv_sales_ratio_sa,1.75,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2017-11,444,Building materials and garden stores,inv_sales_ratio_sa,1.73,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2017-12,444,Building materials and garden stores,inv_sales_ratio_sa,1.74,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2018-01,444,Building materials and garden stores,inv_sales_ratio_sa,1.8,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2018-02,444,Building materials and garden stores,inv_sales_ratio_sa,1.76,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2018-03,444,Building materials and garden stores,inv_sales_ratio_sa,1.79,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2018-04,444,Building materials and garden stores,inv_sales_ratio_sa,1.79,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2018-05,444,Building materials and garden stores,inv_sales_ratio_sa,1.75,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2018-06,444,Building materials and garden stores,inv_sales_ratio_sa,1.74,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2018-07,444,Building materials and garden stores,inv_sales_ratio_sa,1.75,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2018-08,444,Building materials and garden stores,inv_sales_ratio_sa,1.78,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2018-09,444,Building materials and garden stores,inv_sales_ratio_sa,1.77,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2018-10,444,Building materials and garden stores,inv_sales_ratio_sa,1.74,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2018-11,444,Building materials and garden stores,inv_sales_ratio_sa,1.77,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2018-12,444,Building materials and garden stores,inv_sales_ratio_sa,1.79,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2019-01,444,Building materials and garden stores,inv_sales_ratio_sa,1.74,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2019-02,444,Building materials and garden stores,inv_sales_ratio_sa,1.8,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2019-03,444,Building materials and garden stores,inv_sales_ratio_sa,1.8,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2019-04,444,Building materials and garden stores,inv_sales_ratio_sa,1.82,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2019-05,444,Building materials and garden stores,inv_sales_ratio_sa,1.83,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2019-06,444,Building materials and garden stores,inv_sales_ratio_sa,1.84,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2019-07,444,Building materials and garden stores,inv_sales_ratio_sa,1.83,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2019-08,444,Building materials and garden stores,inv_sales_ratio_sa,1.81,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2019-09,444,Building materials and garden stores,inv_sales_ratio_sa,1.84,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2019-10,444,Building materials and garden stores,inv_sales_ratio_sa,1.86,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2019-11,444,Building materials and garden stores,inv_sales_ratio_sa,1.85,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2019-12,444,Building materials and garden stores,inv_sales_ratio_sa,1.81,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2020-01,444,Building materials and garden stores,inv_sales_ratio_sa,1.76,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2020-02,444,Building materials and garden stores,inv_sales_ratio_sa,1.78,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2020-03,444,Building materials and garden stores,inv_sales_ratio_sa,1.79,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2020-04,444,Building materials and garden stores,inv_sales_ratio_sa,1.75,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2020-05,444,Building materials and garden stores,inv_sales_ratio_sa,1.49,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2020-06,444,Building materials and garden stores,inv_sales_ratio_sa,1.5,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2020-07,444,Building materials and garden stores,inv_sales_ratio_sa,1.55,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2020-08,444,Building materials and garden stores,inv_sales_ratio_sa,1.56,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2020-09,444,Building materials and garden stores,inv_sales_ratio_sa,1.58,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2020-10,444,Building materials and garden stores,inv_sales_ratio_sa,1.67,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2020-11,444,Building materials and garden stores,inv_sales_ratio_sa,1.67,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2020-12,444,Building materials and garden stores,inv_sales_ratio_sa,1.7,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2021-01,444,Building materials and garden stores,inv_sales_ratio_sa,1.61,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2021-02,444,Building materials and garden stores,inv_sales_ratio_sa,1.74,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2021-03,444,Building materials and garden stores,inv_sales_ratio_sa,1.55,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2021-04,444,Building materials and garden stores,inv_sales_ratio_sa,1.56,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2021-05,444,Building materials and garden stores,inv_sales_ratio_sa,1.67,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2021-06,444,Building materials and garden stores,inv_sales_ratio_sa,1.72,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2021-07,444,Building materials and garden stores,inv_sales_ratio_sa,1.78,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2021-08,444,Building materials and garden stores,inv_sales_ratio_sa,1.78,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2021-09,444,Building materials and garden stores,inv_sales_ratio_sa,1.79,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2021-10,444,Building materials and garden stores,inv_sales_ratio_sa,1.78,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2021-11,444,Building materials and garden stores,inv_sales_ratio_sa,1.76,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2021-12,444,Building materials and garden stores,inv_sales_ratio_sa,1.81,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2022-01,444,Building materials and garden stores,inv_sales_ratio_sa,1.81,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2022-02,444,Building materials and garden stores,inv_sales_ratio_sa,1.84,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2022-03,444,Building materials and garden stores,inv_sales_ratio_sa,1.87,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2022-04,444,Building materials and garden stores,inv_sales_ratio_sa,1.9,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2022-05,444,Building materials and garden stores,inv_sales_ratio_sa,1.93,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2022-06,444,Building materials and garden stores,inv_sales_ratio_sa,1.97,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2022-07,444,Building materials and garden stores,inv_sales_ratio_sa,2.01,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2022-08,444,Building materials and garden stores,inv_sales_ratio_sa,1.99,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2022-09,444,Building materials and garden stores,inv_sales_ratio_sa,2.01,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2022-10,444,Building materials and garden stores,inv_sales_ratio_sa,1.99,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2022-11,444,Building materials and garden stores,inv_sales_ratio_sa,2.05,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2022-12,444,Building materials and garden stores,inv_sales_ratio_sa,2.03,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2023-01,444,Building materials and garden stores,inv_sales_ratio_sa,1.99,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2023-02,444,Building materials and garden stores,inv_sales_ratio_sa,1.99,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2023-03,444,Building materials and garden stores,inv_sales_ratio_sa,2.08,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2023-04,444,Building materials and garden stores,inv_sales_ratio_sa,2.06,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2023-05,444,Building materials and garden stores,inv_sales_ratio_sa,2.0,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2023-06,444,Building materials and garden stores,inv_sales_ratio_sa,2.06,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2023-07,444,Building materials and garden stores,inv_sales_ratio_sa,2.06,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2023-08,444,Building materials and garden stores,inv_sales_ratio_sa,2.07,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2023-09,444,Building materials and garden stores,inv_sales_ratio_sa,2.09,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2023-10,444,Building materials and garden stores,inv_sales_ratio_sa,2.1,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2023-11,444,Building materials and garden stores,inv_sales_ratio_sa,2.09,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2023-12,444,Building materials and garden stores,inv_sales_ratio_sa,2.08,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2024-01,444,Building materials and garden stores,inv_sales_ratio_sa,2.17,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2024-02,444,Building materials and garden stores,inv_sales_ratio_sa,2.12,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2024-03,444,Building materials and garden stores,inv_sales_ratio_sa,2.17,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2024-04,444,Building materials and garden stores,inv_sales_ratio_sa,2.18,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2024-05,444,Building materials and garden stores,inv_sales_ratio_sa,2.19,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2024-06,444,Building materials and garden stores,inv_sales_ratio_sa,2.2,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2024-07,444,Building materials and garden stores,inv_sales_ratio_sa,2.2,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2024-08,444,Building materials and garden stores,inv_sales_ratio_sa,2.23,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2024-09,444,Building materials and garden stores,inv_sales_ratio_sa,2.24,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2024-10,444,Building materials and garden stores,inv_sales_ratio_sa,2.23,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2024-11,444,Building materials and garden stores,inv_sales_ratio_sa,2.29,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2024-12,444,Building materials and garden stores,inv_sales_ratio_sa,2.39,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2025-01,444,Building materials and garden stores,inv_sales_ratio_sa,2.48,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2025-02,444,Building materials and garden stores,inv_sales_ratio_sa,2.47,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2025-03,444,Building materials and garden stores,inv_sales_ratio_sa,2.42,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2025-04,444,Building materials and garden stores,inv_sales_ratio_sa,2.42,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2025-05,444,Building materials and garden stores,inv_sales_ratio_sa,2.48,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2025-06,444,Building materials and garden stores,inv_sales_ratio_sa,2.45,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2025-07,444,Building materials and garden stores,inv_sales_ratio_sa,2.48,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2025-08,444,Building materials and garden stores,inv_sales_ratio_sa,2.49,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2025-09,444,Building materials and garden stores,inv_sales_ratio_sa,2.49,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2025-10,444,Building materials and garden stores,inv_sales_ratio_sa,2.57,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2025-11,444,Building materials and garden stores,inv_sales_ratio_sa,2.52,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2025-12,444,Building materials and garden stores,inv_sales_ratio_sa,2.49,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2026-01,444,Building materials and garden stores,inv_sales_ratio_sa,2.5,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2026-02,444,Building materials and garden stores,inv_sales_ratio_sa,2.5,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2026-03,444,Building materials and garden stores,inv_sales_ratio_sa,2.47,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2026-04,444,Building materials and garden stores,inv_sales_ratio_sa,2.48,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2026-05,444,Building materials and garden stores,inv_sales_ratio_sa,2.51,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2026-06,444,Building materials and garden stores,inv_sales_ratio_sa,2.52,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2026-07,444,Building materials and garden stores,inv_sales_ratio_sa,2.54,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2026-08,444,Building materials and garden stores,inv_sales_ratio_sa,2.53,months of sales,MRTSIR444USS,444 Building materials and garden stores
+2015-01,448,Clothing and accessories stores,sales_nsa,15417,USD millions,MRTSSM448USN,
+2015-02,448,Clothing and accessories stores,sales_nsa,17593,USD millions,MRTSSM448USN,
+2015-03,448,Clothing and accessories stores,sales_nsa,20293,USD millions,MRTSSM448USN,
+2015-04,448,Clothing and accessories stores,sales_nsa,19952,USD millions,MRTSSM448USN,
+2015-05,448,Clothing and accessories stores,sales_nsa,21665,USD millions,MRTSSM448USN,
+2015-06,448,Clothing and accessories stores,sales_nsa,19252,USD millions,MRTSSM448USN,
+2015-07,448,Clothing and accessories stores,sales_nsa,20158,USD millions,MRTSSM448USN,
+2015-08,448,Clothing and accessories stores,sales_nsa,21884,USD millions,MRTSSM448USN,
+2015-09,448,Clothing and accessories stores,sales_nsa,18769,USD millions,MRTSSM448USN,
+2015-10,448,Clothing and accessories stores,sales_nsa,20263,USD millions,MRTSSM448USN,
+2015-11,448,Clothing and accessories stores,sales_nsa,22575,USD millions,MRTSSM448USN,
+2015-12,448,Clothing and accessories stores,sales_nsa,32614,USD millions,MRTSSM448USN,
+2016-01,448,Clothing and accessories stores,sales_nsa,15322,USD millions,MRTSSM448USN,
+2016-02,448,Clothing and accessories stores,sales_nsa,18486,USD millions,MRTSSM448USN,
+2016-03,448,Clothing and accessories stores,sales_nsa,20997,USD millions,MRTSSM448USN,
+2016-04,448,Clothing and accessories stores,sales_nsa,19951,USD millions,MRTSSM448USN,
+2016-05,448,Clothing and accessories stores,sales_nsa,21165,USD millions,MRTSSM448USN,
+2016-06,448,Clothing and accessories stores,sales_nsa,19723,USD millions,MRTSSM448USN,
+2016-07,448,Clothing and accessories stores,sales_nsa,20233,USD millions,MRTSSM448USN,
+2016-08,448,Clothing and accessories stores,sales_nsa,21918,USD millions,MRTSSM448USN,
+2016-09,448,Clothing and accessories stores,sales_nsa,19391,USD millions,MRTSSM448USN,
+2016-10,448,Clothing and accessories stores,sales_nsa,20105,USD millions,MRTSSM448USN,
+2016-11,448,Clothing and accessories stores,sales_nsa,23176,USD millions,MRTSSM448USN,
+2016-12,448,Clothing and accessories stores,sales_nsa,33817,USD millions,MRTSSM448USN,
+2017-01,448,Clothing and accessories stores,sales_nsa,15473,USD millions,MRTSSM448USN,
+2017-02,448,Clothing and accessories stores,sales_nsa,17538,USD millions,MRTSSM448USN,
+2017-03,448,Clothing and accessories stores,sales_nsa,20800,USD millions,MRTSSM448USN,
+2017-04,448,Clothing and accessories stores,sales_nsa,20625,USD millions,MRTSSM448USN,
+2017-05,448,Clothing and accessories stores,sales_nsa,21384,USD millions,MRTSSM448USN,
+2017-06,448,Clothing and accessories stores,sales_nsa,20092,USD millions,MRTSSM448USN,
+2017-07,448,Clothing and accessories stores,sales_nsa,20273,USD millions,MRTSSM448USN,
+2017-08,448,Clothing and accessories stores,sales_nsa,22200,USD millions,MRTSSM448USN,
+2017-09,448,Clothing and accessories stores,sales_nsa,19381,USD millions,MRTSSM448USN,
+2017-10,448,Clothing and accessories stores,sales_nsa,19926,USD millions,MRTSSM448USN,
+2017-11,448,Clothing and accessories stores,sales_nsa,23911,USD millions,MRTSSM448USN,
+2017-12,448,Clothing and accessories stores,sales_nsa,32958,USD millions,MRTSSM448USN,
+2018-01,448,Clothing and accessories stores,sales_nsa,15268,USD millions,MRTSSM448USN,
+2018-02,448,Clothing and accessories stores,sales_nsa,17803,USD millions,MRTSSM448USN,
+2018-03,448,Clothing and accessories stores,sales_nsa,21489,USD millions,MRTSSM448USN,
+2018-04,448,Clothing and accessories stores,sales_nsa,19744,USD millions,MRTSSM448USN,
+2018-05,448,Clothing and accessories stores,sales_nsa,22811,USD millions,MRTSSM448USN,
+2018-06,448,Clothing and accessories stores,sales_nsa,20555,USD millions,MRTSSM448USN,
+2018-07,448,Clothing and accessories stores,sales_nsa,20900,USD millions,MRTSSM448USN,
+2018-08,448,Clothing and accessories stores,sales_nsa,22259,USD millions,MRTSSM448USN,
+2018-09,448,Clothing and accessories stores,sales_nsa,19038,USD millions,MRTSSM448USN,
+2018-10,448,Clothing and accessories stores,sales_nsa,20382,USD millions,MRTSSM448USN,
+2018-11,448,Clothing and accessories stores,sales_nsa,24390,USD millions,MRTSSM448USN,
+2018-12,448,Clothing and accessories stores,sales_nsa,32679,USD millions,MRTSSM448USN,
+2019-01,448,Clothing and accessories stores,sales_nsa,15508,USD millions,MRTSSM448USN,
+2019-02,448,Clothing and accessories stores,sales_nsa,17214,USD millions,MRTSSM448USN,
+2019-03,448,Clothing and accessories stores,sales_nsa,21183,USD millions,MRTSSM448USN,
+2019-04,448,Clothing and accessories stores,sales_nsa,20572,USD millions,MRTSSM448USN,
+2019-05,448,Clothing and accessories stores,sales_nsa,22110,USD millions,MRTSSM448USN,
+2019-06,448,Clothing and accessories stores,sales_nsa,20231,USD millions,MRTSSM448USN,
+2019-07,448,Clothing and accessories stores,sales_nsa,20801,USD millions,MRTSSM448USN,
+2019-08,448,Clothing and accessories stores,sales_nsa,22826,USD millions,MRTSSM448USN,
+2019-09,448,Clothing and accessories stores,sales_nsa,18682,USD millions,MRTSSM448USN,
+2019-10,448,Clothing and accessories stores,sales_nsa,20458,USD millions,MRTSSM448USN,
+2019-11,448,Clothing and accessories stores,sales_nsa,24008,USD millions,MRTSSM448USN,
+2019-12,448,Clothing and accessories stores,sales_nsa,33469,USD millions,MRTSSM448USN,
+2020-01,448,Clothing and accessories stores,sales_nsa,15950,USD millions,MRTSSM448USN,
+2020-02,448,Clothing and accessories stores,sales_nsa,18143,USD millions,MRTSSM448USN,
+2020-03,448,Clothing and accessories stores,sales_nsa,10345,USD millions,MRTSSM448USN,
+2020-04,448,Clothing and accessories stores,sales_nsa,2532,USD millions,MRTSSM448USN,
+2020-05,448,Clothing and accessories stores,sales_nsa,8113,USD millions,MRTSSM448USN,
+2020-06,448,Clothing and accessories stores,sales_nsa,15251,USD millions,MRTSSM448USN,
+2020-07,448,Clothing and accessories stores,sales_nsa,16496,USD millions,MRTSSM448USN,
+2020-08,448,Clothing and accessories stores,sales_nsa,17457,USD millions,MRTSSM448USN,
+2020-09,448,Clothing and accessories stores,sales_nsa,17257,USD millions,MRTSSM448USN,
+2020-10,448,Clothing and accessories stores,sales_nsa,18436,USD millions,MRTSSM448USN,
+2020-11,448,Clothing and accessories stores,sales_nsa,19539,USD millions,MRTSSM448USN,
+2020-12,448,Clothing and accessories stores,sales_nsa,29326,USD millions,MRTSSM448USN,
+2021-01,448,Clothing and accessories stores,sales_nsa,14348,USD millions,MRTSSM448USN,
+2021-02,448,Clothing and accessories stores,sales_nsa,14911,USD millions,MRTSSM448USN,
+2021-03,448,Clothing and accessories stores,sales_nsa,22128,USD millions,MRTSSM448USN,
+2021-04,448,Clothing and accessories stores,sales_nsa,21639,USD millions,MRTSSM448USN,
+2021-05,448,Clothing and accessories stores,sales_nsa,24109,USD millions,MRTSSM448USN,
+2021-06,448,Clothing and accessories stores,sales_nsa,22897,USD millions,MRTSSM448USN,
+2021-07,448,Clothing and accessories stores,sales_nsa,23504,USD millions,MRTSSM448USN,
+2021-08,448,Clothing and accessories stores,sales_nsa,23290,USD millions,MRTSSM448USN,
+2021-09,448,Clothing and accessories stores,sales_nsa,20939,USD millions,MRTSSM448USN,
+2021-10,448,Clothing and accessories stores,sales_nsa,22545,USD millions,MRTSSM448USN,
+2021-11,448,Clothing and accessories stores,sales_nsa,26508,USD millions,MRTSSM448USN,
+2021-12,448,Clothing and accessories stores,sales_nsa,36038,USD millions,MRTSSM448USN,
+2022-01,448,Clothing and accessories stores,sales_nsa,16484,USD millions,MRTSSM448USN,
+2022-02,448,Clothing and accessories stores,sales_nsa,18505,USD millions,MRTSSM448USN,
+2022-03,448,Clothing and accessories stores,sales_nsa,23302,USD millions,MRTSSM448USN,
+2022-04,448,Clothing and accessories stores,sales_nsa,23412,USD millions,MRTSSM448USN,
+2022-05,448,Clothing and accessories stores,sales_nsa,24267,USD millions,MRTSSM448USN,
+2022-06,448,Clothing and accessories stores,sales_nsa,22575,USD millions,MRTSSM448USN,
+2022-07,448,Clothing and accessories stores,sales_nsa,22765,USD millions,MRTSSM448USN,
+2022-08,448,Clothing and accessories stores,sales_nsa,23721,USD millions,MRTSSM448USN,
+2022-09,448,Clothing and accessories stores,sales_nsa,21410,USD millions,MRTSSM448USN,
+2022-10,448,Clothing and accessories stores,sales_nsa,22439,USD millions,MRTSSM448USN,
+2022-11,448,Clothing and accessories stores,sales_nsa,25883,USD millions,MRTSSM448USN,
+2022-12,448,Clothing and accessories stores,sales_nsa,36226,USD millions,MRTSSM448USN,
+2023-01,448,Clothing and accessories stores,sales_nsa,17604,USD millions,MRTSSM448USN,
+2023-02,448,Clothing and accessories stores,sales_nsa,18965,USD millions,MRTSSM448USN,
+2023-03,448,Clothing and accessories stores,sales_nsa,22550,USD millions,MRTSSM448USN,
+2023-04,448,Clothing and accessories stores,sales_nsa,22340,USD millions,MRTSSM448USN,
+2023-05,448,Clothing and accessories stores,sales_nsa,23966,USD millions,MRTSSM448USN,
+2023-06,448,Clothing and accessories stores,sales_nsa,22397,USD millions,MRTSSM448USN,
+2023-07,448,Clothing and accessories stores,sales_nsa,22924,USD millions,MRTSSM448USN,
+2023-08,448,Clothing and accessories stores,sales_nsa,24500,USD millions,MRTSSM448USN,
+2023-09,448,Clothing and accessories stores,sales_nsa,21445,USD millions,MRTSSM448USN,
+2023-10,448,Clothing and accessories stores,sales_nsa,21990,USD millions,MRTSSM448USN,
+2023-11,448,Clothing and accessories stores,sales_nsa,26116,USD millions,MRTSSM448USN,
+2023-12,448,Clothing and accessories stores,sales_nsa,37253,USD millions,MRTSSM448USN,
+2024-01,448,Clothing and accessories stores,sales_nsa,17405,USD millions,MRTSSM448USN,
+2024-02,448,Clothing and accessories stores,sales_nsa,19902,USD millions,MRTSSM448USN,
+2024-03,448,Clothing and accessories stores,sales_nsa,22718,USD millions,MRTSSM448USN,
+2024-04,448,Clothing and accessories stores,sales_nsa,21804,USD millions,MRTSSM448USN,
+2024-05,448,Clothing and accessories stores,sales_nsa,24934,USD millions,MRTSSM448USN,
+2024-06,448,Clothing and accessories stores,sales_nsa,22850,USD millions,MRTSSM448USN,
+2024-07,448,Clothing and accessories stores,sales_nsa,23110,USD millions,MRTSSM448USN,
+2024-08,448,Clothing and accessories stores,sales_nsa,24671,USD millions,MRTSSM448USN,
+2024-09,448,Clothing and accessories stores,sales_nsa,20888,USD millions,MRTSSM448USN,
+2024-10,448,Clothing and accessories stores,sales_nsa,22871,USD millions,MRTSSM448USN,
+2024-11,448,Clothing and accessories stores,sales_nsa,26942,USD millions,MRTSSM448USN,
+2024-12,448,Clothing and accessories stores,sales_nsa,37096,USD millions,MRTSSM448USN,
+2025-01,448,Clothing and accessories stores,sales_nsa,18203,USD millions,MRTSSM448USN,
+2025-02,448,Clothing and accessories stores,sales_nsa,19221,USD millions,MRTSSM448USN,
+2025-03,448,Clothing and accessories stores,sales_nsa,23360,USD millions,MRTSSM448USN,
+2025-04,448,Clothing and accessories stores,sales_nsa,23179,USD millions,MRTSSM448USN,
+2025-05,448,Clothing and accessories stores,sales_nsa,26171,USD millions,MRTSSM448USN,
+2025-06,448,Clothing and accessories stores,sales_nsa,23399,USD millions,MRTSSM448USN,
+2025-07,448,Clothing and accessories stores,sales_nsa,25024,USD millions,MRTSSM448USN,
+2025-08,448,Clothing and accessories stores,sales_nsa,26435,USD millions,MRTSSM448USN,
+2025-09,448,Clothing and accessories stores,sales_nsa,22369,USD millions,MRTSSM448USN,
+2025-10,448,Clothing and accessories stores,sales_nsa,24528,USD millions,MRTSSM448USN,
+2025-11,448,Clothing and accessories stores,sales_nsa,28902,USD millions,MRTSSM448USN,
+2025-12,448,Clothing and accessories stores,sales_nsa,39105,USD millions,MRTSSM448USN,
+2026-01,448,Clothing and accessories stores,sales_nsa,19222,USD millions,MRTSSM448USN,
+2026-02,448,Clothing and accessories stores,sales_nsa,20874,USD millions,MRTSSM448USN,
+2026-03,448,Clothing and accessories stores,sales_nsa,24984,USD millions,MRTSSM448USN,
+2026-04,448,Clothing and accessories stores,sales_nsa,24191,USD millions,MRTSSM448USN,
+2026-05,448,Clothing and accessories stores,sales_nsa,27373,USD millions,MRTSSM448USN,
+2026-06,448,Clothing and accessories stores,sales_nsa,24586,USD millions,MRTSSM448USN,
+2026-07,448,Clothing and accessories stores,sales_nsa,26161,USD millions,MRTSSM448USN,
+2026-08,448,Clothing and accessories stores,sales_nsa,27302,USD millions,MRTSSM448USN,
+2015-01,448,Clothing and accessories stores,inv_sales_ratio_sa,2.43,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2015-02,448,Clothing and accessories stores,inv_sales_ratio_sa,2.4,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2015-03,448,Clothing and accessories stores,inv_sales_ratio_sa,2.42,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2015-04,448,Clothing and accessories stores,inv_sales_ratio_sa,2.42,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2015-05,448,Clothing and accessories stores,inv_sales_ratio_sa,2.39,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2015-06,448,Clothing and accessories stores,inv_sales_ratio_sa,2.42,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2015-07,448,Clothing and accessories stores,inv_sales_ratio_sa,2.4,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2015-08,448,Clothing and accessories stores,inv_sales_ratio_sa,2.43,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2015-09,448,Clothing and accessories stores,inv_sales_ratio_sa,2.47,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2015-10,448,Clothing and accessories stores,inv_sales_ratio_sa,2.48,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2015-11,448,Clothing and accessories stores,inv_sales_ratio_sa,2.48,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2015-12,448,Clothing and accessories stores,inv_sales_ratio_sa,2.47,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2016-01,448,Clothing and accessories stores,inv_sales_ratio_sa,2.49,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2016-02,448,Clothing and accessories stores,inv_sales_ratio_sa,2.42,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2016-03,448,Clothing and accessories stores,inv_sales_ratio_sa,2.47,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2016-04,448,Clothing and accessories stores,inv_sales_ratio_sa,2.49,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2016-05,448,Clothing and accessories stores,inv_sales_ratio_sa,2.49,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2016-06,448,Clothing and accessories stores,inv_sales_ratio_sa,2.47,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2016-07,448,Clothing and accessories stores,inv_sales_ratio_sa,2.49,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2016-08,448,Clothing and accessories stores,inv_sales_ratio_sa,2.42,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2016-09,448,Clothing and accessories stores,inv_sales_ratio_sa,2.43,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2016-10,448,Clothing and accessories stores,inv_sales_ratio_sa,2.44,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2016-11,448,Clothing and accessories stores,inv_sales_ratio_sa,2.49,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2016-12,448,Clothing and accessories stores,inv_sales_ratio_sa,2.43,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2017-01,448,Clothing and accessories stores,inv_sales_ratio_sa,2.41,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2017-02,448,Clothing and accessories stores,inv_sales_ratio_sa,2.46,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2017-03,448,Clothing and accessories stores,inv_sales_ratio_sa,2.45,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2017-04,448,Clothing and accessories stores,inv_sales_ratio_sa,2.43,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2017-05,448,Clothing and accessories stores,inv_sales_ratio_sa,2.45,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2017-06,448,Clothing and accessories stores,inv_sales_ratio_sa,2.44,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2017-07,448,Clothing and accessories stores,inv_sales_ratio_sa,2.45,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2017-08,448,Clothing and accessories stores,inv_sales_ratio_sa,2.43,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2017-09,448,Clothing and accessories stores,inv_sales_ratio_sa,2.43,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2017-10,448,Clothing and accessories stores,inv_sales_ratio_sa,2.44,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2017-11,448,Clothing and accessories stores,inv_sales_ratio_sa,2.41,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2017-12,448,Clothing and accessories stores,inv_sales_ratio_sa,2.44,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2018-01,448,Clothing and accessories stores,inv_sales_ratio_sa,2.44,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2018-02,448,Clothing and accessories stores,inv_sales_ratio_sa,2.41,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2018-03,448,Clothing and accessories stores,inv_sales_ratio_sa,2.46,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2018-04,448,Clothing and accessories stores,inv_sales_ratio_sa,2.44,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2018-05,448,Clothing and accessories stores,inv_sales_ratio_sa,2.34,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2018-06,448,Clothing and accessories stores,inv_sales_ratio_sa,2.4,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2018-07,448,Clothing and accessories stores,inv_sales_ratio_sa,2.36,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2018-08,448,Clothing and accessories stores,inv_sales_ratio_sa,2.42,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2018-09,448,Clothing and accessories stores,inv_sales_ratio_sa,2.43,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2018-10,448,Clothing and accessories stores,inv_sales_ratio_sa,2.4,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2018-11,448,Clothing and accessories stores,inv_sales_ratio_sa,2.38,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2018-12,448,Clothing and accessories stores,inv_sales_ratio_sa,2.45,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2019-01,448,Clothing and accessories stores,inv_sales_ratio_sa,2.47,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2019-02,448,Clothing and accessories stores,inv_sales_ratio_sa,2.47,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2019-03,448,Clothing and accessories stores,inv_sales_ratio_sa,2.42,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2019-04,448,Clothing and accessories stores,inv_sales_ratio_sa,2.4,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2019-05,448,Clothing and accessories stores,inv_sales_ratio_sa,2.43,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2019-06,448,Clothing and accessories stores,inv_sales_ratio_sa,2.41,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2019-07,448,Clothing and accessories stores,inv_sales_ratio_sa,2.38,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2019-08,448,Clothing and accessories stores,inv_sales_ratio_sa,2.38,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2019-09,448,Clothing and accessories stores,inv_sales_ratio_sa,2.41,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2019-10,448,Clothing and accessories stores,inv_sales_ratio_sa,2.39,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2019-11,448,Clothing and accessories stores,inv_sales_ratio_sa,2.39,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2019-12,448,Clothing and accessories stores,inv_sales_ratio_sa,2.3,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2020-01,448,Clothing and accessories stores,inv_sales_ratio_sa,2.3,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2020-02,448,Clothing and accessories stores,inv_sales_ratio_sa,2.31,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2020-03,448,Clothing and accessories stores,inv_sales_ratio_sa,4.69,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2020-04,448,Clothing and accessories stores,inv_sales_ratio_sa,18.63,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2020-05,448,Clothing and accessories stores,inv_sales_ratio_sa,6.08,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2020-06,448,Clothing and accessories stores,inv_sales_ratio_sa,2.77,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2020-07,448,Clothing and accessories stores,inv_sales_ratio_sa,2.6,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2020-08,448,Clothing and accessories stores,inv_sales_ratio_sa,2.5,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2020-09,448,Clothing and accessories stores,inv_sales_ratio_sa,2.16,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2020-10,448,Clothing and accessories stores,inv_sales_ratio_sa,2.22,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2020-11,448,Clothing and accessories stores,inv_sales_ratio_sa,2.35,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2020-12,448,Clothing and accessories stores,inv_sales_ratio_sa,2.24,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2021-01,448,Clothing and accessories stores,inv_sales_ratio_sa,2.18,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2021-02,448,Clothing and accessories stores,inv_sales_ratio_sa,2.28,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2021-03,448,Clothing and accessories stores,inv_sales_ratio_sa,1.85,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2021-04,448,Clothing and accessories stores,inv_sales_ratio_sa,1.89,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2021-05,448,Clothing and accessories stores,inv_sales_ratio_sa,1.85,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2021-06,448,Clothing and accessories stores,inv_sales_ratio_sa,1.78,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2021-07,448,Clothing and accessories stores,inv_sales_ratio_sa,1.82,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2021-08,448,Clothing and accessories stores,inv_sales_ratio_sa,1.88,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2021-09,448,Clothing and accessories stores,inv_sales_ratio_sa,1.89,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2021-10,448,Clothing and accessories stores,inv_sales_ratio_sa,1.92,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2021-11,448,Clothing and accessories stores,inv_sales_ratio_sa,1.92,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2021-12,448,Clothing and accessories stores,inv_sales_ratio_sa,2.07,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2022-01,448,Clothing and accessories stores,inv_sales_ratio_sa,2.2,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2022-02,448,Clothing and accessories stores,inv_sales_ratio_sa,2.18,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2022-03,448,Clothing and accessories stores,inv_sales_ratio_sa,2.15,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2022-04,448,Clothing and accessories stores,inv_sales_ratio_sa,2.19,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2022-05,448,Clothing and accessories stores,inv_sales_ratio_sa,2.26,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2022-06,448,Clothing and accessories stores,inv_sales_ratio_sa,2.31,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2022-07,448,Clothing and accessories stores,inv_sales_ratio_sa,2.35,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2022-08,448,Clothing and accessories stores,inv_sales_ratio_sa,2.34,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2022-09,448,Clothing and accessories stores,inv_sales_ratio_sa,2.25,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2022-10,448,Clothing and accessories stores,inv_sales_ratio_sa,2.26,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2022-11,448,Clothing and accessories stores,inv_sales_ratio_sa,2.3,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2022-12,448,Clothing and accessories stores,inv_sales_ratio_sa,2.33,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2023-01,448,Clothing and accessories stores,inv_sales_ratio_sa,2.23,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2023-02,448,Clothing and accessories stores,inv_sales_ratio_sa,2.29,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2023-03,448,Clothing and accessories stores,inv_sales_ratio_sa,2.37,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2023-04,448,Clothing and accessories stores,inv_sales_ratio_sa,2.34,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2023-05,448,Clothing and accessories stores,inv_sales_ratio_sa,2.35,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2023-06,448,Clothing and accessories stores,inv_sales_ratio_sa,2.34,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2023-07,448,Clothing and accessories stores,inv_sales_ratio_sa,2.33,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2023-08,448,Clothing and accessories stores,inv_sales_ratio_sa,2.31,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2023-09,448,Clothing and accessories stores,inv_sales_ratio_sa,2.33,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2023-10,448,Clothing and accessories stores,inv_sales_ratio_sa,2.36,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2023-11,448,Clothing and accessories stores,inv_sales_ratio_sa,2.34,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2023-12,448,Clothing and accessories stores,inv_sales_ratio_sa,2.3,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2024-01,448,Clothing and accessories stores,inv_sales_ratio_sa,2.3,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2024-02,448,Clothing and accessories stores,inv_sales_ratio_sa,2.28,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2024-03,448,Clothing and accessories stores,inv_sales_ratio_sa,2.33,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2024-04,448,Clothing and accessories stores,inv_sales_ratio_sa,2.27,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2024-05,448,Clothing and accessories stores,inv_sales_ratio_sa,2.26,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2024-06,448,Clothing and accessories stores,inv_sales_ratio_sa,2.24,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2024-07,448,Clothing and accessories stores,inv_sales_ratio_sa,2.26,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2024-08,448,Clothing and accessories stores,inv_sales_ratio_sa,2.28,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2024-09,448,Clothing and accessories stores,inv_sales_ratio_sa,2.26,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2024-10,448,Clothing and accessories stores,inv_sales_ratio_sa,2.24,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2024-11,448,Clothing and accessories stores,inv_sales_ratio_sa,2.21,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2024-12,448,Clothing and accessories stores,inv_sales_ratio_sa,2.13,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2025-01,448,Clothing and accessories stores,inv_sales_ratio_sa,2.16,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2025-02,448,Clothing and accessories stores,inv_sales_ratio_sa,2.19,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2025-03,448,Clothing and accessories stores,inv_sales_ratio_sa,2.15,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2025-04,448,Clothing and accessories stores,inv_sales_ratio_sa,2.13,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2025-05,448,Clothing and accessories stores,inv_sales_ratio_sa,2.12,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2025-06,448,Clothing and accessories stores,inv_sales_ratio_sa,2.09,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2025-07,448,Clothing and accessories stores,inv_sales_ratio_sa,2.06,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2025-08,448,Clothing and accessories stores,inv_sales_ratio_sa,2.05,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2025-09,448,Clothing and accessories stores,inv_sales_ratio_sa,2.08,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2025-10,448,Clothing and accessories stores,inv_sales_ratio_sa,2.05,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2025-11,448,Clothing and accessories stores,inv_sales_ratio_sa,2.04,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2025-12,448,Clothing and accessories stores,inv_sales_ratio_sa,2.06,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2026-01,448,Clothing and accessories stores,inv_sales_ratio_sa,2.08,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2026-02,448,Clothing and accessories stores,inv_sales_ratio_sa,2.02,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2026-03,448,Clothing and accessories stores,inv_sales_ratio_sa,2.02,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2026-04,448,Clothing and accessories stores,inv_sales_ratio_sa,2.05,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2026-05,448,Clothing and accessories stores,inv_sales_ratio_sa,2.03,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2026-06,448,Clothing and accessories stores,inv_sales_ratio_sa,2.05,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2026-07,448,Clothing and accessories stores,inv_sales_ratio_sa,2.03,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2026-08,448,Clothing and accessories stores,inv_sales_ratio_sa,2.02,months of sales,MRTSIR448USS,448 Clothing and accessories stores
+2015-01,452,General merchandise stores,sales_nsa,50448,USD millions,MRTSSM452USN,
+2015-02,452,General merchandise stores,sales_nsa,49837,USD millions,MRTSSM452USN,
+2015-03,452,General merchandise stores,sales_nsa,55211,USD millions,MRTSSM452USN,
+2015-04,452,General merchandise stores,sales_nsa,53063,USD millions,MRTSSM452USN,
+2015-05,452,General merchandise stores,sales_nsa,58085,USD millions,MRTSSM452USN,
+2015-06,452,General merchandise stores,sales_nsa,54919,USD millions,MRTSSM452USN,
+2015-07,452,General merchandise stores,sales_nsa,55728,USD millions,MRTSSM452USN,
+2015-08,452,General merchandise stores,sales_nsa,57317,USD millions,MRTSSM452USN,
+2015-09,452,General merchandise stores,sales_nsa,52333,USD millions,MRTSSM452USN,
+2015-10,452,General merchandise stores,sales_nsa,56356,USD millions,MRTSSM452USN,
+2015-11,452,General merchandise stores,sales_nsa,61276,USD millions,MRTSSM452USN,
+2015-12,452,General merchandise stores,sales_nsa,74132,USD millions,MRTSSM452USN,
+2016-01,452,General merchandise stores,sales_nsa,50387,USD millions,MRTSSM452USN,
+2016-02,452,General merchandise stores,sales_nsa,52029,USD millions,MRTSSM452USN,
+2016-03,452,General merchandise stores,sales_nsa,56519,USD millions,MRTSSM452USN,
+2016-04,452,General merchandise stores,sales_nsa,54140,USD millions,MRTSSM452USN,
+2016-05,452,General merchandise stores,sales_nsa,56961,USD millions,MRTSSM452USN,
+2016-06,452,General merchandise stores,sales_nsa,55788,USD millions,MRTSSM452USN,
+2016-07,452,General merchandise stores,sales_nsa,56380,USD millions,MRTSSM452USN,
+2016-08,452,General merchandise stores,sales_nsa,56530,USD millions,MRTSSM452USN,
+2016-09,452,General merchandise stores,sales_nsa,52201,USD millions,MRTSSM452USN,
+2016-10,452,General merchandise stores,sales_nsa,56032,USD millions,MRTSSM452USN,
+2016-11,452,General merchandise stores,sales_nsa,60786,USD millions,MRTSSM452USN,
+2016-12,452,General merchandise stores,sales_nsa,73667,USD millions,MRTSSM452USN,
+2017-01,452,General merchandise stores,sales_nsa,50920,USD millions,MRTSSM452USN,
+2017-02,452,General merchandise stores,sales_nsa,50150,USD millions,MRTSSM452USN,
+2017-03,452,General merchandise stores,sales_nsa,56029,USD millions,MRTSSM452USN,
+2017-04,452,General merchandise stores,sales_nsa,55956,USD millions,MRTSSM452USN,
+2017-05,452,General merchandise stores,sales_nsa,56727,USD millions,MRTSSM452USN,
+2017-06,452,General merchandise stores,sales_nsa,56994,USD millions,MRTSSM452USN,
+2017-07,452,General merchandise stores,sales_nsa,56736,USD millions,MRTSSM452USN,
+2017-08,452,General merchandise stores,sales_nsa,57794,USD millions,MRTSSM452USN,
+2017-09,452,General merchandise stores,sales_nsa,54701,USD millions,MRTSSM452USN,
+2017-10,452,General merchandise stores,sales_nsa,56632,USD millions,MRTSSM452USN,
+2017-11,452,General merchandise stores,sales_nsa,62321,USD millions,MRTSSM452USN,
+2017-12,452,General merchandise stores,sales_nsa,75366,USD millions,MRTSSM452USN,
+2018-01,452,General merchandise stores,sales_nsa,51454,USD millions,MRTSSM452USN,
+2018-02,452,General merchandise stores,sales_nsa,51296,USD millions,MRTSSM452USN,
+2018-03,452,General merchandise stores,sales_nsa,59610,USD millions,MRTSSM452USN,
+2018-04,452,General merchandise stores,sales_nsa,54341,USD millions,MRTSSM452USN,
+2018-05,452,General merchandise stores,sales_nsa,60921,USD millions,MRTSSM452USN,
+2018-06,452,General merchandise stores,sales_nsa,58816,USD millions,MRTSSM452USN,
+2018-07,452,General merchandise stores,sales_nsa,58156,USD millions,MRTSSM452USN,
+2018-08,452,General merchandise stores,sales_nsa,60782,USD millions,MRTSSM452USN,
+2018-09,452,General merchandise stores,sales_nsa,55759,USD millions,MRTSSM452USN,
+2018-10,452,General merchandise stores,sales_nsa,58684,USD millions,MRTSSM452USN,
+2018-11,452,General merchandise stores,sales_nsa,66891,USD millions,MRTSSM452USN,
+2018-12,452,General merchandise stores,sales_nsa,79284,USD millions,MRTSSM452USN,
+2019-01,452,General merchandise stores,sales_nsa,53106,USD millions,MRTSSM452USN,
+2019-02,452,General merchandise stores,sales_nsa,51790,USD millions,MRTSSM452USN,
+2019-03,452,General merchandise stores,sales_nsa,60159,USD millions,MRTSSM452USN,
+2019-04,452,General merchandise stores,sales_nsa,58469,USD millions,MRTSSM452USN,
+2019-05,452,General merchandise stores,sales_nsa,62485,USD millions,MRTSSM452USN,
+2019-06,452,General merchandise stores,sales_nsa,60702,USD millions,MRTSSM452USN,
+2019-07,452,General merchandise stores,sales_nsa,60551,USD millions,MRTSSM452USN,
+2019-08,452,General merchandise stores,sales_nsa,63854,USD millions,MRTSSM452USN,
+2019-09,452,General merchandise stores,sales_nsa,56462,USD millions,MRTSSM452USN,
+2019-10,452,General merchandise stores,sales_nsa,60837,USD millions,MRTSSM452USN,
+2019-11,452,General merchandise stores,sales_nsa,68173,USD millions,MRTSSM452USN,
+2019-12,452,General merchandise stores,sales_nsa,79826,USD millions,MRTSSM452USN,
+2020-01,452,General merchandise stores,sales_nsa,55716,USD millions,MRTSSM452USN,
+2020-02,452,General merchandise stores,sales_nsa,56824,USD millions,MRTSSM452USN,
+2020-03,452,General merchandise stores,sales_nsa,62936,USD millions,MRTSSM452USN,
+2020-04,452,General merchandise stores,sales_nsa,56745,USD millions,MRTSSM452USN,
+2020-05,452,General merchandise stores,sales_nsa,66513,USD millions,MRTSSM452USN,
+2020-06,452,General merchandise stores,sales_nsa,63075,USD millions,MRTSSM452USN,
+2020-07,452,General merchandise stores,sales_nsa,63836,USD millions,MRTSSM452USN,
+2020-08,452,General merchandise stores,sales_nsa,64290,USD millions,MRTSSM452USN,
+2020-09,452,General merchandise stores,sales_nsa,60264,USD millions,MRTSSM452USN,
+2020-10,452,General merchandise stores,sales_nsa,64954,USD millions,MRTSSM452USN,
+2020-11,452,General merchandise stores,sales_nsa,67695,USD millions,MRTSSM452USN,
+2020-12,452,General merchandise stores,sales_nsa,79050,USD millions,MRTSSM452USN,
+2021-01,452,General merchandise stores,sales_nsa,61934,USD millions,MRTSSM452USN,
+2021-02,452,General merchandise stores,sales_nsa,56072,USD millions,MRTSSM452USN,
+2021-03,452,General merchandise stores,sales_nsa,68265,USD millions,MRTSSM452USN,
+2021-04,452,General merchandise stores,sales_nsa,68106,USD millions,MRTSSM452USN,
+2021-05,452,General merchandise stores,sales_nsa,72778,USD millions,MRTSSM452USN,
+2021-06,452,General merchandise stores,sales_nsa,68853,USD millions,MRTSSM452USN,
+2021-07,452,General merchandise stores,sales_nsa,70727,USD millions,MRTSSM452USN,
+2021-08,452,General merchandise stores,sales_nsa,71771,USD millions,MRTSSM452USN,
+2021-09,452,General merchandise stores,sales_nsa,66806,USD millions,MRTSSM452USN,
+2021-10,452,General merchandise stores,sales_nsa,73557,USD millions,MRTSSM452USN,
+2021-11,452,General merchandise stores,sales_nsa,76579,USD millions,MRTSSM452USN,
+2021-12,452,General merchandise stores,sales_nsa,90301,USD millions,MRTSSM452USN,
+2022-01,452,General merchandise stores,sales_nsa,66590,USD millions,MRTSSM452USN,
+2022-02,452,General merchandise stores,sales_nsa,64798,USD millions,MRTSSM452USN,
+2022-03,452,General merchandise stores,sales_nsa,72728,USD millions,MRTSSM452USN,
+2022-04,452,General merchandise stores,sales_nsa,76299,USD millions,MRTSSM452USN,
+2022-05,452,General merchandise stores,sales_nsa,79851,USD millions,MRTSSM452USN,
+2022-06,452,General merchandise stores,sales_nsa,78176,USD millions,MRTSSM452USN,
+2022-07,452,General merchandise stores,sales_nsa,78317,USD millions,MRTSSM452USN,
+2022-08,452,General merchandise stores,sales_nsa,79145,USD millions,MRTSSM452USN,
+2022-09,452,General merchandise stores,sales_nsa,74555,USD millions,MRTSSM452USN,
+2022-10,452,General merchandise stores,sales_nsa,79031,USD millions,MRTSSM452USN,
+2022-11,452,General merchandise stores,sales_nsa,81988,USD millions,MRTSSM452USN,
+2022-12,452,General merchandise stores,sales_nsa,96014,USD millions,MRTSSM452USN,
+2023-01,452,General merchandise stores,sales_nsa,69032,USD millions,MRTSSM452USN,
+2023-02,452,General merchandise stores,sales_nsa,66395,USD millions,MRTSSM452USN,
+2023-03,452,General merchandise stores,sales_nsa,71337,USD millions,MRTSSM452USN,
+2023-04,452,General merchandise stores,sales_nsa,73503,USD millions,MRTSSM452USN,
+2023-05,452,General merchandise stores,sales_nsa,75910,USD millions,MRTSSM452USN,
+2023-06,452,General merchandise stores,sales_nsa,74219,USD millions,MRTSSM452USN,
+2023-07,452,General merchandise stores,sales_nsa,74312,USD millions,MRTSSM452USN,
+2023-08,452,General merchandise stores,sales_nsa,75948,USD millions,MRTSSM452USN,
+2023-09,452,General merchandise stores,sales_nsa,71269,USD millions,MRTSSM452USN,
+2023-10,452,General merchandise stores,sales_nsa,74102,USD millions,MRTSSM452USN,
+2023-11,452,General merchandise stores,sales_nsa,78154,USD millions,MRTSSM452USN,
+2023-12,452,General merchandise stores,sales_nsa,93247,USD millions,MRTSSM452USN,
+2024-01,452,General merchandise stores,sales_nsa,66540,USD millions,MRTSSM452USN,
+2024-02,452,General merchandise stores,sales_nsa,67880,USD millions,MRTSSM452USN,
+2024-03,452,General merchandise stores,sales_nsa,76251,USD millions,MRTSSM452USN,
+2024-04,452,General merchandise stores,sales_nsa,71292,USD millions,MRTSSM452USN,
+2024-05,452,General merchandise stores,sales_nsa,78362,USD millions,MRTSSM452USN,
+2024-06,452,General merchandise stores,sales_nsa,75941,USD millions,MRTSSM452USN,
+2024-07,452,General merchandise stores,sales_nsa,75724,USD millions,MRTSSM452USN,
+2024-08,452,General merchandise stores,sales_nsa,79312,USD millions,MRTSSM452USN,
+2024-09,452,General merchandise stores,sales_nsa,72526,USD millions,MRTSSM452USN,
+2024-10,452,General merchandise stores,sales_nsa,77313,USD millions,MRTSSM452USN,
+2024-11,452,General merchandise stores,sales_nsa,82382,USD millions,MRTSSM452USN,
+2024-12,452,General merchandise stores,sales_nsa,94879,USD millions,MRTSSM452USN,
+2025-01,452,General merchandise stores,sales_nsa,70814,USD millions,MRTSSM452USN,
+2025-02,452,General merchandise stores,sales_nsa,67323,USD millions,MRTSSM452USN,
+2025-03,452,General merchandise stores,sales_nsa,76447,USD millions,MRTSSM452USN,
+2025-04,452,General merchandise stores,sales_nsa,75229,USD millions,MRTSSM452USN,
+2025-05,452,General merchandise stores,sales_nsa,80504,USD millions,MRTSSM452USN,
+2025-06,452,General merchandise stores,sales_nsa,76961,USD millions,MRTSSM452USN,
+2025-07,452,General merchandise stores,sales_nsa,77771,USD millions,MRTSSM452USN,
+2025-08,452,General merchandise stores,sales_nsa,81276,USD millions,MRTSSM452USN,
+2025-09,452,General merchandise stores,sales_nsa,73234,USD millions,MRTSSM452USN,
+2025-10,452,General merchandise stores,sales_nsa,79499,USD millions,MRTSSM452USN,
+2025-11,452,General merchandise stores,sales_nsa,83496,USD millions,MRTSSM452USN,
+2025-12,452,General merchandise stores,sales_nsa,95564,USD millions,MRTSSM452USN,
+2026-01,452,General merchandise stores,sales_nsa,73042,USD millions,MRTSSM452USN,
+2026-02,452,General merchandise stores,sales_nsa,69034,USD millions,MRTSSM452USN,
+2026-03,452,General merchandise stores,sales_nsa,79392,USD millions,MRTSSM452USN,
+2026-04,452,General merchandise stores,sales_nsa,77024,USD millions,MRTSSM452USN,
+2026-05,452,General merchandise stores,sales_nsa,84242,USD millions,MRTSSM452USN,
+2026-06,452,General merchandise stores,sales_nsa,79132,USD millions,MRTSSM452USN,
+2026-07,452,General merchandise stores,sales_nsa,81243,USD millions,MRTSSM452USN,
+2026-08,452,General merchandise stores,sales_nsa,83627,USD millions,MRTSSM452USN,
+2015-01,452,General merchandise stores,inv_sales_ratio_sa,1.45,months of sales,MRTSIR452USS,452 General merchandise stores
+2015-02,452,General merchandise stores,inv_sales_ratio_sa,1.47,months of sales,MRTSIR452USS,452 General merchandise stores
+2015-03,452,General merchandise stores,inv_sales_ratio_sa,1.45,months of sales,MRTSIR452USS,452 General merchandise stores
+2015-04,452,General merchandise stores,inv_sales_ratio_sa,1.48,months of sales,MRTSIR452USS,452 General merchandise stores
+2015-05,452,General merchandise stores,inv_sales_ratio_sa,1.47,months of sales,MRTSIR452USS,452 General merchandise stores
+2015-06,452,General merchandise stores,inv_sales_ratio_sa,1.47,months of sales,MRTSIR452USS,452 General merchandise stores
+2015-07,452,General merchandise stores,inv_sales_ratio_sa,1.46,months of sales,MRTSIR452USS,452 General merchandise stores
+2015-08,452,General merchandise stores,inv_sales_ratio_sa,1.46,months of sales,MRTSIR452USS,452 General merchandise stores
+2015-09,452,General merchandise stores,inv_sales_ratio_sa,1.47,months of sales,MRTSIR452USS,452 General merchandise stores
+2015-10,452,General merchandise stores,inv_sales_ratio_sa,1.48,months of sales,MRTSIR452USS,452 General merchandise stores
+2015-11,452,General merchandise stores,inv_sales_ratio_sa,1.47,months of sales,MRTSIR452USS,452 General merchandise stores
+2015-12,452,General merchandise stores,inv_sales_ratio_sa,1.46,months of sales,MRTSIR452USS,452 General merchandise stores
+2016-01,452,General merchandise stores,inv_sales_ratio_sa,1.49,months of sales,MRTSIR452USS,452 General merchandise stores
+2016-02,452,General merchandise stores,inv_sales_ratio_sa,1.46,months of sales,MRTSIR452USS,452 General merchandise stores
+2016-03,452,General merchandise stores,inv_sales_ratio_sa,1.46,months of sales,MRTSIR452USS,452 General merchandise stores
+2016-04,452,General merchandise stores,inv_sales_ratio_sa,1.45,months of sales,MRTSIR452USS,452 General merchandise stores
+2016-05,452,General merchandise stores,inv_sales_ratio_sa,1.47,months of sales,MRTSIR452USS,452 General merchandise stores
+2016-06,452,General merchandise stores,inv_sales_ratio_sa,1.44,months of sales,MRTSIR452USS,452 General merchandise stores
+2016-07,452,General merchandise stores,inv_sales_ratio_sa,1.45,months of sales,MRTSIR452USS,452 General merchandise stores
+2016-08,452,General merchandise stores,inv_sales_ratio_sa,1.44,months of sales,MRTSIR452USS,452 General merchandise stores
+2016-09,452,General merchandise stores,inv_sales_ratio_sa,1.45,months of sales,MRTSIR452USS,452 General merchandise stores
+2016-10,452,General merchandise stores,inv_sales_ratio_sa,1.43,months of sales,MRTSIR452USS,452 General merchandise stores
+2016-11,452,General merchandise stores,inv_sales_ratio_sa,1.43,months of sales,MRTSIR452USS,452 General merchandise stores
+2016-12,452,General merchandise stores,inv_sales_ratio_sa,1.43,months of sales,MRTSIR452USS,452 General merchandise stores
+2017-01,452,General merchandise stores,inv_sales_ratio_sa,1.38,months of sales,MRTSIR452USS,452 General merchandise stores
+2017-02,452,General merchandise stores,inv_sales_ratio_sa,1.39,months of sales,MRTSIR452USS,452 General merchandise stores
+2017-03,452,General merchandise stores,inv_sales_ratio_sa,1.39,months of sales,MRTSIR452USS,452 General merchandise stores
+2017-04,452,General merchandise stores,inv_sales_ratio_sa,1.39,months of sales,MRTSIR452USS,452 General merchandise stores
+2017-05,452,General merchandise stores,inv_sales_ratio_sa,1.41,months of sales,MRTSIR452USS,452 General merchandise stores
+2017-06,452,General merchandise stores,inv_sales_ratio_sa,1.38,months of sales,MRTSIR452USS,452 General merchandise stores
+2017-07,452,General merchandise stores,inv_sales_ratio_sa,1.38,months of sales,MRTSIR452USS,452 General merchandise stores
+2017-08,452,General merchandise stores,inv_sales_ratio_sa,1.38,months of sales,MRTSIR452USS,452 General merchandise stores
+2017-09,452,General merchandise stores,inv_sales_ratio_sa,1.36,months of sales,MRTSIR452USS,452 General merchandise stores
+2017-10,452,General merchandise stores,inv_sales_ratio_sa,1.37,months of sales,MRTSIR452USS,452 General merchandise stores
+2017-11,452,General merchandise stores,inv_sales_ratio_sa,1.38,months of sales,MRTSIR452USS,452 General merchandise stores
+2017-12,452,General merchandise stores,inv_sales_ratio_sa,1.37,months of sales,MRTSIR452USS,452 General merchandise stores
+2018-01,452,General merchandise stores,inv_sales_ratio_sa,1.36,months of sales,MRTSIR452USS,452 General merchandise stores
+2018-02,452,General merchandise stores,inv_sales_ratio_sa,1.36,months of sales,MRTSIR452USS,452 General merchandise stores
+2018-03,452,General merchandise stores,inv_sales_ratio_sa,1.36,months of sales,MRTSIR452USS,452 General merchandise stores
+2018-04,452,General merchandise stores,inv_sales_ratio_sa,1.39,months of sales,MRTSIR452USS,452 General merchandise stores
+2018-05,452,General merchandise stores,inv_sales_ratio_sa,1.36,months of sales,MRTSIR452USS,452 General merchandise stores
+2018-06,452,General merchandise stores,inv_sales_ratio_sa,1.37,months of sales,MRTSIR452USS,452 General merchandise stores
+2018-07,452,General merchandise stores,inv_sales_ratio_sa,1.36,months of sales,MRTSIR452USS,452 General merchandise stores
+2018-08,452,General merchandise stores,inv_sales_ratio_sa,1.36,months of sales,MRTSIR452USS,452 General merchandise stores
+2018-09,452,General merchandise stores,inv_sales_ratio_sa,1.37,months of sales,MRTSIR452USS,452 General merchandise stores
+2018-10,452,General merchandise stores,inv_sales_ratio_sa,1.38,months of sales,MRTSIR452USS,452 General merchandise stores
+2018-11,452,General merchandise stores,inv_sales_ratio_sa,1.32,months of sales,MRTSIR452USS,452 General merchandise stores
+2018-12,452,General merchandise stores,inv_sales_ratio_sa,1.32,months of sales,MRTSIR452USS,452 General merchandise stores
+2019-01,452,General merchandise stores,inv_sales_ratio_sa,1.38,months of sales,MRTSIR452USS,452 General merchandise stores
+2019-02,452,General merchandise stores,inv_sales_ratio_sa,1.39,months of sales,MRTSIR452USS,452 General merchandise stores
+2019-03,452,General merchandise stores,inv_sales_ratio_sa,1.37,months of sales,MRTSIR452USS,452 General merchandise stores
+2019-04,452,General merchandise stores,inv_sales_ratio_sa,1.37,months of sales,MRTSIR452USS,452 General merchandise stores
+2019-05,452,General merchandise stores,inv_sales_ratio_sa,1.36,months of sales,MRTSIR452USS,452 General merchandise stores
+2019-06,452,General merchandise stores,inv_sales_ratio_sa,1.35,months of sales,MRTSIR452USS,452 General merchandise stores
+2019-07,452,General merchandise stores,inv_sales_ratio_sa,1.33,months of sales,MRTSIR452USS,452 General merchandise stores
+2019-08,452,General merchandise stores,inv_sales_ratio_sa,1.33,months of sales,MRTSIR452USS,452 General merchandise stores
+2019-09,452,General merchandise stores,inv_sales_ratio_sa,1.34,months of sales,MRTSIR452USS,452 General merchandise stores
+2019-10,452,General merchandise stores,inv_sales_ratio_sa,1.33,months of sales,MRTSIR452USS,452 General merchandise stores
+2019-11,452,General merchandise stores,inv_sales_ratio_sa,1.31,months of sales,MRTSIR452USS,452 General merchandise stores
+2019-12,452,General merchandise stores,inv_sales_ratio_sa,1.28,months of sales,MRTSIR452USS,452 General merchandise stores
+2020-01,452,General merchandise stores,inv_sales_ratio_sa,1.31,months of sales,MRTSIR452USS,452 General merchandise stores
+2020-02,452,General merchandise stores,inv_sales_ratio_sa,1.28,months of sales,MRTSIR452USS,452 General merchandise stores
+2020-03,452,General merchandise stores,inv_sales_ratio_sa,1.23,months of sales,MRTSIR452USS,452 General merchandise stores
+2020-04,452,General merchandise stores,inv_sales_ratio_sa,1.32,months of sales,MRTSIR452USS,452 General merchandise stores
+2020-05,452,General merchandise stores,inv_sales_ratio_sa,1.18,months of sales,MRTSIR452USS,452 General merchandise stores
+2020-06,452,General merchandise stores,inv_sales_ratio_sa,1.13,months of sales,MRTSIR452USS,452 General merchandise stores
+2020-07,452,General merchandise stores,inv_sales_ratio_sa,1.14,months of sales,MRTSIR452USS,452 General merchandise stores
+2020-08,452,General merchandise stores,inv_sales_ratio_sa,1.19,months of sales,MRTSIR452USS,452 General merchandise stores
+2020-09,452,General merchandise stores,inv_sales_ratio_sa,1.19,months of sales,MRTSIR452USS,452 General merchandise stores
+2020-10,452,General merchandise stores,inv_sales_ratio_sa,1.24,months of sales,MRTSIR452USS,452 General merchandise stores
+2020-11,452,General merchandise stores,inv_sales_ratio_sa,1.26,months of sales,MRTSIR452USS,452 General merchandise stores
+2020-12,452,General merchandise stores,inv_sales_ratio_sa,1.26,months of sales,MRTSIR452USS,452 General merchandise stores
+2021-01,452,General merchandise stores,inv_sales_ratio_sa,1.19,months of sales,MRTSIR452USS,452 General merchandise stores
+2021-02,452,General merchandise stores,inv_sales_ratio_sa,1.25,months of sales,MRTSIR452USS,452 General merchandise stores
+2021-03,452,General merchandise stores,inv_sales_ratio_sa,1.16,months of sales,MRTSIR452USS,452 General merchandise stores
+2021-04,452,General merchandise stores,inv_sales_ratio_sa,1.17,months of sales,MRTSIR452USS,452 General merchandise stores
+2021-05,452,General merchandise stores,inv_sales_ratio_sa,1.19,months of sales,MRTSIR452USS,452 General merchandise stores
+2021-06,452,General merchandise stores,inv_sales_ratio_sa,1.2,months of sales,MRTSIR452USS,452 General merchandise stores
+2021-07,452,General merchandise stores,inv_sales_ratio_sa,1.21,months of sales,MRTSIR452USS,452 General merchandise stores
+2021-08,452,General merchandise stores,inv_sales_ratio_sa,1.21,months of sales,MRTSIR452USS,452 General merchandise stores
+2021-09,452,General merchandise stores,inv_sales_ratio_sa,1.23,months of sales,MRTSIR452USS,452 General merchandise stores
+2021-10,452,General merchandise stores,inv_sales_ratio_sa,1.24,months of sales,MRTSIR452USS,452 General merchandise stores
+2021-11,452,General merchandise stores,inv_sales_ratio_sa,1.26,months of sales,MRTSIR452USS,452 General merchandise stores
+2021-12,452,General merchandise stores,inv_sales_ratio_sa,1.32,months of sales,MRTSIR452USS,452 General merchandise stores
+2022-01,452,General merchandise stores,inv_sales_ratio_sa,1.37,months of sales,MRTSIR452USS,452 General merchandise stores
+2022-02,452,General merchandise stores,inv_sales_ratio_sa,1.37,months of sales,MRTSIR452USS,452 General merchandise stores
+2022-03,452,General merchandise stores,inv_sales_ratio_sa,1.43,months of sales,MRTSIR452USS,452 General merchandise stores
+2022-04,452,General merchandise stores,inv_sales_ratio_sa,1.44,months of sales,MRTSIR452USS,452 General merchandise stores
+2022-05,452,General merchandise stores,inv_sales_ratio_sa,1.43,months of sales,MRTSIR452USS,452 General merchandise stores
+2022-06,452,General merchandise stores,inv_sales_ratio_sa,1.4,months of sales,MRTSIR452USS,452 General merchandise stores
+2022-07,452,General merchandise stores,inv_sales_ratio_sa,1.43,months of sales,MRTSIR452USS,452 General merchandise stores
+2022-08,452,General merchandise stores,inv_sales_ratio_sa,1.42,months of sales,MRTSIR452USS,452 General merchandise stores
+2022-09,452,General merchandise stores,inv_sales_ratio_sa,1.35,months of sales,MRTSIR452USS,452 General merchandise stores
+2022-10,452,General merchandise stores,inv_sales_ratio_sa,1.35,months of sales,MRTSIR452USS,452 General merchandise stores
+2022-11,452,General merchandise stores,inv_sales_ratio_sa,1.35,months of sales,MRTSIR452USS,452 General merchandise stores
+2022-12,452,General merchandise stores,inv_sales_ratio_sa,1.36,months of sales,MRTSIR452USS,452 General merchandise stores
+2023-01,452,General merchandise stores,inv_sales_ratio_sa,1.36,months of sales,MRTSIR452USS,452 General merchandise stores
+2023-02,452,General merchandise stores,inv_sales_ratio_sa,1.36,months of sales,MRTSIR452USS,452 General merchandise stores
+2023-03,452,General merchandise stores,inv_sales_ratio_sa,1.43,months of sales,MRTSIR452USS,452 General merchandise stores
+2023-04,452,General merchandise stores,inv_sales_ratio_sa,1.42,months of sales,MRTSIR452USS,452 General merchandise stores
+2023-05,452,General merchandise stores,inv_sales_ratio_sa,1.41,months of sales,MRTSIR452USS,452 General merchandise stores
+2023-06,452,General merchandise stores,inv_sales_ratio_sa,1.41,months of sales,MRTSIR452USS,452 General merchandise stores
+2023-07,452,General merchandise stores,inv_sales_ratio_sa,1.4,months of sales,MRTSIR452USS,452 General merchandise stores
+2023-08,452,General merchandise stores,inv_sales_ratio_sa,1.39,months of sales,MRTSIR452USS,452 General merchandise stores
+2023-09,452,General merchandise stores,inv_sales_ratio_sa,1.38,months of sales,MRTSIR452USS,452 General merchandise stores
+2023-10,452,General merchandise stores,inv_sales_ratio_sa,1.39,months of sales,MRTSIR452USS,452 General merchandise stores
+2023-11,452,General merchandise stores,inv_sales_ratio_sa,1.36,months of sales,MRTSIR452USS,452 General merchandise stores
+2023-12,452,General merchandise stores,inv_sales_ratio_sa,1.37,months of sales,MRTSIR452USS,452 General merchandise stores
+2024-01,452,General merchandise stores,inv_sales_ratio_sa,1.37,months of sales,MRTSIR452USS,452 General merchandise stores
+2024-02,452,General merchandise stores,inv_sales_ratio_sa,1.36,months of sales,MRTSIR452USS,452 General merchandise stores
+2024-03,452,General merchandise stores,inv_sales_ratio_sa,1.36,months of sales,MRTSIR452USS,452 General merchandise stores
+2024-04,452,General merchandise stores,inv_sales_ratio_sa,1.37,months of sales,MRTSIR452USS,452 General merchandise stores
+2024-05,452,General merchandise stores,inv_sales_ratio_sa,1.36,months of sales,MRTSIR452USS,452 General merchandise stores
+2024-06,452,General merchandise stores,inv_sales_ratio_sa,1.37,months of sales,MRTSIR452USS,452 General merchandise stores
+2024-07,452,General merchandise stores,inv_sales_ratio_sa,1.37,months of sales,MRTSIR452USS,452 General merchandise stores
+2024-08,452,General merchandise stores,inv_sales_ratio_sa,1.4,months of sales,MRTSIR452USS,452 General merchandise stores
+2024-09,452,General merchandise stores,inv_sales_ratio_sa,1.39,months of sales,MRTSIR452USS,452 General merchandise stores
+2024-10,452,General merchandise stores,inv_sales_ratio_sa,1.39,months of sales,MRTSIR452USS,452 General merchandise stores
+2024-11,452,General merchandise stores,inv_sales_ratio_sa,1.4,months of sales,MRTSIR452USS,452 General merchandise stores
+2024-12,452,General merchandise stores,inv_sales_ratio_sa,1.41,months of sales,MRTSIR452USS,452 General merchandise stores
+2025-01,452,General merchandise stores,inv_sales_ratio_sa,1.4,months of sales,MRTSIR452USS,452 General merchandise stores
+2025-02,452,General merchandise stores,inv_sales_ratio_sa,1.4,months of sales,MRTSIR452USS,452 General merchandise stores
+2025-03,452,General merchandise stores,inv_sales_ratio_sa,1.41,months of sales,MRTSIR452USS,452 General merchandise stores
+2025-04,452,General merchandise stores,inv_sales_ratio_sa,1.4,months of sales,MRTSIR452USS,452 General merchandise stores
+2025-05,452,General merchandise stores,inv_sales_ratio_sa,1.41,months of sales,MRTSIR452USS,452 General merchandise stores
+2025-06,452,General merchandise stores,inv_sales_ratio_sa,1.38,months of sales,MRTSIR452USS,452 General merchandise stores
+2025-07,452,General merchandise stores,inv_sales_ratio_sa,1.37,months of sales,MRTSIR452USS,452 General merchandise stores
+2025-08,452,General merchandise stores,inv_sales_ratio_sa,1.37,months of sales,MRTSIR452USS,452 General merchandise stores
+2025-09,452,General merchandise stores,inv_sales_ratio_sa,1.34,months of sales,MRTSIR452USS,452 General merchandise stores
+2025-10,452,General merchandise stores,inv_sales_ratio_sa,1.32,months of sales,MRTSIR452USS,452 General merchandise stores
+2025-11,452,General merchandise stores,inv_sales_ratio_sa,1.4,months of sales,MRTSIR452USS,452 General merchandise stores
+2025-12,452,General merchandise stores,inv_sales_ratio_sa,1.4,months of sales,MRTSIR452USS,452 General merchandise stores
+2026-01,452,General merchandise stores,inv_sales_ratio_sa,1.4,months of sales,MRTSIR452USS,452 General merchandise stores
+2026-02,452,General merchandise stores,inv_sales_ratio_sa,1.4,months of sales,MRTSIR452USS,452 General merchandise stores
+2026-03,452,General merchandise stores,inv_sales_ratio_sa,1.4,months of sales,MRTSIR452USS,452 General merchandise stores
+2026-04,452,General merchandise stores,inv_sales_ratio_sa,1.4,months of sales,MRTSIR452USS,452 General merchandise stores
+2026-05,452,General merchandise stores,inv_sales_ratio_sa,1.4,months of sales,MRTSIR452USS,452 General merchandise stores
+2026-06,452,General merchandise stores,inv_sales_ratio_sa,1.4,months of sales,MRTSIR452USS,452 General merchandise stores
+2026-07,452,General merchandise stores,inv_sales_ratio_sa,1.4,months of sales,MRTSIR452USS,452 General merchandise stores
+2026-08,452,General merchandise stores,inv_sales_ratio_sa,1.39,months of sales,MRTSIR452USS,452 General merchandise stores
+2015-01,4451,Grocery stores,sales_nsa,51357,USD millions,MRTSSM4451USN,
+2015-02,4451,Grocery stores,sales_nsa,46894,USD millions,MRTSSM4451USN,
+2015-03,4451,Grocery stores,sales_nsa,50921,USD millions,MRTSSM4451USN,
+2015-04,4451,Grocery stores,sales_nsa,49813,USD millions,MRTSSM4451USN,
+2015-05,4451,Grocery stores,sales_nsa,52863,USD millions,MRTSSM4451USN,
+2015-06,4451,Grocery stores,sales_nsa,50574,USD millions,MRTSSM4451USN,
+2015-07,4451,Grocery stores,sales_nsa,52686,USD millions,MRTSSM4451USN,
+2015-08,4451,Grocery stores,sales_nsa,51675,USD millions,MRTSSM4451USN,
+2015-09,4451,Grocery stores,sales_nsa,49785,USD millions,MRTSSM4451USN,
+2015-10,4451,Grocery stores,sales_nsa,51495,USD millions,MRTSSM4451USN,
+2015-11,4451,Grocery stores,sales_nsa,50849,USD millions,MRTSSM4451USN,
+2015-12,4451,Grocery stores,sales_nsa,53555,USD millions,MRTSSM4451USN,
+2016-01,4451,Grocery stores,sales_nsa,51528,USD millions,MRTSSM4451USN,
+2016-02,4451,Grocery stores,sales_nsa,48478,USD millions,MRTSSM4451USN,
+2016-03,4451,Grocery stores,sales_nsa,51962,USD millions,MRTSSM4451USN,
+2016-04,4451,Grocery stores,sales_nsa,50258,USD millions,MRTSSM4451USN,
+2016-05,4451,Grocery stores,sales_nsa,52756,USD millions,MRTSSM4451USN,
+2016-06,4451,Grocery stores,sales_nsa,52039,USD millions,MRTSSM4451USN,
+2016-07,4451,Grocery stores,sales_nsa,53080,USD millions,MRTSSM4451USN,
+2016-08,4451,Grocery stores,sales_nsa,52186,USD millions,MRTSSM4451USN,
+2016-09,4451,Grocery stores,sales_nsa,51134,USD millions,MRTSSM4451USN,
+2016-10,4451,Grocery stores,sales_nsa,52388,USD millions,MRTSSM4451USN,
+2016-11,4451,Grocery stores,sales_nsa,52517,USD millions,MRTSSM4451USN,
+2016-12,4451,Grocery stores,sales_nsa,56183,USD millions,MRTSSM4451USN,
+2017-01,4451,Grocery stores,sales_nsa,52314,USD millions,MRTSSM4451USN,
+2017-02,4451,Grocery stores,sales_nsa,48987,USD millions,MRTSSM4451USN,
+2017-03,4451,Grocery stores,sales_nsa,54117,USD millions,MRTSSM4451USN,
+2017-04,4451,Grocery stores,sales_nsa,53385,USD millions,MRTSSM4451USN,
+2017-05,4451,Grocery stores,sales_nsa,55446,USD millions,MRTSSM4451USN,
+2017-06,4451,Grocery stores,sales_nsa,53933,USD millions,MRTSSM4451USN,
+2017-07,4451,Grocery stores,sales_nsa,54890,USD millions,MRTSSM4451USN,
+2017-08,4451,Grocery stores,sales_nsa,54809,USD millions,MRTSSM4451USN,
+2017-09,4451,Grocery stores,sales_nsa,53862,USD millions,MRTSSM4451USN,
+2017-10,4451,Grocery stores,sales_nsa,54268,USD millions,MRTSSM4451USN,
+2017-11,4451,Grocery stores,sales_nsa,55143,USD millions,MRTSSM4451USN,
+2017-12,4451,Grocery stores,sales_nsa,58800,USD millions,MRTSSM4451USN,
+2018-01,4451,Grocery stores,sales_nsa,54563,USD millions,MRTSSM4451USN,
+2018-02,4451,Grocery stores,sales_nsa,50607,USD millions,MRTSSM4451USN,
+2018-03,4451,Grocery stores,sales_nsa,56941,USD millions,MRTSSM4451USN,
+2018-04,4451,Grocery stores,sales_nsa,53166,USD millions,MRTSSM4451USN,
+2018-05,4451,Grocery stores,sales_nsa,57415,USD millions,MRTSSM4451USN,
+2018-06,4451,Grocery stores,sales_nsa,55693,USD millions,MRTSSM4451USN,
+2018-07,4451,Grocery stores,sales_nsa,56264,USD millions,MRTSSM4451USN,
+2018-08,4451,Grocery stores,sales_nsa,56575,USD millions,MRTSSM4451USN,
+2018-09,4451,Grocery stores,sales_nsa,54526,USD millions,MRTSSM4451USN,
+2018-10,4451,Grocery stores,sales_nsa,55635,USD millions,MRTSSM4451USN,
+2018-11,4451,Grocery stores,sales_nsa,56361,USD millions,MRTSSM4451USN,
+2018-12,4451,Grocery stores,sales_nsa,58957,USD millions,MRTSSM4451USN,
+2019-01,4451,Grocery stores,sales_nsa,56984,USD millions,MRTSSM4451USN,
+2019-02,4451,Grocery stores,sales_nsa,51095,USD millions,MRTSSM4451USN,
+2019-03,4451,Grocery stores,sales_nsa,57034,USD millions,MRTSSM4451USN,
+2019-04,4451,Grocery stores,sales_nsa,55787,USD millions,MRTSSM4451USN,
+2019-05,4451,Grocery stores,sales_nsa,59431,USD millions,MRTSSM4451USN,
+2019-06,4451,Grocery stores,sales_nsa,57508,USD millions,MRTSSM4451USN,
+2019-07,4451,Grocery stores,sales_nsa,59053,USD millions,MRTSSM4451USN,
+2019-08,4451,Grocery stores,sales_nsa,59517,USD millions,MRTSSM4451USN,
+2019-09,4451,Grocery stores,sales_nsa,55554,USD millions,MRTSSM4451USN,
+2019-10,4451,Grocery stores,sales_nsa,57441,USD millions,MRTSSM4451USN,
+2019-11,4451,Grocery stores,sales_nsa,58422,USD millions,MRTSSM4451USN,
+2019-12,4451,Grocery stores,sales_nsa,59956,USD millions,MRTSSM4451USN,
+2020-01,4451,Grocery stores,sales_nsa,57561,USD millions,MRTSSM4451USN,
+2020-02,4451,Grocery stores,sales_nsa,54593,USD millions,MRTSSM4451USN,
+2020-03,4451,Grocery stores,sales_nsa,72190,USD millions,MRTSSM4451USN,
+2020-04,4451,Grocery stores,sales_nsa,62631,USD millions,MRTSSM4451USN,
+2020-05,4451,Grocery stores,sales_nsa,66503,USD millions,MRTSSM4451USN,
+2020-06,4451,Grocery stores,sales_nsa,61988,USD millions,MRTSSM4451USN,
+2020-07,4451,Grocery stores,sales_nsa,64760,USD millions,MRTSSM4451USN,
+2020-08,4451,Grocery stores,sales_nsa,62440,USD millions,MRTSSM4451USN,
+2020-09,4451,Grocery stores,sales_nsa,59949,USD millions,MRTSSM4451USN,
+2020-10,4451,Grocery stores,sales_nsa,61937,USD millions,MRTSSM4451USN,
+2020-11,4451,Grocery stores,sales_nsa,61926,USD millions,MRTSSM4451USN,
+2020-12,4451,Grocery stores,sales_nsa,65085,USD millions,MRTSSM4451USN,
+2021-01,4451,Grocery stores,sales_nsa,63002,USD millions,MRTSSM4451USN,
+2021-02,4451,Grocery stores,sales_nsa,57519,USD millions,MRTSSM4451USN,
+2021-03,4451,Grocery stores,sales_nsa,63094,USD millions,MRTSSM4451USN,
+2021-04,4451,Grocery stores,sales_nsa,62074,USD millions,MRTSSM4451USN,
+2021-05,4451,Grocery stores,sales_nsa,66425,USD millions,MRTSSM4451USN,
+2021-06,4451,Grocery stores,sales_nsa,65016,USD millions,MRTSSM4451USN,
+2021-07,4451,Grocery stores,sales_nsa,67245,USD millions,MRTSSM4451USN,
+2021-08,4451,Grocery stores,sales_nsa,66806,USD millions,MRTSSM4451USN,
+2021-09,4451,Grocery stores,sales_nsa,65328,USD millions,MRTSSM4451USN,
+2021-10,4451,Grocery stores,sales_nsa,67836,USD millions,MRTSSM4451USN,
+2021-11,4451,Grocery stores,sales_nsa,67162,USD millions,MRTSSM4451USN,
+2021-12,4451,Grocery stores,sales_nsa,71696,USD millions,MRTSSM4451USN,
+2022-01,4451,Grocery stores,sales_nsa,68008,USD millions,MRTSSM4451USN,
+2022-02,4451,Grocery stores,sales_nsa,62291,USD millions,MRTSSM4451USN,
+2022-03,4451,Grocery stores,sales_nsa,68502,USD millions,MRTSSM4451USN,
+2022-04,4451,Grocery stores,sales_nsa,68536,USD millions,MRTSSM4451USN,
+2022-05,4451,Grocery stores,sales_nsa,71621,USD millions,MRTSSM4451USN,
+2022-06,4451,Grocery stores,sales_nsa,70930,USD millions,MRTSSM4451USN,
+2022-07,4451,Grocery stores,sales_nsa,72593,USD millions,MRTSSM4451USN,
+2022-08,4451,Grocery stores,sales_nsa,71351,USD millions,MRTSSM4451USN,
+2022-09,4451,Grocery stores,sales_nsa,69744,USD millions,MRTSSM4451USN,
+2022-10,4451,Grocery stores,sales_nsa,72107,USD millions,MRTSSM4451USN,
+2022-11,4451,Grocery stores,sales_nsa,72692,USD millions,MRTSSM4451USN,
+2022-12,4451,Grocery stores,sales_nsa,76649,USD millions,MRTSSM4451USN,
+2023-01,4451,Grocery stores,sales_nsa,70531,USD millions,MRTSSM4451USN,
+2023-02,4451,Grocery stores,sales_nsa,65885,USD millions,MRTSSM4451USN,
+2023-03,4451,Grocery stores,sales_nsa,71688,USD millions,MRTSSM4451USN,
+2023-04,4451,Grocery stores,sales_nsa,70484,USD millions,MRTSSM4451USN,
+2023-05,4451,Grocery stores,sales_nsa,73543,USD millions,MRTSSM4451USN,
+2023-06,4451,Grocery stores,sales_nsa,71396,USD millions,MRTSSM4451USN,
+2023-07,4451,Grocery stores,sales_nsa,73198,USD millions,MRTSSM4451USN,
+2023-08,4451,Grocery stores,sales_nsa,73237,USD millions,MRTSSM4451USN,
+2023-09,4451,Grocery stores,sales_nsa,71166,USD millions,MRTSSM4451USN,
+2023-10,4451,Grocery stores,sales_nsa,71896,USD millions,MRTSSM4451USN,
+2023-11,4451,Grocery stores,sales_nsa,73224,USD millions,MRTSSM4451USN,
+2023-12,4451,Grocery stores,sales_nsa,76710,USD millions,MRTSSM4451USN,
+2024-01,4451,Grocery stores,sales_nsa,71682,USD millions,MRTSSM4451USN,
+2024-02,4451,Grocery stores,sales_nsa,68304,USD millions,MRTSSM4451USN,
+2024-03,4451,Grocery stores,sales_nsa,73924,USD millions,MRTSSM4451USN,
+2024-04,4451,Grocery stores,sales_nsa,70002,USD millions,MRTSSM4451USN,
+2024-05,4451,Grocery stores,sales_nsa,75969,USD millions,MRTSSM4451USN,
+2024-06,4451,Grocery stores,sales_nsa,73248,USD millions,MRTSSM4451USN,
+2024-07,4451,Grocery stores,sales_nsa,75507,USD millions,MRTSSM4451USN,
+2024-08,4451,Grocery stores,sales_nsa,75526,USD millions,MRTSSM4451USN,
+2024-09,4451,Grocery stores,sales_nsa,72171,USD millions,MRTSSM4451USN,
+2024-10,4451,Grocery stores,sales_nsa,75306,USD millions,MRTSSM4451USN,
+2024-11,4451,Grocery stores,sales_nsa,75868,USD millions,MRTSSM4451USN,
+2024-12,4451,Grocery stores,sales_nsa,78233,USD millions,MRTSSM4451USN,
+2025-01,4451,Grocery stores,sales_nsa,75693,USD millions,MRTSSM4451USN,
+2025-02,4451,Grocery stores,sales_nsa,68962,USD millions,MRTSSM4451USN,
+2025-03,4451,Grocery stores,sales_nsa,74917,USD millions,MRTSSM4451USN,
+2025-04,4451,Grocery stores,sales_nsa,74295,USD millions,MRTSSM4451USN,
+2025-05,4451,Grocery stores,sales_nsa,78197,USD millions,MRTSSM4451USN,
+2025-06,4451,Grocery stores,sales_nsa,74718,USD millions,MRTSSM4451USN,
+2025-07,4451,Grocery stores,sales_nsa,77895,USD millions,MRTSSM4451USN,
+2025-08,4451,Grocery stores,sales_nsa,77982,USD millions,MRTSSM4451USN,
+2025-09,4451,Grocery stores,sales_nsa,74160,USD millions,MRTSSM4451USN,
+2025-10,4451,Grocery stores,sales_nsa,77532,USD millions,MRTSSM4451USN,
+2025-11,4451,Grocery stores,sales_nsa,77026,USD millions,MRTSSM4451USN,
+2025-12,4451,Grocery stores,sales_nsa,79894,USD millions,MRTSSM4451USN,
+2026-01,4451,Grocery stores,sales_nsa,76992,USD millions,MRTSSM4451USN,
+2026-02,4451,Grocery stores,sales_nsa,68687,USD millions,MRTSSM4451USN,
+2026-03,4451,Grocery stores,sales_nsa,75493,USD millions,MRTSSM4451USN,
+2026-04,4451,Grocery stores,sales_nsa,75045,USD millions,MRTSSM4451USN,
+2026-05,4451,Grocery stores,sales_nsa,79793,USD millions,MRTSSM4451USN,
+2026-06,4451,Grocery stores,sales_nsa,75534,USD millions,MRTSSM4451USN,
+2026-07,4451,Grocery stores,sales_nsa,78734,USD millions,MRTSSM4451USN,
+2026-08,4451,Grocery stores,sales_nsa,77628,USD millions,MRTSSM4451USN,
+2015-01,4451,Grocery stores,inv_sales_ratio_sa,0.77,months of sales,MRTSIR445USS,445 Food and beverage stores
+2015-02,4451,Grocery stores,inv_sales_ratio_sa,0.77,months of sales,MRTSIR445USS,445 Food and beverage stores
+2015-03,4451,Grocery stores,inv_sales_ratio_sa,0.79,months of sales,MRTSIR445USS,445 Food and beverage stores
+2015-04,4451,Grocery stores,inv_sales_ratio_sa,0.78,months of sales,MRTSIR445USS,445 Food and beverage stores
+2015-05,4451,Grocery stores,inv_sales_ratio_sa,0.78,months of sales,MRTSIR445USS,445 Food and beverage stores
+2015-06,4451,Grocery stores,inv_sales_ratio_sa,0.78,months of sales,MRTSIR445USS,445 Food and beverage stores
+2015-07,4451,Grocery stores,inv_sales_ratio_sa,0.78,months of sales,MRTSIR445USS,445 Food and beverage stores
+2015-08,4451,Grocery stores,inv_sales_ratio_sa,0.78,months of sales,MRTSIR445USS,445 Food and beverage stores
+2015-09,4451,Grocery stores,inv_sales_ratio_sa,0.79,months of sales,MRTSIR445USS,445 Food and beverage stores
+2015-10,4451,Grocery stores,inv_sales_ratio_sa,0.8,months of sales,MRTSIR445USS,445 Food and beverage stores
+2015-11,4451,Grocery stores,inv_sales_ratio_sa,0.79,months of sales,MRTSIR445USS,445 Food and beverage stores
+2015-12,4451,Grocery stores,inv_sales_ratio_sa,0.79,months of sales,MRTSIR445USS,445 Food and beverage stores
+2016-01,4451,Grocery stores,inv_sales_ratio_sa,0.79,months of sales,MRTSIR445USS,445 Food and beverage stores
+2016-02,4451,Grocery stores,inv_sales_ratio_sa,0.8,months of sales,MRTSIR445USS,445 Food and beverage stores
+2016-03,4451,Grocery stores,inv_sales_ratio_sa,0.8,months of sales,MRTSIR445USS,445 Food and beverage stores
+2016-04,4451,Grocery stores,inv_sales_ratio_sa,0.8,months of sales,MRTSIR445USS,445 Food and beverage stores
+2016-05,4451,Grocery stores,inv_sales_ratio_sa,0.79,months of sales,MRTSIR445USS,445 Food and beverage stores
+2016-06,4451,Grocery stores,inv_sales_ratio_sa,0.8,months of sales,MRTSIR445USS,445 Food and beverage stores
+2016-07,4451,Grocery stores,inv_sales_ratio_sa,0.8,months of sales,MRTSIR445USS,445 Food and beverage stores
+2016-08,4451,Grocery stores,inv_sales_ratio_sa,0.8,months of sales,MRTSIR445USS,445 Food and beverage stores
+2016-09,4451,Grocery stores,inv_sales_ratio_sa,0.8,months of sales,MRTSIR445USS,445 Food and beverage stores
+2016-10,4451,Grocery stores,inv_sales_ratio_sa,0.8,months of sales,MRTSIR445USS,445 Food and beverage stores
+2016-11,4451,Grocery stores,inv_sales_ratio_sa,0.79,months of sales,MRTSIR445USS,445 Food and beverage stores
+2016-12,4451,Grocery stores,inv_sales_ratio_sa,0.8,months of sales,MRTSIR445USS,445 Food and beverage stores
+2017-01,4451,Grocery stores,inv_sales_ratio_sa,0.79,months of sales,MRTSIR445USS,445 Food and beverage stores
+2017-02,4451,Grocery stores,inv_sales_ratio_sa,0.78,months of sales,MRTSIR445USS,445 Food and beverage stores
+2017-03,4451,Grocery stores,inv_sales_ratio_sa,0.78,months of sales,MRTSIR445USS,445 Food and beverage stores
+2017-04,4451,Grocery stores,inv_sales_ratio_sa,0.78,months of sales,MRTSIR445USS,445 Food and beverage stores
+2017-05,4451,Grocery stores,inv_sales_ratio_sa,0.78,months of sales,MRTSIR445USS,445 Food and beverage stores
+2017-06,4451,Grocery stores,inv_sales_ratio_sa,0.78,months of sales,MRTSIR445USS,445 Food and beverage stores
+2017-07,4451,Grocery stores,inv_sales_ratio_sa,0.79,months of sales,MRTSIR445USS,445 Food and beverage stores
+2017-08,4451,Grocery stores,inv_sales_ratio_sa,0.78,months of sales,MRTSIR445USS,445 Food and beverage stores
+2017-09,4451,Grocery stores,inv_sales_ratio_sa,0.78,months of sales,MRTSIR445USS,445 Food and beverage stores
+2017-10,4451,Grocery stores,inv_sales_ratio_sa,0.77,months of sales,MRTSIR445USS,445 Food and beverage stores
+2017-11,4451,Grocery stores,inv_sales_ratio_sa,0.78,months of sales,MRTSIR445USS,445 Food and beverage stores
+2017-12,4451,Grocery stores,inv_sales_ratio_sa,0.78,months of sales,MRTSIR445USS,445 Food and beverage stores
+2018-01,4451,Grocery stores,inv_sales_ratio_sa,0.79,months of sales,MRTSIR445USS,445 Food and beverage stores
+2018-02,4451,Grocery stores,inv_sales_ratio_sa,0.79,months of sales,MRTSIR445USS,445 Food and beverage stores
+2018-03,4451,Grocery stores,inv_sales_ratio_sa,0.78,months of sales,MRTSIR445USS,445 Food and beverage stores
+2018-04,4451,Grocery stores,inv_sales_ratio_sa,0.77,months of sales,MRTSIR445USS,445 Food and beverage stores
+2018-05,4451,Grocery stores,inv_sales_ratio_sa,0.78,months of sales,MRTSIR445USS,445 Food and beverage stores
+2018-06,4451,Grocery stores,inv_sales_ratio_sa,0.78,months of sales,MRTSIR445USS,445 Food and beverage stores
+2018-07,4451,Grocery stores,inv_sales_ratio_sa,0.78,months of sales,MRTSIR445USS,445 Food and beverage stores
+2018-08,4451,Grocery stores,inv_sales_ratio_sa,0.79,months of sales,MRTSIR445USS,445 Food and beverage stores
+2018-09,4451,Grocery stores,inv_sales_ratio_sa,0.78,months of sales,MRTSIR445USS,445 Food and beverage stores
+2018-10,4451,Grocery stores,inv_sales_ratio_sa,0.79,months of sales,MRTSIR445USS,445 Food and beverage stores
+2018-11,4451,Grocery stores,inv_sales_ratio_sa,0.79,months of sales,MRTSIR445USS,445 Food and beverage stores
+2018-12,4451,Grocery stores,inv_sales_ratio_sa,0.79,months of sales,MRTSIR445USS,445 Food and beverage stores
+2019-01,4451,Grocery stores,inv_sales_ratio_sa,0.78,months of sales,MRTSIR445USS,445 Food and beverage stores
+2019-02,4451,Grocery stores,inv_sales_ratio_sa,0.8,months of sales,MRTSIR445USS,445 Food and beverage stores
+2019-03,4451,Grocery stores,inv_sales_ratio_sa,0.78,months of sales,MRTSIR445USS,445 Food and beverage stores
+2019-04,4451,Grocery stores,inv_sales_ratio_sa,0.79,months of sales,MRTSIR445USS,445 Food and beverage stores
+2019-05,4451,Grocery stores,inv_sales_ratio_sa,0.79,months of sales,MRTSIR445USS,445 Food and beverage stores
+2019-06,4451,Grocery stores,inv_sales_ratio_sa,0.79,months of sales,MRTSIR445USS,445 Food and beverage stores
+2019-07,4451,Grocery stores,inv_sales_ratio_sa,0.79,months of sales,MRTSIR445USS,445 Food and beverage stores
+2019-08,4451,Grocery stores,inv_sales_ratio_sa,0.79,months of sales,MRTSIR445USS,445 Food and beverage stores
+2019-09,4451,Grocery stores,inv_sales_ratio_sa,0.79,months of sales,MRTSIR445USS,445 Food and beverage stores
+2019-10,4451,Grocery stores,inv_sales_ratio_sa,0.8,months of sales,MRTSIR445USS,445 Food and beverage stores
+2019-11,4451,Grocery stores,inv_sales_ratio_sa,0.8,months of sales,MRTSIR445USS,445 Food and beverage stores
+2019-12,4451,Grocery stores,inv_sales_ratio_sa,0.79,months of sales,MRTSIR445USS,445 Food and beverage stores
+2020-01,4451,Grocery stores,inv_sales_ratio_sa,0.81,months of sales,MRTSIR445USS,445 Food and beverage stores
+2020-02,4451,Grocery stores,inv_sales_ratio_sa,0.8,months of sales,MRTSIR445USS,445 Food and beverage stores
+2020-03,4451,Grocery stores,inv_sales_ratio_sa,0.59,months of sales,MRTSIR445USS,445 Food and beverage stores
+2020-04,4451,Grocery stores,inv_sales_ratio_sa,0.71,months of sales,MRTSIR445USS,445 Food and beverage stores
+2020-05,4451,Grocery stores,inv_sales_ratio_sa,0.69,months of sales,MRTSIR445USS,445 Food and beverage stores
+2020-06,4451,Grocery stores,inv_sales_ratio_sa,0.72,months of sales,MRTSIR445USS,445 Food and beverage stores
+2020-07,4451,Grocery stores,inv_sales_ratio_sa,0.72,months of sales,MRTSIR445USS,445 Food and beverage stores
+2020-08,4451,Grocery stores,inv_sales_ratio_sa,0.74,months of sales,MRTSIR445USS,445 Food and beverage stores
+2020-09,4451,Grocery stores,inv_sales_ratio_sa,0.75,months of sales,MRTSIR445USS,445 Food and beverage stores
+2020-10,4451,Grocery stores,inv_sales_ratio_sa,0.76,months of sales,MRTSIR445USS,445 Food and beverage stores
+2020-11,4451,Grocery stores,inv_sales_ratio_sa,0.75,months of sales,MRTSIR445USS,445 Food and beverage stores
+2020-12,4451,Grocery stores,inv_sales_ratio_sa,0.76,months of sales,MRTSIR445USS,445 Food and beverage stores
+2021-01,4451,Grocery stores,inv_sales_ratio_sa,0.75,months of sales,MRTSIR445USS,445 Food and beverage stores
+2021-02,4451,Grocery stores,inv_sales_ratio_sa,0.74,months of sales,MRTSIR445USS,445 Food and beverage stores
+2021-03,4451,Grocery stores,inv_sales_ratio_sa,0.75,months of sales,MRTSIR445USS,445 Food and beverage stores
+2021-04,4451,Grocery stores,inv_sales_ratio_sa,0.75,months of sales,MRTSIR445USS,445 Food and beverage stores
+2021-05,4451,Grocery stores,inv_sales_ratio_sa,0.74,months of sales,MRTSIR445USS,445 Food and beverage stores
+2021-06,4451,Grocery stores,inv_sales_ratio_sa,0.72,months of sales,MRTSIR445USS,445 Food and beverage stores
+2021-07,4451,Grocery stores,inv_sales_ratio_sa,0.74,months of sales,MRTSIR445USS,445 Food and beverage stores
+2021-08,4451,Grocery stores,inv_sales_ratio_sa,0.71,months of sales,MRTSIR445USS,445 Food and beverage stores
+2021-09,4451,Grocery stores,inv_sales_ratio_sa,0.72,months of sales,MRTSIR445USS,445 Food and beverage stores
+2021-10,4451,Grocery stores,inv_sales_ratio_sa,0.71,months of sales,MRTSIR445USS,445 Food and beverage stores
+2021-11,4451,Grocery stores,inv_sales_ratio_sa,0.72,months of sales,MRTSIR445USS,445 Food and beverage stores
+2021-12,4451,Grocery stores,inv_sales_ratio_sa,0.71,months of sales,MRTSIR445USS,445 Food and beverage stores
+2022-01,4451,Grocery stores,inv_sales_ratio_sa,0.71,months of sales,MRTSIR445USS,445 Food and beverage stores
+2022-02,4451,Grocery stores,inv_sales_ratio_sa,0.73,months of sales,MRTSIR445USS,445 Food and beverage stores
+2022-03,4451,Grocery stores,inv_sales_ratio_sa,0.74,months of sales,MRTSIR445USS,445 Food and beverage stores
+2022-04,4451,Grocery stores,inv_sales_ratio_sa,0.75,months of sales,MRTSIR445USS,445 Food and beverage stores
+2022-05,4451,Grocery stores,inv_sales_ratio_sa,0.75,months of sales,MRTSIR445USS,445 Food and beverage stores
+2022-06,4451,Grocery stores,inv_sales_ratio_sa,0.74,months of sales,MRTSIR445USS,445 Food and beverage stores
+2022-07,4451,Grocery stores,inv_sales_ratio_sa,0.75,months of sales,MRTSIR445USS,445 Food and beverage stores
+2022-08,4451,Grocery stores,inv_sales_ratio_sa,0.75,months of sales,MRTSIR445USS,445 Food and beverage stores
+2022-09,4451,Grocery stores,inv_sales_ratio_sa,0.74,months of sales,MRTSIR445USS,445 Food and beverage stores
+2022-10,4451,Grocery stores,inv_sales_ratio_sa,0.75,months of sales,MRTSIR445USS,445 Food and beverage stores
+2022-11,4451,Grocery stores,inv_sales_ratio_sa,0.74,months of sales,MRTSIR445USS,445 Food and beverage stores
+2022-12,4451,Grocery stores,inv_sales_ratio_sa,0.74,months of sales,MRTSIR445USS,445 Food and beverage stores
+2023-01,4451,Grocery stores,inv_sales_ratio_sa,0.76,months of sales,MRTSIR445USS,445 Food and beverage stores
+2023-02,4451,Grocery stores,inv_sales_ratio_sa,0.76,months of sales,MRTSIR445USS,445 Food and beverage stores
+2023-03,4451,Grocery stores,inv_sales_ratio_sa,0.78,months of sales,MRTSIR445USS,445 Food and beverage stores
+2023-04,4451,Grocery stores,inv_sales_ratio_sa,0.79,months of sales,MRTSIR445USS,445 Food and beverage stores
+2023-05,4451,Grocery stores,inv_sales_ratio_sa,0.79,months of sales,MRTSIR445USS,445 Food and beverage stores
+2023-06,4451,Grocery stores,inv_sales_ratio_sa,0.8,months of sales,MRTSIR445USS,445 Food and beverage stores
+2023-07,4451,Grocery stores,inv_sales_ratio_sa,0.81,months of sales,MRTSIR445USS,445 Food and beverage stores
+2023-08,4451,Grocery stores,inv_sales_ratio_sa,0.81,months of sales,MRTSIR445USS,445 Food and beverage stores
+2023-09,4451,Grocery stores,inv_sales_ratio_sa,0.82,months of sales,MRTSIR445USS,445 Food and beverage stores
+2023-10,4451,Grocery stores,inv_sales_ratio_sa,0.82,months of sales,MRTSIR445USS,445 Food and beverage stores
+2023-11,4451,Grocery stores,inv_sales_ratio_sa,0.82,months of sales,MRTSIR445USS,445 Food and beverage stores
+2023-12,4451,Grocery stores,inv_sales_ratio_sa,0.82,months of sales,MRTSIR445USS,445 Food and beverage stores
+2024-01,4451,Grocery stores,inv_sales_ratio_sa,0.83,months of sales,MRTSIR445USS,445 Food and beverage stores
+2024-02,4451,Grocery stores,inv_sales_ratio_sa,0.83,months of sales,MRTSIR445USS,445 Food and beverage stores
+2024-03,4451,Grocery stores,inv_sales_ratio_sa,0.81,months of sales,MRTSIR445USS,445 Food and beverage stores
+2024-04,4451,Grocery stores,inv_sales_ratio_sa,0.81,months of sales,MRTSIR445USS,445 Food and beverage stores
+2024-05,4451,Grocery stores,inv_sales_ratio_sa,0.81,months of sales,MRTSIR445USS,445 Food and beverage stores
+2024-06,4451,Grocery stores,inv_sales_ratio_sa,0.81,months of sales,MRTSIR445USS,445 Food and beverage stores
+2024-07,4451,Grocery stores,inv_sales_ratio_sa,0.8,months of sales,MRTSIR445USS,445 Food and beverage stores
+2024-08,4451,Grocery stores,inv_sales_ratio_sa,0.81,months of sales,MRTSIR445USS,445 Food and beverage stores
+2024-09,4451,Grocery stores,inv_sales_ratio_sa,0.8,months of sales,MRTSIR445USS,445 Food and beverage stores
+2024-10,4451,Grocery stores,inv_sales_ratio_sa,0.8,months of sales,MRTSIR445USS,445 Food and beverage stores
+2024-11,4451,Grocery stores,inv_sales_ratio_sa,0.8,months of sales,MRTSIR445USS,445 Food and beverage stores
+2024-12,4451,Grocery stores,inv_sales_ratio_sa,0.79,months of sales,MRTSIR445USS,445 Food and beverage stores
+2025-01,4451,Grocery stores,inv_sales_ratio_sa,0.8,months of sales,MRTSIR445USS,445 Food and beverage stores
+2025-02,4451,Grocery stores,inv_sales_ratio_sa,0.79,months of sales,MRTSIR445USS,445 Food and beverage stores
+2025-03,4451,Grocery stores,inv_sales_ratio_sa,0.79,months of sales,MRTSIR445USS,445 Food and beverage stores
+2025-04,4451,Grocery stores,inv_sales_ratio_sa,0.8,months of sales,MRTSIR445USS,445 Food and beverage stores
+2025-05,4451,Grocery stores,inv_sales_ratio_sa,0.81,months of sales,MRTSIR445USS,445 Food and beverage stores
+2025-06,4451,Grocery stores,inv_sales_ratio_sa,0.8,months of sales,MRTSIR445USS,445 Food and beverage stores
+2025-07,4451,Grocery stores,inv_sales_ratio_sa,0.8,months of sales,MRTSIR445USS,445 Food and beverage stores
+2025-08,4451,Grocery stores,inv_sales_ratio_sa,0.8,months of sales,MRTSIR445USS,445 Food and beverage stores
+2025-09,4451,Grocery stores,inv_sales_ratio_sa,0.81,months of sales,MRTSIR445USS,445 Food and beverage stores
+2025-10,4451,Grocery stores,inv_sales_ratio_sa,0.81,months of sales,MRTSIR445USS,445 Food and beverage stores
+2025-11,4451,Grocery stores,inv_sales_ratio_sa,0.81,months of sales,MRTSIR445USS,445 Food and beverage stores
+2025-12,4451,Grocery stores,inv_sales_ratio_sa,0.81,months of sales,MRTSIR445USS,445 Food and beverage stores
+2026-01,4451,Grocery stores,inv_sales_ratio_sa,0.8,months of sales,MRTSIR445USS,445 Food and beverage stores
+2026-02,4451,Grocery stores,inv_sales_ratio_sa,0.83,months of sales,MRTSIR445USS,445 Food and beverage stores
+2026-03,4451,Grocery stores,inv_sales_ratio_sa,0.82,months of sales,MRTSIR445USS,445 Food and beverage stores
+2026-04,4451,Grocery stores,inv_sales_ratio_sa,0.81,months of sales,MRTSIR445USS,445 Food and beverage stores
+2026-05,4451,Grocery stores,inv_sales_ratio_sa,0.81,months of sales,MRTSIR445USS,445 Food and beverage stores
+2026-06,4451,Grocery stores,inv_sales_ratio_sa,0.82,months of sales,MRTSIR445USS,445 Food and beverage stores
+2026-07,4451,Grocery stores,inv_sales_ratio_sa,0.83,months of sales,MRTSIR445USS,445 Food and beverage stores
+2026-08,4451,Grocery stores,inv_sales_ratio_sa,0.82,months of sales,MRTSIR445USS,445 Food and beverage stores
+2015-01,446,Health and personal care stores,sales_nsa,24733,USD millions,MRTSSM446USN,
+2015-02,446,Health and personal care stores,sales_nsa,23176,USD millions,MRTSSM446USN,
+2015-03,446,Health and personal care stores,sales_nsa,25789,USD millions,MRTSSM446USN,
+2015-04,446,Health and personal care stores,sales_nsa,24601,USD millions,MRTSSM446USN,
+2015-05,446,Health and personal care stores,sales_nsa,24524,USD millions,MRTSSM446USN,
+2015-06,446,Health and personal care stores,sales_nsa,24714,USD millions,MRTSSM446USN,
+2015-07,446,Health and personal care stores,sales_nsa,24864,USD millions,MRTSSM446USN,
+2015-08,446,Health and personal care stores,sales_nsa,24761,USD millions,MRTSSM446USN,
+2015-09,446,Health and personal care stores,sales_nsa,25121,USD millions,MRTSSM446USN,
+2015-10,446,Health and personal care stores,sales_nsa,25622,USD millions,MRTSSM446USN,
+2015-11,446,Health and personal care stores,sales_nsa,24789,USD millions,MRTSSM446USN,
+2015-12,446,Health and personal care stores,sales_nsa,29342,USD millions,MRTSSM446USN,
+2016-01,446,Health and personal care stores,sales_nsa,24947,USD millions,MRTSSM446USN,
+2016-02,446,Health and personal care stores,sales_nsa,25541,USD millions,MRTSSM446USN,
+2016-03,446,Health and personal care stores,sales_nsa,27013,USD millions,MRTSSM446USN,
+2016-04,446,Health and personal care stores,sales_nsa,25699,USD millions,MRTSSM446USN,
+2016-05,446,Health and personal care stores,sales_nsa,26198,USD millions,MRTSSM446USN,
+2016-06,446,Health and personal care stores,sales_nsa,26020,USD millions,MRTSSM446USN,
+2016-07,446,Health and personal care stores,sales_nsa,25200,USD millions,MRTSSM446USN,
+2016-08,446,Health and personal care stores,sales_nsa,26435,USD millions,MRTSSM446USN,
+2016-09,446,Health and personal care stores,sales_nsa,25669,USD millions,MRTSSM446USN,
+2016-10,446,Health and personal care stores,sales_nsa,25179,USD millions,MRTSSM446USN,
+2016-11,446,Health and personal care stores,sales_nsa,25271,USD millions,MRTSSM446USN,
+2016-12,446,Health and personal care stores,sales_nsa,29001,USD millions,MRTSSM446USN,
+2017-01,446,Health and personal care stores,sales_nsa,25325,USD millions,MRTSSM446USN,
+2017-02,446,Health and personal care stores,sales_nsa,24350,USD millions,MRTSSM446USN,
+2017-03,446,Health and personal care stores,sales_nsa,27090,USD millions,MRTSSM446USN,
+2017-04,446,Health and personal care stores,sales_nsa,25479,USD millions,MRTSSM446USN,
+2017-05,446,Health and personal care stores,sales_nsa,27034,USD millions,MRTSSM446USN,
+2017-06,446,Health and personal care stores,sales_nsa,26508,USD millions,MRTSSM446USN,
+2017-07,446,Health and personal care stores,sales_nsa,25645,USD millions,MRTSSM446USN,
+2017-08,446,Health and personal care stores,sales_nsa,27255,USD millions,MRTSSM446USN,
+2017-09,446,Health and personal care stores,sales_nsa,26202,USD millions,MRTSSM446USN,
+2017-10,446,Health and personal care stores,sales_nsa,27431,USD millions,MRTSSM446USN,
+2017-11,446,Health and personal care stores,sales_nsa,27029,USD millions,MRTSSM446USN,
+2017-12,446,Health and personal care stores,sales_nsa,30123,USD millions,MRTSSM446USN,
+2018-01,446,Health and personal care stores,sales_nsa,27319,USD millions,MRTSSM446USN,
+2018-02,446,Health and personal care stores,sales_nsa,25235,USD millions,MRTSSM446USN,
+2018-03,446,Health and personal care stores,sales_nsa,27956,USD millions,MRTSSM446USN,
+2018-04,446,Health and personal care stores,sales_nsa,26639,USD millions,MRTSSM446USN,
+2018-05,446,Health and personal care stores,sales_nsa,28424,USD millions,MRTSSM446USN,
+2018-06,446,Health and personal care stores,sales_nsa,27087,USD millions,MRTSSM446USN,
+2018-07,446,Health and personal care stores,sales_nsa,26840,USD millions,MRTSSM446USN,
+2018-08,446,Health and personal care stores,sales_nsa,28234,USD millions,MRTSSM446USN,
+2018-09,446,Health and personal care stores,sales_nsa,26266,USD millions,MRTSSM446USN,
+2018-10,446,Health and personal care stores,sales_nsa,28772,USD millions,MRTSSM446USN,
+2018-11,446,Health and personal care stores,sales_nsa,28149,USD millions,MRTSSM446USN,
+2018-12,446,Health and personal care stores,sales_nsa,30099,USD millions,MRTSSM446USN,
+2019-01,446,Health and personal care stores,sales_nsa,28211,USD millions,MRTSSM446USN,
+2019-02,446,Health and personal care stores,sales_nsa,26433,USD millions,MRTSSM446USN,
+2019-03,446,Health and personal care stores,sales_nsa,28395,USD millions,MRTSSM446USN,
+2019-04,446,Health and personal care stores,sales_nsa,28082,USD millions,MRTSSM446USN,
+2019-05,446,Health and personal care stores,sales_nsa,29066,USD millions,MRTSSM446USN,
+2019-06,446,Health and personal care stores,sales_nsa,27259,USD millions,MRTSSM446USN,
+2019-07,446,Health and personal care stores,sales_nsa,27814,USD millions,MRTSSM446USN,
+2019-08,446,Health and personal care stores,sales_nsa,28191,USD millions,MRTSSM446USN,
+2019-09,446,Health and personal care stores,sales_nsa,26873,USD millions,MRTSSM446USN,
+2019-10,446,Health and personal care stores,sales_nsa,29099,USD millions,MRTSSM446USN,
+2019-11,446,Health and personal care stores,sales_nsa,27359,USD millions,MRTSSM446USN,
+2019-12,446,Health and personal care stores,sales_nsa,30842,USD millions,MRTSSM446USN,
+2020-01,446,Health and personal care stores,sales_nsa,28662,USD millions,MRTSSM446USN,
+2020-02,446,Health and personal care stores,sales_nsa,27383,USD millions,MRTSSM446USN,
+2020-03,446,Health and personal care stores,sales_nsa,30477,USD millions,MRTSSM446USN,
+2020-04,446,Health and personal care stores,sales_nsa,25369,USD millions,MRTSSM446USN,
+2020-05,446,Health and personal care stores,sales_nsa,25861,USD millions,MRTSSM446USN,
+2020-06,446,Health and personal care stores,sales_nsa,27827,USD millions,MRTSSM446USN,
+2020-07,446,Health and personal care stores,sales_nsa,29154,USD millions,MRTSSM446USN,
+2020-08,446,Health and personal care stores,sales_nsa,28338,USD millions,MRTSSM446USN,
+2020-09,446,Health and personal care stores,sales_nsa,28870,USD millions,MRTSSM446USN,
+2020-10,446,Health and personal care stores,sales_nsa,29969,USD millions,MRTSSM446USN,
+2020-11,446,Health and personal care stores,sales_nsa,27957,USD millions,MRTSSM446USN,
+2020-12,446,Health and personal care stores,sales_nsa,32858,USD millions,MRTSSM446USN,
+2021-01,446,Health and personal care stores,sales_nsa,28485,USD millions,MRTSSM446USN,
+2021-02,446,Health and personal care stores,sales_nsa,26678,USD millions,MRTSSM446USN,
+2021-03,446,Health and personal care stores,sales_nsa,32264,USD millions,MRTSSM446USN,
+2021-04,446,Health and personal care stores,sales_nsa,30802,USD millions,MRTSSM446USN,
+2021-05,446,Health and personal care stores,sales_nsa,30211,USD millions,MRTSSM446USN,
+2021-06,446,Health and personal care stores,sales_nsa,31366,USD millions,MRTSSM446USN,
+2021-07,446,Health and personal care stores,sales_nsa,30735,USD millions,MRTSSM446USN,
+2021-08,446,Health and personal care stores,sales_nsa,31299,USD millions,MRTSSM446USN,
+2021-09,446,Health and personal care stores,sales_nsa,30865,USD millions,MRTSSM446USN,
+2021-10,446,Health and personal care stores,sales_nsa,31342,USD millions,MRTSSM446USN,
+2021-11,446,Health and personal care stores,sales_nsa,31130,USD millions,MRTSSM446USN,
+2021-12,446,Health and personal care stores,sales_nsa,35762,USD millions,MRTSSM446USN,
+2022-01,446,Health and personal care stores,sales_nsa,31050,USD millions,MRTSSM446USN,
+2022-02,446,Health and personal care stores,sales_nsa,29062,USD millions,MRTSSM446USN,
+2022-03,446,Health and personal care stores,sales_nsa,32449,USD millions,MRTSSM446USN,
+2022-04,446,Health and personal care stores,sales_nsa,31297,USD millions,MRTSSM446USN,
+2022-05,446,Health and personal care stores,sales_nsa,31721,USD millions,MRTSSM446USN,
+2022-06,446,Health and personal care stores,sales_nsa,32154,USD millions,MRTSSM446USN,
+2022-07,446,Health and personal care stores,sales_nsa,31139,USD millions,MRTSSM446USN,
+2022-08,446,Health and personal care stores,sales_nsa,32584,USD millions,MRTSSM446USN,
+2022-09,446,Health and personal care stores,sales_nsa,32051,USD millions,MRTSSM446USN,
+2022-10,446,Health and personal care stores,sales_nsa,32513,USD millions,MRTSSM446USN,
+2022-11,446,Health and personal care stores,sales_nsa,31946,USD millions,MRTSSM446USN,
+2022-12,446,Health and personal care stores,sales_nsa,35539,USD millions,MRTSSM446USN,
+2023-01,446,Health and personal care stores,sales_nsa,32406,USD millions,MRTSSM446USN,
+2023-02,446,Health and personal care stores,sales_nsa,30504,USD millions,MRTSSM446USN,
+2023-03,446,Health and personal care stores,sales_nsa,34108,USD millions,MRTSSM446USN,
+2023-04,446,Health and personal care stores,sales_nsa,32159,USD millions,MRTSSM446USN,
+2023-05,446,Health and personal care stores,sales_nsa,34328,USD millions,MRTSSM446USN,
+2023-06,446,Health and personal care stores,sales_nsa,33843,USD millions,MRTSSM446USN,
+2023-07,446,Health and personal care stores,sales_nsa,32270,USD millions,MRTSSM446USN,
+2023-08,446,Health and personal care stores,sales_nsa,34661,USD millions,MRTSSM446USN,
+2023-09,446,Health and personal care stores,sales_nsa,33486,USD millions,MRTSSM446USN,
+2023-10,446,Health and personal care stores,sales_nsa,35940,USD millions,MRTSSM446USN,
+2023-11,446,Health and personal care stores,sales_nsa,34855,USD millions,MRTSSM446USN,
+2023-12,446,Health and personal care stores,sales_nsa,38082,USD millions,MRTSSM446USN,
+2024-01,446,Health and personal care stores,sales_nsa,34501,USD millions,MRTSSM446USN,
+2024-02,446,Health and personal care stores,sales_nsa,33333,USD millions,MRTSSM446USN,
+2024-03,446,Health and personal care stores,sales_nsa,34786,USD millions,MRTSSM446USN,
+2024-04,446,Health and personal care stores,sales_nsa,34744,USD millions,MRTSSM446USN,
+2024-05,446,Health and personal care stores,sales_nsa,36006,USD millions,MRTSSM446USN,
+2024-06,446,Health and personal care stores,sales_nsa,34695,USD millions,MRTSSM446USN,
+2024-07,446,Health and personal care stores,sales_nsa,36920,USD millions,MRTSSM446USN,
+2024-08,446,Health and personal care stores,sales_nsa,37634,USD millions,MRTSSM446USN,
+2024-09,446,Health and personal care stores,sales_nsa,37452,USD millions,MRTSSM446USN,
+2024-10,446,Health and personal care stores,sales_nsa,39488,USD millions,MRTSSM446USN,
+2024-11,446,Health and personal care stores,sales_nsa,37161,USD millions,MRTSSM446USN,
+2024-12,446,Health and personal care stores,sales_nsa,42166,USD millions,MRTSSM446USN,
+2025-01,446,Health and personal care stores,sales_nsa,37642,USD millions,MRTSSM446USN,
+2025-02,446,Health and personal care stores,sales_nsa,35460,USD millions,MRTSSM446USN,
+2025-03,446,Health and personal care stores,sales_nsa,38700,USD millions,MRTSSM446USN,
+2025-04,446,Health and personal care stores,sales_nsa,38573,USD millions,MRTSSM446USN,
+2025-05,446,Health and personal care stores,sales_nsa,39135,USD millions,MRTSSM446USN,
+2025-06,446,Health and personal care stores,sales_nsa,38735,USD millions,MRTSSM446USN,
+2025-07,446,Health and personal care stores,sales_nsa,39397,USD millions,MRTSSM446USN,
+2025-08,446,Health and personal care stores,sales_nsa,39130,USD millions,MRTSSM446USN,
+2025-09,446,Health and personal care stores,sales_nsa,40289,USD millions,MRTSSM446USN,
+2025-10,446,Health and personal care stores,sales_nsa,41871,USD millions,MRTSSM446USN,
+2025-11,446,Health and personal care stores,sales_nsa,38125,USD millions,MRTSSM446USN,
+2025-12,446,Health and personal care stores,sales_nsa,45214,USD millions,MRTSSM446USN,
+2026-01,446,Health and personal care stores,sales_nsa,36008,USD millions,MRTSSM446USN,
+2026-02,446,Health and personal care stores,sales_nsa,34615,USD millions,MRTSSM446USN,
+2026-03,446,Health and personal care stores,sales_nsa,38621,USD millions,MRTSSM446USN,
+2026-04,446,Health and personal care stores,sales_nsa,37643,USD millions,MRTSSM446USN,
+2026-05,446,Health and personal care stores,sales_nsa,37948,USD millions,MRTSSM446USN,
+2026-06,446,Health and personal care stores,sales_nsa,38528,USD millions,MRTSSM446USN,
+2026-07,446,Health and personal care stores,sales_nsa,38544,USD millions,MRTSSM446USN,
+2026-08,446,Health and personal care stores,sales_nsa,38620,USD millions,MRTSSM446USN,
+2015-01,442,Furniture and home furnishings stores,sales_nsa,7840,USD millions,MRTSSM442USN,
+2015-02,442,Furniture and home furnishings stores,sales_nsa,7407,USD millions,MRTSSM442USN,
+2015-03,442,Furniture and home furnishings stores,sales_nsa,8495,USD millions,MRTSSM442USN,
+2015-04,442,Furniture and home furnishings stores,sales_nsa,8150,USD millions,MRTSSM442USN,
+2015-05,442,Furniture and home furnishings stores,sales_nsa,8785,USD millions,MRTSSM442USN,
+2015-06,442,Furniture and home furnishings stores,sales_nsa,8479,USD millions,MRTSSM442USN,
+2015-07,442,Furniture and home furnishings stores,sales_nsa,9012,USD millions,MRTSSM442USN,
+2015-08,442,Furniture and home furnishings stores,sales_nsa,9056,USD millions,MRTSSM442USN,
+2015-09,442,Furniture and home furnishings stores,sales_nsa,8886,USD millions,MRTSSM442USN,
+2015-10,442,Furniture and home furnishings stores,sales_nsa,9026,USD millions,MRTSSM442USN,
+2015-11,442,Furniture and home furnishings stores,sales_nsa,9398,USD millions,MRTSSM442USN,
+2015-12,442,Furniture and home furnishings stores,sales_nsa,10810,USD millions,MRTSSM442USN,
+2016-01,442,Furniture and home furnishings stores,sales_nsa,8117,USD millions,MRTSSM442USN,
+2016-02,442,Furniture and home furnishings stores,sales_nsa,8323,USD millions,MRTSSM442USN,
+2016-03,442,Furniture and home furnishings stores,sales_nsa,9198,USD millions,MRTSSM442USN,
+2016-04,442,Furniture and home furnishings stores,sales_nsa,8545,USD millions,MRTSSM442USN,
+2016-05,442,Furniture and home furnishings stores,sales_nsa,8943,USD millions,MRTSSM442USN,
+2016-06,442,Furniture and home furnishings stores,sales_nsa,9056,USD millions,MRTSSM442USN,
+2016-07,442,Furniture and home furnishings stores,sales_nsa,9114,USD millions,MRTSSM442USN,
+2016-08,442,Furniture and home furnishings stores,sales_nsa,9503,USD millions,MRTSSM442USN,
+2016-09,442,Furniture and home furnishings stores,sales_nsa,9461,USD millions,MRTSSM442USN,
+2016-10,442,Furniture and home furnishings stores,sales_nsa,8978,USD millions,MRTSSM442USN,
+2016-11,442,Furniture and home furnishings stores,sales_nsa,9866,USD millions,MRTSSM442USN,
+2016-12,442,Furniture and home furnishings stores,sales_nsa,10756,USD millions,MRTSSM442USN,
+2017-01,442,Furniture and home furnishings stores,sales_nsa,8232,USD millions,MRTSSM442USN,
+2017-02,442,Furniture and home furnishings stores,sales_nsa,8200,USD millions,MRTSSM442USN,
+2017-03,442,Furniture and home furnishings stores,sales_nsa,9605,USD millions,MRTSSM442USN,
+2017-04,442,Furniture and home furnishings stores,sales_nsa,8541,USD millions,MRTSSM442USN,
+2017-05,442,Furniture and home furnishings stores,sales_nsa,9369,USD millions,MRTSSM442USN,
+2017-06,442,Furniture and home furnishings stores,sales_nsa,9317,USD millions,MRTSSM442USN,
+2017-07,442,Furniture and home furnishings stores,sales_nsa,9195,USD millions,MRTSSM442USN,
+2017-08,442,Furniture and home furnishings stores,sales_nsa,9813,USD millions,MRTSSM442USN,
+2017-09,442,Furniture and home furnishings stores,sales_nsa,9467,USD millions,MRTSSM442USN,
+2017-10,442,Furniture and home furnishings stores,sales_nsa,9436,USD millions,MRTSSM442USN,
+2017-11,442,Furniture and home furnishings stores,sales_nsa,10468,USD millions,MRTSSM442USN,
+2017-12,442,Furniture and home furnishings stores,sales_nsa,11181,USD millions,MRTSSM442USN,
+2018-01,442,Furniture and home furnishings stores,sales_nsa,8668,USD millions,MRTSSM442USN,
+2018-02,442,Furniture and home furnishings stores,sales_nsa,8489,USD millions,MRTSSM442USN,
+2018-03,442,Furniture and home furnishings stores,sales_nsa,9933,USD millions,MRTSSM442USN,
+2018-04,442,Furniture and home furnishings stores,sales_nsa,9116,USD millions,MRTSSM442USN,
+2018-05,442,Furniture and home furnishings stores,sales_nsa,9838,USD millions,MRTSSM442USN,
+2018-06,442,Furniture and home furnishings stores,sales_nsa,9639,USD millions,MRTSSM442USN,
+2018-07,442,Furniture and home furnishings stores,sales_nsa,9647,USD millions,MRTSSM442USN,
+2018-08,442,Furniture and home furnishings stores,sales_nsa,10103,USD millions,MRTSSM442USN,
+2018-09,442,Furniture and home furnishings stores,sales_nsa,9493,USD millions,MRTSSM442USN,
+2018-10,442,Furniture and home furnishings stores,sales_nsa,9676,USD millions,MRTSSM442USN,
+2018-11,442,Furniture and home furnishings stores,sales_nsa,10492,USD millions,MRTSSM442USN,
+2018-12,442,Furniture and home furnishings stores,sales_nsa,10843,USD millions,MRTSSM442USN,
+2019-01,442,Furniture and home furnishings stores,sales_nsa,8570,USD millions,MRTSSM442USN,
+2019-02,442,Furniture and home furnishings stores,sales_nsa,8387,USD millions,MRTSSM442USN,
+2019-03,442,Furniture and home furnishings stores,sales_nsa,9733,USD millions,MRTSSM442USN,
+2019-04,442,Furniture and home furnishings stores,sales_nsa,9301,USD millions,MRTSSM442USN,
+2019-05,442,Furniture and home furnishings stores,sales_nsa,10003,USD millions,MRTSSM442USN,
+2019-06,442,Furniture and home furnishings stores,sales_nsa,9460,USD millions,MRTSSM442USN,
+2019-07,442,Furniture and home furnishings stores,sales_nsa,9879,USD millions,MRTSSM442USN,
+2019-08,442,Furniture and home furnishings stores,sales_nsa,10284,USD millions,MRTSSM442USN,
+2019-09,442,Furniture and home furnishings stores,sales_nsa,9795,USD millions,MRTSSM442USN,
+2019-10,442,Furniture and home furnishings stores,sales_nsa,9906,USD millions,MRTSSM442USN,
+2019-11,442,Furniture and home furnishings stores,sales_nsa,10667,USD millions,MRTSSM442USN,
+2019-12,442,Furniture and home furnishings stores,sales_nsa,10817,USD millions,MRTSSM442USN,
+2020-01,442,Furniture and home furnishings stores,sales_nsa,9107,USD millions,MRTSSM442USN,
+2020-02,442,Furniture and home furnishings stores,sales_nsa,9065,USD millions,MRTSSM442USN,
+2020-03,442,Furniture and home furnishings stores,sales_nsa,7767,USD millions,MRTSSM442USN,
+2020-04,442,Furniture and home furnishings stores,sales_nsa,3693,USD millions,MRTSSM442USN,
+2020-05,442,Furniture and home furnishings stores,sales_nsa,6938,USD millions,MRTSSM442USN,
+2020-06,442,Furniture and home furnishings stores,sales_nsa,9416,USD millions,MRTSSM442USN,
+2020-07,442,Furniture and home furnishings stores,sales_nsa,10000,USD millions,MRTSSM442USN,
+2020-08,442,Furniture and home furnishings stores,sales_nsa,10508,USD millions,MRTSSM442USN,
+2020-09,442,Furniture and home furnishings stores,sales_nsa,10479,USD millions,MRTSSM442USN,
+2020-10,442,Furniture and home furnishings stores,sales_nsa,10451,USD millions,MRTSSM442USN,
+2020-11,442,Furniture and home furnishings stores,sales_nsa,10513,USD millions,MRTSSM442USN,
+2020-12,442,Furniture and home furnishings stores,sales_nsa,11303,USD millions,MRTSSM442USN,
+2021-01,442,Furniture and home furnishings stores,sales_nsa,10020,USD millions,MRTSSM442USN,
+2021-02,442,Furniture and home furnishings stores,sales_nsa,9498,USD millions,MRTSSM442USN,
+2021-03,442,Furniture and home furnishings stores,sales_nsa,11896,USD millions,MRTSSM442USN,
+2021-04,442,Furniture and home furnishings stores,sales_nsa,11363,USD millions,MRTSSM442USN,
+2021-05,442,Furniture and home furnishings stores,sales_nsa,11337,USD millions,MRTSSM442USN,
+2021-06,442,Furniture and home furnishings stores,sales_nsa,11102,USD millions,MRTSSM442USN,
+2021-07,442,Furniture and home furnishings stores,sales_nsa,11410,USD millions,MRTSSM442USN,
+2021-08,442,Furniture and home furnishings stores,sales_nsa,11477,USD millions,MRTSSM442USN,
+2021-09,442,Furniture and home furnishings stores,sales_nsa,11360,USD millions,MRTSSM442USN,
+2021-10,442,Furniture and home furnishings stores,sales_nsa,11446,USD millions,MRTSSM442USN,
+2021-11,442,Furniture and home furnishings stores,sales_nsa,12191,USD millions,MRTSSM442USN,
+2021-12,442,Furniture and home furnishings stores,sales_nsa,12108,USD millions,MRTSSM442USN,
+2022-01,442,Furniture and home furnishings stores,sales_nsa,9881,USD millions,MRTSSM442USN,
+2022-02,442,Furniture and home furnishings stores,sales_nsa,10174,USD millions,MRTSSM442USN,
+2022-03,442,Furniture and home furnishings stores,sales_nsa,12069,USD millions,MRTSSM442USN,
+2022-04,442,Furniture and home furnishings stores,sales_nsa,11674,USD millions,MRTSSM442USN,
+2022-05,442,Furniture and home furnishings stores,sales_nsa,11672,USD millions,MRTSSM442USN,
+2022-06,442,Furniture and home furnishings stores,sales_nsa,11351,USD millions,MRTSSM442USN,
+2022-07,442,Furniture and home furnishings stores,sales_nsa,11186,USD millions,MRTSSM442USN,
+2022-08,442,Furniture and home furnishings stores,sales_nsa,11992,USD millions,MRTSSM442USN,
+2022-09,442,Furniture and home furnishings stores,sales_nsa,11522,USD millions,MRTSSM442USN,
+2022-10,442,Furniture and home furnishings stores,sales_nsa,11396,USD millions,MRTSSM442USN,
+2022-11,442,Furniture and home furnishings stores,sales_nsa,12013,USD millions,MRTSSM442USN,
+2022-12,442,Furniture and home furnishings stores,sales_nsa,11877,USD millions,MRTSSM442USN,
+2023-01,442,Furniture and home furnishings stores,sales_nsa,10747,USD millions,MRTSSM442USN,
+2023-02,442,Furniture and home furnishings stores,sales_nsa,10286,USD millions,MRTSSM442USN,
+2023-03,442,Furniture and home furnishings stores,sales_nsa,11636,USD millions,MRTSSM442USN,
+2023-04,442,Furniture and home furnishings stores,sales_nsa,10451,USD millions,MRTSSM442USN,
+2023-05,442,Furniture and home furnishings stores,sales_nsa,11081,USD millions,MRTSSM442USN,
+2023-06,442,Furniture and home furnishings stores,sales_nsa,10845,USD millions,MRTSSM442USN,
+2023-07,442,Furniture and home furnishings stores,sales_nsa,10498,USD millions,MRTSSM442USN,
+2023-08,442,Furniture and home furnishings stores,sales_nsa,11195,USD millions,MRTSSM442USN,
+2023-09,442,Furniture and home furnishings stores,sales_nsa,10557,USD millions,MRTSSM442USN,
+2023-10,442,Furniture and home furnishings stores,sales_nsa,10157,USD millions,MRTSSM442USN,
+2023-11,442,Furniture and home furnishings stores,sales_nsa,11383,USD millions,MRTSSM442USN,
+2023-12,442,Furniture and home furnishings stores,sales_nsa,10965,USD millions,MRTSSM442USN,
+2024-01,442,Furniture and home furnishings stores,sales_nsa,9255,USD millions,MRTSSM442USN,
+2024-02,442,Furniture and home furnishings stores,sales_nsa,9600,USD millions,MRTSSM442USN,
+2024-03,442,Furniture and home furnishings stores,sales_nsa,10214,USD millions,MRTSSM442USN,
+2024-04,442,Furniture and home furnishings stores,sales_nsa,9772,USD millions,MRTSSM442USN,
+2024-05,442,Furniture and home furnishings stores,sales_nsa,10507,USD millions,MRTSSM442USN,
+2024-06,442,Furniture and home furnishings stores,sales_nsa,9950,USD millions,MRTSSM442USN,
+2024-07,442,Furniture and home furnishings stores,sales_nsa,10462,USD millions,MRTSSM442USN,
+2024-08,442,Furniture and home furnishings stores,sales_nsa,10949,USD millions,MRTSSM442USN,
+2024-09,442,Furniture and home furnishings stores,sales_nsa,10369,USD millions,MRTSSM442USN,
+2024-10,442,Furniture and home furnishings stores,sales_nsa,10504,USD millions,MRTSSM442USN,
+2024-11,442,Furniture and home furnishings stores,sales_nsa,11644,USD millions,MRTSSM442USN,
+2024-12,442,Furniture and home furnishings stores,sales_nsa,11800,USD millions,MRTSSM442USN,
+2025-01,442,Furniture and home furnishings stores,sales_nsa,9826,USD millions,MRTSSM442USN,
+2025-02,442,Furniture and home furnishings stores,sales_nsa,9821,USD millions,MRTSSM442USN,
+2025-03,442,Furniture and home furnishings stores,sales_nsa,10860,USD millions,MRTSSM442USN,
+2025-04,442,Furniture and home furnishings stores,sales_nsa,10509,USD millions,MRTSSM442USN,
+2025-05,442,Furniture and home furnishings stores,sales_nsa,10997,USD millions,MRTSSM442USN,
+2025-06,442,Furniture and home furnishings stores,sales_nsa,10368,USD millions,MRTSSM442USN,
+2025-07,442,Furniture and home furnishings stores,sales_nsa,11075,USD millions,MRTSSM442USN,
+2025-08,442,Furniture and home furnishings stores,sales_nsa,10941,USD millions,MRTSSM442USN,
+2025-09,442,Furniture and home furnishings stores,sales_nsa,10232,USD millions,MRTSSM442USN,
+2025-10,442,Furniture and home furnishings stores,sales_nsa,10475,USD millions,MRTSSM442USN,
+2025-11,442,Furniture and home furnishings stores,sales_nsa,11068,USD millions,MRTSSM442USN,
+2025-12,442,Furniture and home furnishings stores,sales_nsa,11175,USD millions,MRTSSM442USN,
+2026-01,442,Furniture and home furnishings stores,sales_nsa,9320,USD millions,MRTSSM442USN,
+2026-02,442,Furniture and home furnishings stores,sales_nsa,9312,USD millions,MRTSSM442USN,
+2026-03,442,Furniture and home furnishings stores,sales_nsa,10782,USD millions,MRTSSM442USN,
+2026-04,442,Furniture and home furnishings stores,sales_nsa,10133,USD millions,MRTSSM442USN,
+2026-05,442,Furniture and home furnishings stores,sales_nsa,10826,USD millions,MRTSSM442USN,
+2026-06,442,Furniture and home furnishings stores,sales_nsa,10518,USD millions,MRTSSM442USN,
+2026-07,442,Furniture and home furnishings stores,sales_nsa,10770,USD millions,MRTSSM442USN,
+2026-08,442,Furniture and home furnishings stores,sales_nsa,10760,USD millions,MRTSSM442USN,
+2015-01,451,"Sporting goods, hobby, music and book stores",sales_nsa,5997,USD millions,MRTSSM451USN,
+2015-02,451,"Sporting goods, hobby, music and book stores",sales_nsa,5203,USD millions,MRTSSM451USN,
+2015-03,451,"Sporting goods, hobby, music and book stores",sales_nsa,6264,USD millions,MRTSSM451USN,
+2015-04,451,"Sporting goods, hobby, music and book stores",sales_nsa,5987,USD millions,MRTSSM451USN,
+2015-05,451,"Sporting goods, hobby, music and book stores",sales_nsa,6371,USD millions,MRTSSM451USN,
+2015-06,451,"Sporting goods, hobby, music and book stores",sales_nsa,6460,USD millions,MRTSSM451USN,
+2015-07,451,"Sporting goods, hobby, music and book stores",sales_nsa,6518,USD millions,MRTSSM451USN,
+2015-08,451,"Sporting goods, hobby, music and book stores",sales_nsa,7598,USD millions,MRTSSM451USN,
+2015-09,451,"Sporting goods, hobby, music and book stores",sales_nsa,6580,USD millions,MRTSSM451USN,
+2015-10,451,"Sporting goods, hobby, music and book stores",sales_nsa,6164,USD millions,MRTSSM451USN,
+2015-11,451,"Sporting goods, hobby, music and book stores",sales_nsa,7293,USD millions,MRTSSM451USN,
+2015-12,451,"Sporting goods, hobby, music and book stores",sales_nsa,11627,USD millions,MRTSSM451USN,
+2016-01,451,"Sporting goods, hobby, music and book stores",sales_nsa,6159,USD millions,MRTSSM451USN,
+2016-02,451,"Sporting goods, hobby, music and book stores",sales_nsa,5605,USD millions,MRTSSM451USN,
+2016-03,451,"Sporting goods, hobby, music and book stores",sales_nsa,6643,USD millions,MRTSSM451USN,
+2016-04,451,"Sporting goods, hobby, music and book stores",sales_nsa,6233,USD millions,MRTSSM451USN,
+2016-05,451,"Sporting goods, hobby, music and book stores",sales_nsa,6423,USD millions,MRTSSM451USN,
+2016-06,451,"Sporting goods, hobby, music and book stores",sales_nsa,6929,USD millions,MRTSSM451USN,
+2016-07,451,"Sporting goods, hobby, music and book stores",sales_nsa,6641,USD millions,MRTSSM451USN,
+2016-08,451,"Sporting goods, hobby, music and book stores",sales_nsa,7482,USD millions,MRTSSM451USN,
+2016-09,451,"Sporting goods, hobby, music and book stores",sales_nsa,6459,USD millions,MRTSSM451USN,
+2016-10,451,"Sporting goods, hobby, music and book stores",sales_nsa,6037,USD millions,MRTSSM451USN,
+2016-11,451,"Sporting goods, hobby, music and book stores",sales_nsa,7299,USD millions,MRTSSM451USN,
+2016-12,451,"Sporting goods, hobby, music and book stores",sales_nsa,11020,USD millions,MRTSSM451USN,
+2017-01,451,"Sporting goods, hobby, music and book stores",sales_nsa,5971,USD millions,MRTSSM451USN,
+2017-02,451,"Sporting goods, hobby, music and book stores",sales_nsa,5337,USD millions,MRTSSM451USN,
+2017-03,451,"Sporting goods, hobby, music and book stores",sales_nsa,6370,USD millions,MRTSSM451USN,
+2017-04,451,"Sporting goods, hobby, music and book stores",sales_nsa,6100,USD millions,MRTSSM451USN,
+2017-05,451,"Sporting goods, hobby, music and book stores",sales_nsa,6303,USD millions,MRTSSM451USN,
+2017-06,451,"Sporting goods, hobby, music and book stores",sales_nsa,6462,USD millions,MRTSSM451USN,
+2017-07,451,"Sporting goods, hobby, music and book stores",sales_nsa,6247,USD millions,MRTSSM451USN,
+2017-08,451,"Sporting goods, hobby, music and book stores",sales_nsa,7347,USD millions,MRTSSM451USN,
+2017-09,451,"Sporting goods, hobby, music and book stores",sales_nsa,6444,USD millions,MRTSSM451USN,
+2017-10,451,"Sporting goods, hobby, music and book stores",sales_nsa,6070,USD millions,MRTSSM451USN,
+2017-11,451,"Sporting goods, hobby, music and book stores",sales_nsa,7451,USD millions,MRTSSM451USN,
+2017-12,451,"Sporting goods, hobby, music and book stores",sales_nsa,10428,USD millions,MRTSSM451USN,
+2018-01,451,"Sporting goods, hobby, music and book stores",sales_nsa,5622,USD millions,MRTSSM451USN,
+2018-02,451,"Sporting goods, hobby, music and book stores",sales_nsa,5326,USD millions,MRTSSM451USN,
+2018-03,451,"Sporting goods, hobby, music and book stores",sales_nsa,6606,USD millions,MRTSSM451USN,
+2018-04,451,"Sporting goods, hobby, music and book stores",sales_nsa,5956,USD millions,MRTSSM451USN,
+2018-05,451,"Sporting goods, hobby, music and book stores",sales_nsa,6364,USD millions,MRTSSM451USN,
+2018-06,451,"Sporting goods, hobby, music and book stores",sales_nsa,6397,USD millions,MRTSSM451USN,
+2018-07,451,"Sporting goods, hobby, music and book stores",sales_nsa,5933,USD millions,MRTSSM451USN,
+2018-08,451,"Sporting goods, hobby, music and book stores",sales_nsa,6870,USD millions,MRTSSM451USN,
+2018-09,451,"Sporting goods, hobby, music and book stores",sales_nsa,5670,USD millions,MRTSSM451USN,
+2018-10,451,"Sporting goods, hobby, music and book stores",sales_nsa,5596,USD millions,MRTSSM451USN,
+2018-11,451,"Sporting goods, hobby, music and book stores",sales_nsa,6740,USD millions,MRTSSM451USN,
+2018-12,451,"Sporting goods, hobby, music and book stores",sales_nsa,8659,USD millions,MRTSSM451USN,
+2019-01,451,"Sporting goods, hobby, music and book stores",sales_nsa,5246,USD millions,MRTSSM451USN,
+2019-02,451,"Sporting goods, hobby, music and book stores",sales_nsa,4855,USD millions,MRTSSM451USN,
+2019-03,451,"Sporting goods, hobby, music and book stores",sales_nsa,5875,USD millions,MRTSSM451USN,
+2019-04,451,"Sporting goods, hobby, music and book stores",sales_nsa,5781,USD millions,MRTSSM451USN,
+2019-05,451,"Sporting goods, hobby, music and book stores",sales_nsa,6030,USD millions,MRTSSM451USN,
+2019-06,451,"Sporting goods, hobby, music and book stores",sales_nsa,6169,USD millions,MRTSSM451USN,
+2019-07,451,"Sporting goods, hobby, music and book stores",sales_nsa,6136,USD millions,MRTSSM451USN,
+2019-08,451,"Sporting goods, hobby, music and book stores",sales_nsa,7055,USD millions,MRTSSM451USN,
+2019-09,451,"Sporting goods, hobby, music and book stores",sales_nsa,5834,USD millions,MRTSSM451USN,
+2019-10,451,"Sporting goods, hobby, music and book stores",sales_nsa,5907,USD millions,MRTSSM451USN,
+2019-11,451,"Sporting goods, hobby, music and book stores",sales_nsa,6743,USD millions,MRTSSM451USN,
+2019-12,451,"Sporting goods, hobby, music and book stores",sales_nsa,8866,USD millions,MRTSSM451USN,
+2020-01,451,"Sporting goods, hobby, music and book stores",sales_nsa,5402,USD millions,MRTSSM451USN,
+2020-02,451,"Sporting goods, hobby, music and book stores",sales_nsa,5146,USD millions,MRTSSM451USN,
+2020-03,451,"Sporting goods, hobby, music and book stores",sales_nsa,4839,USD millions,MRTSSM451USN,
+2020-04,451,"Sporting goods, hobby, music and book stores",sales_nsa,3196,USD millions,MRTSSM451USN,
+2020-05,451,"Sporting goods, hobby, music and book stores",sales_nsa,5763,USD millions,MRTSSM451USN,
+2020-06,451,"Sporting goods, hobby, music and book stores",sales_nsa,7596,USD millions,MRTSSM451USN,
+2020-07,451,"Sporting goods, hobby, music and book stores",sales_nsa,7265,USD millions,MRTSSM451USN,
+2020-08,451,"Sporting goods, hobby, music and book stores",sales_nsa,7380,USD millions,MRTSSM451USN,
+2020-09,451,"Sporting goods, hobby, music and book stores",sales_nsa,6982,USD millions,MRTSSM451USN,
+2020-10,451,"Sporting goods, hobby, music and book stores",sales_nsa,6807,USD millions,MRTSSM451USN,
+2020-11,451,"Sporting goods, hobby, music and book stores",sales_nsa,7479,USD millions,MRTSSM451USN,
+2020-12,451,"Sporting goods, hobby, music and book stores",sales_nsa,10109,USD millions,MRTSSM451USN,
+2021-01,451,"Sporting goods, hobby, music and book stores",sales_nsa,6649,USD millions,MRTSSM451USN,
+2021-02,451,"Sporting goods, hobby, music and book stores",sales_nsa,5561,USD millions,MRTSSM451USN,
+2021-03,451,"Sporting goods, hobby, music and book stores",sales_nsa,8247,USD millions,MRTSSM451USN,
+2021-04,451,"Sporting goods, hobby, music and book stores",sales_nsa,7746,USD millions,MRTSSM451USN,
+2021-05,451,"Sporting goods, hobby, music and book stores",sales_nsa,7678,USD millions,MRTSSM451USN,
+2021-06,451,"Sporting goods, hobby, music and book stores",sales_nsa,8169,USD millions,MRTSSM451USN,
+2021-07,451,"Sporting goods, hobby, music and book stores",sales_nsa,7799,USD millions,MRTSSM451USN,
+2021-08,451,"Sporting goods, hobby, music and book stores",sales_nsa,8453,USD millions,MRTSSM451USN,
+2021-09,451,"Sporting goods, hobby, music and book stores",sales_nsa,7408,USD millions,MRTSSM451USN,
+2021-10,451,"Sporting goods, hobby, music and book stores",sales_nsa,7368,USD millions,MRTSSM451USN,
+2021-11,451,"Sporting goods, hobby, music and book stores",sales_nsa,8696,USD millions,MRTSSM451USN,
+2021-12,451,"Sporting goods, hobby, music and book stores",sales_nsa,11137,USD millions,MRTSSM451USN,
+2022-01,451,"Sporting goods, hobby, music and book stores",sales_nsa,6335,USD millions,MRTSSM451USN,
+2022-02,451,"Sporting goods, hobby, music and book stores",sales_nsa,6186,USD millions,MRTSSM451USN,
+2022-03,451,"Sporting goods, hobby, music and book stores",sales_nsa,7613,USD millions,MRTSSM451USN,
+2022-04,451,"Sporting goods, hobby, music and book stores",sales_nsa,7465,USD millions,MRTSSM451USN,
+2022-05,451,"Sporting goods, hobby, music and book stores",sales_nsa,7496,USD millions,MRTSSM451USN,
+2022-06,451,"Sporting goods, hobby, music and book stores",sales_nsa,7896,USD millions,MRTSSM451USN,
+2022-07,451,"Sporting goods, hobby, music and book stores",sales_nsa,7772,USD millions,MRTSSM451USN,
+2022-08,451,"Sporting goods, hobby, music and book stores",sales_nsa,8661,USD millions,MRTSSM451USN,
+2022-09,451,"Sporting goods, hobby, music and book stores",sales_nsa,7568,USD millions,MRTSSM451USN,
+2022-10,451,"Sporting goods, hobby, music and book stores",sales_nsa,7391,USD millions,MRTSSM451USN,
+2022-11,451,"Sporting goods, hobby, music and book stores",sales_nsa,8603,USD millions,MRTSSM451USN,
+2022-12,451,"Sporting goods, hobby, music and book stores",sales_nsa,11346,USD millions,MRTSSM451USN,
+2023-01,451,"Sporting goods, hobby, music and book stores",sales_nsa,6559,USD millions,MRTSSM451USN,
+2023-02,451,"Sporting goods, hobby, music and book stores",sales_nsa,6094,USD millions,MRTSSM451USN,
+2023-03,451,"Sporting goods, hobby, music and book stores",sales_nsa,7399,USD millions,MRTSSM451USN,
+2023-04,451,"Sporting goods, hobby, music and book stores",sales_nsa,7145,USD millions,MRTSSM451USN,
+2023-05,451,"Sporting goods, hobby, music and book stores",sales_nsa,7477,USD millions,MRTSSM451USN,
+2023-06,451,"Sporting goods, hobby, music and book stores",sales_nsa,7754,USD millions,MRTSSM451USN,
+2023-07,451,"Sporting goods, hobby, music and book stores",sales_nsa,7652,USD millions,MRTSSM451USN,
+2023-08,451,"Sporting goods, hobby, music and book stores",sales_nsa,8332,USD millions,MRTSSM451USN,
+2023-09,451,"Sporting goods, hobby, music and book stores",sales_nsa,7427,USD millions,MRTSSM451USN,
+2023-10,451,"Sporting goods, hobby, music and book stores",sales_nsa,7182,USD millions,MRTSSM451USN,
+2023-11,451,"Sporting goods, hobby, music and book stores",sales_nsa,8489,USD millions,MRTSSM451USN,
+2023-12,451,"Sporting goods, hobby, music and book stores",sales_nsa,10811,USD millions,MRTSSM451USN,
+2024-01,451,"Sporting goods, hobby, music and book stores",sales_nsa,6528,USD millions,MRTSSM451USN,
+2024-02,451,"Sporting goods, hobby, music and book stores",sales_nsa,6375,USD millions,MRTSSM451USN,
+2024-03,451,"Sporting goods, hobby, music and book stores",sales_nsa,7424,USD millions,MRTSSM451USN,
+2024-04,451,"Sporting goods, hobby, music and book stores",sales_nsa,6844,USD millions,MRTSSM451USN,
+2024-05,451,"Sporting goods, hobby, music and book stores",sales_nsa,7513,USD millions,MRTSSM451USN,
+2024-06,451,"Sporting goods, hobby, music and book stores",sales_nsa,7666,USD millions,MRTSSM451USN,
+2024-07,451,"Sporting goods, hobby, music and book stores",sales_nsa,7538,USD millions,MRTSSM451USN,
+2024-08,451,"Sporting goods, hobby, music and book stores",sales_nsa,8370,USD millions,MRTSSM451USN,
+2024-09,451,"Sporting goods, hobby, music and book stores",sales_nsa,7308,USD millions,MRTSSM451USN,
+2024-10,451,"Sporting goods, hobby, music and book stores",sales_nsa,7408,USD millions,MRTSSM451USN,
+2024-11,451,"Sporting goods, hobby, music and book stores",sales_nsa,8712,USD millions,MRTSSM451USN,
+2024-12,451,"Sporting goods, hobby, music and book stores",sales_nsa,11245,USD millions,MRTSSM451USN,
+2025-01,451,"Sporting goods, hobby, music and book stores",sales_nsa,6584,USD millions,MRTSSM451USN,
+2025-02,451,"Sporting goods, hobby, music and book stores",sales_nsa,6101,USD millions,MRTSSM451USN,
+2025-03,451,"Sporting goods, hobby, music and book stores",sales_nsa,7598,USD millions,MRTSSM451USN,
+2025-04,451,"Sporting goods, hobby, music and book stores",sales_nsa,7038,USD millions,MRTSSM451USN,
+2025-05,451,"Sporting goods, hobby, music and book stores",sales_nsa,7723,USD millions,MRTSSM451USN,
+2025-06,451,"Sporting goods, hobby, music and book stores",sales_nsa,7574,USD millions,MRTSSM451USN,
+2025-07,451,"Sporting goods, hobby, music and book stores",sales_nsa,7839,USD millions,MRTSSM451USN,
+2025-08,451,"Sporting goods, hobby, music and book stores",sales_nsa,8738,USD millions,MRTSSM451USN,
+2025-09,451,"Sporting goods, hobby, music and book stores",sales_nsa,7456,USD millions,MRTSSM451USN,
+2025-10,451,"Sporting goods, hobby, music and book stores",sales_nsa,7694,USD millions,MRTSSM451USN,
+2025-11,451,"Sporting goods, hobby, music and book stores",sales_nsa,8946,USD millions,MRTSSM451USN,
+2025-12,451,"Sporting goods, hobby, music and book stores",sales_nsa,11888,USD millions,MRTSSM451USN,
+2026-01,451,"Sporting goods, hobby, music and book stores",sales_nsa,6921,USD millions,MRTSSM451USN,
+2026-02,451,"Sporting goods, hobby, music and book stores",sales_nsa,6624,USD millions,MRTSSM451USN,
+2026-03,451,"Sporting goods, hobby, music and book stores",sales_nsa,8050,USD millions,MRTSSM451USN,
+2026-04,451,"Sporting goods, hobby, music and book stores",sales_nsa,7758,USD millions,MRTSSM451USN,
+2026-05,451,"Sporting goods, hobby, music and book stores",sales_nsa,8539,USD millions,MRTSSM451USN,
+2026-06,451,"Sporting goods, hobby, music and book stores",sales_nsa,8611,USD millions,MRTSSM451USN,
+2026-07,451,"Sporting goods, hobby, music and book stores",sales_nsa,8623,USD millions,MRTSSM451USN,
+2026-08,451,"Sporting goods, hobby, music and book stores",sales_nsa,9495,USD millions,MRTSSM451USN,

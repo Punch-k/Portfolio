@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S&amp;OP and Inventory Optimization | Prapanch Kokkalemada</title>
+    <meta name="author" content="Prapanch Kokkalemada">
+    <meta name="description" content="Portfolio case study by Prapanch Kokkalemada. Forecast comparison, safety stock and inventory vs OTIF tradeoffs built on US Census retail sales data.">
+    <meta property="og:title" content="S&amp;OP and Inventory Optimization | Portfolio Case Study">
+    <meta property="og:description" content="Naive, seasonal and ETS forecasts on real Census retail data, with safety stock, OTIF tradeoff and an S&amp;OP memo.">
+    <meta property="og:url" content="https://punch-k.github.io/Portfolio/sop-inventory-optimization/">
+    <link rel="canonical" href="https://punch-k.github.io/Portfolio/sop-inventory-optimization/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css?v=7">
+    <link rel="stylesheet" href="styles.css?v=1">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+    <div id="aura" aria-hidden="true"></div>
+    <div id="sprog" aria-hidden="true"></div>
+    <div id="cdot" aria-hidden="true"></div>
+    <div id="cring" aria-hidden="true"></div>
+    <div id="ctip" aria-hidden="true"></div>
+
+    <nav id="mobile-menu" role="navigation" aria-label="Mobile menu">
+        <a href="../index.html#scrub-section">Home</a>
+        <a href="../index.html#section-cases">Cases</a>
+        <a href="../index.html#section-skills">Skills</a>
+        <a href="../simulators.html">Simulators</a>
+        <a href="../index.html#section-get-in-touch">Contact</a>
+        <a href="../index.html#section-get-in-touch" class="mob-cta">Let's Connect ↗</a>
+    </nav>
+
+    <nav id="mainnav" role="navigation" aria-label="Primary navigation">
+        <a class="nav-logo" href="../index.html">PRAPANCH <span>KOKKALEMADA</span></a>
+        <ul class="nav-links">
+            <li><a href="../index.html#section-intro">About</a></li>
+            <li><a href="../index.html#section-cases" class="act">Research</a></li>
+            <li><a href="../simulators.html">Simulators</a></li>
+            <li><a href="../index.html#section-skills">Skills</a></li>
+            <li><a href="../about.html">Gallery</a></li>
+        </ul>
+        <a class="nav-cta" href="../index.html#section-get-in-touch"><span>Let's Connect ↗</span></a>
+        <button id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <header class="proj-hero">
+        <div class="proj-breadcrumbs"><a href="../index.html">Portfolio</a> / <a href="../index.html#section-cases">Research</a> / S&amp;OP</div>
+        <span class="case-badge">Portfolio Case Study</span>
+        <h1>S&amp;OP and <em>Inventory Optimization.</em></h1>
+        <p>A working S&amp;OP model on real US retail sales. Pick a category. Compare three forecast methods. Set safety stock. See what each extra point of service costs in inventory. Then read the memo the model writes for you.</p>
+        <p class="proj-hero-note">Data: U.S. Census Bureau, Monthly Retail Trade Survey. Not seasonally adjusted sales, Jan 2015 to <span data-bind="lastMonth">the latest month</span>. All charts and tables below are calculated in your browser from the included data file.</p>
+    </header>
+
+    <div class="stat-strip proj-stats" aria-label="Key results for the selected category">
+        <div class="stat-strip-item"><div class="stat-strip-n" id="k-best">--</div><div class="stat-strip-l">Best method<br><em>lowest WAPE on holdout</em></div></div>
+        <div class="stat-strip-item"><div class="stat-strip-n" id="k-wape">--</div><div class="stat-strip-l">Holdout WAPE<br><em>best method</em></div></div>
+        <div class="stat-strip-item"><div class="stat-strip-n" id="k-ss">--</div><div class="stat-strip-l">Safety stock<br><em>at target service</em></div></div>
+        <div class="stat-strip-item"><div class="stat-strip-n" id="k-mos">--</div><div class="stat-strip-l">Months of supply<br><em>model vs Census I/S</em></div></div>
+    </div>
+
+    <main class="proj-wrap">
+
+        <div class="proj-controls" role="group" aria-label="Model controls">
+            <div class="ctl">
+                <label for="sel-cat">Category (NAICS)</label>
+                <select id="sel-cat"></select>
+            </div>
+            <div class="ctl">
+                <label for="sel-hold">Holdout window</label>
+                <select id="sel-hold">
+                    <option value="6">Last 6 months</option>
+                    <option value="12" selected>Last 12 months</option>
+                    <option value="18">Last 18 months</option>
+                    <option value="24">Last 24 months</option>
+                </select>
+            </div>
+            <div class="ctl">
+                <label for="sel-mode">Backtest mode</label>
+                <select id="sel-mode">
+                    <option value="fixed" selected>Frozen plan (one origin)</option>
+                    <option value="rolling">Rolling 1 month ahead</option>
+                </select>
+            </div>
+            <div class="ctl">
+                <label for="sel-season">ETS seasonality</label>
+                <select id="sel-season">
+                    <option value="mul" selected>Multiplicative</option>
+                    <option value="add">Additive</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="sim-tabs" role="tablist" id="steps">
+            <button class="sim-tab-btn active" role="tab" data-go="sec-forecast"><span class="stb-num">01</span> Demand Review</button>
+            <button class="sim-tab-btn" role="tab" data-go="sec-ss"><span class="stb-num">02</span> Safety Stock</button>
+            <button class="sim-tab-btn" role="tab" data-go="sec-otif"><span class="stb-num">03</span> Inventory vs OTIF</button>
+            <button class="sim-tab-btn" role="tab" data-go="sec-supply"><span class="stb-num">04</span> Supply Review</button>
+            <button class="sim-tab-btn" role="tab" data-go="sec-memo"><span class="stb-num">05</span> S&amp;OP Memo</button>
+        </div>
+
+        <!-- 01 DEMAND REVIEW -->
+        <section class="proj-section" id="sec-forecast">
+            <div class="sim-section-head">
+                <p class="sec-num">01. Demand Review</p>
+                <h3>Naive vs Seasonal vs ETS</h3>
+                <p>Each method is trained on the months before the holdout window. Then it forecasts the holdout. Errors are measured against what the Census actually reported.</p>
+            </div>
+
+            <div class="sim-scenario-card">
+                <div class="ssc-eyebrow">How the three methods work</div>
+                <div class="ssc-body">
+                    <strong>Naive</strong> repeats the last known month. <strong>Seasonal naive</strong> repeats the same month from last year. <strong>ETS</strong> is Holt-Winters exponential smoothing with a damped trend. Its smoothing weights are fitted on the training months by grid search, unless you set them by hand below.
+                </div>
+                <div class="ssc-defaults">MAPE is the average percent miss per month. WAPE is total miss divided by total sales. Bias is total forecast minus total actual, as a percent. Positive bias means the plan ran high.</div>
+            </div>
+
+            <div class="sim-chart-block">
+                <div class="schart-header">
+                    <span class="schart-title">Actual sales vs forecasts, USD millions</span>
+                    <span class="schart-sub" id="fc-sub">Shaded band is the 80 percent range around the forward ETS forecast, based on holdout error.</span>
+                </div>
+                <div class="chart-wrap tall"><canvas id="ch-forecast" aria-label="Forecast comparison chart" role="img"></canvas></div>
+            </div>
+
+            <div class="sim-metrics-row" id="method-cards"></div>
+
+            <div class="proj-two">
+                <div class="sim-input-group">
+                    <div class="sig-header"><span class="sig-tag">E</span><span class="sig-title">ETS parameters<span class="sig-hint">Auto fit picks the lowest training error. Switch to manual to test your own.</span></span></div>
+                    <div class="toggle-row">
+                        <label class="chk"><input type="checkbox" id="ets-auto" checked> Auto fit on training months</label>
+                    </div>
+                    <div class="sim-field"><label for="ets-a">Alpha (level) <b id="ets-a-v"></b></label><input type="range" id="ets-a" min="0.05" max="0.95" step="0.05" value="0.3"></div>
+                    <div class="sim-field"><label for="ets-b">Beta (trend) <b id="ets-b-v"></b></label><input type="range" id="ets-b" min="0.01" max="0.5" step="0.01" value="0.05"></div>
+                    <div class="sim-field"><label for="ets-g">Gamma (season) <b id="ets-g-v"></b></label><input type="range" id="ets-g" min="0.05" max="0.95" step="0.05" value="0.3"></div>
+                    <div class="sim-field"><label for="ets-p">Phi (trend damping) <b id="ets-p-v"></b></label><input type="range" id="ets-p" min="0.8" max="1" step="0.01" value="0.95"></div>
+                </div>
+                <div class="sim-sensitivity">
+                    <div class="ssens-header">Same test across all 8 categories, WAPE by method</div>
+                    <table class="ssens-table" id="tbl-all"></table>
+                    <p class="table-note">Uses the holdout window, backtest mode and ETS seasonality chosen above. Lowest WAPE in each row is marked.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 02 SAFETY STOCK -->
+        <section class="proj-section" id="sec-ss">
+            <div class="sim-section-head">
+                <p class="sec-num">02. Safety Stock</p>
+                <h3>Buffer by service level, lead time and variability</h3>
+                <p>Safety stock covers the demand you did not forecast. Better forecasts mean smaller errors, and smaller errors mean less buffer for the same service.</p>
+            </div>
+            <div class="sim-body">
+                <div class="sim-inputs-panel">
+                    <div class="sim-input-group">
+                        <div class="sig-header"><span class="sig-tag">A</span><span class="sig-title">Policy inputs<span class="sig-hint">These are planning choices, not data.</span></span></div>
+                        <div class="sim-field"><label for="ss-sl">Cycle service level <b id="ss-sl-v"></b></label><input type="range" id="ss-sl" min="80" max="99.9" step="0.1" value="95"></div>
+                        <div class="sim-field"><label for="ss-lt">Supplier lead time, weeks <b id="ss-lt-v"></b></label><input type="range" id="ss-lt" min="1" max="26" step="1" value="6"></div>
+                        <div class="sim-field"><label for="ss-ltsd">Lead time variability, std dev weeks <b id="ss-ltsd-v"></b></label><input type="range" id="ss-ltsd" min="0" max="6" step="0.5" value="1"></div>
+                        <div class="sim-field"><label for="ss-rp">Review period, weeks <b id="ss-rp-v"></b></label><input type="range" id="ss-rp" min="1" max="8" step="1" value="2"></div>
+                    </div>
+                    <div class="sim-input-group">
+                        <div class="sig-header"><span class="sig-tag">B</span><span class="sig-title">Demand variability source<span class="sig-hint">Both come from the data.</span></span></div>
+                        <label class="chk block"><input type="radio" name="ss-src" value="err" checked> Forecast error of the selected method (RMSE on holdout)</label>
+                        <label class="chk block"><input type="radio" name="ss-src" value="raw"> Raw month to month demand swings (no forecast)</label>
+                        <div class="sim-field" style="margin-top:1rem"><label for="ss-method">Method used for planning</label><select id="ss-method" class="full"></select></div>
+                    </div>
+                </div>
+                <div class="sim-output-panel">
+                    <div class="sim-metrics-row" id="ss-metrics"></div>
+                    <div class="sim-commentary">
+                        <div class="scom-eyebrow">Formula</div>
+                        <div class="scom-body">Safety stock = z × √( L × σ² + D² × σL² ). Here z comes from the service level, L is lead time plus review period in months, σ is the monthly demand uncertainty, D is average monthly demand, and σL is lead time variability in months.</div>
+                        <div class="scom-insight" id="ss-insight"></div>
+                    </div>
+                    <div class="sim-sensitivity">
+                        <div class="ssens-header">Safety stock needed by method, same policy</div>
+                        <table class="ssens-table" id="tbl-ss-methods"></table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 03 INVENTORY VS OTIF -->
+        <section class="proj-section" id="sec-otif">
+            <div class="sim-section-head">
+                <p class="sec-num">03. Inventory vs OTIF</p>
+                <h3>What each point of service costs</h3>
+                <p>The curve below links inventory to OTIF. In-full comes from the expected fill rate at each service level. On-time comes from the supplier on-time rate you set. The gold line is where the industry actually sits, from the Census inventory to sales ratio.</p>
+            </div>
+            <div class="proj-two wide-right">
+                <div class="sim-input-group">
+                    <div class="sig-header"><span class="sig-tag">C</span><span class="sig-title">Tradeoff inputs<span class="sig-hint">Model inputs. Change them to test.</span></span></div>
+                    <div class="sim-field"><label for="ot-ontime">Supplier on-time delivery rate <b id="ot-ontime-v"></b></label><input type="range" id="ot-ontime" min="80" max="100" step="0.5" value="96"></div>
+                    <div class="sim-field"><label for="ot-carry">Annual carrying cost, percent of inventory value <b id="ot-carry-v"></b></label><input type="range" id="ot-carry" min="10" max="40" step="1" value="25"></div>
+                    <p class="sim-field-note">25 percent is the same carrying rate used in the Inventory Lab on this site. Inventory is valued at retail sales dollars here, so read the dollar figures as relative, not as cost.</p>
+                    <div class="mos-compare" id="mos-compare"></div>
+                </div>
+                <div class="sim-chart-block">
+                    <div class="schart-header">
+                        <span class="schart-title">OTIF vs months of supply</span>
+                        <span class="schart-sub">Each point is one service level from 80 to 99.9 percent. Hover a point for details.</span>
+                    </div>
+                    <div class="chart-wrap tall"><canvas id="ch-otif" role="img" aria-label="Inventory versus OTIF tradeoff curve"></canvas></div>
+                </div>
+            </div>
+            <div class="sim-sensitivity">
+                <div class="ssens-header">Service ladder for the selected category</div>
+                <table class="ssens-table" id="tbl-otif"></table>
+            </div>
+        </section>
+
+        <!-- 04 SUPPLY REVIEW -->
+        <section class="proj-section" id="sec-supply">
+            <div class="sim-section-head">
+                <p class="sec-num">04. Supply Review</p>
+                <h3>Twelve month projection against the buffer</h3>
+                <p>Opening inventory starts from the latest Census inventory to sales ratio where Census publishes one. Receipts follow the plan but cannot exceed the receiving cap. Months that dip below safety stock are flagged.</p>
+            </div>
+            <div class="sim-body">
+                <div class="sim-inputs-panel">
+                    <div class="sim-input-group">
+                        <div class="sig-header"><span class="sig-tag">D</span><span class="sig-title">Consensus and capacity<span class="sig-hint">Overrides apply on top of the statistical forecast.</span></span></div>
+                        <div class="sim-field"><label for="sp-q1">Consensus override, next 3 months <b id="sp-q1-v"></b></label><input type="range" id="sp-q1" min="-15" max="15" step="1" value="0"></div>
+                        <div class="sim-field"><label for="sp-q2">Consensus override, months 4 to 6 <b id="sp-q2-v"></b></label><input type="range" id="sp-q2" min="-15" max="15" step="1" value="0"></div>
+                        <div class="sim-field"><label for="sp-q34">Consensus override, months 7 to 12 <b id="sp-q34-v"></b></label><input type="range" id="sp-q34" min="-15" max="15" step="1" value="0"></div>
+                        <div class="sim-field"><label for="sp-cap">Receiving cap, percent of average monthly demand <b id="sp-cap-v"></b></label><input type="range" id="sp-cap" min="90" max="160" step="5" value="120"></div>
+                        <div class="sim-field"><label for="sp-open">Opening inventory, months of supply <b id="sp-open-v"></b></label><input type="range" id="sp-open" min="0.5" max="4" step="0.05" value="2"></div>
+                        <p class="sim-field-note" id="sp-open-note"></p>
+                    </div>
+                </div>
+                <div class="sim-output-panel">
+                    <div class="sim-metrics-row" id="sp-metrics"></div>
+                    <div class="sim-chart-block">
+                        <div class="schart-header">
+                            <span class="schart-title">Projected demand, receipts and ending inventory, USD millions</span>
+                            <span class="schart-sub">Dashed line is safety stock at your target service level.</span>
+                        </div>
+                        <div class="chart-wrap tall"><canvas id="ch-supply" role="img" aria-label="Twelve month supply projection"></canvas></div>
+                    </div>
+                    <div class="sim-sensitivity">
+                        <table class="ssens-table" id="tbl-supply"></table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 05 MEMO -->
+        <section class="proj-section" id="sec-memo">
+            <div class="sim-section-head">
+                <p class="sec-num">05. S&amp;OP Memo</p>
+                <h3>One page for the executive meeting</h3>
+                <p>The memo is written from the numbers above. Change any input and it updates.</p>
+            </div>
+            <article class="memo" id="memo" aria-live="polite"></article>
+            <div class="memo-actions">
+                <button class="sim-carry-btn" id="btn-copy">Copy memo text</button>
+                <button class="sim-reset-btn" onclick="window.print()">Print memo</button>
+            </div>
+        </section>
+
+        <section class="proj-section sources" id="sec-sources">
+            <div class="sim-section-head">
+                <p class="sec-num">Data and Method</p>
+                <h3>Sources</h3>
+            </div>
+            <ol class="src-list">
+                <li>U.S. Census Bureau, Monthly Retail Trade Survey. Retail sales by kind of business, not seasonally adjusted, USD millions. Retrieved from FRED, Federal Reserve Bank of St. Louis. Series: MRTSSM4413USN, MRTSSM444USN, MRTSSM448USN, MRTSSM452USN, MRTSSM4451USN, MRTSSM446USN, MRTSSM442USN, MRTSSM451USN.</li>
+                <li>U.S. Census Bureau, Monthly Retail Trade Survey. Inventories to sales ratios, seasonally adjusted. Retrieved from FRED. Series: MRTSIR441USS, MRTSIR444USS, MRTSIR448USS, MRTSIR452USS, MRTSIR445USS. Census does not publish a ratio at every level. Where it does not, the page says so and asks you to set opening inventory by hand.</li>
+                <li>Recent months in the Census series are advance or preliminary estimates and can be revised.</li>
+            </ol>
+            <p class="case-disclaimer">This is a portfolio case study, not work done for an employer. Policy inputs such as lead time, service level and supplier on-time rate are planning assumptions you can change. Census figures are national totals for a whole retail category, not for one company or SKU.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-left">
+            <span class="ft-logo">S&amp;OP and Inventory Optimization. A portfolio case study by Prapanch Kokkalemada.</span>
+        </div>
+        <nav class="footer-links" aria-label="Footer links">
+            <a href="mailto:kokkalem@msu.edu" class="ft-link">E-MAIL</a>
+            <a href="https://linkedin.com/in/prapanchkokkalemada/" class="ft-link" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+            <a href="https://broad.campusgroups.com/gscma/events/" class="ft-link" target="_blank" rel="noopener noreferrer">🏅&nbsp;GSCMA</a>
+            <button class="ft-top-btn" id="footer-top-btn" aria-label="Scroll to top of page">↑ Top</button>
+        </nav>
+    </footer>
+
+    <script src="app.js?v=1"></script>
+</body>
+</html>
