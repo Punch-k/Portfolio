@@ -2,50 +2,75 @@
 
 Portfolio case study by Prapanch Kokkalemada.
 
-Live page: https://punch-k.github.io/Portfolio/sop-inventory-optimization/
+| | Link |
+|---|---|
+| Tableau dashboard | [S&OP: Forecast, Safety Stock and OTIF](https://public.tableau.com/app/profile/prapanch.kokkalemada/viz/SOPandInventoryOptimization/SOPForecastSafetyStockandOTIFUSCensusRetailSales) |
+| Notebook | [analysis/sop_forecast.ipynb](analysis/sop_forecast.ipynb) |
+| Interactive model | [punch-k.github.io/Portfolio/sop-inventory-optimization](https://punch-k.github.io/Portfolio/sop-inventory-optimization/) |
+| Tableau data | [tableau/](tableau/) |
 
-## What it does
+**Tools:** Python (pandas, statsmodels, scipy), Tableau Public, JavaScript (Chart.js)
 
-A working S&OP model on real US retail sales data. It runs in the browser. There is no backend.
+## Question
 
-1. **Demand review.** Backtests three forecast methods on a holdout window you choose:
-   - Naive: repeats the last known month.
-   - Seasonal naive: repeats the same month last year.
-   - ETS: Holt-Winters exponential smoothing with a damped trend. Weights are fitted by grid search on the training months, or set by hand.
-   Shows MAPE, WAPE, bias and RMSE per method. Runs the same test across all 8 categories.
-2. **Safety stock.** Sets the buffer from service level, lead time, lead time variability and review period. Demand uncertainty comes from the forecast error of the chosen method, or from raw demand swings for comparison.
-3. **Inventory vs OTIF.** Plots modeled OTIF against months of supply for service levels from 80 to 99.9 percent. In-full uses the normal loss function. On-time uses a supplier on-time rate you set. The Census inventory to sales ratio is shown on the same axis where Census publishes one.
-4. **Supply review.** Projects 12 months of demand, receipts and ending inventory. It applies consensus overrides and a receiving cap, and flags months below safety stock.
-5. **S&OP memo.** Writes a one-page memo (decision, risk, what to change next cycle) from the numbers above.
+Which simple forecast method holds up best on real retail demand? How much safety stock does each one need? And what does each extra point of service cost in inventory?
 
 ## Data
 
-`data.csv` holds every number the page uses. Columns: `month, naics, category, metric, value, unit, fred_series, ratio_level`.
+U.S. Census Bureau, Monthly Retail Trade Survey, pulled from FRED on 2026-11-09.
 
-- Retail sales, not seasonally adjusted, USD millions. U.S. Census Bureau, Monthly Retail Trade Survey. Retrieved from FRED (Federal Reserve Bank of St. Louis). Series: MRTSSM4413USN, MRTSSM444USN, MRTSSM448USN, MRTSSM452USN, MRTSSM4451USN, MRTSSM446USN, MRTSSM442USN, MRTSSM451USN. Jan 2015 to Aug 2026.
-- Inventories to sales ratios, seasonally adjusted. Same survey. Series: MRTSIR441USS, MRTSIR444USS, MRTSIR448USS, MRTSIR452USS, MRTSIR445USS. Census does not publish a ratio for every category. Where the ratio is published only at a parent level (for example 441 for auto parts and tire stores, 445 for grocery), the page says which level it uses.
+- Retail sales, not seasonally adjusted, USD millions, Jan 2015 to Aug 2026, for 8 categories: MRTSSM4413USN, MRTSSM444USN, MRTSSM448USN, MRTSSM452USN, MRTSSM4451USN, MRTSSM446USN, MRTSSM442USN, MRTSSM451USN.
+- Inventory to sales ratios, seasonally adjusted: MRTSIR441USS, MRTSIR444USS, MRTSIR448USS, MRTSIR452USS, MRTSIR445USS. Census does not publish a ratio for every category.
 
-Data pulled on 2026-11-09. Recent months are Census advance or preliminary estimates and can be revised.
+Recent months are advance estimates and can be revised.
+
+## Steps
+
+All steps run in [the notebook](analysis/sop_forecast.ipynb). Outputs are saved in it.
+
+1. **Load and shape.** Read `data.csv` and pivot to one monthly series per category.
+2. **Backtest.** Hold out the last 12 months. Forecast them in one go from the training data with three methods:
+   - Naive: the last known month, repeated.
+   - Seasonal naive: the same month last year.
+   - ETS: Holt-Winters with a damped additive trend and multiplicative seasonality (statsmodels, parameters fitted on training data).
+3. **Score.** MAPE, WAPE, bias and RMSE for each method and category.
+4. **Forward plan.** Refit ETS on the full history and forecast 12 months. The 80% band uses the holdout RMSE.
+5. **Safety stock ladder.** For service levels from 80% to 99.9%: safety stock = z × √(L × σ² + D² × σL²), using each method's RMSE as σ. Fill rate uses the normal loss function. OTIF = fill rate × supplier on-time rate.
+6. **Export.** Write four CSVs to `tableau/` for the dashboard.
+
+## Results
+
+- ETS has the lowest holdout WAPE in 6 of 8 categories. Seasonal naive wins grocery and health and personal care. Naive never wins.
+- For auto parts and tire stores, holdout WAPE is 3.1% (ETS), 3.6% (seasonal naive) and 5.2% (naive).
+- At these settings, lead time variability drives most of the safety stock. A steadier supplier cuts more stock than a better forecast.
+- Census inventory to sales ratios sit well above the modeled target. Real stores also hold slow movers, display stock and seasonal builds that this model leaves out.
 
 ## Assumptions
 
-Policy inputs are planning choices, not data: service level, lead time, lead time variability, review period, supplier on-time rate, carrying cost rate, consensus overrides and receiving cap. All of them can be changed on the page. Inventory is valued at retail sales dollars because Census sales are reported that way.
+These are planning inputs, not data: 6 week lead time, 1 week lead time std dev, 2 week review period, 96% supplier on-time, 25% annual carrying cost. The interactive model lets you change all of them.
 
-## Run it locally
-
-The page loads `data.csv` with `fetch`, so it needs a local web server. Opening the file directly will not work.
+## Run it
 
 ```bash
-# from the Portfolio repo root, so ../style.css resolves
+pip install pandas numpy scipy statsmodels matplotlib jupyter
+cd analysis
+jupyter notebook sop_forecast.ipynb
+```
+
+The interactive page needs a local web server because it loads `data.csv` with `fetch`:
+
+```bash
+# from the Portfolio repo root
 python -m http.server 8000
 # open http://localhost:8000/sop-inventory-optimization/
 ```
 
 ## Files
 
-- `index.html`: page structure. Uses the portfolio's shared `../style.css` for the header, footer, fonts and components.
-- `styles.css`: layout for this page. Uses the same design tokens as the portfolio.
-- `app.js`: forecasting, safety stock, OTIF, supply projection and memo logic.
-- `data.csv`: Census data used by every chart and table.
-
-Chart.js 4.4.1 is loaded from the jsDelivr CDN.
+| Path | What it is |
+|---|---|
+| `analysis/sop_forecast.ipynb` | Forecast backtest, safety stock and OTIF analysis |
+| `tableau/*.csv` | Dashboard data written by the notebook |
+| `tableau/BUILD.md` | How the Tableau dashboard is built, sheet by sheet |
+| `data.csv` | Census data used by the notebook and the interactive page |
+| `index.html`, `styles.css`, `app.js` | Interactive model |
