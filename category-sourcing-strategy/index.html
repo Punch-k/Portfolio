@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category Sourcing Strategy | Prapanch Kokkalemada</title>
+    <meta name="author" content="Prapanch Kokkalemada">
+    <meta name="description" content="Portfolio case study by Prapanch Kokkalemada. Spend cube, should-cost, TCO, supplier scorecard, RFQ scoring, negotiation playbook and contract compliance for a corrugated packaging category.">
+    <meta property="og:title" content="Category Sourcing Strategy | Portfolio Case Study">
+    <meta property="og:description" content="A sourcing toolkit built on public BLS and EIA cost data, anchored in verified Ward Tires procurement work.">
+    <meta property="og:url" content="https://punch-k.github.io/Portfolio/category-sourcing-strategy/">
+    <link rel="canonical" href="https://punch-k.github.io/Portfolio/category-sourcing-strategy/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css?v=7">
+    <link rel="stylesheet" href="styles.css?v=1">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+    <div id="aura" aria-hidden="true"></div>
+    <div id="sprog" aria-hidden="true"></div>
+    <div id="cdot" aria-hidden="true"></div>
+    <div id="cring" aria-hidden="true"></div>
+    <div id="ctip" aria-hidden="true"></div>
+
+    <nav id="mobile-menu" role="navigation" aria-label="Mobile menu">
+        <a href="../index.html#scrub-section">Home</a>
+        <a href="../index.html#section-cases">Cases</a>
+        <a href="../index.html#section-skills">Skills</a>
+        <a href="../simulators.html">Simulators</a>
+        <a href="../index.html#section-get-in-touch">Contact</a>
+        <a href="../index.html#section-get-in-touch" class="mob-cta">Let's Connect ↗</a>
+    </nav>
+
+    <nav id="mainnav" role="navigation" aria-label="Primary navigation">
+        <a class="nav-logo" href="../index.html">PRAPANCH <span>KOKKALEMADA</span></a>
+        <ul class="nav-links">
+            <li><a href="../index.html#section-intro">About</a></li>
+            <li><a href="../index.html#section-cases" class="act">Research</a></li>
+            <li><a href="../simulators.html">Simulators</a></li>
+            <li><a href="../index.html#section-skills">Skills</a></li>
+            <li><a href="../about.html">Gallery</a></li>
+        </ul>
+        <a class="nav-cta" href="../index.html#section-get-in-touch"><span>Let's Connect ↗</span></a>
+        <button id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <header class="proj-hero">
+        <div class="proj-breadcrumbs"><a href="../index.html">Portfolio</a> / <a href="../index.html#section-cases">Research</a> / Sourcing</div>
+        <span class="case-badge">Portfolio Case Study</span>
+        <h1>Category <em>Sourcing Strategy.</em></h1>
+        <p>A full sourcing toolkit, run end to end on one category. It starts from my procurement work at Ward Tires. Then it applies the same method to a fresh indirect category: corrugated packaging.</p>
+        <p class="proj-hero-note">Two kinds of numbers appear on this page. <span class="verified">Verified</span> marks my own Ward Tires figures. <span class="assump">Assumption</span> marks model inputs for the corrugated case. Market cost data is real and comes from BLS and EIA.</p>
+    </header>
+
+    <div class="stat-strip proj-stats" aria-label="Headline figures">
+        <div class="stat-strip-item"><div class="stat-strip-n">$350<span>K</span></div><div class="stat-strip-l">Monthly procurement spend<br><em>Ward Tires, verified</em></div></div>
+        <div class="stat-strip-item"><div class="stat-strip-n">20<span>%</span></div><div class="stat-strip-l">Landed cost reduction<br><em>Ward Tires, verified</em></div></div>
+        <div class="stat-strip-item"><div class="stat-strip-n" id="k-box">--</div><div class="stat-strip-l">Box price index change<br><em id="k-box-sub">BLS PPI</em></div></div>
+        <div class="stat-strip-item"><div class="stat-strip-n" id="k-opp">--</div><div class="stat-strip-l">Modeled savings, dual source award<br><em>corrugated case, illustrative</em></div></div>
+    </div>
+
+    <main class="proj-wrap">
+
+        <div class="sim-tabs" role="tablist" id="steps">
+            <button class="sim-tab-btn active" data-go="sec-ward"><span class="stb-num">01</span> Ward Tires</button>
+            <button class="sim-tab-btn" data-go="sec-market"><span class="stb-num">02</span> Should-Cost</button>
+            <button class="sim-tab-btn" data-go="sec-cube"><span class="stb-num">03</span> Spend Cube</button>
+            <button class="sim-tab-btn" data-go="sec-tco"><span class="stb-num">04</span> TCO</button>
+            <button class="sim-tab-btn" data-go="sec-score"><span class="stb-num">05</span> Scorecard</button>
+            <button class="sim-tab-btn" data-go="sec-rfq"><span class="stb-num">06</span> RFQ</button>
+            <button class="sim-tab-btn" data-go="sec-nego"><span class="stb-num">07</span> Negotiation</button>
+            <button class="sim-tab-btn" data-go="sec-comp"><span class="stb-num">08</span> Compliance</button>
+        </div>
+
+        <!-- 01 WARD TIRES -->
+        <section class="proj-section" id="sec-ward">
+            <div class="sim-section-head">
+                <p class="sec-num">01. Where this comes from</p>
+                <h3>Ward Tires, Calgary</h3>
+                <p>I was a Business Account Manager at Ward Tires in Calgary from July 2021 to August 2024. I managed OEM procurement for the distribution network.</p>
+            </div>
+            <div class="sim-metrics-row">
+                <div class="sim-metric highlight"><span class="sm-label">Monthly procurement spend <span class="verified">Verified</span></span><span class="sm-value">$350K</span><span class="sm-sub">OEM procurement, Calgary network</span></div>
+                <div class="sim-metric highlight"><span class="sm-label">Landed cost reduction <span class="verified">Verified</span></span><span class="sm-value">20%</span><span class="sm-sub">measured on landed cost</span></div>
+                <div class="sim-metric"><span class="sm-label">Annual spend base</span><span class="sm-value">$4.2M</span><span class="sm-sub">12 × $350K, simple arithmetic</span></div>
+            </div>
+            <div class="sim-scenario-card">
+                <div class="ssc-eyebrow">Why landed cost, not unit price</div>
+                <div class="ssc-body">Unit price is only part of what a part costs to put on the shelf. <strong>Landed cost</strong> adds freight, handling, duty and the cost of holding stock. A lower price from a far away supplier can cost more once it lands. That is why every tool below works in total cost, not just price.</div>
+                <div class="ssc-defaults">Only the two verified figures above come from Ward Tires. Supplier names, prices and volumes from that job are not shown here. The corrugated case below is a separate model, built from public data, to show the method.</div>
+            </div>
+        </section>
+
+        <!-- 02 MARKET + SHOULD COST -->
+        <section class="proj-section" id="sec-market">
+            <div class="sim-section-head">
+                <p class="sec-num">02. Market and Should-Cost</p>
+                <h3>What a box should cost</h3>
+                <p>Corrugated box cost is mostly board. The rest is labor, energy, freight, overhead and margin. Each driver below moves with a real public index. Compare the modeled cost to what box prices actually did.</p>
+            </div>
+            <div class="sim-chart-block">
+                <div class="row-between">
+                    <div class="schart-header" style="margin:0">
+                        <span class="schart-title">Cost driver indexes, rebased to 100 at <span id="base-lbl">base</span></span>
+                        <span class="schart-sub">BLS PPI for boxes, paperboard mills, natural gas and industrial power. BLS manufacturing wages. EIA diesel. Natural gas and power start hidden because their 2022 spike flattens the chart. Click the legend to show them.</span>
+                    </div>
+                    <div class="seg" id="seg-base"></div>
+                </div>
+                <div class="chart-wrap tall"><canvas id="ch-market" role="img" aria-label="Cost driver indexes"></canvas></div>
+            </div>
+            <div class="sim-commentary"><div class="scom-eyebrow">What the data says</div><div class="scom-body" id="market-read"></div></div>
+
+            <div class="sim-body">
+                <div class="sim-inputs-panel">
+                    <div class="sim-input-group">
+                        <div class="sig-header"><span class="sig-tag">A</span><span class="sig-title">Should-cost inputs <span class="assump">Assumption</span><span class="sig-hint">Anchors in the base month. Each then moves with its real index.</span></span></div>
+                        <div class="sim-field"><label for="sc-box">Box</label><select id="sc-box"></select></div>
+                        <div class="sim-field"><label for="sc-month">Cost month</label><select id="sc-month"></select></div>
+                        <div class="sim-field"><label for="sc-ton">Containerboard, USD per ton in Jan 2020 <b id="sc-ton-v"></b></label><input type="range" id="sc-ton" min="500" max="900" step="10"></div>
+                        <div class="sim-field"><label for="sc-waste">Trim waste <b id="sc-waste-v"></b></label><input type="range" id="sc-waste" min="3" max="15" step="1"></div>
+                        <div class="sim-field"><label for="sc-oh">Overhead <b id="sc-oh-v"></b></label><input type="range" id="sc-oh" min="5" max="25" step="1"></div>
+                        <div class="sim-field"><label for="sc-margin">Supplier margin <b id="sc-margin-v"></b></label><input type="range" id="sc-margin" min="4" max="20" step="1"></div>
+                        <div class="sim-field"><label for="sc-miles">Delivery distance, miles <b id="sc-miles-v"></b></label><input type="range" id="sc-miles" min="25" max="600" step="25"></div>
+                    </div>
+                </div>
+                <div class="sim-output-panel">
+                    <div class="sim-metrics-row" id="sc-metrics"></div>
+                    <div class="sim-chart-block">
+                        <div class="schart-header"><span class="schart-title">Should-cost breakdown per box</span><span class="schart-sub" id="sc-sub"></span></div>
+                        <div class="chart-wrap short"><canvas id="ch-sc" role="img" aria-label="Should-cost breakdown"></canvas></div>
+                    </div>
+                    <div class="sim-sensitivity"><div class="ssens-header">Should-cost vs what each supplier charges today <span class="assump">Assumption</span></div><table class="ssens-table" id="tbl-sc"></table></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 03 SPEND CUBE -->
+        <section class="proj-section" id="sec-cube">
+            <div class="sim-section-head">
+                <p class="sec-num">03. Spend Cube</p>
+                <h3>Who buys what, from whom, at what price</h3>
+                <p>Annual spend by site, box and supplier. Pick any two dimensions. The opportunity column prices every line at the best price already paid for that box in the network.</p>
+            </div>
+            <div class="proj-controls">
+                <div class="ctl"><label for="cube-rows">Rows</label><select id="cube-rows"><option value="site">Site</option><option value="box" selected>Box</option><option value="sup">Supplier</option></select></div>
+                <div class="ctl"><label for="cube-cols">Columns</label><select id="cube-cols"><option value="site">Site</option><option value="box">Box</option><option value="sup" selected>Supplier</option></select></div>
+                <div class="ctl"><label for="cube-metric">Measure</label><select id="cube-metric"><option value="spend" selected>Spend, USD</option><option value="units">Units</option><option value="price">Average price per box</option></select></div>
+            </div>
+            <div class="sim-chart-block" style="overflow-x:auto"><table class="cube" id="cube"></table></div>
+            <div class="proj-two even">
+                <div class="sim-chart-block">
+                    <div class="schart-header"><span class="schart-title">Spend by supplier</span><span class="schart-sub">Share of modeled annual spend.</span></div>
+                    <div class="chart-wrap short"><canvas id="ch-cube" role="img" aria-label="Spend by supplier"></canvas></div>
+                </div>
+                <div class="sim-sensitivity"><div class="ssens-header">Price spread for the same box across sites</div><table class="ssens-table" id="tbl-spread"></table></div>
+            </div>
+        </section>
+
+        <!-- 04 TCO -->
+        <section class="proj-section" id="sec-tco">
+            <div class="sim-section-head">
+                <p class="sec-num">04. Total Cost of Ownership</p>
+                <h3>The cheapest box is not always the cheapest</h3>
+                <p>TCO adds what price leaves out: inventory forced by minimum orders, safety stock for late deliveries, defects, admin per order and the value of payment terms.</p>
+            </div>
+            <div class="sim-body">
+                <div class="sim-inputs-panel">
+                    <div class="sim-input-group">
+                        <div class="sig-header"><span class="sig-tag">B</span><span class="sig-title">TCO inputs <span class="assump">Assumption</span><span class="sig-hint">Apply to every supplier the same way.</span></span></div>
+                        <div class="sim-field"><label for="tco-box">Box</label><select id="tco-box"></select></div>
+                        <div class="sim-field"><label for="tco-carry">Carrying cost per year <b id="tco-carry-v"></b></label><input type="range" id="tco-carry" min="10" max="40" step="1" value="25"></div>
+                        <div class="sim-field"><label for="tco-defect">Cost of one defective box (rework, line stop) <b id="tco-defect-v"></b></label><input type="range" id="tco-defect" min="1" max="25" step="0.5" value="6"></div>
+                        <div class="sim-field"><label for="tco-po">Admin cost per purchase order <b id="tco-po-v"></b></label><input type="range" id="tco-po" min="10" max="150" step="5" value="60"></div>
+                        <div class="sim-field"><label for="tco-wacc">Cost of capital per year <b id="tco-wacc-v"></b></label><input type="range" id="tco-wacc" min="3" max="15" step="0.5" value="8"></div>
+                        <div class="sim-field"><label for="tco-sl">Service level for safety stock <b id="tco-sl-v"></b></label><input type="range" id="tco-sl" min="85" max="99.5" step="0.5" value="97"></div>
+                    </div>
+                </div>
+                <div class="sim-output-panel">
+                    <div class="sim-chart-block">
+                        <div class="schart-header"><span class="schart-title">TCO per 1,000 boxes, stacked</span><span class="schart-sub">Payment terms show as a negative bar because longer terms are worth money.</span></div>
+                        <div class="chart-wrap"><canvas id="ch-tco" role="img" aria-label="TCO comparison"></canvas></div>
+                    </div>
+                    <div class="sim-sensitivity"><table class="ssens-table" id="tbl-tco"></table></div>
+                    <div class="sim-commentary"><div class="scom-eyebrow">Read</div><div class="scom-body" id="tco-read"></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 05 SCORECARD -->
+        <section class="proj-section" id="sec-score">
+            <div class="sim-section-head">
+                <p class="sec-num">05. Supplier Scorecard</p>
+                <h3>Weighted performance, not gut feel</h3>
+                <p>Cost and delivery scores are computed from the model. Quality is computed from defect rates. Responsiveness, risk and sustainability are judgment scores you can edit. Change the weights to see the ranking move.</p>
+            </div>
+            <div class="proj-two">
+                <div class="sim-input-group">
+                    <div class="sig-header"><span class="sig-tag">C</span><span class="sig-title">Weights<span class="sig-hint">Normalized to 100% automatically.</span></span></div>
+                    <div id="weights"></div>
+                </div>
+                <div>
+                    <div class="sim-sensitivity"><table class="ssens-table" id="tbl-score"></table></div>
+                    <div class="sim-chart-block"><div class="schart-header"><span class="schart-title">Score profile</span></div><div class="chart-wrap"><canvas id="ch-score" role="img" aria-label="Supplier score radar"></canvas></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 06 RFQ -->
+        <section class="proj-section" id="sec-rfq">
+            <div class="sim-section-head">
+                <p class="sec-num">06. RFQ Scoring Sheet</p>
+                <h3>Score the bids, then choose the award</h3>
+                <p>Four bidders quoted all five boxes <span class="assump">Assumption</span>. Price score starts at 100 for the lowest annual cost and loses 4 points for each 1% above it. Commercial score covers terms, lead time and minimum order. Technical score comes from the plant review. Then compare three award strategies.</p>
+            </div>
+            <div class="proj-controls">
+                <div class="ctl"><label for="rfq-wp">Price weight <b id="rfq-wp-v"></b></label><input type="range" id="rfq-wp" min="20" max="80" step="5" value="60"></div>
+                <div class="ctl"><label for="rfq-wt">Technical weight <b id="rfq-wt-v"></b></label><input type="range" id="rfq-wt" min="0" max="50" step="5" value="25"></div>
+                <div class="ctl"><label for="rfq-wc">Commercial weight <b id="rfq-wc-v"></b></label><input type="range" id="rfq-wc" min="0" max="50" step="5" value="15"></div>
+                <div class="ctl"><label for="rfq-split">Dual source split to runner-up <b id="rfq-split-v"></b></label><input type="range" id="rfq-split" min="10" max="50" step="5" value="30"></div>
+            </div>
+            <div class="table-scroll"><table class="ssens-table" id="tbl-rfq"></table></div>
+            <div class="sim-metrics-row" id="rfq-awards" style="margin-top:1.5rem"></div>
+            <div class="sim-commentary"><div class="scom-eyebrow">Award read</div><div class="scom-body" id="rfq-read"></div></div>
+        </section>
+
+        <!-- 07 NEGOTIATION -->
+        <section class="proj-section" id="sec-nego">
+            <div class="sim-section-head">
+                <p class="sec-num">07. Negotiation Playbook</p>
+                <h3>Know the floor, the walk-away and the ask</h3>
+                <p>The playbook is built from the should-cost, the bids and the index history. Pick the supplier you are negotiating with.</p>
+            </div>
+            <div class="proj-controls">
+                <div class="ctl"><label for="ng-sup">Negotiating with</label><select id="ng-sup"></select></div>
+                <div class="ctl"><label for="ng-box">Box</label><select id="ng-box"></select></div>
+            </div>
+            <div class="sim-chart-block">
+                <div class="schart-header"><span class="schart-title">Price corridor per box</span><span class="schart-sub">Floor is should-cost. Walk-away is your best alternative bid on a TCO basis. The opening ask sits between them.</span></div>
+                <div class="chart-wrap short"><canvas id="ch-nego" role="img" aria-label="Negotiation corridor"></canvas></div>
+            </div>
+            <div class="card-grid" id="nego-cards"></div>
+        </section>
+
+        <!-- 08 COMPLIANCE -->
+        <section class="proj-section" id="sec-comp">
+            <div class="sim-section-head">
+                <p class="sec-num">08. Contract Compliance Tracker</p>
+                <h3>Savings only count if invoices match the contract</h3>
+                <p>The contract with Supplier A is index-linked to the BLS paperboard mills PPI <span class="assump">Assumption</span>. Each invoice line is checked against the price the clause allows that month. Off-contract buys are flagged too.</p>
+            </div>
+            <div class="proj-controls">
+                <div class="ctl"><label for="cp-site">Site</label><select id="cp-site"></select></div>
+                <div class="ctl"><label for="cp-tol">Price tolerance <b id="cp-tol-v"></b></label><input type="range" id="cp-tol" min="0" max="5" step="0.5" value="1"></div>
+                <div class="ctl"><label for="cp-pt">Index pass-through <b id="cp-pt-v"></b></label><input type="range" id="cp-pt" min="0" max="100" step="10" value="60"></div>
+            </div>
+            <div class="sim-metrics-row" id="cp-metrics"></div>
+            <div class="sim-chart-block">
+                <div class="schart-header"><span class="schart-title">Monthly leakage, USD</span><span class="schart-sub">Overbilling is paid above the allowed price on contract. Off-contract premium is paid above the allowed price on non-contract buys.</span></div>
+                <div class="chart-wrap"><canvas id="ch-comp" role="img" aria-label="Compliance leakage by month"></canvas></div>
+            </div>
+            <div class="table-scroll"><table class="ssens-table" id="tbl-comp"></table></div>
+            <p class="table-note">Showing the 40 largest exceptions. Invoice lines are illustrative. The allowed price uses real index values.</p>
+        </section>
+
+        <section class="proj-section sources" id="sec-sources">
+            <div class="sim-section-head"><p class="sec-num">Data and Method</p><h3>Sources and assumptions</h3></div>
+            <ol class="src-list" id="src-list"></ol>
+            <p class="case-disclaimer">This is a portfolio case study, not work done for an employer. The only employment figures are the two marked Verified. All corrugated volumes, prices, bids, supplier profiles and invoices are assumptions built to show the method. Suppliers are anonymous archetypes, not real companies.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-left">
+            <span class="ft-logo">Category Sourcing Strategy. A portfolio case study by Prapanch Kokkalemada.</span>
+        </div>
+        <nav class="footer-links" aria-label="Footer links">
+            <a href="mailto:kokkalem@msu.edu" class="ft-link">E-MAIL</a>
+            <a href="https://linkedin.com/in/prapanchkokkalemada/" class="ft-link" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+            <a href="https://broad.campusgroups.com/gscma/events/" class="ft-link" target="_blank" rel="noopener noreferrer">🏅&nbsp;GSCMA</a>
+            <button class="ft-top-btn" id="footer-top-btn" aria-label="Scroll to top of page">↑ Top</button>
+        </nav>
+    </footer>
+
+    <script src="app.js?v=1"></script>
+</body>
+</html>
