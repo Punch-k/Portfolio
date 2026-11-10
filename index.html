@@ -63,6 +63,11 @@
     .ss-cat { font-family: var(--sans); font-size: clamp(.6rem, .9vw, .75rem); letter-spacing: .22em; text-transform: uppercase; color: var(--gold); border: 1px solid rgba(201,168,76,.45); border-radius: 50px; padding: .35rem .9rem; flex-shrink: 0; align-self: center; }
     .ss-item { font-family: var(--display); font-size: clamp(1.35rem, 3vw, 2.5rem); letter-spacing: .03em; color: rgba(237,233,224,.62); flex-shrink: 0; transition: color .3s; }
     .ss-item:hover { color: var(--fg); }
+    .tech-stack { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, 54px); gap: .8rem .9rem; }
+    .ts-badge { position: relative; width: 54px; height: 54px; border-radius: 50%; background: #ede9e0; border: 2px solid rgba(201,168,76,.55); display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 18px rgba(0,0,0,.35); transition: transform .25s, border-color .25s; }
+    .ts-badge:hover { transform: translateY(-4px); border-color: var(--gold); }
+    .ts-badge img { width: 26px; height: 26px; display: block; }
+    @media (max-width: 600px) { .tech-stack { display: grid; grid-template-columns: repeat(6, minmax(0, 46px)); gap: .5rem; } .ts-badge { width: 100%; height: auto; aspect-ratio: 1; } .ts-badge img { width: 48%; height: auto; } }
     .ss-sep { color: rgba(201,168,76,.45); font-size: clamp(.9rem, 1.6vw, 1.3rem); flex-shrink: 0; }
   </style>
 </head>
@@ -805,7 +810,22 @@
         <p class="sec-num" data-a="up">III. Areas of Expertise &amp; Tools</p>
         <h2 id="skills-heading">Core Skills.<em>Competencies</em></h2>
       </div>
-      <p>Five tracks: supply chain, sourcing, analytics, strategy and leadership. Scroll and each row slides into place.</p>
+      <div class="skills-intro">
+        <ul class="tech-stack" aria-label="Tech stack: Excel, PowerPoint, Word, Google Sheets, Python, pandas, Jupyter, MySQL, Tableau, Power BI, HubSpot, GitHub">
+          <li class="ts-badge" title="Excel"><img src="skills-icons/excel.svg" alt="" width="26" height="26" loading="lazy"></li>
+          <li class="ts-badge" title="PowerPoint"><img src="skills-icons/powerpoint.svg" alt="" width="26" height="26" loading="lazy"></li>
+          <li class="ts-badge" title="Word"><img src="skills-icons/word.svg" alt="" width="26" height="26" loading="lazy"></li>
+          <li class="ts-badge" title="Google Sheets"><img src="skills-icons/googlesheets.svg" alt="" width="26" height="26" loading="lazy"></li>
+          <li class="ts-badge" title="Python"><img src="skills-icons/python.svg" alt="" width="26" height="26" loading="lazy"></li>
+          <li class="ts-badge" title="pandas"><img src="skills-icons/pandas.svg" alt="" width="26" height="26" loading="lazy"></li>
+          <li class="ts-badge" title="Jupyter"><img src="skills-icons/jupyter.svg" alt="" width="26" height="26" loading="lazy"></li>
+          <li class="ts-badge" title="MySQL"><img src="skills-icons/mysql.svg" alt="" width="26" height="26" loading="lazy"></li>
+          <li class="ts-badge" title="Tableau"><img src="skills-icons/tableau.svg" alt="" width="26" height="26" loading="lazy"></li>
+          <li class="ts-badge" title="Power BI"><img src="skills-icons/powerbi.svg" alt="" width="26" height="26" loading="lazy"></li>
+          <li class="ts-badge" title="HubSpot"><img src="skills-icons/hubspot.svg" alt="" width="26" height="26" loading="lazy"></li>
+          <li class="ts-badge" title="GitHub"><img src="skills-icons/github.svg" alt="" width="26" height="26" loading="lazy"></li>
+        </ul>
+      </div>
     </div>
   </div>
   <div class="skills-stair" aria-hidden="true">
