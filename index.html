@@ -98,6 +98,19 @@
     @media (max-width: 600px) { .icon-link-lg { width: 52px; height: 52px; } .hero-actions .icon-link { margin-left: 0; } }
     @media (max-width: 900px) { .hero-actions { flex-direction: row; flex-wrap: wrap; align-items: center; } .hero-actions .btn-pri { flex: 1 0 100%; justify-content: center; } }
     .ss-sep { color: rgba(201,168,76,.45); font-size: clamp(.9rem, 1.6vw, 1.3rem); flex-shrink: 0; }
+    /* Core competencies tabbed panel */
+    .core-comp { flex: 1 1 360px; max-width: 100%; align-self: center; }
+    .cc-title { font-family: var(--display); font-size: clamp(1.4rem, 2.6vw, 2rem); color: var(--fg); margin: 0 0 1rem; padding-left: .8rem; border-left: 3px solid var(--gold); }
+    .cc-acc { display: flex; flex-direction: column; gap: .35rem; }
+    .cc-tab { display: block; width: 100%; text-align: left; font-family: var(--sans); font-size: .95rem; letter-spacing: .02em; padding: .8rem 1.1rem; border: 1px solid rgba(201,168,76,.3); border-radius: 6px; background: rgba(237,233,224,.07); color: rgba(237,233,224,.85); cursor: pointer; transition: background .2s, color .2s; }
+    .cc-tab { position: relative; padding-right: 2.6rem; }
+    .cc-tab::after { content: ""; position: absolute; right: 1.1rem; top: 50%; width: 8px; height: 8px; border-right: 2px solid var(--gold); border-bottom: 2px solid var(--gold); transform: translateY(-70%) rotate(45deg); transition: transform .25s; }
+    .cc-tab.is-active::after { transform: translateY(-30%) rotate(-135deg); border-color: var(--bg); }
+    .cc-tab:hover { color: var(--fg); }
+    .cc-tab.is-active { background: var(--gold); color: var(--bg); border-color: var(--gold); }
+    .cc-panel { list-style: disc; margin: 0; padding: .6rem 0 .8rem 2.2rem; color: rgba(237,233,224,.8); font-size: .95rem; line-height: 1.9; }
+    .cc-panel li::marker { color: var(--gold); }
+    @media (max-width: 600px) { .cc-tab { font-size: .9rem; } .cc-panel { font-size: .9rem; } }
   </style>
 </head>
 <body>
@@ -242,7 +255,7 @@
         <br>
     </div>
 
-    <!-- TRUCK GAME WRAPPER — styles in style.css under ─── TRUCK GAME ─── -->
+    <!-- Truck game deactivated at the user's request; restore by removing the comment markers.
     <div id="gameWrap" data-a="up" data-delay="200" class="game-wrap">
       <div id="header" class="game-header">
         <div id="brand" class="game-brand">SUPPLY &amp; CO.</div>
@@ -265,8 +278,12 @@
         </p>
       </div>
     </div>
-    
-  </div><!-- /.scrub-layout -->
+    -->
+    <!-- CORE COMPETENCIES (dropdown accordion, replaces the game) -->
+    <div class="core-comp" data-a="up" data-delay="200">
+      <p class="cc-title">Core Competencies</p>
+      <div class="cc-acc"><button type="button" class="cc-tab" id="cc-t0" aria-controls="cc-p0" aria-expanded="false">Supply Chain</button><ul class="cc-panel" id="cc-p0" role="region" aria-labelledby="cc-t0" hidden><li>S&amp;OP</li><li>Demand Forecasting</li><li>Inventory Optimization</li><li>Safety Stock &amp; OTIF</li><li>Capacity Planning</li><li>JIT Delivery Models</li></ul><button type="button" class="cc-tab" id="cc-t1" aria-controls="cc-p1" aria-expanded="false">Sourcing</button><ul class="cc-panel" id="cc-p1" role="region" aria-labelledby="cc-t1" hidden><li>Category Strategy</li><li>Should-Cost Modeling</li><li>TCO Analysis</li><li>RFQ Scoring</li><li>Spend Analysis</li><li>Vendor Development</li></ul><button type="button" class="cc-tab" id="cc-t2" aria-controls="cc-p2" aria-expanded="false">Analytics</button><ul class="cc-panel" id="cc-p2" role="region" aria-labelledby="cc-t2" hidden><li>Tableau</li><li>Power BI</li><li>Python</li><li>Excel Modeling</li><li>Financial Modeling</li><li>Cost Modeling</li></ul><button type="button" class="cc-tab" id="cc-t3" aria-controls="cc-p3" aria-expanded="false">Strategy &amp; GTM</button><ul class="cc-panel" id="cc-p3" role="region" aria-labelledby="cc-t3" hidden><li>GTM Execution</li><li>Pricing Strategy</li><li>Market Sizing</li><li>Competitive Analysis</li><li>Channel Economics</li><li>M&amp;A Deal Analysis</li></ul><button type="button" class="cc-tab" id="cc-t4" aria-controls="cc-p4" aria-expanded="false">Leadership</button><ul class="cc-panel" id="cc-p4" role="region" aria-labelledby="cc-t4" hidden><li>Program Management</li><li>Change Management</li><li>RevOps</li><li>Stakeholder Alignment</li><li>Regulatory Compliance</li><li>Risk Management</li></ul></div>
+      </div><!-- /.scrub-layout -->
 </div><!-- /#scrub-section -->
 
 <!-- ── III. CASE STUDIES ───────────────────────────────── -->
@@ -1053,6 +1070,23 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="script.js"></script>
+<script>
+/* Core competencies tabs */
+(function () {
+  var tabs = document.querySelectorAll('.core-comp .cc-tab');
+  tabs.forEach(function (t) {
+    t.addEventListener('click', function () {
+      var opening = !t.classList.contains('is-active');
+      tabs.forEach(function (o) {
+        var on = o === t && opening;
+        o.classList.toggle('is-active', on);
+        o.setAttribute('aria-expanded', on ? 'true' : 'false');
+        document.getElementById(o.getAttribute('aria-controls')).hidden = !on;
+      });
+    });
+  });
+})();
+</script>
 <script>
 /* Skills staircase: each row starts showing its last skills, travels left to right while the
    section scrolls in so every skill passes through view, then rests one step left of the row above (top right to bottom left). */
