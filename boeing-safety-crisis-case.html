@@ -99,6 +99,8 @@
             .pull-quote p, .stat-num { color: black; }
             .exec-summary { border-left-color: black; background: #f9f9f9; }
         }
+        /* keep the contents sidebar sticky: overflow-x hidden on html/body breaks position: sticky, clip does not */
+        html, body { overflow-x: clip !important; }
     </style>
 </head>
 <body>
@@ -259,26 +261,6 @@
             <h2 class="contact-display-heading" id="contact-heading">
                 Initiate<br><em class="contact-display-em">Dialogue.</em>
             </h2>
-            <div class="faq-wrapper" style="border-top: 1px solid var(--line);">
-                <div class="faq-item" style="border-bottom: 1px solid var(--line);">
-                    <button class="faq-btn" aria-expanded="false" aria-controls="faq-a1">
-                        <span class="faq-question">Q1. How do you bridge the gap between technical engineering and business strategy?</span>
-                        <span class="faq-icon" aria-hidden="true">+</span>
-                    </button>
-                    <div class="faq-content" id="faq-a1" role="region">
-                        <p class="faq-answer">A. My foundation in Civil Engineering allows me to understand the complex infrastructure and capital-intensive nature of the Utilities sector, while my Broad MBA provides the framework to translate those technical realities into C-suite value. I specialize in taking "bottom-up" operational data and turning it into "top-down" GTM strategies that drive measurable margin growth.</p>
-                    </div>
-                </div>
-                <div class="faq-item" style="border-bottom: 1px solid var(--line);">
-                    <button class="faq-btn" aria-expanded="false" aria-controls="faq-a4">
-                        <span class="faq-question">Q2. What is your status regarding US Work Authorization?</span>
-                        <span class="faq-icon" aria-hidden="true">+</span>
-                    </button>
-                    <div class="faq-content" id="faq-a4" role="region">
-                        <p class="faq-answer">A. I am a Canadian Citizen eligible for TN (Trade NAFTA) status under the USMCA. This allows for immediate work authorization upon a job offer in categories like Management Consultant or Engineer. This process is completed directly at the port of entry, bypassing the H-1B lottery and traditional sponsorship costs, making me available to join US-based teams with minimal lead time.</p>
-                    </div>
-                </div>
-            </div>
         </div>
         <div class="ct-visual gsap-reveal">
             <div class="photo-portrait-frame">

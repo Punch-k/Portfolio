@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eTracks: The 80% Tire Gap | Reverse Logistics Case Study</title>
+
+    <meta name="description" content="Portfolio case study by Prapanch Kokkalemada. Ontario raised its tire management target to 80%. A 60-month model shows where the eTracks collection network loses tires and which plan closes the gap.">
+    <meta property="og:title" content="eTracks: The 80% Tire Gap. Reverse Logistics Case Study">
+    <meta property="og:description" content="Network reach, seasonality, grey market leakage and processing capacity under Ontario's new 80% tire target. Excel model and Tableau dashboard.">
+    <meta property="og:url" content="https://punch-k.github.io/Portfolio/etracks-tire-management-case.html">
+    <link rel="canonical" href="https://punch-k.github.io/Portfolio/etracks-tire-management-case.html">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=7">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <style>
+        body { background: var(--bg); color: var(--fg); font-family: var(--sans); margin: 0; padding: 0; overflow-x: hidden; scroll-behavior: smooth; }
+        #reading-progress { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 1000; transition: width 0.1s ease; }
+        #back-to-top { position: fixed; bottom: 2rem; right: 2rem; background: var(--fg); color: var(--bg); border: none; padding: 1rem; border-radius: 50%; cursor: pointer; z-index: 999; opacity: 0; transform: translateY(20px); transition: all 0.3s ease; font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; }
+        #back-to-top.visible { opacity: 1; transform: translateY(0); }
+        #back-to-top:hover { background: var(--gold); }
+        .case-nav { position: fixed; top: 0; left: 0; width: 100%; padding: 1.5rem 4rem; display: flex; justify-content: space-between; align-items: center; background: rgba(10, 11, 13, 0.85); backdrop-filter: blur(12px); z-index: 100; border-bottom: 1px solid rgba(237,233,224,0.05); box-sizing: border-box; }
+        .nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; width: 100%; }
+        /* .nav-logo styling now comes solely from the shared style.css rule -- no local
+           override here, so this page can't silently drift from the rest of the site again. */
+        .nav-links { display: flex; gap: 2rem; }
+        /* .nav-links a styling now comes solely from the shared style.css rule -- no
+           local override here, so this page can't silently drift from the rest of the site. */
+        .nav-connect { border: 1px solid var(--gold); color: var(--gold); padding: 0.6rem 1.5rem; border-radius: 50px; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; transition: all 0.3s ease; }
+        .nav-connect:hover { background: var(--gold); color: var(--bg); }
+        @media (max-width: 900px) { .nav-links { display: none; } .case-nav { padding: 1rem 1.5rem; } #case-menu-toggle { display: block !important; } }
+        .hero { height: 75vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; padding: 0 2rem; border-bottom: 1px solid var(--line); }
+        .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(ellipse at 50% 35%, rgba(201,168,76,0.16), transparent 60%), repeating-radial-gradient(circle at 50% 120%, rgba(237,233,224,0.035) 0 2px, transparent 2px 26px); opacity: 0; z-index: 0; }
+        .hero-content { position: relative; z-index: 10; display: flex; flex-direction: column; align-items: center; }
+        .breadcrumbs { display: flex; gap: 0.5rem; color: rgba(237,233,224,0.6); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 2rem; opacity: 0; }
+        .breadcrumbs a { color: var(--gold); text-decoration: none; }
+        .exec-summary { background: rgba(201,168,76,0.05); border-left: 4px solid var(--gold); padding: 2.5rem; margin: -3rem auto 4rem; position: relative; z-index: 20; max-width: 1000px; border-radius: 0 8px 8px 0; backdrop-filter: blur(10px); }
+        .exec-summary h3 { font-family: 'Bebas Neue', sans-serif; color: var(--gold); margin-top: 0; font-size: 1.5rem; letter-spacing: 0.1em; }
+        .case-layout { display: grid; grid-template-columns: 250px 1fr; gap: 5rem; max-width: 1200px; margin: 0 auto; padding: 0 2rem 6rem; align-items: start; }
+        .case-sidebar { position: sticky; top: 120px; display: flex; flex-direction: column; gap: 3rem; }
+        .toc-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem; border-left: 1px solid var(--line); }
+        .toc-list li a { text-decoration: none; color: rgba(237,233,224,0.5); font-size: 0.9rem; transition: all 0.3s ease; padding-left: 1.5rem; display: block; position: relative; }
+        .toc-list li a::before { content: ''; position: absolute; left: -1px; top: 0; height: 100%; width: 2px; background: transparent; transition: background 0.3s ease; }
+        .toc-list li a:hover { color: var(--fg); }
+        .toc-list li a.active { color: var(--gold); font-weight: 500; }
+        .toc-list li a.active::before { background: var(--gold); }
+        .meta-block { font-size: 0.8rem; color: rgba(237,233,224,0.6); }
+        .meta-title { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.1em; color: var(--fg); margin-bottom: 0.5rem; display: block; font-size: 1rem; }
+        .print-btn { background: none; border: 1px solid var(--line); color: var(--fg); padding: 0.5rem 1rem; cursor: pointer; font-family: var(--sans); font-size: 0.8rem; transition: all 0.3s; margin-top: 1rem; width: 100%; text-align: left; }
+        .print-btn:hover { border-color: var(--gold); color: var(--gold); }
+        @media (max-width: 900px) { .case-layout { grid-template-columns: 1fr; } .case-sidebar { display: none; } }
+        .article-body h2 { font-family: var(--display); font-size: clamp(1.9rem, 7vw, 2.8rem); color: var(--fg); margin-top: 0; margin-bottom: 1.5rem; line-height: 1.15; position: relative; padding-top: 4rem; }
+        .article-body p { font-size: 1.15rem; color: rgba(237,233,224,0.8); line-height: 1.8; margin-bottom: 2rem; font-weight: 300; }
+        .article-body a { color: var(--gold); }
+        .gsap-reveal { opacity: 0; transform: translateY(40px); }
+        .comp-tabs { display: flex; gap: 1rem; border-bottom: 1px solid var(--line); margin-bottom: 2rem; }
+        .comp-tab { background: none; border: none; color: rgba(237,233,224,0.5); font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: 0.05em; padding: 1rem 2rem; cursor: pointer; transition: all 0.3s; position: relative; }
+        .comp-tab::after { content: ''; position: absolute; bottom: -1px; left: 0; width: 100%; height: 2px; background: transparent; transition: background 0.3s; }
+        .comp-tab.active { color: var(--gold); }
+        .comp-tab.active::after { background: var(--gold); }
+        .comp-panel { display: none; animation: fadeIn 0.5s ease; }
+        .comp-panel.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .pull-quote { margin: 4rem 0; padding: 3rem; border: 1px solid var(--line); text-align: center; background: rgba(255,255,255,0.02); }
+        .pull-quote p { font-family: var(--display); font-size: 2rem; color: var(--gold); line-height: 1.3; margin: 0 0 1rem 0; font-style: italic; }
+        .pull-quote span { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.1em; color: rgba(237,233,224,0.5); }
+        .stat-banner { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 2rem; background: rgba(255,255,255,0.02); border: 1px solid var(--line); padding: 3rem; border-radius: 8px; margin: 4rem 0; }
+        .stat-num { font-family: var(--display); font-size: 4rem; color: var(--gold); line-height: 1; }
+        .stat-label { font-size: 0.85rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(237,233,224,0.6); margin-top: 0.5rem; }
+        .sources-block { font-size: 0.85rem; color: rgba(237,233,224,0.55); line-height: 1.9; border-top: 1px solid var(--line); padding-top: 2rem; margin-top: 3rem; }
+        .sources-block strong { color: var(--gold); }
+        .sources-block ol { padding-left: 1.2rem; margin: 0.75rem 0 0; }
+        .next-project { margin-top: 8rem; border-top: 1px solid var(--line); padding: 6rem 2rem; text-align: center; background: linear-gradient(180deg, transparent, rgba(201,168,76,0.03)); transition: background 0.4s; display: block; text-decoration: none; }
+        .next-project:hover { background: rgba(201,168,76,0.08); }
+        .next-project span { display: block; font-size: 0.85rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(237,233,224,0.6); margin-bottom: 1rem; }
+        .next-project h2 { font-family: var(--display); font-size: clamp(3rem, 5vw, 5rem); color: var(--gold); margin: 0; transition: transform 0.4s; }
+        .next-project:hover h2 { transform: translateY(-10px); }
+        @media (max-width: 600px) {
+            .case-layout { padding: 0 1.2rem 4rem; }
+            .exec-summary { padding: 1.5rem; margin: -2rem 1rem 3rem; }
+            .comp-tabs { flex-wrap: wrap; gap: .5rem; }
+            .comp-tab { font-size: 1.1rem; padding: .7rem 1.2rem; }
+            .stat-num { font-size: clamp(2.2rem, 12vw, 4rem); }
+            .pull-quote { padding: 1.8rem 1.2rem; }
+            .pull-quote p { font-size: 1.4rem; }
+            .hero { padding: 0 1.2rem; }
+        }
+        @media print {
+            body { background: white; color: black; }
+            .case-nav, #reading-progress, .case-sidebar, .next-project, #section-get-in-touch, .site-footer, #back-to-top { display: none !important; }
+            .case-layout { grid-template-columns: 1fr; margin: 0; padding: 0; }
+            .article-body h2 { color: black; padding-top: 2rem; }
+            .pull-quote p, .stat-num { color: black; }
+            .exec-summary { border-left-color: black; background: #f9f9f9; }
+        }
+    
+        .bluf-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.8rem; }
+        .bluf-item p { margin: 0; font-size: 0.98rem; line-height: 1.7; color: rgba(237,233,224,0.9); }
+        .bluf-label { display: block; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem; }
+        .banner-btns { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+        .banner-btn-ghost { background: transparent; color: var(--gold); border: 1px solid var(--gold); }
+        .banner-btn-ghost:hover { background: rgba(201,168,76,0.12); }
+        .article-body sup a { text-decoration: none; font-size: 0.7em; margin-left: 1px; }
+        .timeline { border-left: 1px solid var(--line); margin: 0 0 2.5rem; padding-left: 1.5rem; display: flex; flex-direction: column; gap: 1.4rem; }
+        .tl-row { position: relative; }
+        .tl-row::before { content: ''; position: absolute; left: calc(-1.5rem - 5px); top: 0.45rem; width: 9px; height: 9px; border-radius: 50%; background: var(--gold); }
+        .tl-date { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.1em; color: var(--gold); font-size: 1.1rem; }
+        .tl-row p { margin: 0.2rem 0 0 !important; font-size: 1.02rem !important; }
+        .chart-box { position: relative; height: 380px; background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 12px; padding: 1.2rem; margin: 1.5rem 0 0.8rem; box-sizing: border-box; }
+        .chart-box-sm { height: 320px; margin-top: 2rem; }
+        .chart-note { font-size: 0.85rem !important; color: rgba(237,233,224,0.5) !important; line-height: 1.6 !important; }
+        .sub-h { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.08em; font-size: 1.5rem; color: var(--fg); margin: 3rem 0 1rem; font-weight: 400; }
+        .scenario-toggle { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+        .sc-btn { background: none; border: 1px solid var(--line); color: rgba(237,233,224,0.45); font-family: var(--sans); font-size: 0.78rem; letter-spacing: 0.08em; padding: 0.5rem 1rem; border-radius: 50px; cursor: pointer; transition: all 0.25s; }
+        .sc-btn.active { border-color: var(--gold); color: var(--gold); background: rgba(201,168,76,0.08); }
+        .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 1.5rem 0; border: 1px solid var(--line); border-radius: 8px; }
+        .data-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; min-width: 520px; }
+        .data-table th { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.08em; font-weight: 400; font-size: 1rem; color: var(--gold); text-align: left; padding: 0.8rem 1rem; border-bottom: 1px solid var(--line); background: rgba(201,168,76,0.04); }
+        .data-table td { padding: 0.7rem 1rem; border-bottom: 1px solid rgba(237,233,224,0.06); color: rgba(237,233,224,0.8); }
+        .data-table tr:last-child td { border-bottom: none; }
+        .data-table td.hl { color: var(--gold); }
+        .tableau-frame { position: relative; width: 100%; height: 860px; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: #fff; margin: 1.5rem 0 0.8rem; }
+        .tableau-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
+        .insight-list { display: flex; flex-direction: column; gap: 1.6rem; margin-bottom: 3rem; }
+        .insight { display: grid; grid-template-columns: 3.2rem 1fr; gap: 1rem; border-top: 1px solid var(--line); padding-top: 1.4rem; }
+        .insight-num { font-family: var(--display); font-size: 2rem; color: var(--gold); line-height: 1; }
+        .insight h4 { margin: 0 0 0.5rem; font-family: var(--display); font-size: 1.45rem; font-weight: 500; color: var(--fg); line-height: 1.25; }
+        .insight p { margin: 0 !important; font-size: 1.02rem !important; }
+        .recommend-box { border: 1px solid rgba(201,168,76,0.4); background: rgba(201,168,76,0.06); border-radius: 8px; padding: 2rem; margin-bottom: 3rem; }
+        .recommend-box p { margin: 0 !important; font-size: 1.05rem !important; }
+        .stat-box { text-align: center; }
+        .case-layout > * { min-width: 0; }
+        @media (max-width: 900px) { .bluf-grid { grid-template-columns: 1fr; gap: 1.3rem; } }
+        @media (max-width: 600px) {
+            .chart-box { height: 300px; padding: 0.8rem; }
+            .tableau-frame { height: 1150px; }
+            .insight { grid-template-columns: 1fr; gap: 0.4rem; }
+            .recommend-box { padding: 1.4rem; }
+            .data-table { font-size: 0.85rem; }
+        }
+        @media print { .tableau-frame, .scenario-toggle { display: none !important; } .data-table td, .data-table th { color: black; } }
+        /* keep the contents sidebar sticky: overflow-x hidden on html/body breaks position: sticky, clip does not */
+        html, body { overflow-x: clip !important; }
+    </style>
+</head>
+<body>
+
+<div id="reading-progress"></div>
+<button id="back-to-top" aria-label="Scroll to top" onclick="window.scrollTo(0,0)">↑</button>
+
+<nav class="case-nav">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">PRAPANCH <span>KOKKALEMADA</span></a>
+        <div class="nav-links">
+            <a href="index.html#section-intro">ABOUT</a>
+            <a href="index.html#section-cases" style="color: var(--gold);">RESEARCH</a>
+            <a href="simulators.html">SIMULATORS</a>
+            <a href="index.html#section-skills">SKILLS</a>
+            <a href="about.html">GALLERY</a>
+        </div>
+        <button id="case-menu-toggle" style="display:none; background:none; border:none; color:var(--fg); font-size:1.5rem; cursor:pointer;" aria-label="Open navigation">☰</button>
+        <a href="mailto:kokkalem@msu.edu" class="nav-connect">LET'S CONNECT ↗</a>
+    </div>
+</nav>
+
+<div id="case-mobile-menu" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:var(--bg);z-index:200;flex-direction:column;align-items:center;justify-content:center;gap:2rem;">
+    <button onclick="document.getElementById('case-mobile-menu').style.display='none';" style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;color:var(--fg);font-size:2rem; cursor:pointer;">&times;</button>
+    <a href="index.html#section-intro" style="font-family:var(--display);font-size:2.5rem;color:var(--fg);text-decoration:none;">ABOUT</a>
+    <a href="index.html#section-cases" style="font-family:var(--display);font-size:2.5rem;color:var(--gold);text-decoration:none;">RESEARCH</a>
+    <a href="simulators.html" style="font-family:var(--display);font-size:2.5rem;color:var(--fg);text-decoration:none;">SIMULATORS</a>
+    <a href="index.html#section-skills" style="font-family:var(--display);font-size:2.5rem;color:var(--fg);text-decoration:none;">SKILLS</a>
+    <a href="about.html" style="font-family:var(--display);font-size:2.5rem;color:var(--fg);text-decoration:none;">GALLERY</a>
+</div>
+
+<header class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+        <div class="breadcrumbs hero-anim">
+            <a href="index.html">Portfolio</a> / <a href="index.html#section-cases">Research</a> / Reverse Logistics
+        </div>
+        <h1 class="hero-anim" style="font-family: var(--display); font-size: clamp(3.2rem, 7vw, 6.5rem); color: var(--gold); margin: 0; line-height: 1;">ETRACKS: THE 80% TIRE GAP</h1>
+        <p class="hero-anim" style="font-size: 1.2rem; max-width: 680px; margin-top: 2rem; line-height: 1.8; color: var(--fg); font-weight: 300;">
+            Ontario now requires tire producers to manage 80% of the tires they sell. After tread wear, that is about 91% of the scrap tires that actually exist. Today's collection network reaches about 88%.
+        </p>
+    </div>
+</header>
+
+<div class="exec-summary gsap-reveal">
+    <h3>EXECUTIVE SUMMARY (BLUF)</h3>
+    <div class="bluf-grid">
+        <div class="bluf-item">
+            <span class="bluf-label">The problem</span>
+            <p>In September 2026 Ontario raised the tire management target from 65% to 80%, effective for the 2026 year, and removed the $1 million cap on penalties. eTracks, the producer responsibility organization (PRO) behind roughly 70% of the market, now has to collect and process more tires through a network that already backs up every spring and fall. Dealers estimated 750,000 to 1 million tires waiting for pickup by July 2026.</p>
+        </div>
+        <div class="bluf-item">
+            <span class="bluf-label">Why solve it</span>
+            <p>If the network stays as it is, the model misses the target in every year from 2027 to 2030. By December 2030, 1.4M tires are left sitting at sites, 22,000 t have gone to private haulers, and penalty exposure reaches $13.4M with no cap. Stockpiled tires are a fire and pest risk, and dealers pay twice when they have to call a private hauler.</p>
+        </div>
+        <div class="bluf-item">
+            <span class="bluf-label">The answer</span>
+            <p>A Balanced plan meets the target in all four years and clears the backlog by the end of 2027. It adds sites, peak-season surge hauling, 128,000 t of processing and call-in pickups, and keeps hauling after the target is met. The cost is about $0.40 more per tire supplied. Processing capacity becomes the next constraint, and the market-wide gap is evidence to take to the regulator.</p>
+        </div>
+    </div>
+</div>
+
+<div class="sim-link-banner gsap-reveal">
+    <p class="sim-link-banner-text"><strong>Explore the model.</strong> Tableau dashboard of the three scenarios, plus the full Excel model with every assumption.</p>
+    <div class="banner-btns">
+        <a href="https://public.tableau.com/app/profile/prapanch.kokkalemada/viz/eTracksTireManagementModel/eTracksTireManagementModelFlatvsBalancedvsStresshypotheticalfigures" class="sim-link-banner-btn" target="_blank" rel="noopener noreferrer">Tableau ↗</a>
+        <a href="etracks-tire-management/eTracks_Supply_Chain_Model.xlsx" class="sim-link-banner-btn banner-btn-ghost" download>Excel model ↓</a>
+    </div>
+</div>
+
+<div class="case-layout">
+    <aside class="case-sidebar">
+        <nav aria-label="Table of Contents">
+            <span class="meta-title">CONTENTS</span>
+            <ul class="toc-list" id="toc-list">
+                <li><a href="#the-mandate" class="active">I. The Mandate</a></li>
+                <li><a href="#the-gap">II. The Gap</a></li>
+                <li><a href="#where-tires-get-stuck">III. Where Tires Get Stuck</a></li>
+                <li><a href="#three-plans">IV. Three Plans</a></li>
+                <li><a href="#the-dashboard">V. The Dashboard</a></li>
+                <li><a href="#insights">VI. Insights</a></li>
+            </ul>
+        </nav>
+        <div class="meta-block">
+            <span class="meta-title">CASE DETAILS</span>
+            <p style="margin: 0 0 0.5rem 0;"><strong>Focus:</strong> Reverse Logistics, Network Design, Regulatory Compliance</p>
+            <p style="margin: 0 0 0.5rem 0;"><strong>Read Time:</strong> 7 Minutes</p>
+            <p style="margin: 0 0 0.5rem 0;"><strong>Tools:</strong> Excel model, Tableau</p>
+            <p style="margin: 0;"><strong>Type:</strong> Portfolio Case Study. Real regulation, hypothetical model figures</p>
+            <button class="print-btn" onclick="window.print()">🖨️ Print Case Study</button>
+        </div>
+    </aside>
+
+    <main class="article-body">
+        <section id="the-mandate" class="scroll-section gsap-reveal">
+            <h2>I. THE MANDATE</h2>
+            <p>Ontario runs tire recycling through extended producer responsibility. Under the Tires Regulation (O. Reg. 225/18), producers must manage a share of the tires they supply into the province. Most meet that obligation through a PRO, which runs collection sites, hires haulers and pays processors. eTracks is the largest PRO, with roughly 70% of the market.<sup><a href="#src-4">4</a></sup></p>
+            <div class="timeline">
+                <div class="tl-row"><span class="tl-date">Jan 2025</span><p>The target drops from 85% to 65%. Several PROs slow or stop collecting once they hit it, and the number of required sites falls to about 4,450.<sup><a href="#src-3">3</a></sup><sup><a href="#src-4">4</a></sup></p></div>
+                <div class="tl-row"><span class="tl-date">Mar 2026</span><p>Spring volumes run 43% above normal heading into March. A processor stops accepting loads for days after a PRO volume quota, and haulers warn of disruption.<sup><a href="#src-4">4</a></sup></p></div>
+                <div class="tl-row"><span class="tl-date">Jul 2026</span><p>The Ontario Tire Dealers Association estimates 750,000 to 1 million tires waiting for collection across the province.<sup><a href="#src-3">3</a></sup></p></div>
+                <div class="tl-row"><span class="tl-date">Sep 2026</span><p>The amendments are finalized. The target rises to 80% for 2026 and every year after, with no pro-rating. Required sites rise from about 4,300 to about 6,500 from 2027, with 220 of the new sites in Northern Ontario. The $1 million cap on administrative penalties is removed.<sup><a href="#src-1">1</a></sup><sup><a href="#src-2">2</a></sup></p></div>
+            </div>
+            <p>The question for a PRO is no longer whether the target is reasonable. The questions are how big the physical gap is, where in the network tires get lost, and which plan closes the gap at an acceptable cost. I built a 60-month model to answer all three.</p>
+        </section>
+
+        <blockquote class="pull-quote gsap-reveal">
+            <p>"An 80% target on tires sold is a 91% target on tires scrapped."</p>
+            <span>Model finding, 2028</span>
+        </blockquote>
+
+        <section id="the-gap" class="scroll-section gsap-reveal">
+            <h2>II. THE GAP</h2>
+            <p>The target is measured against the three-year average weight of tires <em>supplied</em>. But about 15% of that weight wears off as tread before a tire is scrapped, and the market keeps growing. So 80% of supply works out to 91.4% of the scrap that is actually generated.</p>
+            <p>A collection site can only take tires from the generators near it. In the model, today's network reaches 88.1% of scrap, weighted by where scrap is generated. Before any backlog, leakage or capacity limit, that caps the highest target the network could meet at about 77%. The market-wide shortfall is about 6,000 t a year, or roughly 550,000 tires that no amount of hauling can reach.</p>
+            <div class="chart-box"><canvas id="gapChart" aria-label="Required management versus realistically collectable tonnes, 2025 to 2030"></canvas></div>
+            <p class="chart-note">Market-wide, all PROs. 2025 used the 65% target, so collectable tonnes exceeded the requirement. From 2026 the requirement sits above what today's network can reach.</p>
+        </section>
+
+        <section class="stat-banner gsap-reveal">
+            <div class="stat-box"><div class="stat-num"><span class="counter" data-target="91">0</span>%</div><div class="stat-label">Of scrap the target requires</div></div>
+            <div class="stat-box"><div class="stat-num"><span class="counter" data-target="88">0</span>%</div><div class="stat-label">Reach of today's network</div></div>
+            <div class="stat-box"><div class="stat-num"><span class="counter" data-target="547">0</span>K</div><div class="stat-label">Tires out of reach, 2028</div></div>
+        </section>
+
+        <section id="where-tires-get-stuck" class="scroll-section gsap-reveal">
+            <h2>III. WHERE TIRES GET STUCK</h2>
+            <p>The model follows eTracks' 70% share month by month: tires generated, reached, accepted at a site, hauled, and processed. Losses come from four places. Select one.</p>
+
+            <div class="comp-tabs">
+                <button class="comp-tab active" onclick="openTab(event, 'tab-reach')">Reach</button>
+                <button class="comp-tab" onclick="openTab(event, 'tab-season')">Seasonality</button>
+                <button class="comp-tab" onclick="openTab(event, 'tab-grey')">Grey Market</button>
+                <button class="comp-tab" onclick="openTab(event, 'tab-process')">Processing</button>
+            </div>
+            <div id="tab-reach" class="comp-panel active">
+                <p><strong>Reach follows diminishing returns.</strong> Each region's reach rises with site count but levels off. The North holds 9% of scrap, has the longest hauls ($260/t) and reaches only 68% today. Sites alone cannot get it to 95%. Getting it to 90% would take about 2,300 sites, against 800 today. Call-in pickups for generators with 50 or more tires add about 3 points of reach for a $12/t premium, which is cheaper than building that density.</p>
+                <div class="table-wrap">
+                    <table class="data-table">
+                        <thead><tr><th>Region</th><th>Share of scrap</th><th>Sites today</th><th>Reach today</th><th>Reach in plan</th><th>Sites for 90%</th></tr></thead>
+                        <tbody>
+                            <tr><td>GTA</td><td>46%</td><td>2,300</td><td>91%</td><td>97%</td><td>2,160</td></tr>
+                            <tr><td>Southwest</td><td>27%</td><td>1,900</td><td>89%</td><td>96%</td><td>1,960</td></tr>
+                            <tr><td>East</td><td>18%</td><td>1,500</td><td>88%</td><td>95%</td><td>1,630</td></tr>
+                            <tr><td>North</td><td>9%</td><td>800</td><td>68%</td><td>76%</td><td>2,300</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="tab-season" class="comp-panel">
+                <p><strong>Tires arrive in two waves, but hauling is flat.</strong> Generation runs at 0.55 times the monthly average in January and 1.55 times in April, with a second peak in October and November when drivers change to winter tires. A hauling budget spread evenly at 9,000 t a month falls behind every March to May and every September to November, and the backlog never fully clears. The model's profile matches the 43% jump in volumes reported heading into March 2026.<sup><a href="#src-4">4</a></sup></p>
+            </div>
+            <div id="tab-grey" class="comp-panel">
+                <p><strong>Long waits push tires out of the system.</strong> Once tires sit at a site for more than about three weeks, dealers start calling private haulers. In the model, leakage rises from zero at 21 days to a 15% maximum share of new tires at 66 days, or 22% in the stress test. Tires that go to private haulers never count toward the target, and dealers pay for removal after the fee was already collected at the point of sale. Dealer groups have raised exactly this concern with the province.<sup><a href="#src-4">4</a></sup> On the Flat budget, 22,000 t leak out between 2027 and 2030.</p>
+            </div>
+            <div id="tab-process" class="comp-panel">
+                <p><strong>Processing is the next bottleneck.</strong> The five processors in the model have 168,000 t of capacity, but 24% of it goes to tires imported from the US, leaving 128,250 t for Ontario. The Balanced plan contracts 128,000 t, which uses 99.8% of what is left. Processors refuse loads once their yards hold two months of stock, so an outage or more imports blocks hauling upstream. If import share fell to 15% at every processor, 17,250 t of capacity would free up. Higher targets do not create processing capacity on their own.<sup><a href="#src-5">5</a></sup></p>
+            </div>
+
+            <h3 class="sub-h">Tires waiting at eTracks sites, by month</h3>
+            <div class="scenario-toggle" role="group" aria-label="Choose scenarios to show">
+                <button class="sc-btn active" data-sc="0">Flat budget</button>
+                <button class="sc-btn active" data-sc="1">Balanced plan</button>
+                <button class="sc-btn active" data-sc="2">Stress test</button>
+            </div>
+            <div class="chart-box"><canvas id="waitChart" aria-label="Tires waiting at sites by month for each scenario, 2026 to 2030"></canvas></div>
+            <p class="chart-note">All three scenarios run on today's network in 2026 and start with 900,000 tires waiting. The plan applies from January 2027. The Flat budget's waves grow every year. The Balanced plan clears the backlog within 2027 and only builds small spring piles after that.</p>
+        </section>
+
+        <section id="three-plans" class="scroll-section gsap-reveal">
+            <h2>IV. THREE PLANS</h2>
+            <p>Each scenario runs its own calculation engine over 2027 to 2030. <strong>Flat budget</strong> keeps today's network: 6,500 sites, 108,000 t of hauling, 112,000 t of processing, and the 2025 habit of slowing hauling once the target is met. <strong>Balanced plan</strong> adds 1,300 sites, a 125,000 t hauling base with 40% surge capacity in the six peak months, 128,000 t of processing and call-in pickups, and it does not pause. <strong>Stress test</strong> keeps today's network but adds sharper peaks, more leakage and 8% processing outages.</p>
+            <div class="table-wrap">
+                <table class="data-table">
+                    <thead><tr><th>2027 to 2030</th><th>Flat budget</th><th>Balanced plan</th><th>Stress test</th></tr></thead>
+                    <tbody>
+                        <tr><td>Years target met</td><td>0 of 4</td><td class="hl">4 of 4</td><td>0 of 4</td></tr>
+                        <tr><td>Average attainment</td><td>91%</td><td class="hl">103%</td><td>86%</td></tr>
+                        <tr><td>Shortfall (t)</td><td>44,700</td><td class="hl">0</td><td>64,600</td></tr>
+                        <tr><td>Never reached a site (t)</td><td>62,100</td><td class="hl">28,100</td><td>62,100</td></tr>
+                        <tr><td>Lost to grey market (t)</td><td>22,100</td><td class="hl">150</td><td>27,100</td></tr>
+                        <tr><td>Peak tires waiting</td><td>1.78M</td><td class="hl">0.41M</td><td>1.90M</td></tr>
+                        <tr><td>Tires waiting, Dec 2030</td><td>1.38M</td><td class="hl">0</td><td>1.41M</td></tr>
+                        <tr><td>Operating cost</td><td>$161.4M</td><td>$197.2M</td><td>$158.9M</td></tr>
+                        <tr><td>Penalty at $300/t</td><td>$13.4M</td><td class="hl">$0</td><td>$19.4M</td></tr>
+                        <tr><td>Total cost incl. penalty</td><td>$174.8M</td><td>$197.2M</td><td>$178.3M</td></tr>
+                        <tr><td>Cost per tire supplied</td><td>$3.13</td><td>$3.54</td><td>$3.19</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="chart-box chart-box-sm"><canvas id="costChart" aria-label="Operating cost and penalty by scenario, 2027 to 2030"></canvas></div>
+            <p class="chart-note">Operating cost covers hauling, surge premium and retainer, processing incentive, take-or-pay on unused processing, site servicing, call-in premiums and $4.5M a year of overhead.</p>
+        </section>
+
+        <section id="the-dashboard" class="scroll-section gsap-reveal">
+            <h2>V. THE DASHBOARD</h2>
+            <p>The Tableau dashboard is built from the model's 60-month output for all three scenarios: tires waiting by month, tonnes short of the target by year, and total cost split into operating cost and penalty. Hover over any mark to see its values.</p>
+            <div class="tableau-frame">
+                <iframe src="https://public.tableau.com/views/eTracksTireManagementModel/eTracksTireManagementModelFlatvsBalancedvsStresshypotheticalfigures?:showVizHome=no&amp;:embed=true&amp;:toolbar=bottom&amp;:tabs=no" title="eTracks Tire Management Model, Tableau Public dashboard" loading="lazy" allowfullscreen></iframe>
+            </div>
+            <p class="chart-note">Dashboard totals cover 2026 to 2030. The table above covers 2027 to 2030, the years the plan is in force. <a href="https://public.tableau.com/app/profile/prapanch.kokkalemada/viz/eTracksTireManagementModel/eTracksTireManagementModelFlatvsBalancedvsStresshypotheticalfigures" target="_blank" rel="noopener noreferrer">Open in Tableau Public ↗</a> · <a href="https://github.com/Punch-k/Portfolio/tree/main/etracks-tire-management" target="_blank" rel="noopener noreferrer">Data and model files ↗</a></p>
+        </section>
+
+        <section id="insights" class="scroll-section gsap-reveal">
+            <h2 style="color: var(--gold);">VI. INSIGHTS</h2>
+            <div class="insight-list">
+                <div class="insight"><span class="insight-num">01</span><div><h4>It is a reach problem before it is a hauling problem.</h4><p>Below 91% reach, no hauling budget can deliver 80% of supply. The first dollars should go to sites and call-in pickups, which together lift reach from 88% to 95%. The North needs depots and call-ins, not more drop-off sites.</p></div></div>
+                <div class="insight"><span class="insight-num">02</span><div><h4>The backlog comes from a seasonal mismatch, not a shortage of total capacity.</h4><p>Over a year, hauling of 108,000 t is close to what reaches a site. The problem is timing: generation nearly triples from January to April while hauling stays flat. Surge capacity in the six peak months, about 17,000 t a year, does more than a bigger flat budget would.</p></div></div>
+                <div class="insight"><span class="insight-num">03</span><div><h4>Year-end carryover is the hidden cost.</h4><p>Even before the new target applies, flat hauling leaves 868,000 tires waiting at sites at the end of 2026, so every year starts behind. The Balanced plan clears that carryover in its first year and keeps it at zero each December. It also drops the 2025 habit of slowing hauling once the target is met. That rule never triggers on the Flat budget, because the Flat budget never reaches the target. Under any plan that does reach it, though, a pause would rebuild the year-end pile behind the 2025 backlog.</p></div></div>
+                <div class="insight"><span class="insight-num">04</span><div><h4>Processing headroom is the plan's weak point.</h4><p>At 99.8% utilization, an 8% outage or one processor taking more imports puts the plan short again. Contracts should include about 10% headroom, priority access for Ontario tires, and a Northern outlet such as pyrolysis to cut the $260/t haul.</p></div></div>
+                <div class="insight"><span class="insight-num">05</span><div><h4>At $300/t, paying the penalty is cheaper. That will not last.</h4><p>Including penalties, the Flat budget is $22.4M cheaper than the Balanced plan, and compliance only pays for itself above $801 per tonne short. But the cap is gone, and PRO financial reporting now feeds into penalty calculations, so the regulator can set penalties to make non-compliance irrational. Unpriced costs also favour compliance: stockpile fire risk, double fees for dealers and loss of trust.</p></div></div>
+            </div>
+            <div class="recommend-box">
+                <span class="bluf-label">Recommendation</span>
+                <p>Adopt the Balanced plan in three steps. <strong>Q1 2027:</strong> add sites and switch on call-in pickups to lift reach. <strong>Before March 2027:</strong> contract surge hauling for the spring wave and end the pause rule. <strong>During 2027:</strong> renegotiate processing for about 10% headroom. In parallel, give RPRA the gap analysis: on today's network, the highest target that can be met is about 77% of supply, not 80%.</p>
+            </div>
+        </section>
+
+        <p class="case-disclaimer">Disclaimer: Portfolio case study for academic and demonstrative purposes. This is an independent analysis, not affiliated with or endorsed by eTracks Tire Management Systems or RPRA. Regulatory facts come from the public sources below. All model figures, including site counts, tonnages, costs, processor capacities, import shares and the penalty rate, are hypothetical assumptions for illustration. All trademarks belong to their respective owners.</p>
+        <div class="sources-block">
+            <strong>Sources:</strong> Regulation and market context from public reporting. Model built in Excel (download above).
+            <ol>
+                <li id="src-1"><a href="https://rpra.ca/2026/09/ontario-government-finalizes-amendments-to-tires-and-other-producer-responsibility-regulations/" target="_blank" rel="noopener noreferrer">RPRA, "Ontario Government finalizes amendments to Tires and other producer responsibility regulations" (Sep 22, 2026)</a></li>
+                <li id="src-2"><a href="https://www.blg.com/en/insights/2026/10/ontario-epr-updates-tire-rules-accelerate-and-1-million-penalty-cap-ends" target="_blank" rel="noopener noreferrer">BLG, "Ontario EPR updates: Tire rules accelerate and $1 million penalty cap ends" (Oct 15, 2026)</a></li>
+                <li id="src-3"><a href="https://www.trucknews.com/transportation/ontario-raises-tire-recycling-target-as-collection-backlog-persists/1003222859/" target="_blank" rel="noopener noreferrer">Truck News, "Ontario raises tire recycling target as collection backlog persists" (Oct 6, 2026)</a></li>
+                <li id="src-4"><a href="https://www.trucknews.com/transportation/tire-recycling-issues-resurface-in-ontario-as-regulatory-changes-processing-disputes-strain-the-system/1003211098" target="_blank" rel="noopener noreferrer">Truck News, "Tire recycling issues resurface in Ontario as regulatory changes, processing disputes strain the system" (Mar 16, 2026)</a></li>
+                <li id="src-5"><a href="https://kleanindustries.com/insights/market-analysis-reports/ontario-tire-management-target-and-collection-network/" target="_blank" rel="noopener noreferrer">Klean Industries, "Tire Recycling Regulation: Ontario Lifts Target to 80%" (Oct 14, 2026; vendor commentary)</a></li>
+                <li id="src-6"><a href="https://ero.ontario.ca/notice/026-0218" target="_blank" rel="noopener noreferrer">Environmental Registry of Ontario, notice 026-0218: Proposed Amendments to Tires and Other Producer Responsibility Regulations</a></li>
+            </ol>
+        </div>
+    </main>
+</div>
+
+<a href="lg-wroclaw-nearshoring-case.html" class="next-project">
+    <span>Next Case Study</span>
+    <h2>LG Wroclaw →</h2>
+</a>
+
+<section id="section-get-in-touch" class="contact-section-shell" aria-labelledby="contact-heading">
+    <div class="connect-grid">
+        <div class="ct-content gsap-reveal">
+            <div class="sec-eyebrow-row">
+                <span class="sec-eyebrow-label">Let's Connect</span>
+                <div class="sec-eyebrow-line"></div>
+            </div>
+            <h2 class="contact-display-heading" id="contact-heading">
+                Initiate<br><em class="contact-display-em">Dialogue.</em>
+            </h2>
+        </div>
+        <div class="ct-visual gsap-reveal">
+            <div class="photo-portrait-frame">
+                <img src="sparty.jpg" alt="Punch Kokkalemada with Sparty at Michigan State University" class="contact-portrait-img" loading="lazy">
+                <div class="portrait-location-badge">
+                    <span class="portrait-location-eyebrow">Current Base</span>
+                    <span class="portrait-location-city">East Lansing, MI</span>
+                </div>
+            </div>
+            <div class="ct-status-badge">
+                <div class="ct-status-dot-wrap" aria-hidden="true">
+                    <span class="ct-status-dot"></span>
+                    <span class="ct-status-pulse"></span>
+                </div>
+                <div class="ct-status-text">
+                    <span class="ct-status-eyebrow">System Status: Active</span>
+                    <span class="ct-status-label">Open to Full-Time · May 2026</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer" role="contentinfo">
+    <div class="footer-left">
+        <span class="ft-logo">MBA Candidate © 2026 · Broad College of Business</span>
+    </div>
+    <nav class="footer-links" aria-label="Footer links">
+        <a href="mailto:kokkalem@msu.edu" class="ft-link">E-MAIL</a>
+        <a href="https://linkedin.com/in/prapanchkokkalemada/" class="ft-link" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+        <button class="ft-top-btn" id="footer-top-btn" aria-label="Scroll to top of page" onclick="window.scrollTo(0,0)">↑ Top</button>
+    </nav>
+</footer>
+
+<script>
+    window.addEventListener('scroll', () => {
+        const scrollTop = document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const progress = (scrollTop / scrollHeight) * 100;
+        document.getElementById('reading-progress').style.width = progress + '%';
+        const backToTop = document.getElementById('back-to-top');
+        if (progress > 50) { backToTop.classList.add('visible'); }
+        else { backToTop.classList.remove('visible'); }
+    });
+
+    const sections = document.querySelectorAll('.scroll-section');
+    const navLinks = document.querySelectorAll('.toc-list li a');
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            if (window.pageYOffset >= (section.offsetTop - 200)) { current = section.getAttribute('id'); }
+        });
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (current && link.getAttribute('href') === '#' + current) { link.classList.add('active'); }
+        });
+    });
+
+    function openTab(evt, tabName) {
+        document.querySelectorAll('.comp-panel').forEach(p => { p.style.display = 'none'; });
+        document.querySelectorAll('.comp-tab').forEach(t => t.classList.remove('active'));
+        document.getElementById(tabName).style.display = 'block';
+        evt.currentTarget.classList.add('active');
+    }
+
+    gsap.registerPlugin(ScrollTrigger);
+    const heroTl = gsap.timeline();
+    heroTl.to(".hero-bg", { opacity: 1, duration: 2, ease: "power2.out" })
+          .to(".hero-anim", { y: 0, opacity: 1, duration: 1, stagger: 0.2, ease: "power3.out" }, "-=1.5");
+
+    gsap.utils.toArray('.gsap-reveal').forEach(section => {
+        gsap.to(section, {
+            scrollTrigger: { trigger: section, start: "top 85%" },
+            y: 0, opacity: 1, duration: 1, ease: "power3.out"
+        });
+    });
+
+    ScrollTrigger.create({
+        trigger: ".stat-banner", start: "top 80%", once: true,
+        onEnter: () => {
+            document.querySelectorAll('.counter').forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                let current = 0;
+                const update = () => {
+                    current += Math.max(target, 1) / 60;
+                    if (current < target) { counter.innerText = Math.ceil(current); requestAnimationFrame(update); }
+                    else { counter.innerText = target; }
+                };
+                update();
+            });
+        }
+    });
+
+    /* ── Model data (eTracks_Supply_Chain_Model.xlsx, hypothetical figures) ── */
+    const GOLD = '#c9a84c', FG = '#ede9e0', MUTED = '#787570', RED = '#e05a00';
+    const GRID = 'rgba(255,255,255,0.05)';
+    Chart.defaults.color = 'rgba(237,233,224,0.7)';
+    Chart.defaults.font.family = "'DM Sans', sans-serif";
+
+    const gapData = {
+        years: ['2025', '2026', '2027', '2028', '2029', '2030'],
+        required: [130520, 163727, 166472, 168969, 171504, 174076],
+        collectable: [155830, 158168, 160540, 162948, 165393, 167873]
+    };
+    // Tires waiting at eTracks sites, thousands of tires, Jan 2026 to Dec 2030
+    const waitData = [
+        { label: 'Flat budget', color: MUTED, data: [525,210,357,839,1117,1044,859,689,657,961,1263,868,502,195,356,857,1151,1088,910,747,722,1035,1345,953,590,290,466,987,1282,1219,1041,878,854,1167,1478,1086,723,424,615,1154,1445,1379,1200,1035,1009,1320,1628,1235,872,572,778,1314,1602,1534,1354,1188,1160,1469,1776,1383] },
+        { label: 'Balanced plan', color: GOLD, data: [525,210,357,839,1117,1044,859,689,657,961,1263,868,410,12,0,91,0,0,0,0,0,0,0,0,0,0,0,113,40,0,0,0,0,0,0,0,0,0,0,134,80,28,0,0,0,0,0,0,0,0,0,156,121,82,0,0,0,0,13,0] },
+        { label: 'Stress test', color: RED, data: [410,0,184,804,1158,1044,795,574,540,942,1317,801,323,0,199,841,1207,1099,854,637,608,1024,1401,886,409,5,220,884,1261,1158,918,703,678,1100,1481,967,491,93,323,1009,1380,1274,1031,815,788,1207,1586,1086,646,290,573,1319,1682,1585,1356,1153,1130,1533,1898,1408] }
+    ];
+    const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    const monthLabels = [];
+    for (let y = 26; y <= 30; y++) months.forEach(m => monthLabels.push(m + ' ' + y));
+
+    const fmtT = v => Math.round(v).toLocaleString('en-US') + ' t';
+    const built = {};
+    function buildChart(id, factory) {
+        const el = document.getElementById(id);
+        if (!el) return;
+        ScrollTrigger.create({ trigger: el, start: "top 90%", once: true, onEnter: () => { built[id] = factory(el.getContext('2d')); } });
+    }
+
+    buildChart('gapChart', ctx => new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: gapData.years,
+            datasets: [
+                { type: 'line', label: 'Required management (t)', data: gapData.required, borderColor: GOLD, backgroundColor: GOLD, borderWidth: 2.5, pointRadius: 4, tension: 0.2, order: 0 },
+                { type: 'bar', label: "Collectable with today's network (t)", data: gapData.collectable, backgroundColor: 'rgba(237,233,224,0.22)', borderRadius: 4, order: 1 }
+            ]
+        },
+        options: {
+            responsive: true, maintainAspectRatio: false,
+            animation: { duration: 1600, easing: 'easeOutQuart' },
+            interaction: { mode: 'index', intersect: false },
+            plugins: {
+                legend: { labels: { color: FG, boxWidth: 12 } },
+                tooltip: { callbacks: { label: c => c.dataset.label.replace(' (t)', '') + ': ' + fmtT(c.parsed.y),
+                    footer: items => { const i = items[0].dataIndex; const g = gapData.required[i] - gapData.collectable[i]; return g > 0 ? 'Gap: ' + fmtT(g) : 'No gap'; } } }
+            },
+            scales: {
+                x: { grid: { color: GRID } },
+                y: { min: 100000, grid: { color: GRID }, ticks: { callback: v => (v / 1000) + 'K t' } }
+            }
+        }
+    }));
+
+    buildChart('waitChart', ctx => new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: monthLabels,
+            datasets: waitData.map(s => ({ label: s.label, data: s.data, borderColor: s.color, backgroundColor: s.color, borderWidth: s.label === 'Balanced plan' ? 3 : 2, pointRadius: 0, pointHoverRadius: 4, tension: 0.3 }))
+        },
+        options: {
+            responsive: true, maintainAspectRatio: false,
+            animation: { duration: 1600, easing: 'easeOutQuart' },
+            interaction: { mode: 'index', intersect: false },
+            plugins: {
+                legend: { display: false },
+                tooltip: { callbacks: { label: c => c.dataset.label + ': ' + (c.parsed.y * 1000).toLocaleString('en-US') + ' tires' } }
+            },
+            scales: {
+                x: { grid: { color: GRID }, ticks: { maxRotation: 0, autoSkip: true, maxTicksLimit: 10 } },
+                y: { beginAtZero: true, grid: { color: GRID }, ticks: { callback: v => v >= 1000 ? (v / 1000) + 'M' : v + 'K' }, title: { display: true, text: 'Tires waiting' } }
+            }
+        }
+    }));
+
+    document.querySelectorAll('.sc-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            btn.classList.toggle('active');
+            const chart = built['waitChart'];
+            if (!chart) return;
+            chart.setDatasetVisibility(+btn.dataset.sc, btn.classList.contains('active'));
+            chart.update();
+        });
+    });
+
+    buildChart('costChart', ctx => new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Flat budget', 'Balanced plan', 'Stress test'],
+            datasets: [
+                { label: 'Operating cost ($M)', data: [161.4, 197.2, 158.9], backgroundColor: 'rgba(237,233,224,0.28)', borderRadius: 4 },
+                { label: 'Penalty at $300/t ($M)', data: [13.4, 0, 19.4], backgroundColor: RED, borderRadius: 4 }
+            ]
+        },
+        options: {
+            responsive: true, maintainAspectRatio: false, indexAxis: 'y',
+            animation: { duration: 1600, easing: 'easeOutQuart' },
+            plugins: {
+                legend: { labels: { color: FG, boxWidth: 12 } },
+                tooltip: { callbacks: { label: c => c.dataset.label.replace(' ($M)', '') + ': $' + c.parsed.x.toFixed(1) + 'M',
+                    footer: items => { const i = items[0].dataIndex; const t = [174.8, 197.2, 178.3][i]; return 'Total: $' + t.toFixed(1) + 'M'; } } }
+            },
+            scales: {
+                x: { stacked: true, grid: { color: GRID }, ticks: { callback: v => '$' + v + 'M' } },
+                y: { stacked: true, grid: { display: false } }
+            }
+        }
+    }));
+
+    const toggle = document.getElementById('case-menu-toggle');
+    const menu = document.getElementById('case-mobile-menu');
+    toggle.addEventListener('click', () => { menu.style.display = 'flex'; });
+</script>
+</body>
+</html>

@@ -434,6 +434,8 @@ body::after { content: ''; position: fixed; inset: -100%; width: 300%; height: 3
 .tw-rot-5 { transform: rotate(3deg); }
 /* 8-card deck: same fan, overlap tightened so all cards fit the screen width (desktop only; mobile scrolls) */
 .tw-deck-8 .tw-card + .tw-card { margin-left: calc((100vw - 4rem - clamp(260px,22vw,420px)) / 7 - clamp(260px,22vw,420px)); }
+/* 9-card deck (eTracks tile added between Zara and LG) */
+.tw-deck-9 .tw-card + .tw-card { margin-left: calc((100vw - 4rem - clamp(260px,22vw,420px)) / 8 - clamp(260px,22vw,420px)); }
 /* Minimal text tile for the new case studies. Same size, border and radius as the image cards. */
 .tw-card-text { display: flex; flex-direction: column; justify-content: flex-end; gap: .7rem; padding: 1.6rem 1.4rem; background: linear-gradient(180deg, var(--bg2) 0%, #14130f 100%); color: var(--fg); }
 .tw-ct-eyebrow { font-size: .58rem; letter-spacing: .22em; text-transform: uppercase; color: var(--gold); margin-bottom: auto; }
@@ -793,7 +795,7 @@ body::after { content: ''; position: fixed; inset: -100%; width: 300%; height: 3
       scrollbar-width: none;
       scroll-snap-type: x mandatory;
   }
-  .tw-card + .tw-card, .tw-deck-8 .tw-card + .tw-card { margin-left: 1rem; }
+  .tw-card + .tw-card, .tw-deck-8 .tw-card + .tw-card, .tw-deck-9 .tw-card + .tw-card { margin-left: 1rem; }
   .tw-card { scroll-snap-align: center; }
 
   footer { padding: 1.8rem 1.4rem; flex-direction: column; align-items: flex-start; gap: 1.5rem; }
