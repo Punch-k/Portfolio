@@ -55,6 +55,16 @@
     gtag('js', new Date());
     gtag('config', 'G-KE4GVETS40');
   </script>
+  <style>
+    /* Skills staircase: five rows slide left to right with scroll and settle as a staircase */
+    .skills-stair { display: flex; flex-direction: column; gap: clamp(.4rem, 1vw, .9rem); margin-top: clamp(1.5rem, 4vw, 3rem); }
+    .ss-row { overflow: hidden; }
+    .ss-track { display: flex; align-items: baseline; gap: clamp(1rem, 2.2vw, 2.2rem); white-space: nowrap; width: max-content; will-change: transform; }
+    .ss-cat { font-family: var(--sans); font-size: clamp(.6rem, .9vw, .75rem); letter-spacing: .22em; text-transform: uppercase; color: var(--gold); border: 1px solid rgba(201,168,76,.45); border-radius: 50px; padding: .35rem .9rem; flex-shrink: 0; align-self: center; }
+    .ss-item { font-family: var(--display); font-size: clamp(1.35rem, 3vw, 2.5rem); letter-spacing: .03em; color: rgba(237,233,224,.62); flex-shrink: 0; transition: color .3s; }
+    .ss-item:hover { color: var(--fg); }
+    .ss-sep { color: rgba(201,168,76,.45); font-size: clamp(.9rem, 1.6vw, 1.3rem); flex-shrink: 0; }
+  </style>
 </head>
 <body>
 
@@ -795,90 +805,24 @@
         <p class="sec-num" data-a="up">III. Areas of Expertise &amp; Tools</p>
         <h2 id="skills-heading">Core Skills.<em>Competencies</em></h2>
       </div>
-      <p>Drag the cursor across the pit — the balls scatter. Gold-filled balls are core, ring-fill balls are supporting; the ring color always encodes the skill category below.</p>
-    </div>
-<!-- ──    <div id="skills-pit-wrap">
-      <canvas id="skills-canvas" aria-label="Interactive skills ball pit, grouped into four categories — hover to scatter, click a ball to reveal skill name"></canvas>
-      <ul class="skills-legend" aria-hidden="true">
-        <li><span class="skills-legend-dot" style="--dot:#c9a84c"></span>Strategy &amp; GTM</li>
-        <li><span class="skills-legend-dot" style="--dot:#4a90e2"></span>Analytics &amp; Tools</li>
-        <li><span class="skills-legend-dot" style="--dot:#3fb8af"></span>Operations &amp; Process</li>
-        <li><span class="skills-legend-dot" style="--dot:#9b7fd4"></span>Methods &amp; Certifications</li>
-      </ul>
-      <ul class="sr-only">
-        <li>Strategy &amp; GTM: GTM Execution, Pricing Strategy, Market Sizing, Competitive Analysis, Channel Economics, M&amp;A Deal Analysis, Content Strategy, Voice of Customer, Buyer Persona Mapping, Brand Positioning</li>
-        <li>Analytics &amp; Tools: Demand Forecasting, A/B Testing, Media Analytics, Tableau, Power BI, Data Storytelling, Cost Modeling, Financial Modeling, KPI Dashboard Design, Sensitivity Analysis</li>
-        <li>Operations &amp; Process: Inventory Optimization, JIT Delivery Models, RevOps, Vendor Development, Capacity Planning, Tariff Modeling, Process Mapping, Lean Operations, Risk Mitigation</li>
-        <li>Methods &amp; Certifications: HubSpot, Agile (Certified), Scrum (Certified), Waterfall PM</li>
-      </ul>
+      <p>Five tracks: supply chain, sourcing, analytics, strategy and leadership. Scroll and each row slides into place.</p>
     </div>
   </div>
-</section>──────────────────────────────────── -->
-<!-- ── MARQUEE ────────────────────────────────────────── -->
-<div class="mq-wrap" aria-hidden="true">
-    <div class="mq-track">
-        <!-- Set 1 -->
-        <div class="mq-content">
-            <span class="mq-item">CHANGE MANAGEMENT</span><span class="mq-item hi">✺</span>
-            <span class="mq-item">DATA STORYTELLING</span><span class="mq-item hi">✺</span>
-            <span class="mq-item">MARKET INTELLIGENCE</span><span class="mq-item hi">✺</span>
-            <span class="mq-item">SALES &amp; OPS PLANNING</span><span class="mq-item hi">✺</span>
-            <span class="mq-item">GTM EXECUTION</span><span class="mq-item hi">✺</span>
-            <span class="mq-item">DEMAND FORECASTING</span><span class="mq-item hi">✺</span>
-        </div>
-        <!-- Set 2 (Exact Duplicate for the seamless loop) -->
-        <div class="mq-content">
-            <span class="mq-item">CHANGE MANAGEMENT</span><span class="mq-item hi">✺</span>
-            <span class="mq-item">DATA STORYTELLING</span><span class="mq-item hi">✺</span>
-            <span class="mq-item">MARKET INTELLIGENCE</span><span class="mq-item hi">✺</span>
-            <span class="mq-item">SALES &amp; OPS PLANNING</span><span class="mq-item hi">✺</span>
-            <span class="mq-item">GTM EXECUTION</span><span class="mq-item hi">✺</span>
-            <span class="mq-item">DEMAND FORECASTING</span><span class="mq-item hi">✺</span>
-        </div>
-    </div>
-  <div class="mq-wrap" aria-hidden="true">
-  <div class="mq-track">
-        <!-- Set 4 -->
-        <div class="mq-content">
-            <span class="mq-item">CHANGE MANAGEMENT</span><span class="mq-item hi">✺</span>
-            <span class="mq-item">DATA STORYTELLING</span><span class="mq-item hi">✺</span>
-            <span class="mq-item">MARKET INTELLIGENCE</span><span class="mq-item hi">✺</span>
-            <span class="mq-item">SALES &amp; OPS PLANNING</span><span class="mq-item hi">✺</span>
-            <span class="mq-item">GTM EXECUTION</span><span class="mq-item hi">✺</span>
-            <span class="mq-item">DEMAND FORECASTING</span><span class="mq-item hi">✺</span>
-        </div>
-        <!-- Set 4-2 (Exact Duplicate for the seamless loop) -->
-        <div class="mq-content">
-            <span class="mq-item">CHANGE MANAGEMENT</span><span class="mq-item hi">✺</span>
-            <span class="mq-item">DATA STORYTELLING</span><span class="mq-item hi">✺</span>
-            <span class="mq-item">MARKET INTELLIGENCE</span><span class="mq-item hi">✺</span>
-            <span class="mq-item">SALES &amp; OPS PLANNING</span><span class="mq-item hi">✺</span>
-            <span class="mq-item">GTM EXECUTION</span><span class="mq-item hi">✺</span>
-            <span class="mq-item">DEMAND FORECASTING</span><span class="mq-item hi">✺</span>
-        </div>
-    </div>
-    </div>
-  <div class="mq-track">
-        <!-- Set 5 -->
-        <div class="mq-content">
-            <span class="mq-item">CHANGE MANAGEMENT</span><span class="mq-item hi">✺</span>
-            <span class="mq-item">DATA STORYTELLING</span><span class="mq-item hi">✺</span>
-            <span class="mq-item">MARKET INTELLIGENCE</span><span class="mq-item hi">✺</span>
-            <span class="mq-item">SALES &amp; OPS PLANNING</span><span class="mq-item hi">✺</span>
-            <span class="mq-item">GTM EXECUTION</span><span class="mq-item hi">✺</span>
-            <span class="mq-item">DEMAND FORECASTING</span><span class="mq-item hi">✺</span>
-        </div>
-        <!-- Set 5-2 (Exact Duplicate for the seamless loop) -->
-        <div class="mq-content">
-            <span class="mq-item">CHANGE MANAGEMENT</span><span class="mq-item hi">✺</span>
-            <span class="mq-item">DATA STORYTELLING</span><span class="mq-item hi">✺</span>
-            <span class="mq-item">MARKET INTELLIGENCE</span><span class="mq-item hi">✺</span>
-            <span class="mq-item">SALES &amp; OPS PLANNING</span><span class="mq-item hi">✺</span>
-            <span class="mq-item">GTM EXECUTION</span><span class="mq-item hi">✺</span>
-            <span class="mq-item">DEMAND FORECASTING</span><span class="mq-item hi">✺</span>
-        </div>
-    </div>
-</div>
+  <div class="skills-stair" aria-hidden="true">
+      <div class="ss-row"><div class="ss-track"><span class="ss-cat">Supply Chain</span><span class="ss-item">S&amp;OP</span><span class="ss-sep">✺</span><span class="ss-item">Demand Forecasting</span><span class="ss-sep">✺</span><span class="ss-item">Inventory Optimization</span><span class="ss-sep">✺</span><span class="ss-item">Safety Stock &amp; OTIF</span><span class="ss-sep">✺</span><span class="ss-item">Capacity Planning</span><span class="ss-sep">✺</span><span class="ss-item">JIT Delivery Models</span><span class="ss-sep">✺</span><span class="ss-item">Reverse Logistics</span><span class="ss-sep">✺</span><span class="ss-item">Network Design</span><span class="ss-sep">✺</span><span class="ss-item">Lean Operations</span><span class="ss-sep">✺</span><span class="ss-item">Process Mapping</span><span class="ss-sep">✺</span></div></div>
+      <div class="ss-row"><div class="ss-track"><span class="ss-cat">Sourcing</span><span class="ss-item">Category Strategy</span><span class="ss-sep">✺</span><span class="ss-item">Should-Cost Modeling</span><span class="ss-sep">✺</span><span class="ss-item">TCO Analysis</span><span class="ss-sep">✺</span><span class="ss-item">RFQ Scoring</span><span class="ss-sep">✺</span><span class="ss-item">Spend Analysis</span><span class="ss-sep">✺</span><span class="ss-item">Vendor Development</span><span class="ss-sep">✺</span><span class="ss-item">Contract Compliance</span><span class="ss-sep">✺</span><span class="ss-item">Tariff Modeling</span><span class="ss-sep">✺</span><span class="ss-item">Nearshoring</span><span class="ss-sep">✺</span><span class="ss-item">Supplier Risk Mitigation</span><span class="ss-sep">✺</span></div></div>
+      <div class="ss-row"><div class="ss-track"><span class="ss-cat">Analytics</span><span class="ss-item">Tableau</span><span class="ss-sep">✺</span><span class="ss-item">Power BI</span><span class="ss-sep">✺</span><span class="ss-item">Python</span><span class="ss-sep">✺</span><span class="ss-item">Excel Modeling</span><span class="ss-sep">✺</span><span class="ss-item">Financial Modeling</span><span class="ss-sep">✺</span><span class="ss-item">Cost Modeling</span><span class="ss-sep">✺</span><span class="ss-item">Sensitivity Analysis</span><span class="ss-sep">✺</span><span class="ss-item">KPI Dashboard Design</span><span class="ss-sep">✺</span><span class="ss-item">A/B Testing</span><span class="ss-sep">✺</span><span class="ss-item">Data Storytelling</span><span class="ss-sep">✺</span></div></div>
+      <div class="ss-row"><div class="ss-track"><span class="ss-cat">Strategy &amp; GTM</span><span class="ss-item">GTM Execution</span><span class="ss-sep">✺</span><span class="ss-item">Pricing Strategy</span><span class="ss-sep">✺</span><span class="ss-item">Market Sizing</span><span class="ss-sep">✺</span><span class="ss-item">Competitive Analysis</span><span class="ss-sep">✺</span><span class="ss-item">Channel Economics</span><span class="ss-sep">✺</span><span class="ss-item">M&amp;A Deal Analysis</span><span class="ss-sep">✺</span><span class="ss-item">Market Intelligence</span><span class="ss-sep">✺</span><span class="ss-item">Brand Positioning</span><span class="ss-sep">✺</span><span class="ss-item">Voice of Customer</span><span class="ss-sep">✺</span><span class="ss-item">Buyer Persona Mapping</span><span class="ss-sep">✺</span></div></div>
+      <div class="ss-row"><div class="ss-track"><span class="ss-cat">Leadership</span><span class="ss-item">Program Management</span><span class="ss-sep">✺</span><span class="ss-item">Change Management</span><span class="ss-sep">✺</span><span class="ss-item">RevOps</span><span class="ss-sep">✺</span><span class="ss-item">Stakeholder Alignment</span><span class="ss-sep">✺</span><span class="ss-item">Regulatory Compliance</span><span class="ss-sep">✺</span><span class="ss-item">Risk Management</span><span class="ss-sep">✺</span><span class="ss-item">HubSpot</span><span class="ss-sep">✺</span><span class="ss-item">Agile (Certified)</span><span class="ss-sep">✺</span><span class="ss-item">Scrum (Certified)</span><span class="ss-sep">✺</span><span class="ss-item">Waterfall PM</span><span class="ss-sep">✺</span></div></div>
+  </div>
+  <ul class="sr-only">
+        <li>Supply Chain: S&amp;OP, Demand Forecasting, Inventory Optimization, Safety Stock &amp; OTIF, Capacity Planning, JIT Delivery Models, Reverse Logistics, Network Design, Lean Operations, Process Mapping</li>
+        <li>Sourcing: Category Strategy, Should-Cost Modeling, TCO Analysis, RFQ Scoring, Spend Analysis, Vendor Development, Contract Compliance, Tariff Modeling, Nearshoring, Supplier Risk Mitigation</li>
+        <li>Analytics: Tableau, Power BI, Python, Excel Modeling, Financial Modeling, Cost Modeling, Sensitivity Analysis, KPI Dashboard Design, A/B Testing, Data Storytelling</li>
+        <li>Strategy &amp; GTM: GTM Execution, Pricing Strategy, Market Sizing, Competitive Analysis, Channel Economics, M&amp;A Deal Analysis, Market Intelligence, Brand Positioning, Voice of Customer, Buyer Persona Mapping</li>
+        <li>Leadership: Program Management, Change Management, RevOps, Stakeholder Alignment, Regulatory Compliance, Risk Management, HubSpot, Agile (Certified), Scrum (Certified), Waterfall PM</li>
+  </ul>
+</section>
     <!-- ── Quote ─── --> 
 <!-- Quote muted
 <div class="agency-quote-section" id="agency-quote" aria-hidden="true" style="margin: 2rem auto; display: flex; justify-content: center; text-align: center; width: 100%;"> 
@@ -1034,5 +978,27 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="script.js"></script>
+<script>
+/* Skills staircase: each row starts showing its last skills, travels left to right while the
+   section scrolls in so every skill passes through view, then rests one step right of the row above. */
+(function () {
+  var rows = document.querySelectorAll('.skills-stair .ss-track');
+  if (!rows.length) return;
+  function step() { return Math.min(Math.max(window.innerWidth * 0.06, 28), 110); }
+  function travel() { return window.innerWidth * 0.55; }
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined' || reduce) {
+    rows.forEach(function (r, i) { r.style.transform = 'translateX(' + (i * step()) + 'px)'; });
+    return;
+  }
+  gsap.registerPlugin(ScrollTrigger);
+  rows.forEach(function (r, i) {
+    gsap.fromTo(r,
+      { x: function () { return i * step() - Math.max(r.scrollWidth - r.parentElement.clientWidth * 0.6, travel()) - i * travel() * 0.15; } },
+      { x: function () { return i * step(); }, ease: 'none',
+        scrollTrigger: { trigger: '.skills-stair', start: 'top bottom', end: 'bottom 70%', scrub: 0.6, invalidateOnRefresh: true } });
+  });
+})();
+</script>
 </body>
 </html>
