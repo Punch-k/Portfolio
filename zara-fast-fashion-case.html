@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Can Zara Fast-Forward Fashion | Strategy & Operations Case Study</title>
+    <title>Can Zara Fast-Forward Fashion | Vertical Integration Case Study</title>
 
-    <meta name="description" content="Vertical integration case study by Prapanch Kokkalemada. How Zara's responsive manufacturing model turns a 2-3 week design-to-shelf cycle into a durable competitive moat.">
-    <meta property="og:title" content="Can Zara Fast-Forward Fashion — Vertical Integration Case Study">
-    <meta property="og:description" content="Operations strategy deep dive by Prapanch Kokkalemada, Strategy & Operations Transformation specialist.">
-    <meta property="og:image" content="https://punch-k.github.io/Portfolio/4.png">
+    <meta name="description" content="Portfolio case study by Prapanch Kokkalemada. Inditex and Zara: proximity production, small batches and whether speed still pays.">
+    <meta property="og:title" content="Can Zara Fast-Forward Fashion | Vertical Integration Case Study">
+    <meta property="og:description" content="Portfolio case study by Prapanch Kokkalemada. Inditex and Zara: proximity production, small batches and whether speed still pays.">
     <meta property="og:url" content="https://punch-k.github.io/Portfolio/zara-fast-fashion-case.html">
     <link rel="canonical" href="https://punch-k.github.io/Portfolio/zara-fast-fashion-case.html">
 
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=7">
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
@@ -36,7 +35,7 @@
         .nav-connect:hover { background: var(--gold); color: var(--bg); }
         @media (max-width: 900px) { .nav-links { display: none; } .case-nav { padding: 1rem 1.5rem; } #case-menu-toggle { display: block !important; } }
         .hero { height: 75vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; padding: 0 2rem; border-bottom: 1px solid var(--line); }
-        .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?q=80&w=1600&auto=format&fit=crop'); background-size: cover; background-position: center; opacity: 0; filter: grayscale(90%) brightness(0.25); z-index: 0; }
+        .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(ellipse at 50% 35%, rgba(201,168,76,0.16), transparent 60%), repeating-radial-gradient(circle at 50% 120%, rgba(237,233,224,0.035) 0 2px, transparent 2px 26px); opacity: 0; z-index: 0; }
         .hero-content { position: relative; z-index: 10; display: flex; flex-direction: column; align-items: center; }
         .breadcrumbs { display: flex; gap: 0.5rem; color: rgba(237,233,224,0.6); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 2rem; opacity: 0; }
         .breadcrumbs a { color: var(--gold); text-decoration: none; }
@@ -99,6 +98,54 @@
             .pull-quote p, .stat-num { color: black; }
             .exec-summary { border-left-color: black; background: #f9f9f9; }
         }
+    
+        .bluf-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.8rem; }
+        .bluf-item p { margin: 0; font-size: 0.98rem; line-height: 1.7; color: rgba(237,233,224,0.9); }
+        .bluf-label { display: block; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem; }
+        .banner-btns { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+        .banner-btn-ghost { background: transparent; color: var(--gold); border: 1px solid var(--gold); }
+        .banner-btn-ghost:hover { background: rgba(201,168,76,0.12); }
+        .article-body sup a { text-decoration: none; font-size: 0.7em; margin-left: 1px; }
+        .timeline { border-left: 1px solid var(--line); margin: 0 0 2.5rem; padding-left: 1.5rem; display: flex; flex-direction: column; gap: 1.4rem; }
+        .tl-row { position: relative; }
+        .tl-row::before { content: ''; position: absolute; left: calc(-1.5rem - 5px); top: 0.45rem; width: 9px; height: 9px; border-radius: 50%; background: var(--gold); }
+        .tl-date { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.1em; color: var(--gold); font-size: 1.1rem; }
+        .tl-row p { margin: 0.2rem 0 0 !important; font-size: 1.02rem !important; }
+        .chart-box { position: relative; height: 380px; background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 12px; padding: 1.2rem; margin: 1.5rem 0 0.8rem; box-sizing: border-box; }
+        .chart-box-sm { height: 320px; margin-top: 2rem; }
+        .chart-note { font-size: 0.85rem !important; color: rgba(237,233,224,0.5) !important; line-height: 1.6 !important; }
+        .sub-h { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.08em; font-size: 1.5rem; color: var(--fg); margin: 3rem 0 1rem; font-weight: 400; }
+        .scenario-toggle { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+        .sc-btn { background: none; border: 1px solid var(--line); color: rgba(237,233,224,0.45); font-family: var(--sans); font-size: 0.78rem; letter-spacing: 0.08em; padding: 0.5rem 1rem; border-radius: 50px; cursor: pointer; transition: all 0.25s; }
+        .sc-btn.active { border-color: var(--gold); color: var(--gold); background: rgba(201,168,76,0.08); }
+        .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 1.5rem 0; border: 1px solid var(--line); border-radius: 8px; }
+        .data-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; min-width: 520px; }
+        .data-table th { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.08em; font-weight: 400; font-size: 1rem; color: var(--gold); text-align: left; padding: 0.8rem 1rem; border-bottom: 1px solid var(--line); background: rgba(201,168,76,0.04); }
+        .data-table td { padding: 0.7rem 1rem; border-bottom: 1px solid rgba(237,233,224,0.06); color: rgba(237,233,224,0.8); }
+        .data-table tr:last-child td { border-bottom: none; }
+        .data-table td.hl { color: var(--gold); }
+        .tableau-frame { position: relative; width: 100%; height: 860px; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: #fff; margin: 1.5rem 0 0.8rem; }
+        .tableau-frame-sm { height: 720px; }
+        .tableau-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
+        .insight-list { display: flex; flex-direction: column; gap: 1.6rem; margin-bottom: 3rem; }
+        .insight { display: grid; grid-template-columns: 3.2rem 1fr; gap: 1rem; border-top: 1px solid var(--line); padding-top: 1.4rem; }
+        .insight-num { font-family: var(--display); font-size: 2rem; color: var(--gold); line-height: 1; }
+        .insight h4 { margin: 0 0 0.5rem; font-family: var(--display); font-size: 1.45rem; font-weight: 500; color: var(--fg); line-height: 1.25; }
+        .insight p { margin: 0 !important; font-size: 1.02rem !important; }
+        .recommend-box { border: 1px solid rgba(201,168,76,0.4); background: rgba(201,168,76,0.06); border-radius: 8px; padding: 2rem; margin-bottom: 3rem; }
+        .recommend-box p { margin: 0 !important; font-size: 1.05rem !important; }
+        .stat-box { text-align: center; }
+        .case-layout > * { min-width: 0; }
+        @media (max-width: 900px) { .bluf-grid { grid-template-columns: 1fr; gap: 1.3rem; } }
+        @media (max-width: 600px) {
+            .chart-box { height: 300px; padding: 0.8rem; }
+            .tableau-frame { height: 1150px; }
+            .tableau-frame-sm { height: 980px; }
+            .insight { grid-template-columns: 1fr; gap: 0.4rem; }
+            .recommend-box { padding: 1.4rem; }
+            .data-table { font-size: 0.85rem; }
+        }
+        @media print { .tableau-frame, .scenario-toggle { display: none !important; } .data-table td, .data-table th { color: black; } }
         /* keep the contents sidebar sticky: overflow-x hidden on html/body breaks position: sticky, clip does not */
         html, body { overflow-x: clip !important; }
     </style>
@@ -135,113 +182,102 @@
 <header class="hero">
     <div class="hero-bg"></div>
     <div class="hero-content">
-        <div class="breadcrumbs hero-anim">
-            <a href="index.html">Portfolio</a> / <a href="index.html#section-cases">Research</a> / Vertical Integration
-        </div>
-        <h1 class="hero-anim" style="font-family: var(--display); font-size: clamp(3rem, 6.5vw, 6rem); color: var(--gold); margin: 0; line-height: 1;">CAN ZARA FAST-FORWARD FASHION</h1>
-        <p class="hero-anim" style="font-size: 1.2rem; max-width: 650px; margin-top: 2rem; line-height: 1.8; color: var(--fg); font-weight: 300;">
-            Most apparel brands compete on design. Zara built a supply chain so responsive that speed itself became the design language.
-        </p>
+        <div class="breadcrumbs hero-anim"><a href="index.html">Portfolio</a> / <a href="index.html#section-cases">Research</a> / Vertical Integration</div>
+        <h1 class="hero-anim" style="font-family: var(--display); font-size: clamp(3.2rem, 7vw, 6.5rem); color: var(--gold); margin: 0; line-height: 1;">CAN ZARA FAST-FORWARD FASHION</h1>
+        <p class="hero-anim" style="font-size: 1.2rem; max-width: 680px; margin-top: 2rem; line-height: 1.8; color: var(--fg); font-weight: 300;">Inditex nearly doubled sales from €20.4 billion in its pandemic year to €39.9 billion in FY2025. Its edge is a supply chain that makes much of its fashion close to home, in small batches, and reacts to what sells within weeks.</p>
     </div>
 </header>
 
 <div class="exec-summary gsap-reveal">
     <h3>EXECUTIVE SUMMARY (BLUF)</h3>
-    <p style="margin: 0; font-size: 1.05rem; line-height: 1.7; color: rgba(237,233,224,0.9);">
-        Inditex built Zara's advantage by vertically integrating design, small-batch manufacturing, and logistics under one centralized IT backbone — enabling a 2-3 week design-to-shelf cycle and twice-weekly store replenishment that no fast-fashion competitor has fully replicated. This case examines whether that responsive-manufacturing moat can survive the next disruption: reshoring pressure, sustainability regulation, and AI-driven demand forecasting closing the speed gap for everyone else.
-    </p>
+    <div class="bluf-grid"><div class="bluf-item"><span class="bluf-label">The problem</span><p>Growth is slowing. Inditex sales rose 3.2% in FY2025, or 7.0% at constant currency, after double-digit years. Competitors are closing the speed gap with better forecasting, and tariffs and EU textile rules are adding cost and complexity.</p></div><div class="bluf-item"><span class="bluf-label">Why solve it</span><p>Speed is the business model. Owning design, production and distribution lets Zara put new items in stores in two to three weeks and restock twice a week. If speed stops paying, the cost of running factories with spare capacity becomes hard to justify.</p></div><div class="bluf-item"><span class="bluf-label">The answer</span><p>Keep proximity production for trend-driven items, where speed earns full price, and source basics further away. Use store and online sales data to cut first-order sizes further, and invest the savings from fewer markdowns in flexible capacity.</p></div></div>
 </div>
 
 <div class="sim-link-banner gsap-reveal">
-    <p class="sim-link-banner-text"><strong>Try it yourself.</strong> Run the same EOQ &amp; safety-stock math against your own numbers.</p>
-    <a href="simulators.html#inventory-lab" class="sim-link-banner-btn">Open Inventory Lab ↗</a>
+    <p class="sim-link-banner-text"><strong>Explore the data.</strong> Tableau view of Inditex net sales by fiscal year, FY2019 to FY2025.</p>
+    <div class="banner-btns">
+        <a href="https://public.tableau.com/app/profile/prapanch.kokkalemada/viz/InditexNetSalesFY2019-FY2025/InditexNetSalesbyFiscalYearEURbn" class="sim-link-banner-btn" target="_blank" rel="noopener noreferrer">Tableau ↗</a>
+        <a href="simulators.html#inventory-lab" class="sim-link-banner-btn banner-btn-ghost">Inventory Lab ↗</a>
+    </div>
 </div>
 
 <div class="case-layout">
     <aside class="case-sidebar">
         <nav aria-label="Table of Contents">
             <span class="meta-title">CONTENTS</span>
-            <ul class="toc-list" id="toc-list">
-                <li><a href="#the-integration-model" class="active">I. The Integration Model</a></li>
-                <li><a href="#the-quick-response-engine">II. The Quick-Response Engine</a></li>
-                <li><a href="#the-bullwhip-defense">III. The Bullwhip Defense</a></li>
-                <li><a href="#can-it-last">IV. Can It Last?</a></li>
-            </ul>
+            <ul class="toc-list" id="toc-list"><li><a href="#integration" class="active">I. The Integration Model</a></li><li><a href="#quick-response">II. The Quick-Response Engine</a></li><li><a href="#the-numbers">III. The Numbers</a></li><li><a href="#the-dashboard">IV. The Dashboard</a></li><li><a href="#insights">V. Insights</a></li></ul>
         </nav>
         <div class="meta-block">
             <span class="meta-title">CASE DETAILS</span>
             <p style="margin: 0 0 0.5rem 0;"><strong>Focus:</strong> Vertical Integration, Responsive Manufacturing</p>
             <p style="margin: 0 0 0.5rem 0;"><strong>Read Time:</strong> 6 Minutes</p>
-            <p style="margin: 0;"><strong>Type:</strong> Public case study, real events</p>
+            <p style="margin: 0 0 0.5rem 0;"><strong>Tools:</strong> Tableau, public reporting</p>
+            <p style="margin: 0;"><strong>Type:</strong> Portfolio Case Study. Public data, independent analysis</p>
             <button class="print-btn" onclick="window.print()">🖨️ Print Case Study</button>
         </div>
     </aside>
 
     <main class="article-body">
-        <section id="the-integration-model" class="scroll-section gsap-reveal">
+        <section id="integration" class="scroll-section gsap-reveal">
             <h2>I. THE INTEGRATION MODEL</h2>
-            <p>Where most apparel brands outsource design, manufacturing, and logistics to separate specialist vendors, Inditex owns nearly all of it for Zara: product design and development, production, and distribution, coordinated through a centralized IT infrastructure that ties store point-of-sale data directly back to design and factory scheduling decisions.</p>
-            <p>Inditex also deliberately keeps excess capacity in its own factories rather than running them at maximum utilization — a choice that looks inefficient on a standard cost model, but is exactly what buys the flexibility to respond to a trend within days instead of months.</p>
+            <p>Where most apparel brands outsource design, manufacturing and logistics to separate vendors, Inditex controls most of it for Zara, coordinated by a central IT system that links store sales back to design and factory scheduling.<sup><a href="#src-1">1</a></sup><sup><a href="#src-2">2</a></sup> It also keeps spare capacity in its own factories on purpose, which looks wasteful on a cost model but buys the ability to react within days.</p>
+            <p>A large share of production stays close to its Spanish headquarters. At the end of 2023 about 48% of Inditex's suppliers were in the proximity countries of Spain, Portugal, Morocco and Turkey.<sup><a href="#src-6">6</a></sup><sup><a href="#src-10">10</a></sup></p>
         </section>
 
         <blockquote class="pull-quote gsap-reveal">
-            <p>"Every competitor can copy the clothes. Almost none can copy the willingness to run factories below capacity on purpose."</p>
-            <span>— Supply Chain Strategy Note</span>
+            <p>"Every competitor can copy the clothes. Few will run factories below capacity on purpose."</p>
+            <span>Case thesis</span>
         </blockquote>
 
-        <section id="the-quick-response-engine" class="scroll-section gsap-reveal">
+        <section id="quick-response" class="scroll-section gsap-reveal">
             <h2>II. THE QUICK-RESPONSE ENGINE</h2>
-            <p>The output of the integration model is speed: Zara can design, produce, and deliver new collections to stores in as little as two to three weeks, with stores replenished twice a week — a cadence competitors have struggled to match.</p>
-
+            <p>Zara can design, produce and deliver new items to stores in as little as two to three weeks, with stores restocked twice a week.<sup><a href="#src-1">1</a></sup><sup><a href="#src-3">3</a></sup> Select a lever below.</p>
             <div class="comp-tabs">
-                <button class="comp-tab active" onclick="openTab(event, 'proximity-mfg')">Proximity Manufacturing</button>
-                <button class="comp-tab" onclick="openTab(event, 'input-control')">Input Control</button>
+                <button class="comp-tab active" onclick="openTab(event, 'tab-near')">Proximity Production</button>
+                <button class="comp-tab" onclick="openTab(event, 'tab-batch')">Small Batches</button>
             </div>
-            <div id="proximity-mfg" class="comp-panel active">
-                <p><strong>Near-Shore Production:</strong> A large share of Zara's production stays close to its Spanish headquarters and distribution hub, trading the lower unit-labor cost of far-shore manufacturing for dramatically shorter lead times — the same trade-off logic seen in nearshoring strategies more broadly (see the companion <a href="lg-wroclaw-nearshoring-case.html" style="color:var(--gold);">LG Wroclaw</a> case).</p>
-            </div>
-            <div id="input-control" class="comp-panel">
-                <p><strong>Dyestuff Ownership:</strong> Zara/Inditex holds a stake in Fibracolor, a dyestuff producer, purchasing roughly 20% of its output — vertical control that extends even into raw-material inputs, letting Zara move on color and print trends faster than a brand sourcing dye externally.</p>
-            </div>
-        </section>
-
-        <section id="the-bullwhip-defense" class="scroll-section gsap-reveal">
-            <h2 style="color: var(--gold);">III. THE BULLWHIP DEFENSE</h2>
-            <p>Small, frequent batches tied directly to real store-level sell-through data are also a defense against the classic "bullwhip effect," where demand signal distortion amplifies as it moves upstream through a supply chain, causing overproduction and markdown-driven margin erosion. By keeping batches small and replenishment frequent, Zara keeps the signal close to real demand instead of a quarterly forecast — reducing both stockouts and the discount racks that erode a fast-fashion brand's margin.</p>
+            <div id="tab-near" class="comp-panel active"><p><strong>Short lead times over low unit cost.</strong> Producing in Spain, Portugal, Morocco and Turkey costs more per unit than far-shore sourcing but cuts lead time from months to weeks. In 2023 Morocco had the most Inditex suppliers of the group's sourcing markets, ahead of Turkey and Portugal.<sup><a href="#src-6">6</a></sup><sup><a href="#src-10">10</a></sup></p></div>
+            <div id="tab-batch" class="comp-panel"><p><strong>A defense against the bullwhip effect.</strong> Small first orders, refilled from real sales, keep production close to actual demand instead of a seasonal forecast. That reduces both stockouts and the end-of-season markdowns that erode margin in fashion.<sup><a href="#src-2">2</a></sup></p></div>
         </section>
 
         <section class="stat-banner gsap-reveal">
-            <div class="stat-box" style="text-align: center;">
-                <div class="stat-num counter" data-target="3">0</div>
-                <div class="stat-label">Weeks, Design-to-Shelf</div>
+            <div class="stat-box"><div class="stat-num"><span class="counter" data-target="3">0</span> wks</div><div class="stat-label">Design to shelf, as fast as</div></div>
+            <div class="stat-box"><div class="stat-num"><span class="counter" data-target="48">0</span>%</div><div class="stat-label">Suppliers in proximity, 2023</div></div>
+            <div class="stat-box"><div class="stat-num"><span class="counter" data-target="5460">0</span></div><div class="stat-label">Inditex stores, FY2025</div></div>
+        </section>
+
+        <section id="the-numbers" class="scroll-section gsap-reveal">
+            <h2>III. THE NUMBERS</h2>
+            <p>Inditex sales fell to €20.4 billion in FY2020 and recovered to €27.7 billion the next year.<sup><a href="#src-7">7</a></sup><sup><a href="#src-8">8</a></sup> FY2025 brought a record €39.9 billion in sales and €6.2 billion in net income, with Spain at 15.9% of sales.<sup><a href="#src-5">5</a></sup> Growth, though, has slowed from double digits to low single digits in euro terms.</p>
+            <div class="chart-box"><canvas id="salesChart" aria-label="Inditex net sales by fiscal year, FY2019 to FY2025"></canvas></div>
+            <p class="chart-note">Inditex fiscal years run February to January. FY2019 is implied from the reported FY2022 growth on 2019.</p>
+            <div class="table-wrap"><table class="data-table">
+                <thead><tr><th>Proximity market</th><th>Inditex suppliers, 2023</th><th>Source</th></tr></thead>
+                <tbody><tr><td>Morocco</td><td>216</td><td>Modaes</td></tr><tr><td>Turkey</td><td>186</td><td>Modaes</td></tr><tr><td>Portugal</td><td>114</td><td>Modaes</td></tr></tbody></table></div>
+        </section>
+
+        <section id="the-dashboard" class="scroll-section gsap-reveal">
+            <h2>IV. THE DASHBOARD</h2>
+            <p>The Tableau view shows Inditex net sales for each fiscal year from FY2019 to FY2025. Hover over a bar to see its value.</p>
+            <div class="tableau-frame tableau-frame-sm">
+                <iframe src="https://public.tableau.com/views/InditexNetSalesFY2019-FY2025/InditexNetSalesbyFiscalYearEURbn?:showVizHome=no&amp;:embed=true&amp;:toolbar=bottom&amp;:tabs=no" title="Can Zara Fast-Forward Fashion, Tableau Public dashboard" loading="lazy" allowfullscreen></iframe>
             </div>
-            <div class="stat-box" style="text-align: center;">
-                <div class="stat-num counter" data-target="2">0</div>
-                <div class="stat-label">Store Replenishments / Week</div>
-            </div>
-            <div class="stat-box" style="text-align: center;">
-                <div class="stat-num counter" data-target="20">0</div>
-                <div class="stat-label">% of Fibracolor Output Purchased</div>
+            <p class="chart-note"><a href="https://public.tableau.com/app/profile/prapanch.kokkalemada/viz/InditexNetSalesFY2019-FY2025/InditexNetSalesbyFiscalYearEURbn" target="_blank" rel="noopener noreferrer">Open in Tableau Public ↗</a> · <a href="https://github.com/Punch-k/Portfolio/tree/main/zara-inditex" target="_blank" rel="noopener noreferrer">Data files ↗</a></p>
+        </section>
+
+        <section id="insights" class="scroll-section gsap-reveal">
+            <h2 style="color: var(--gold);">V. INSIGHTS</h2>
+            <div class="insight-list"><div class="insight"><span class="insight-num">01</span><div><h4>Speed pays only where trends move fast.</h4><p>Proximity production earns its higher unit cost on trend items that sell at full price. On basics, slower and cheaper sourcing makes more sense.</p></div></div><div class="insight"><span class="insight-num">02</span><div><h4>Spare capacity is the real moat.</h4><p>Competitors can copy designs in weeks. Few are willing to keep factories below full use so they can react.</p></div></div><div class="insight"><span class="insight-num">03</span><div><h4>Better forecasting narrows the gap.</h4><p>As rivals use AI forecasting, the value of reacting faster than the forecast shrinks. Zara has to keep turning sales data into smaller, more accurate first orders.</p></div></div><div class="insight"><span class="insight-num">04</span><div><h4>Regulation adds cost to the whole industry.</h4><p>EU textile and waste rules raise costs for everyone, and a model built on fewer markdowns and less unsold stock is better placed than most.</p></div></div></div>
+            <div class="recommend-box">
+                <span class="bluf-label">Recommendation</span>
+                <p><strong>Segment sourcing:</strong> keep trend-driven lines in proximity markets and move stable basics further afield. <strong>Shrink first orders:</strong> use store and online sales data to cut initial buys and refill faster. <strong>Fund flexibility:</strong> reinvest markdown savings in spare capacity. <strong>Track it:</strong> report full-price sell-through and markdown rate by sourcing region.</p>
             </div>
         </section>
 
-        <section id="can-it-last" class="scroll-section gsap-reveal">
-            <h2>IV. CAN IT LAST?</h2>
-            <p>The open question in the case's title is real: rising EU sustainability regulation on textile waste, AI-driven demand forecasting narrowing the responsiveness gap for slower-moving competitors, and consumer pushback on fast-fashion's environmental footprint all pressure the model simultaneously. Zara's moat was built on being faster than everyone else's forecast — the strategic risk is a world where better forecasting makes speed matter less than it used to.</p>
-            <div style="height: 380px; background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 12px; padding: 1.5rem; margin-top: 2rem;">
-                <canvas id="cycleChart"></canvas>
-            </div>
-        </section>
-
-        <p class="case-disclaimer">Disclaimer: this case study is for academic and demonstrative purposes. Analysis and figures are synthesized from the public sources below to illustrate strategic framework application; all trademarks and brand assets belong to their respective owners.</p>
+        <p class="case-disclaimer">Disclaimer: Portfolio case study for academic and demonstrative purposes. This is an independent analysis, not affiliated with or endorsed by Inditex or Zara. Facts and figures come from the public sources below; the recommendation is the author's view. All trademarks belong to their respective owners.</p>
         <div class="sources-block">
-            <strong>Sources:</strong> This case study synthesizes publicly available academic and industry research on Inditex/Zara's supply chain model.
-            <ol>
-                <li><a href="https://www.iberglobal.com/files/2018/zara_case_supply_chain.pdf" target="_blank" rel="noopener noreferrer">Iberglobal — "Super Responsive Supply Chain: The Case of Spanish Fast Fashion Retailer Inditex-Zara"</a></li>
-                <li><a href="https://www.ccsenet.org/journal/index.php/ijbm/article/view/71748" target="_blank" rel="noopener noreferrer">International Journal of Business and Management (CCSE) — Aftab et al., Inditex-Zara supply chain study</a></li>
-                <li><a href="https://fourweekmba.com/zara-supply-chain/" target="_blank" rel="noopener noreferrer">FourWeekMBA — "Zara Supply Chain"</a></li>
-                <li><a href="https://www.ijmrset.com/upload/61_Zara.pdf" target="_blank" rel="noopener noreferrer">IJMRSET — "Zara's Supply Chain Management and Fast Fashion Model"</a></li>
-            </ol>
+            <strong>Sources:</strong>
+            <ol><li id="src-1"><a href="https://www.iberglobal.com/files/2018/zara_case_supply_chain.pdf" target="_blank" rel="noopener noreferrer">Iberglobal, "Super Responsive Supply Chain: The Case of Spanish Fast Fashion Retailer Inditex-Zara"</a></li><li id="src-2"><a href="https://www.ccsenet.org/journal/index.php/ijbm/article/view/71748" target="_blank" rel="noopener noreferrer">International Journal of Business and Management (CCSE), Inditex-Zara supply chain study</a></li><li id="src-3"><a href="https://fourweekmba.com/zara-supply-chain/" target="_blank" rel="noopener noreferrer">FourWeekMBA, "Zara Supply Chain"</a></li><li id="src-4"><a href="https://www.ijmrset.com/upload/61_Zara.pdf" target="_blank" rel="noopener noreferrer">IJMRSET, "Zara's Supply Chain Management and Fast Fashion Model"</a></li><li id="src-5"><a href="https://www.inditex.com/itxcomweb/api/media/1da2c9d1-dbca-49fb-9563-982a8a27fae6/INDITEXFullYear2025.pdf?t=1773216267196" target="_blank" rel="noopener noreferrer">Inditex, FY2025 Results (Feb 2025 to Jan 2026)</a></li><li id="src-6"><a href="https://www.modaes.com/empresas/el-mapa-del-sourcing-de-inditex-el-grupo-concentra-en-asia-casi-el-60-de-sus-fabricas" target="_blank" rel="noopener noreferrer">Modaes, "El mapa del sourcing de Inditex"</a></li><li id="src-7"><a href="https://www.rte.ie/news/business/2021/0310/1203053-inditex-annual-results" target="_blank" rel="noopener noreferrer">RTE, Inditex annual results (Mar 2021)</a></li><li id="src-8"><a href="https://ca.marketscreener.com/quote/stock/INDITEX-16943135/news/Inditex-FY21-revenues-grow-36-to-27-7bn-39774264/" target="_blank" rel="noopener noreferrer">MarketScreener, "Inditex FY21 revenues grow 36% to 27.7bn" (Mar 2022)</a></li><li id="src-9"><a href="https://www.rte.ie/news/business/2024/0313/1437608-inditex-annual-results" target="_blank" rel="noopener noreferrer">RTE, Inditex annual results (Mar 2024)</a></li><li id="src-10"><a href="https://www.modaes.com/empresa/mas-india-y-marruecos-menos-china-inditex-reduce-su-dependencia-del-gigante-asiatico" target="_blank" rel="noopener noreferrer">Modaes, "Mas India y Marruecos, menos China: Inditex reduce su dependencia del gigante asiatico"</a></li></ol>
         </div>
     </main>
 </div>
@@ -311,23 +347,19 @@
     window.addEventListener('scroll', () => {
         let current = '';
         sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            if (pageYOffset >= (sectionTop - 200)) { current = section.getAttribute('id'); }
+            if (window.pageYOffset >= (section.offsetTop - 200)) { current = section.getAttribute('id'); }
         });
         navLinks.forEach(link => {
             link.classList.remove('active');
-            if (link.getAttribute('href').includes(current)) { link.classList.add('active'); }
+            if (current && link.getAttribute('href') === '#' + current) { link.classList.add('active'); }
         });
     });
 
     function openTab(evt, tabName) {
-        let i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("comp-panel");
-        for (i = 0; i < tabcontent.length; i++) { tabcontent[i].style.display = "none"; }
-        tablinks = document.getElementsByClassName("comp-tab");
-        for (i = 0; i < tablinks.length; i++) { tablinks[i].className = tablinks[i].className.replace(" active", ""); }
-        document.getElementById(tabName).style.display = "block";
-        evt.currentTarget.className += " active";
+        document.querySelectorAll('.comp-panel').forEach(p => { p.style.display = 'none'; });
+        document.querySelectorAll('.comp-tab').forEach(t => t.classList.remove('active'));
+        document.getElementById(tabName).style.display = 'block';
+        evt.currentTarget.classList.add('active');
     }
 
     gsap.registerPlugin(ScrollTrigger);
@@ -349,7 +381,7 @@
                 const target = +counter.getAttribute('data-target');
                 let current = 0;
                 const update = () => {
-                    current += Math.max(target,1) / 60;
+                    current += Math.max(target, 1) / 60;
                     if (current < target) { counter.innerText = Math.ceil(current); requestAnimationFrame(update); }
                     else { counter.innerText = target; }
                 };
@@ -358,47 +390,28 @@
         }
     });
 
-    const ctx = document.getElementById('cycleChart').getContext('2d');
-    let chartRendered = false;
-    ScrollTrigger.create({
-        trigger: "#cycleChart", start: "top 85%",
-        onEnter: () => {
-            if(!chartRendered) {
-                new Chart(ctx, {
-                    type: 'bar',
-                    data: {
-                        labels: ['Zara', 'Fast-Fashion Peer Avg.', 'Traditional Retailer'],
-                        datasets: [{
-                            label: 'Design-to-Shelf Cycle (weeks, illustrative)',
-                            data: [3, 8, 26],
-                            backgroundColor: ['#c9a84c', '#ede9e0', 'rgba(237,233,224,0.4)']
-                        }]
-                    },
-                    options: {
-                        responsive: true, maintainAspectRatio: false, indexAxis: 'y',
-                        animation: { duration: 2000, easing: 'easeOutQuart' },
-                        plugins: { legend: { labels: { color: '#ede9e0' } } },
-                        scales: { x: { grid: { color: 'rgba(255,255,255,0.05)' } }, y: { grid: { color: 'rgba(255,255,255,0.05)' } } }
-                    }
-                });
-                chartRendered = true;
-            }
-        }
-    });
+    const GOLD = '#c9a84c', FG = '#ede9e0', MUTED = '#787570', RED = '#e05a00';
+    const GRID = 'rgba(255,255,255,0.05)';
+    Chart.defaults.color = 'rgba(237,233,224,0.7)';
+    Chart.defaults.font.family = "'DM Sans', sans-serif";
+    const built = {};
+    function buildChart(id, factory) {
+        const el = document.getElementById(id);
+        if (!el) return;
+        ScrollTrigger.create({ trigger: el, start: "top 90%", once: true, onEnter: () => { built[id] = factory(el.getContext('2d')); } });
+    }
+
+    buildChart('salesChart', ctx => new Chart(ctx, {
+        type: 'bar',
+        data: { labels: ['FY2019','FY2020','FY2021','FY2022','FY2023','FY2024','FY2025'],
+            datasets: [ { label: 'Net sales (EUR bn)', data: [28.3,20.4,27.7,32.6,35.9,38.6,39.9], backgroundColor: [MUTED, RED, GOLD, GOLD, GOLD, GOLD, GOLD], borderRadius: 4 } ] },
+        options: { responsive: true, maintainAspectRatio: false, animation: { duration: 1600, easing: 'easeOutQuart' }, plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => 'EUR ' + c.parsed.y + ' bn' } } },
+            scales: { x: { grid: { color: GRID } }, y: { beginAtZero: true, grid: { color: GRID }, ticks: { callback: v => 'EUR ' + v + 'bn' } } } }
+    }));
 
     const toggle = document.getElementById('case-menu-toggle');
     const menu = document.getElementById('case-mobile-menu');
     toggle.addEventListener('click', () => { menu.style.display = 'flex'; });
-
-    document.querySelectorAll('.faq-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const isExpanded = btn.getAttribute('aria-expanded') === 'true';
-            btn.setAttribute('aria-expanded', !isExpanded);
-            const content = document.getElementById(btn.getAttribute('aria-controls'));
-            content.style.maxHeight = isExpanded ? null : content.scrollHeight + "px";
-        });
-    });
 </script>
-
 </body>
 </html>

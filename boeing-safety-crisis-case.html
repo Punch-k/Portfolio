@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boeing: Safety Crisis | Strategy & Operations Case Study</title>
+    <title>Boeing: Safety Crisis | Governance and Quality Case Study</title>
 
-    <meta name="description" content="Governance and quality-control case study by Prapanch Kokkalemada. How Boeing's manufacturing crisis exposed a breakdown between engineering, oversight, and the board.">
-    <meta property="og:title" content="Boeing: Safety Crisis — Governance & Quality Control Case Study">
-    <meta property="og:description" content="Operations and governance deep dive by Prapanch Kokkalemada, Strategy & Operations Transformation specialist.">
-    <meta property="og:image" content="https://punch-k.github.io/Portfolio/2.png">
+    <meta name="description" content="Portfolio case study by Prapanch Kokkalemada. How governance and quality-control failures at Boeing turned into a cap on 737 MAX output.">
+    <meta property="og:title" content="Boeing: Safety Crisis | Governance and Quality Case Study">
+    <meta property="og:description" content="Portfolio case study by Prapanch Kokkalemada. How governance and quality-control failures at Boeing turned into a cap on 737 MAX output.">
     <meta property="og:url" content="https://punch-k.github.io/Portfolio/boeing-safety-crisis-case.html">
     <link rel="canonical" href="https://punch-k.github.io/Portfolio/boeing-safety-crisis-case.html">
 
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=7">
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
@@ -36,7 +35,7 @@
         .nav-connect:hover { background: var(--gold); color: var(--bg); }
         @media (max-width: 900px) { .nav-links { display: none; } .case-nav { padding: 1rem 1.5rem; } #case-menu-toggle { display: block !important; } }
         .hero { height: 75vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; padding: 0 2rem; border-bottom: 1px solid var(--line); }
-        .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1600&auto=format&fit=crop'); background-size: cover; background-position: center; opacity: 0; filter: grayscale(90%) brightness(0.25); z-index: 0; }
+        .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(ellipse at 50% 35%, rgba(201,168,76,0.16), transparent 60%), repeating-radial-gradient(circle at 50% 120%, rgba(237,233,224,0.035) 0 2px, transparent 2px 26px); opacity: 0; z-index: 0; }
         .hero-content { position: relative; z-index: 10; display: flex; flex-direction: column; align-items: center; }
         .breadcrumbs { display: flex; gap: 0.5rem; color: rgba(237,233,224,0.6); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 2rem; opacity: 0; }
         .breadcrumbs a { color: var(--gold); text-decoration: none; }
@@ -99,6 +98,54 @@
             .pull-quote p, .stat-num { color: black; }
             .exec-summary { border-left-color: black; background: #f9f9f9; }
         }
+    
+        .bluf-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.8rem; }
+        .bluf-item p { margin: 0; font-size: 0.98rem; line-height: 1.7; color: rgba(237,233,224,0.9); }
+        .bluf-label { display: block; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem; }
+        .banner-btns { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+        .banner-btn-ghost { background: transparent; color: var(--gold); border: 1px solid var(--gold); }
+        .banner-btn-ghost:hover { background: rgba(201,168,76,0.12); }
+        .article-body sup a { text-decoration: none; font-size: 0.7em; margin-left: 1px; }
+        .timeline { border-left: 1px solid var(--line); margin: 0 0 2.5rem; padding-left: 1.5rem; display: flex; flex-direction: column; gap: 1.4rem; }
+        .tl-row { position: relative; }
+        .tl-row::before { content: ''; position: absolute; left: calc(-1.5rem - 5px); top: 0.45rem; width: 9px; height: 9px; border-radius: 50%; background: var(--gold); }
+        .tl-date { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.1em; color: var(--gold); font-size: 1.1rem; }
+        .tl-row p { margin: 0.2rem 0 0 !important; font-size: 1.02rem !important; }
+        .chart-box { position: relative; height: 380px; background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 12px; padding: 1.2rem; margin: 1.5rem 0 0.8rem; box-sizing: border-box; }
+        .chart-box-sm { height: 320px; margin-top: 2rem; }
+        .chart-note { font-size: 0.85rem !important; color: rgba(237,233,224,0.5) !important; line-height: 1.6 !important; }
+        .sub-h { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.08em; font-size: 1.5rem; color: var(--fg); margin: 3rem 0 1rem; font-weight: 400; }
+        .scenario-toggle { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+        .sc-btn { background: none; border: 1px solid var(--line); color: rgba(237,233,224,0.45); font-family: var(--sans); font-size: 0.78rem; letter-spacing: 0.08em; padding: 0.5rem 1rem; border-radius: 50px; cursor: pointer; transition: all 0.25s; }
+        .sc-btn.active { border-color: var(--gold); color: var(--gold); background: rgba(201,168,76,0.08); }
+        .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 1.5rem 0; border: 1px solid var(--line); border-radius: 8px; }
+        .data-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; min-width: 520px; }
+        .data-table th { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.08em; font-weight: 400; font-size: 1rem; color: var(--gold); text-align: left; padding: 0.8rem 1rem; border-bottom: 1px solid var(--line); background: rgba(201,168,76,0.04); }
+        .data-table td { padding: 0.7rem 1rem; border-bottom: 1px solid rgba(237,233,224,0.06); color: rgba(237,233,224,0.8); }
+        .data-table tr:last-child td { border-bottom: none; }
+        .data-table td.hl { color: var(--gold); }
+        .tableau-frame { position: relative; width: 100%; height: 860px; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: #fff; margin: 1.5rem 0 0.8rem; }
+        .tableau-frame-sm { height: 720px; }
+        .tableau-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
+        .insight-list { display: flex; flex-direction: column; gap: 1.6rem; margin-bottom: 3rem; }
+        .insight { display: grid; grid-template-columns: 3.2rem 1fr; gap: 1rem; border-top: 1px solid var(--line); padding-top: 1.4rem; }
+        .insight-num { font-family: var(--display); font-size: 2rem; color: var(--gold); line-height: 1; }
+        .insight h4 { margin: 0 0 0.5rem; font-family: var(--display); font-size: 1.45rem; font-weight: 500; color: var(--fg); line-height: 1.25; }
+        .insight p { margin: 0 !important; font-size: 1.02rem !important; }
+        .recommend-box { border: 1px solid rgba(201,168,76,0.4); background: rgba(201,168,76,0.06); border-radius: 8px; padding: 2rem; margin-bottom: 3rem; }
+        .recommend-box p { margin: 0 !important; font-size: 1.05rem !important; }
+        .stat-box { text-align: center; }
+        .case-layout > * { min-width: 0; }
+        @media (max-width: 900px) { .bluf-grid { grid-template-columns: 1fr; gap: 1.3rem; } }
+        @media (max-width: 600px) {
+            .chart-box { height: 300px; padding: 0.8rem; }
+            .tableau-frame { height: 1150px; }
+            .tableau-frame-sm { height: 980px; }
+            .insight { grid-template-columns: 1fr; gap: 0.4rem; }
+            .recommend-box { padding: 1.4rem; }
+            .data-table { font-size: 0.85rem; }
+        }
+        @media print { .tableau-frame, .scenario-toggle { display: none !important; } .data-table td, .data-table th { color: black; } }
         /* keep the contents sidebar sticky: overflow-x hidden on html/body breaks position: sticky, clip does not */
         html, body { overflow-x: clip !important; }
     </style>
@@ -135,120 +182,125 @@
 <header class="hero">
     <div class="hero-bg"></div>
     <div class="hero-content">
-        <div class="breadcrumbs hero-anim">
-            <a href="index.html">Portfolio</a> / <a href="index.html#section-cases">Research</a> / Governance &amp; Quality Control
-        </div>
+        <div class="breadcrumbs hero-anim"><a href="index.html">Portfolio</a> / <a href="index.html#section-cases">Research</a> / Governance &amp; Quality Control</div>
         <h1 class="hero-anim" style="font-family: var(--display); font-size: clamp(3.2rem, 7vw, 6.5rem); color: var(--gold); margin: 0; line-height: 1;">BOEING: SAFETY CRISIS</h1>
-        <p class="hero-anim" style="font-size: 1.2rem; max-width: 650px; margin-top: 2rem; line-height: 1.8; color: var(--fg); font-weight: 300;">
-            A manufacturing crisis, in hindsight, is almost always a governance crisis first — Boeing's is a case study in what happens when internal audit stops being the safety net.
-        </p>
+        <p class="hero-anim" style="font-size: 1.2rem; max-width: 680px; margin-top: 2rem; line-height: 1.8; color: var(--fg); font-weight: 300;">Boeing delivered 806 commercial jets in 2018 and 157 in 2020. Seven years later it still has not returned to that volume. A quality system that leaned on the regulator to find its problems turned a safety failure into an output failure.</p>
     </div>
 </header>
 
 <div class="exec-summary gsap-reveal">
     <h3>EXECUTIVE SUMMARY (BLUF)</h3>
-    <p style="margin: 0; font-size: 1.05rem; line-height: 1.7; color: rgba(237,233,224,0.9);">
-        Boeing's 737 MAX crisis — from the 2018-2019 MCAS crashes through the January 2024 Alaska Airlines door-plug blowout — is not a single defect but a chain of governance failures: a board that reportedly never discussed grounding the MAX during the crash investigations, a reliance on FAA inspection instead of internal audit to catch problems, and a 2024 FAA audit that found ongoing quality-control failures in manufacturing process control, parts handling, and product control. This case traces how the breakdown moved from the boardroom down to a missing set of door-plug bolts on the factory floor.
-    </p>
+    <div class="bluf-grid"><div class="bluf-item"><span class="bluf-label">The problem</span><p>Two 737 MAX crashes in October 2018 and March 2019 led to a worldwide grounding. Then on January 5, 2024 a door plug blew out of an Alaska Airlines 737 MAX 9; four bolts meant to hold it were missing when the jet left the factory. A follow-up FAA audit found failures in manufacturing process control, parts handling and storage, and product control.</p></div><div class="bluf-item"><span class="bluf-label">Why solve it</span><p>Quality failures became capacity limits. Deliveries fell from 806 in 2018 to 157 in 2020, recovered to 528 in 2023, then dropped to 348 in 2024 after the FAA capped 737 MAX output at 38 a month. Every month spent below the cap is revenue and airline trust that competitors collect.</p></div><div class="bluf-item"><span class="bluf-label">The answer</span><p>Make verified process control the gate for every rate increase. Put safety on the board agenda, trace every flight-critical step on the line, and raise output only once process capability is proven. That is the path the FAA took when it allowed 42 a month in October 2025.</p></div></div>
 </div>
 
 <div class="sim-link-banner gsap-reveal">
-    <p class="sim-link-banner-text"><strong>Try it yourself.</strong> Model the financial fallout of a quality crisis on enterprise value.</p>
-    <a href="simulators.html#financial-dcf-lab" class="sim-link-banner-btn">Open Financial &amp; DCF Lab ↗</a>
+    <p class="sim-link-banner-text"><strong>Explore the data.</strong> Tableau view of Boeing commercial deliveries, total and 737, from 2018 to 2025.</p>
+    <div class="banner-btns">
+        <a href="https://public.tableau.com/app/profile/prapanch.kokkalemada/viz/BoeingDeliveries2018-2025/BoeingCommercialDeliveriesTotalvs7372018-2025" class="sim-link-banner-btn" target="_blank" rel="noopener noreferrer">Tableau ↗</a>
+        <a href="simulators.html#financial-dcf-lab" class="sim-link-banner-btn banner-btn-ghost">Financial &amp; DCF Lab ↗</a>
+    </div>
 </div>
 
 <div class="case-layout">
     <aside class="case-sidebar">
         <nav aria-label="Table of Contents">
             <span class="meta-title">CONTENTS</span>
-            <ul class="toc-list" id="toc-list">
-                <li><a href="#the-governance-gap" class="active">I. The Governance Gap</a></li>
-                <li><a href="#quality-control-breakdown">II. Quality Control Breakdown</a></li>
-                <li><a href="#faa-oversight-failure">III. FAA Oversight Failure</a></li>
-                <li><a href="#the-fix">IV. The Fix</a></li>
-            </ul>
+            <ul class="toc-list" id="toc-list"><li><a href="#governance-gap" class="active">I. The Governance Gap</a></li><li><a href="#the-line">II. The Factory Floor</a></li><li><a href="#output">III. The Output Cost</a></li><li><a href="#the-dashboard">IV. The Dashboard</a></li><li><a href="#insights">V. Insights</a></li></ul>
         </nav>
         <div class="meta-block">
             <span class="meta-title">CASE DETAILS</span>
-            <p style="margin: 0 0 0.5rem 0;"><strong>Focus:</strong> Corporate Governance, Manufacturing QC</p>
+            <p style="margin: 0 0 0.5rem 0;"><strong>Focus:</strong> Corporate Governance, Manufacturing Quality</p>
             <p style="margin: 0 0 0.5rem 0;"><strong>Read Time:</strong> 6 Minutes</p>
-            <p style="margin: 0;"><strong>Type:</strong> Public case study, real events</p>
+            <p style="margin: 0 0 0.5rem 0;"><strong>Tools:</strong> Tableau, public reporting</p>
+            <p style="margin: 0;"><strong>Type:</strong> Portfolio Case Study. Public data, independent analysis</p>
             <button class="print-btn" onclick="window.print()">🖨️ Print Case Study</button>
         </div>
     </aside>
 
     <main class="article-body">
-        <section id="the-governance-gap" class="scroll-section gsap-reveal">
+        <section id="governance-gap" class="scroll-section gsap-reveal">
             <h2>I. THE GOVERNANCE GAP</h2>
-            <p>Between November 2018 and March 2019 — the window between the Lion Air and Ethiopian Airlines 737 MAX crashes and the FAA's eventual grounding order — Boeing's board reportedly never formally considered or discussed grounding the aircraft on safety grounds. That is the detail that turns a "manufacturing story" into a governance one: the highest level of oversight in the company was not the forcing function that stopped a known-risk aircraft from flying.</p>
-            <p>Compounding this, whistleblowers reported operating-process problems that were reportedly ignored by management and not consistently escalated to the board — meaning the information gap wasn't just about what leadership didn't know, but about what frontline signal never made it up the chain at all.</p>
+            <p>Between the Lion Air crash in October 2018 and the Ethiopian Airlines crash in March 2019, Boeing's board reportedly never formally discussed grounding the 737 MAX.<sup><a href="#src-1">1</a></sup> Safety information from the shop floor did not reliably reach the top, and the board was not the forcing function that stopped a known-risk aircraft from flying.</p>
+            <p>Regulators share the blame. The US Department of Transportation's review describes an oversight system in which FAA management at times sided with Boeing over its own technical experts during the original MAX certification.<sup><a href="#src-2">2</a></sup></p>
+            <div class="timeline">
+                <div class="tl-row"><span class="tl-date">Oct 2018</span><p>Lion Air Flight 610, a 737 MAX 8, crashes shortly after takeoff.<sup><a href="#src-1">1</a></sup></p></div>
+                <div class="tl-row"><span class="tl-date">Mar 2019</span><p>Ethiopian Airlines Flight 302 crashes; the 737 MAX is grounded worldwide.<sup><a href="#src-1">1</a></sup></p></div>
+                <div class="tl-row"><span class="tl-date">Jan 2024</span><p>A door plug blows out of an Alaska Airlines 737 MAX 9 in flight. The FAA caps 737 MAX production at 38 a month.<sup><a href="#src-3">3</a></sup><sup><a href="#src-8">8</a></sup></p></div>
+                <div class="tl-row"><span class="tl-date">Mar 2024</span><p>An FAA audit finds failures in manufacturing process control, parts handling and storage, and product control.<sup><a href="#src-3">3</a></sup></p></div>
+                <div class="tl-row"><span class="tl-date">Oct 2025</span><p>After extended reviews of Boeing's lines, the FAA allows production to rise to 42 a month.<sup><a href="#src-8">8</a></sup></p></div>
+            </div>
         </section>
 
         <blockquote class="pull-quote gsap-reveal">
-            <p>"Boeing did not use internal audits to identify and correct operational problems — it relied on the FAA to find its safety issues for it."</p>
-            <span>— U.S. Senate Investigation Findings</span>
+            <p>"A quality system that waits for the regulator to find the problem is not a quality system."</p>
+            <span>Case thesis</span>
         </blockquote>
 
-        <section id="quality-control-breakdown" class="scroll-section gsap-reveal">
-            <h2>II. QUALITY CONTROL BREAKDOWN</h2>
-            <p>The clearest post-MAX evidence of the gap between governance intent and shop-floor reality came on January 5, 2024, when a door plug blew out mid-flight on an Alaska Airlines 737 MAX 9. The preliminary investigation found four key bolts that were supposed to secure the door plug were missing when the aircraft left Boeing's factory — not a design flaw, a process-control failure.</p>
-
+        <section id="the-line" class="scroll-section gsap-reveal">
+            <h2>II. THE FACTORY FLOOR</h2>
+            <p>The door plug was not a design flaw. It was a step that was not done and not checked. Select a finding below.</p>
             <div class="comp-tabs">
-                <button class="comp-tab active" onclick="openTab(event, 'faa-findings')">2024 FAA Audit Findings</button>
-                <button class="comp-tab" onclick="openTab(event, 'root-cause')">Root Cause Pattern</button>
+                <button class="comp-tab active" onclick="openTab(event, 'tab-audit')">FAA Audit</button>
+                <button class="comp-tab" onclick="openTab(event, 'tab-trace')">Traceability</button>
             </div>
-            <div id="faa-findings" class="comp-panel active">
-                <p><strong>Multiple Instances of Failure:</strong> The FAA's subsequent audit found problems specifically in Boeing's manufacturing process control, parts handling and storage, and product control — a systemic pattern, not an isolated incident on one production line.</p>
-            </div>
-            <div id="root-cause" class="comp-panel">
-                <p><strong>Traceability Gaps:</strong> When a door-plug bolt installation isn't verified and traced with the same rigor as flight-critical software, the quality system has effectively decided some steps matter less than others — the exact inversion of how a safety-critical manufacturing line should be run.</p>
-            </div>
-        </section>
-
-        <section id="faa-oversight-failure" class="scroll-section gsap-reveal">
-            <h2 style="color: var(--gold);">III. FAA OVERSIGHT FAILURE</h2>
-            <p>This wasn't a one-sided failure. Multiple career FAA officials have documented cases where FAA management overruled its own technical experts at Boeing's request during the original MAX certification. The regulator's own retrospective conclusion was direct: Boeing failed in the design and development of the MAX, and the FAA failed in its oversight and certification of the aircraft. In response, the FAA increased onsite inspector presence at Boeing's Renton facility and at Spirit AeroSystems in Wichita, and halted MAX production-rate expansion.</p>
+            <div id="tab-audit" class="comp-panel active"><p><strong>A pattern, not an incident.</strong> The FAA's 2024 audit of Boeing and its fuselage supplier found problems in manufacturing process control, parts handling and storage, and product control.<sup><a href="#src-3">3</a></sup> Findings across several areas point to a system that tolerated skipped steps, not to one bad shift.</p></div>
+            <div id="tab-trace" class="comp-panel"><p><strong>Every critical step needs a record.</strong> When a bolt installation on a pressurized fuselage is not verified and traced with the same rigor as flight software, the line has quietly decided some steps matter less. In response, the FAA increased its inspectors on site and tied any rate increase to its own review.<sup><a href="#src-4">4</a></sup></p></div>
         </section>
 
         <section class="stat-banner gsap-reveal">
-            <div class="stat-box" style="text-align: center;">
-                <div class="stat-num counter" data-target="2">0</div>
-                <div class="stat-label">MAX Crashes, 2018-19</div>
+            <div class="stat-box"><div class="stat-num"><span class="counter" data-target="806">0</span></div><div class="stat-label">Deliveries, 2018</div></div>
+            <div class="stat-box"><div class="stat-num"><span class="counter" data-target="157">0</span></div><div class="stat-label">Deliveries, 2020</div></div>
+            <div class="stat-box"><div class="stat-num"><span class="counter" data-target="42">0</span></div><div class="stat-label">737 MAX per month cap, Oct 2025</div></div>
+        </section>
+
+        <section id="output" class="scroll-section gsap-reveal">
+            <h2>III. THE OUTPUT COST</h2>
+            <p>Delivery counts show what the crisis cost. Boeing has not matched its 2018 total in any year since. 2025 was its best year since then, with 600 deliveries, 447 of them 737s.<sup><a href="#src-5">5</a></sup></p>
+            <div class="chart-box"><canvas id="deliveriesChart" aria-label="Boeing commercial deliveries, total and 737, 2018 to 2025"></canvas></div>
+            <p class="chart-note">737 counts for 2020 and 2021 are not shown because no source we used states them directly.</p>
+            <div class="table-wrap"><table class="data-table">
+                <thead><tr><th>Year</th><th>Total deliveries</th><th>737 deliveries</th><th>Source</th></tr></thead>
+                <tbody>
+                <tr><td>2018</td><td>806</td><td>580</td><td>SimpleFlying</td></tr>
+                <tr><td>2019</td><td>380</td><td>127</td><td>SimpleFlying</td></tr>
+                <tr><td>2020</td><td>157</td><td>n/a</td><td>Aviation Today</td></tr>
+                <tr><td>2021</td><td>340</td><td>n/a</td><td>Aviation Today</td></tr>
+                <tr><td>2022</td><td>480</td><td>387</td><td>SimpleFlying</td></tr>
+                <tr><td>2023</td><td>528</td><td>396</td><td>CNBC</td></tr>
+                <tr><td>2024</td><td>348</td><td>260</td><td>Boeing Q4 2024 results</td></tr>
+                <tr><td>2025</td><td>600</td><td>447</td><td>Manufacturing Dive</td></tr>
+                </tbody></table></div>
+        </section>
+
+        <section id="the-dashboard" class="scroll-section gsap-reveal">
+            <h2>IV. THE DASHBOARD</h2>
+            <p>The Tableau view shows total commercial deliveries against 737 deliveries for each year. Hover over a bar to see its value.</p>
+            <div class="tableau-frame tableau-frame-sm">
+                <iframe src="https://public.tableau.com/views/BoeingDeliveries2018-2025/BoeingCommercialDeliveriesTotalvs7372018-2025?:showVizHome=no&amp;:embed=true&amp;:toolbar=bottom&amp;:tabs=no" title="Boeing: Safety Crisis, Tableau Public dashboard" loading="lazy" allowfullscreen></iframe>
             </div>
-            <div class="stat-box" style="text-align: center;">
-                <div class="stat-num counter" data-target="4">0</div>
-                <div class="stat-label">Missing Bolts, 2024 Incident</div>
-            </div>
-            <div class="stat-box" style="text-align: center;">
-                <div class="stat-num counter" data-target="0">0</div>
-                <div class="stat-label">Board Discussions on Grounding (2018-19)</div>
+            <p class="chart-note"><a href="https://public.tableau.com/app/profile/prapanch.kokkalemada/viz/BoeingDeliveries2018-2025/BoeingCommercialDeliveriesTotalvs7372018-2025" target="_blank" rel="noopener noreferrer">Open in Tableau Public ↗</a> · <a href="https://github.com/Punch-k/Portfolio/tree/main/boeing-safety" target="_blank" rel="noopener noreferrer">Data files ↗</a></p>
+        </section>
+
+        <section id="insights" class="scroll-section gsap-reveal">
+            <h2 style="color: var(--gold);">V. INSIGHTS</h2>
+            <div class="insight-list"><div class="insight"><span class="insight-num">01</span><div><h4>Quality failures become capacity limits.</h4><p>The FAA cap turned a factory problem into a hard ceiling on output. The cost of weak process control showed up as hundreds of undelivered aircraft, not just as fines.</p></div></div><div class="insight"><span class="insight-num">02</span><div><h4>Governance has to pull safety signals up.</h4><p>A board that does not see frontline safety issues cannot act on them. Safety needs its own committee, metrics and escalation path, separate from delivery targets.</p></div></div><div class="insight"><span class="insight-num">03</span><div><h4>Traceability is the cheapest control.</h4><p>Recording that each critical step was done and checked costs far less than finding a missing bolt in flight.</p></div></div><div class="insight"><span class="insight-num">04</span><div><h4>Rate follows capability, not the other way round.</h4><p>The rise to 42 a month came only after the FAA reviewed the lines. Linking each rate step to proven process capability rebuilds trust and output together.</p></div></div></div>
+            <div class="recommend-box">
+                <span class="bluf-label">Recommendation</span>
+                <p><strong>Board:</strong> a standing safety committee with direct reporting from quality and whistleblower channels. <strong>Line:</strong> mandatory traceability on every flight-critical installation, checked by a second person. <strong>Rate:</strong> each production increase gated on measured process capability, agreed with the regulator in advance. <strong>Suppliers:</strong> the same standards and audits at the fuselage supplier as on Boeing's own lines.</p>
             </div>
         </section>
 
-        <section id="the-fix" class="scroll-section gsap-reveal">
-            <h2>IV. THE FIX</h2>
-            <p>Post-2024, the FAA capped Boeing's 737 production rate and mandated an independent quality-control overhaul before any rate increase would be approved — deliberately forcing the fix to happen at the pace of verified process control, not at the pace of delivery targets. The broader governance lesson generalizes well beyond aerospace: an internal audit function that only reacts to what an external regulator finds first is not really a governance function — it's a compliance mirror.</p>
-            <div style="height: 380px; background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 12px; padding: 1.5rem; margin-top: 2rem;">
-                <canvas id="timelineChart"></canvas>
-            </div>
-        </section>
-
-        <p class="case-disclaimer">Disclaimer: this case study is for academic and demonstrative purposes. Analysis and figures are synthesized from the public sources below to illustrate strategic framework application; all trademarks and brand assets belong to their respective owners.</p>
+        <p class="case-disclaimer">Disclaimer: Portfolio case study for academic and demonstrative purposes. This is an independent analysis, not affiliated with or endorsed by Boeing, the FAA or any airline. Facts and figures come from the public sources below; the recommendation is the author's view. All trademarks belong to their respective owners.</p>
         <div class="sources-block">
-            <strong>Sources:</strong> This case study synthesizes publicly reported facts and official findings. All events, dates, and figures are drawn from the following public sources; no company-confidential information is used.
-            <ol>
-                <li><a href="https://www.npr.org/2024/03/04/1235826355/faa-audit-boeing-737-max-8-9-quality-control-failures" target="_blank" rel="noopener noreferrer">NPR — "FAA audit faults Boeing for quality control 737 Max failures" (March 2024)</a></li>
-                <li><a href="https://www.transportation.gov/faa-oversight-boeings-broken-safety-culture-0" target="_blank" rel="noopener noreferrer">U.S. Department of Transportation — "FAA Oversight of Boeing's Broken Safety Culture"</a></li>
-                <li><a href="https://www.faa.gov/newsroom/faa-continues-hold-boeing-accountable-implementing-safety-and-production-quality-fixes" target="_blank" rel="noopener noreferrer">Federal Aviation Administration — Newsroom, production and safety quality fixes</a></li>
-                <li><a href="https://corpgov.law.harvard.edu/2024/06/06/boeing-737-max/" target="_blank" rel="noopener noreferrer">Harvard Law School Forum on Corporate Governance — "Boeing 737 MAX" (June 2024)</a></li>
-            </ol>
+            <strong>Sources:</strong>
+            <ol><li id="src-1"><a href="https://corpgov.law.harvard.edu/2024/06/06/boeing-737-max/" target="_blank" rel="noopener noreferrer">Harvard Law School Forum on Corporate Governance, "Boeing 737 MAX" (June 2024)</a></li><li id="src-2"><a href="https://www.transportation.gov/faa-oversight-boeings-broken-safety-culture-0" target="_blank" rel="noopener noreferrer">U.S. Department of Transportation, "FAA Oversight of Boeing's Broken Safety Culture"</a></li><li id="src-3"><a href="https://www.npr.org/2024/03/04/1235826355/faa-audit-boeing-737-max-8-9-quality-control-failures" target="_blank" rel="noopener noreferrer">NPR, "FAA audit faults Boeing for quality control 737 Max failures" (Mar 2024)</a></li><li id="src-4"><a href="https://www.faa.gov/newsroom/faa-continues-hold-boeing-accountable-implementing-safety-and-production-quality-fixes" target="_blank" rel="noopener noreferrer">FAA Newsroom, safety and production quality fixes at Boeing</a></li><li id="src-5"><a href="https://www.manufacturingdive.com/news/boeing-deliveries-q4-full-year-2025-commercial-airbus/809504/" target="_blank" rel="noopener noreferrer">Manufacturing Dive, "Boeing delivered 600 commercial aircraft in 2025"</a></li><li id="src-6"><a href="https://simpleflying.com/how-many-737s-boeing-delivered-5-years/" target="_blank" rel="noopener noreferrer">SimpleFlying, "How Many 737s Has Boeing Delivered Over The Past 5 Years?"</a></li><li id="src-7"><a href="https://www.aviationtoday.com/2022/01/12/airbus-boeing-report-2021-commercial-aircraft-deliveries/" target="_blank" rel="noopener noreferrer">Aviation Today, "Airbus, Boeing Report 2021 Commercial Aircraft Deliveries" (Jan 2022)</a></li><li id="src-8"><a href="https://www.wsls.com/business/2025/10/17/faa-allows-boeing-to-increase-737-max-production-nearly-two-years-after-door-plug-flew-off-plane/" target="_blank" rel="noopener noreferrer">Associated Press via WSLS, "FAA allows Boeing to increase 737 Max production" (Oct 2025)</a></li><li id="src-9"><a href="https://www.cnbc.com/2024/01/09/boeing-hits-2023-jet-delivery-goal-in-blockbuster-sales-year-.html" target="_blank" rel="noopener noreferrer">CNBC, "Boeing hits 2023 jet delivery goal" (Jan 2024)</a></li><li id="src-10"><a href="https://investors.boeing.com/investors/news/press-release-details/2025/Boeing-Reports-Fourth-Quarter-Results/default.aspx" target="_blank" rel="noopener noreferrer">Boeing, "Boeing Reports Fourth Quarter Results" (Jan 28, 2025)</a></li></ol>
         </div>
     </main>
 </div>
 
-<a href="kfc-logistics-failure-case.html" class="next-project">
+<a href="category-sourcing-strategy/" class="next-project">
     <span>Next Case Study</span>
-    <h2>KFC's Logistics Failure →</h2>
+    <h2>Category Sourcing Strategy →</h2>
 </a>
 
 <section id="section-get-in-touch" class="contact-section-shell" aria-labelledby="contact-heading">
@@ -311,23 +363,19 @@
     window.addEventListener('scroll', () => {
         let current = '';
         sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            if (pageYOffset >= (sectionTop - 200)) { current = section.getAttribute('id'); }
+            if (window.pageYOffset >= (section.offsetTop - 200)) { current = section.getAttribute('id'); }
         });
         navLinks.forEach(link => {
             link.classList.remove('active');
-            if (link.getAttribute('href').includes(current)) { link.classList.add('active'); }
+            if (current && link.getAttribute('href') === '#' + current) { link.classList.add('active'); }
         });
     });
 
     function openTab(evt, tabName) {
-        let i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("comp-panel");
-        for (i = 0; i < tabcontent.length; i++) { tabcontent[i].style.display = "none"; }
-        tablinks = document.getElementsByClassName("comp-tab");
-        for (i = 0; i < tablinks.length; i++) { tablinks[i].className = tablinks[i].className.replace(" active", ""); }
-        document.getElementById(tabName).style.display = "block";
-        evt.currentTarget.className += " active";
+        document.querySelectorAll('.comp-panel').forEach(p => { p.style.display = 'none'; });
+        document.querySelectorAll('.comp-tab').forEach(t => t.classList.remove('active'));
+        document.getElementById(tabName).style.display = 'block';
+        evt.currentTarget.classList.add('active');
     }
 
     gsap.registerPlugin(ScrollTrigger);
@@ -349,7 +397,7 @@
                 const target = +counter.getAttribute('data-target');
                 let current = 0;
                 const update = () => {
-                    current += Math.max(target,1) / 60;
+                    current += Math.max(target, 1) / 60;
                     if (current < target) { counter.innerText = Math.ceil(current); requestAnimationFrame(update); }
                     else { counter.innerText = target; }
                 };
@@ -358,47 +406,30 @@
         }
     });
 
-    const ctx = document.getElementById('timelineChart').getContext('2d');
-    let chartRendered = false;
-    ScrollTrigger.create({
-        trigger: "#timelineChart", start: "top 85%",
-        onEnter: () => {
-            if(!chartRendered) {
-                new Chart(ctx, {
-                    type: 'line',
-                    data: {
-                        labels: ['2018 Lion Air', '2019 Ethiopian', '2019 Grounding', '2020-23 Review', '2024 Door Plug', '2024 FAA Audit'],
-                        datasets: [{
-                            label: 'Regulatory & Governance Scrutiny (illustrative index)',
-                            data: [20, 55, 90, 60, 95, 100],
-                            borderColor: '#c9a84c', borderWidth: 3, tension: 0.35, fill: false
-                        }]
-                    },
-                    options: {
-                        responsive: true, maintainAspectRatio: false,
-                        animation: { duration: 2200, easing: 'easeOutQuart' },
-                        plugins: { legend: { labels: { color: '#ede9e0' } } },
-                        scales: { x: { grid: { color: 'rgba(255,255,255,0.05)' } }, y: { grid: { color: 'rgba(255,255,255,0.05)' } } }
-                    }
-                });
-                chartRendered = true;
-            }
-        }
-    });
+    const GOLD = '#c9a84c', FG = '#ede9e0', MUTED = '#787570', RED = '#e05a00';
+    const GRID = 'rgba(255,255,255,0.05)';
+    Chart.defaults.color = 'rgba(237,233,224,0.7)';
+    Chart.defaults.font.family = "'DM Sans', sans-serif";
+    const built = {};
+    function buildChart(id, factory) {
+        const el = document.getElementById(id);
+        if (!el) return;
+        ScrollTrigger.create({ trigger: el, start: "top 90%", once: true, onEnter: () => { built[id] = factory(el.getContext('2d')); } });
+    }
+
+    buildChart('deliveriesChart', ctx => new Chart(ctx, {
+        type: 'bar',
+        data: { labels: ['2018','2019','2020','2021','2022','2023','2024','2025'],
+            datasets: [
+                { label: 'Total commercial deliveries', data: [806,380,157,340,480,528,348,600], backgroundColor: 'rgba(237,233,224,0.28)', borderRadius: 4 },
+                { label: '737 deliveries', data: [580,127,null,null,387,396,260,447], backgroundColor: GOLD, borderRadius: 4 } ] },
+        options: { responsive: true, maintainAspectRatio: false, animation: { duration: 1600, easing: 'easeOutQuart' }, plugins: { legend: { labels: { color: FG, boxWidth: 12 } } },
+            scales: { x: { grid: { color: GRID } }, y: { beginAtZero: true, grid: { color: GRID } } } }
+    }));
 
     const toggle = document.getElementById('case-menu-toggle');
     const menu = document.getElementById('case-mobile-menu');
     toggle.addEventListener('click', () => { menu.style.display = 'flex'; });
-
-    document.querySelectorAll('.faq-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const isExpanded = btn.getAttribute('aria-expanded') === 'true';
-            btn.setAttribute('aria-expanded', !isExpanded);
-            const content = document.getElementById(btn.getAttribute('aria-controls'));
-            content.style.maxHeight = isExpanded ? null : content.scrollHeight + "px";
-        });
-    });
 </script>
-
 </body>
 </html>

@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LG Wroclaw | Strategy & Operations Case Study</title>
+    <title>LG Wroclaw | Nearshoring Case Study</title>
 
-    <meta name="description" content="Regional supply and nearshoring case study by Prapanch Kokkalemada. How LG built Europe's largest EV battery gigafactory outside Wroclaw, Poland.">
-    <meta property="og:title" content="LG Wroclaw — Evaluating Strategic Nearshoring Case Study">
-    <meta property="og:description" content="Supply chain strategy deep dive by Prapanch Kokkalemada, Strategy & Operations Transformation specialist.">
-    <meta property="og:image" content="https://punch-k.github.io/Portfolio/5.png">
+    <meta name="description" content="Portfolio case study by Prapanch Kokkalemada. Why LG Energy Solution builds EV batteries in Poland, close to its European automaker customers.">
+    <meta property="og:title" content="LG Wroclaw | Nearshoring Case Study">
+    <meta property="og:description" content="Portfolio case study by Prapanch Kokkalemada. Why LG Energy Solution builds EV batteries in Poland, close to its European automaker customers.">
     <meta property="og:url" content="https://punch-k.github.io/Portfolio/lg-wroclaw-nearshoring-case.html">
     <link rel="canonical" href="https://punch-k.github.io/Portfolio/lg-wroclaw-nearshoring-case.html">
 
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=7">
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
@@ -36,7 +35,7 @@
         .nav-connect:hover { background: var(--gold); color: var(--bg); }
         @media (max-width: 900px) { .nav-links { display: none; } .case-nav { padding: 1rem 1.5rem; } #case-menu-toggle { display: block !important; } }
         .hero { height: 75vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; padding: 0 2rem; border-bottom: 1px solid var(--line); }
-        .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?q=80&w=1600&auto=format&fit=crop'); background-size: cover; background-position: center; opacity: 0; filter: grayscale(90%) brightness(0.25); z-index: 0; }
+        .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(ellipse at 50% 35%, rgba(201,168,76,0.16), transparent 60%), repeating-radial-gradient(circle at 50% 120%, rgba(237,233,224,0.035) 0 2px, transparent 2px 26px); opacity: 0; z-index: 0; }
         .hero-content { position: relative; z-index: 10; display: flex; flex-direction: column; align-items: center; }
         .breadcrumbs { display: flex; gap: 0.5rem; color: rgba(237,233,224,0.6); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 2rem; opacity: 0; }
         .breadcrumbs a { color: var(--gold); text-decoration: none; }
@@ -99,6 +98,54 @@
             .pull-quote p, .stat-num { color: black; }
             .exec-summary { border-left-color: black; background: #f9f9f9; }
         }
+    
+        .bluf-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.8rem; }
+        .bluf-item p { margin: 0; font-size: 0.98rem; line-height: 1.7; color: rgba(237,233,224,0.9); }
+        .bluf-label { display: block; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem; }
+        .banner-btns { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+        .banner-btn-ghost { background: transparent; color: var(--gold); border: 1px solid var(--gold); }
+        .banner-btn-ghost:hover { background: rgba(201,168,76,0.12); }
+        .article-body sup a { text-decoration: none; font-size: 0.7em; margin-left: 1px; }
+        .timeline { border-left: 1px solid var(--line); margin: 0 0 2.5rem; padding-left: 1.5rem; display: flex; flex-direction: column; gap: 1.4rem; }
+        .tl-row { position: relative; }
+        .tl-row::before { content: ''; position: absolute; left: calc(-1.5rem - 5px); top: 0.45rem; width: 9px; height: 9px; border-radius: 50%; background: var(--gold); }
+        .tl-date { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.1em; color: var(--gold); font-size: 1.1rem; }
+        .tl-row p { margin: 0.2rem 0 0 !important; font-size: 1.02rem !important; }
+        .chart-box { position: relative; height: 380px; background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 12px; padding: 1.2rem; margin: 1.5rem 0 0.8rem; box-sizing: border-box; }
+        .chart-box-sm { height: 320px; margin-top: 2rem; }
+        .chart-note { font-size: 0.85rem !important; color: rgba(237,233,224,0.5) !important; line-height: 1.6 !important; }
+        .sub-h { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.08em; font-size: 1.5rem; color: var(--fg); margin: 3rem 0 1rem; font-weight: 400; }
+        .scenario-toggle { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+        .sc-btn { background: none; border: 1px solid var(--line); color: rgba(237,233,224,0.45); font-family: var(--sans); font-size: 0.78rem; letter-spacing: 0.08em; padding: 0.5rem 1rem; border-radius: 50px; cursor: pointer; transition: all 0.25s; }
+        .sc-btn.active { border-color: var(--gold); color: var(--gold); background: rgba(201,168,76,0.08); }
+        .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 1.5rem 0; border: 1px solid var(--line); border-radius: 8px; }
+        .data-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; min-width: 520px; }
+        .data-table th { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.08em; font-weight: 400; font-size: 1rem; color: var(--gold); text-align: left; padding: 0.8rem 1rem; border-bottom: 1px solid var(--line); background: rgba(201,168,76,0.04); }
+        .data-table td { padding: 0.7rem 1rem; border-bottom: 1px solid rgba(237,233,224,0.06); color: rgba(237,233,224,0.8); }
+        .data-table tr:last-child td { border-bottom: none; }
+        .data-table td.hl { color: var(--gold); }
+        .tableau-frame { position: relative; width: 100%; height: 860px; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: #fff; margin: 1.5rem 0 0.8rem; }
+        .tableau-frame-sm { height: 720px; }
+        .tableau-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
+        .insight-list { display: flex; flex-direction: column; gap: 1.6rem; margin-bottom: 3rem; }
+        .insight { display: grid; grid-template-columns: 3.2rem 1fr; gap: 1rem; border-top: 1px solid var(--line); padding-top: 1.4rem; }
+        .insight-num { font-family: var(--display); font-size: 2rem; color: var(--gold); line-height: 1; }
+        .insight h4 { margin: 0 0 0.5rem; font-family: var(--display); font-size: 1.45rem; font-weight: 500; color: var(--fg); line-height: 1.25; }
+        .insight p { margin: 0 !important; font-size: 1.02rem !important; }
+        .recommend-box { border: 1px solid rgba(201,168,76,0.4); background: rgba(201,168,76,0.06); border-radius: 8px; padding: 2rem; margin-bottom: 3rem; }
+        .recommend-box p { margin: 0 !important; font-size: 1.05rem !important; }
+        .stat-box { text-align: center; }
+        .case-layout > * { min-width: 0; }
+        @media (max-width: 900px) { .bluf-grid { grid-template-columns: 1fr; gap: 1.3rem; } }
+        @media (max-width: 600px) {
+            .chart-box { height: 300px; padding: 0.8rem; }
+            .tableau-frame { height: 1150px; }
+            .tableau-frame-sm { height: 980px; }
+            .insight { grid-template-columns: 1fr; gap: 0.4rem; }
+            .recommend-box { padding: 1.4rem; }
+            .data-table { font-size: 0.85rem; }
+        }
+        @media print { .tableau-frame, .scenario-toggle { display: none !important; } .data-table td, .data-table th { color: black; } }
         /* keep the contents sidebar sticky: overflow-x hidden on html/body breaks position: sticky, clip does not */
         html, body { overflow-x: clip !important; }
     </style>
@@ -135,44 +182,37 @@
 <header class="hero">
     <div class="hero-bg"></div>
     <div class="hero-content">
-        <div class="breadcrumbs hero-anim">
-            <a href="index.html">Portfolio</a> / <a href="index.html#section-cases">Research</a> / Regional Supply
-        </div>
-        <h1 class="hero-anim" style="font-family: var(--display); font-size: clamp(3.5rem, 8vw, 7rem); color: var(--gold); margin: 0; line-height: 1;">LG WROCLAW</h1>
-        <p class="hero-anim" style="font-size: 1.2rem; max-width: 650px; margin-top: 2rem; line-height: 1.8; color: var(--fg); font-weight: 300;">
-            Evaluating strategic nearshoring: how LG built Europe's largest EV battery gigafactory in Poland instead of importing cells from Asia.
-        </p>
+        <div class="breadcrumbs hero-anim"><a href="index.html">Portfolio</a> / <a href="index.html#section-cases">Research</a> / Regional Supply</div>
+        <h1 class="hero-anim" style="font-family: var(--display); font-size: clamp(3.2rem, 7vw, 6.5rem); color: var(--gold); margin: 0; line-height: 1;">LG WROCLAW</h1>
+        <p class="hero-anim" style="font-size: 1.2rem; max-width: 680px; margin-top: 2rem; line-height: 1.8; color: var(--fg); font-weight: 300;">LG Energy Solution builds EV batteries near Wroclaw, about 450 to 950 km from the headquarters of the European automakers it supplies, instead of shipping them from its home plant in Korea, more than 8,000 km away.</p>
     </div>
 </header>
 
 <div class="exec-summary gsap-reveal">
     <h3>EXECUTIVE SUMMARY (BLUF)</h3>
-    <p style="margin: 0; font-size: 1.05rem; line-height: 1.7; color: rgba(237,233,224,0.9);">
-        LG Energy Solution's complex near Wrocław, Poland (Kobierzyce commune / Biskupice Podgórne) is the largest lithium-ion EV battery factory in Europe, with roughly 70 GWh of current capacity scaling toward 100 GWh — fully integrated from electrodes through cells, modules, and packs, supplying automakers including Audi, BMW, Fiat, Ford, Porsche, and Volkswagen. This case examines the nearshoring logic: why a South Korean battery maker chose to build its most important European capacity on the ground, close to its automotive customers, instead of shipping finished cells across continents.
-    </p>
+    <div class="bluf-grid"><div class="bluf-item"><span class="bluf-label">The problem</span><p>European automakers need very large volumes of EV batteries. Importing cells from Asia means long lead times, costly freight for a heavy and hazardous product, and weaker alignment with EU content rules.</p></div><div class="bluf-item"><span class="bluf-label">Why solve it</span><p>The battery is the most expensive part of an EV. A supplier that cannot deliver reliably and close to the assembly line puts the whole vehicle program at risk.</p></div><div class="bluf-item"><span class="bluf-label">The answer</span><p>Build where the customers are. LG put a fully integrated battery complex near Wroclaw, Poland: more than €3 billion invested on about 100 hectares, with more than 9,500 employees and capacity reported between 70 and 86 GWh, scaling toward 100 GWh.</p></div></div>
 </div>
 
 <div class="sim-link-banner gsap-reveal">
-    <p class="sim-link-banner-text"><strong>Try it yourself.</strong> Run the NPV math behind a nearshoring vs. offshoring decision.</p>
-    <a href="simulators.html#financial-dcf-lab" class="sim-link-banner-btn">Open Financial &amp; DCF Lab ↗</a>
+    <p class="sim-link-banner-text"><strong>Explore the data.</strong> Tableau map of the Wroclaw plant, the headquarters of its automaker customers and LG's home plant in Korea.</p>
+    <div class="banner-btns">
+        <a href="https://public.tableau.com/app/profile/prapanch.kokkalemada/viz/LGWroclawProximityMap/LGWroclawPlantAutomakerHQsandLGHomePlant" class="sim-link-banner-btn" target="_blank" rel="noopener noreferrer">Tableau ↗</a>
+        <a href="simulators.html#financial-dcf-lab" class="sim-link-banner-btn banner-btn-ghost">Financial &amp; DCF Lab ↗</a>
+    </div>
 </div>
 
 <div class="case-layout">
     <aside class="case-sidebar">
         <nav aria-label="Table of Contents">
             <span class="meta-title">CONTENTS</span>
-            <ul class="toc-list" id="toc-list">
-                <li><a href="#why-poland" class="active">I. Why Poland</a></li>
-                <li><a href="#full-vertical-integration">II. Full Vertical Integration</a></li>
-                <li><a href="#the-automaker-proximity-thesis">III. The Automaker Proximity Thesis</a></li>
-                <li><a href="#the-nearshoring-trade-off">IV. The Nearshoring Trade-Off</a></li>
-            </ul>
+            <ul class="toc-list" id="toc-list"><li><a href="#why-poland" class="active">I. Why Poland</a></li><li><a href="#integration">II. Full Integration</a></li><li><a href="#proximity">III. The Proximity Math</a></li><li><a href="#the-dashboard">IV. The Dashboard</a></li><li><a href="#insights">V. Insights</a></li></ul>
         </nav>
         <div class="meta-block">
             <span class="meta-title">CASE DETAILS</span>
             <p style="margin: 0 0 0.5rem 0;"><strong>Focus:</strong> Regional Supply, Nearshoring Strategy</p>
             <p style="margin: 0 0 0.5rem 0;"><strong>Read Time:</strong> 5 Minutes</p>
-            <p style="margin: 0;"><strong>Type:</strong> Public case study, real events</p>
+            <p style="margin: 0 0 0.5rem 0;"><strong>Tools:</strong> Tableau, public reporting</p>
+            <p style="margin: 0;"><strong>Type:</strong> Portfolio Case Study. Public data, independent analysis</p>
             <button class="print-btn" onclick="window.print()">🖨️ Print Case Study</button>
         </div>
     </aside>
@@ -180,68 +220,64 @@
     <main class="article-body">
         <section id="why-poland" class="scroll-section gsap-reveal">
             <h2>I. WHY POLAND</h2>
-            <p>LG Chem (now largely operated under LG Energy Solution) chose Kobierzyce, near Wrocław in southwestern Poland, as the site for its flagship European EV battery plant. The site sits inside the EURO-PARK KOBIERZYCE special economic zone, on roughly 100 hectares, and has expanded in stages toward a targeted 100 GWh of capacity — enough to make it, on completion, the largest EV battery factory in the world.</p>
-            <p>Poland itself is the EU's largest exporter of car batteries, and Wrocław sits within efficient trucking distance of the German, and broader Central European, automotive manufacturing belt — the actual customers for the batteries being produced.</p>
+            <p>LG Chem, now operating as LG Energy Solution, chose Kobierzyce near Wroclaw in southwestern Poland for its European battery plant. The site sits in a special economic zone on about 100 hectares and has expanded in stages.<sup><a href="#src-1">1</a></sup><sup><a href="#src-2">2</a></sup> LG describes it as the largest battery plant in Europe.<sup><a href="#src-5">5</a></sup></p>
+            <p>Wroclaw is within trucking distance of the German and Central European car industry, which is where the batteries are installed. Its customers include Audi, BMW, Fiat, Ford, Porsche and Volkswagen.<sup><a href="#src-2">2</a></sup></p>
         </section>
 
         <blockquote class="pull-quote gsap-reveal">
-            <p>"A battery gigafactory built next to its customers isn't just cheaper to ship from — it's a different, faster feedback loop with the automaker's own engineering teams."</p>
-            <span>— Regional Supply Strategy Note</span>
+            <p>"Proximity has a price. So does distance."</p>
+            <span>Case thesis</span>
         </blockquote>
 
-        <section id="full-vertical-integration" class="scroll-section gsap-reveal">
-            <h2>II. FULL VERTICAL INTEGRATION</h2>
-            <p>The Wrocław complex was built as a fully integrated production system — producing all battery components from electrodes through cells, modules, and finished packs, the first time this had been done at this scale in Europe. Select a workstream below.</p>
-
+        <section id="integration" class="scroll-section gsap-reveal">
+            <h2>II. FULL INTEGRATION</h2>
+            <p>The Wroclaw complex produces every stage of the battery, from electrodes to cells, modules and finished packs.<sup><a href="#src-3">3</a></sup><sup><a href="#src-4">4</a></sup> Select a workstream.</p>
             <div class="comp-tabs">
-                <button class="comp-tab active" onclick="openTab(event, 'capacity-scale')">Capacity &amp; Scale</button>
-                <button class="comp-tab" onclick="openTab(event, 'product-mix')">Product Mix</button>
+                <button class="comp-tab active" onclick="openTab(event, 'tab-cap')">Capacity &amp; Scale</button>
+                <button class="comp-tab" onclick="openTab(event, 'tab-mix')">Product Mix</button>
             </div>
-            <div id="capacity-scale" class="comp-panel active">
-                <p><strong>Staged Expansion:</strong> Capacity has been built out in stages toward a targeted 100 GWh, rather than committed all at once — matching capital deployment to confirmed automaker demand rather than betting the full investment on a single forecast.</p>
-            </div>
-            <div id="product-mix" class="comp-panel">
-                <p><strong>Beyond EV Batteries:</strong> The Wrocław operation has expanded output to include e-bus batteries and energy-storage-system cells, diversifying the plant's demand base beyond passenger EVs alone — a hedge against any single segment's demand slowing.</p>
-            </div>
-        </section>
-
-        <section id="the-automaker-proximity-thesis" class="scroll-section gsap-reveal">
-            <h2 style="color: var(--gold);">III. THE AUTOMAKER PROXIMITY THESIS</h2>
-            <p>Batteries produced at Wrocław supply electric vehicles for Audi, BMW, Fiat, Ford, Porsche, and Volkswagen — a customer list that is, not coincidentally, concentrated in exactly the geography the plant sits closest to. Building at scale near the customer reduces logistics cost and lead time on a heavy, hazardous-to-ship product, and it also enables tighter, faster collaboration on next-generation cell chemistry between LG's engineers and each automaker's platform teams.</p>
+            <div id="tab-cap" class="comp-panel active"><p><strong>Built in stages.</strong> Reported capacity varies by date and source, from about 70 GWh to about 86 GWh, with a stated target of 100 GWh once the latest expansion stage is complete.<sup><a href="#src-5">5</a></sup><sup><a href="#src-6">6</a></sup> Building in phases ties each investment to confirmed automaker demand rather than one large bet.</p></div>
+            <div id="tab-mix" class="comp-panel"><p><strong>Beyond passenger EVs.</strong> The plant has added batteries for electric buses and energy storage, spreading its demand across more than one market.<sup><a href="#src-3">3</a></sup></p></div>
         </section>
 
         <section class="stat-banner gsap-reveal">
-            <div class="stat-box" style="text-align: center;">
-                <div class="stat-num counter" data-target="100">0</div>
-                <div class="stat-label">GWh Target Capacity</div>
+            <div class="stat-box"><div class="stat-num"><span class="counter" data-target="100">0</span></div><div class="stat-label">GWh capacity target</div></div>
+            <div class="stat-box"><div class="stat-num"><span class="counter" data-target="9500">0</span>+</div><div class="stat-label">Employees</div></div>
+            <div class="stat-box"><div class="stat-num"><span class="counter" data-target="6">0</span></div><div class="stat-label">Major automaker customers</div></div>
+        </section>
+
+        <section id="proximity" class="scroll-section gsap-reveal">
+            <h2>III. THE PROXIMITY MATH</h2>
+            <p>Straight-line distance shows the trade-off. Every customer headquarters is within about 950 km of Wroclaw, a day by truck. LG's home plant in Ochang, Korea is more than 8,100 km away in a straight line, and much further by sea.</p>
+            <div class="chart-box chart-box-sm"><canvas id="distanceChart" aria-label="Great-circle distance in km from Wroclaw to automaker headquarters and to LG's Ochang plant"></canvas></div>
+            <p class="chart-note">Great-circle distances calculated from coordinates of each city. Headquarters are used as a reference point; they are not necessarily the plants each battery ships to.</p>
+            <div class="table-wrap"><table class="data-table">
+                <thead><tr><th>Destination</th><th>Km from Wroclaw</th></tr></thead>
+                <tbody><tr><td>Volkswagen HQ, Wolfsburg</td><td>448</td></tr><tr><td>Audi HQ, Ingolstadt</td><td>466</td></tr><tr><td>BMW HQ, Munich</td><td>498</td></tr><tr><td>Porsche HQ, Stuttgart</td><td>606</td></tr><tr><td>Ford Europe HQ, Cologne</td><td>695</td></tr><tr><td>Fiat HQ, Turin</td><td>951</td></tr><tr><td>LG Energy Solution Ochang plant, Korea</td><td>8,146</td></tr></tbody></table></div>
+        </section>
+
+        <section id="the-dashboard" class="scroll-section gsap-reveal">
+            <h2>IV. THE DASHBOARD</h2>
+            <p>The Tableau map shows the Wroclaw plant, the headquarters of its automaker customers, and LG's home plant in Korea. Hover over a point to see its name.</p>
+            <div class="tableau-frame tableau-frame-sm">
+                <iframe src="https://public.tableau.com/views/LGWroclawProximityMap/LGWroclawPlantAutomakerHQsandLGHomePlant?:showVizHome=no&amp;:embed=true&amp;:toolbar=bottom&amp;:tabs=no" title="Lg Wroclaw, Tableau Public dashboard" loading="lazy" allowfullscreen></iframe>
             </div>
-            <div class="stat-box" style="text-align: center;">
-                <div class="stat-num counter" data-target="100">0</div>
-                <div class="stat-label">Hectares, EURO-PARK Site</div>
-            </div>
-            <div class="stat-box" style="text-align: center;">
-                <div class="stat-num counter" data-target="6">0</div>
-                <div class="stat-label">Major Automaker Customers</div>
+            <p class="chart-note"><a href="https://public.tableau.com/app/profile/prapanch.kokkalemada/viz/LGWroclawProximityMap/LGWroclawPlantAutomakerHQsandLGHomePlant" target="_blank" rel="noopener noreferrer">Open in Tableau Public ↗</a> · <a href="https://github.com/Punch-k/Portfolio/tree/main/lg-wroclaw" target="_blank" rel="noopener noreferrer">Data files ↗</a></p>
+        </section>
+
+        <section id="insights" class="scroll-section gsap-reveal">
+            <h2 style="color: var(--gold);">V. INSIGHTS</h2>
+            <div class="insight-list"><div class="insight"><span class="insight-num">01</span><div><h4>Distance is a cost even when it is not on the invoice.</h4><p>Weeks of transit tie up working capital and slow down engineering changes. Being a day away lets LG and its customers fix problems quickly.</p></div></div><div class="insight"><span class="insight-num">02</span><div><h4>Phased capacity limits the downside.</h4><p>Building in stages ties each investment to confirmed demand, which matters as EV adoption in Europe moves unevenly.</p></div></div><div class="insight"><span class="insight-num">03</span><div><h4>Customer concentration is both the reason and the risk.</h4><p>The plant exists to serve a cluster of German and European automakers. A slowdown in that cluster hits the plant directly, which is why it has added bus and storage batteries.</p></div></div><div class="insight"><span class="insight-num">04</span><div><h4>Local production supports EU content rules.</h4><p>Batteries made in the EU fit more easily with rules and incentives that favor local content.</p></div></div></div>
+            <div class="recommend-box">
+                <span class="bluf-label">Recommendation</span>
+                <p><strong>Keep scaling in phases</strong> tied to signed automaker volumes. <strong>Diversify demand</strong> further into energy storage to offset swings in EV sales. <strong>Localize inputs</strong> such as cathode and anode materials to match the plant's proximity advantage. <strong>Measure it:</strong> track delivered cost per kWh and lead time against imported cells, not unit manufacturing cost alone.</p>
             </div>
         </section>
 
-        <section id="the-nearshoring-trade-off" class="scroll-section gsap-reveal">
-            <h2>IV. THE NEARSHORING TRADE-OFF</h2>
-            <p>Building Europe's largest battery gigafactory in Poland instead of shipping cells from Asia trades a lower nominal unit-manufacturing cost for lower logistics cost, faster lead time, EU regulatory and content alignment, and a much tighter feedback loop with automaker customers. It's the same strategic calculus every nearshoring decision runs — proximity has a price, but so does distance, and the Wrocław investment is a bet that proximity to a concentrated automotive customer base wins that trade-off at gigafactory scale.</p>
-            <div style="height: 380px; background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 12px; padding: 1.5rem; margin-top: 2rem;">
-                <canvas id="capacityChart"></canvas>
-            </div>
-        </section>
-
-        <p class="case-disclaimer">Disclaimer: this case study is for academic and demonstrative purposes. Analysis and figures are synthesized from the public sources below to illustrate strategic framework application; all trademarks and brand assets belong to their respective owners.</p>
+        <p class="case-disclaimer">Disclaimer: Portfolio case study for academic and demonstrative purposes. This is an independent analysis, not affiliated with or endorsed by LG Energy Solution or any automaker named. Facts and figures come from the public sources below; the recommendation is the author's view. All trademarks belong to their respective owners.</p>
         <div class="sources-block">
-            <strong>Sources:</strong> This case study synthesizes publicly reported facts from company press releases and industry press coverage.
-            <ol>
-                <li><a href="https://www.lgcorp.com/media/release/8357" target="_blank" rel="noopener noreferrer">LG Corp — "LG Chem Starts Construction of an Electric Vehicle Battery Plant in Poland"</a></li>
-                <li><a href="https://invest-in-wroclaw.pl/the-largest-ev-battery-factory-in-the-world-in-lg-energy-solution-is-building-near-wroclaw" target="_blank" rel="noopener noreferrer">Invest in Wrocław — "The largest EV battery factory in the world... is building near Wrocław"</a></li>
-                <li><a href="https://chargedevs.com/newswire/a-look-inside-lg-energy-solutions-massive-polish-battery-plant/" target="_blank" rel="noopener noreferrer">Charged EVs — "A look inside LG Energy Solution's massive Polish battery plant"</a></li>
-                <li><a href="https://insideevs.com/news/576028/lges-ev-battery-gigafactory-poland/" target="_blank" rel="noopener noreferrer">InsideEVs — "Check Out Europe's Largest EV Battery Gigafactory In Poland"</a></li>
-            </ol>
+            <strong>Sources:</strong>
+            <ol><li id="src-1"><a href="https://www.lgcorp.com/media/release/8357" target="_blank" rel="noopener noreferrer">LG Corp, "LG Chem Starts Construction of an Electric Vehicle Battery Plant in Poland"</a></li><li id="src-2"><a href="https://invest-in-wroclaw.pl/5-years-of-lg-energy-solution-wroclaw-the-largest-investment-in-the-region" target="_blank" rel="noopener noreferrer">Invest in Wroclaw, "5 years of LG Energy Solution Wroclaw, the largest investment in the region"</a></li><li id="src-3"><a href="https://chargedevs.com/newswire/a-look-inside-lg-energy-solutions-massive-polish-battery-plant/" target="_blank" rel="noopener noreferrer">Charged EVs, "A look inside LG Energy Solution's massive Polish battery plant"</a></li><li id="src-4"><a href="https://insideevs.com/news/576028/lges-ev-battery-gigafactory-poland/" target="_blank" rel="noopener noreferrer">InsideEVs, "Check Out Europe's Largest EV Battery Gigafactory In Poland"</a></li><li id="src-5"><a href="https://news.lgensol.com/insights/from-our-experts/3071/" target="_blank" rel="noopener noreferrer">LG Energy Solution, "LG Energy Solution Wroclaw Shows No Signs of Slowing Down"</a></li><li id="src-6"><a href="https://invest-in-wroclaw.pl/the-largest-ev-battery-factory-in-the-world-in-lg-energy-solution-is-building-near-wroclaw" target="_blank" rel="noopener noreferrer">Invest in Wroclaw, "The largest EV battery factory... is building near Wroclaw"</a></li></ol>
         </div>
     </main>
 </div>
@@ -311,23 +347,19 @@
     window.addEventListener('scroll', () => {
         let current = '';
         sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            if (pageYOffset >= (sectionTop - 200)) { current = section.getAttribute('id'); }
+            if (window.pageYOffset >= (section.offsetTop - 200)) { current = section.getAttribute('id'); }
         });
         navLinks.forEach(link => {
             link.classList.remove('active');
-            if (link.getAttribute('href').includes(current)) { link.classList.add('active'); }
+            if (current && link.getAttribute('href') === '#' + current) { link.classList.add('active'); }
         });
     });
 
     function openTab(evt, tabName) {
-        let i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("comp-panel");
-        for (i = 0; i < tabcontent.length; i++) { tabcontent[i].style.display = "none"; }
-        tablinks = document.getElementsByClassName("comp-tab");
-        for (i = 0; i < tablinks.length; i++) { tablinks[i].className = tablinks[i].className.replace(" active", ""); }
-        document.getElementById(tabName).style.display = "block";
-        evt.currentTarget.className += " active";
+        document.querySelectorAll('.comp-panel').forEach(p => { p.style.display = 'none'; });
+        document.querySelectorAll('.comp-tab').forEach(t => t.classList.remove('active'));
+        document.getElementById(tabName).style.display = 'block';
+        evt.currentTarget.classList.add('active');
     }
 
     gsap.registerPlugin(ScrollTrigger);
@@ -349,7 +381,7 @@
                 const target = +counter.getAttribute('data-target');
                 let current = 0;
                 const update = () => {
-                    current += Math.max(target,1) / 60;
+                    current += Math.max(target, 1) / 60;
                     if (current < target) { counter.innerText = Math.ceil(current); requestAnimationFrame(update); }
                     else { counter.innerText = target; }
                 };
@@ -358,47 +390,28 @@
         }
     });
 
-    const ctx = document.getElementById('capacityChart').getContext('2d');
-    let chartRendered = false;
-    ScrollTrigger.create({
-        trigger: "#capacityChart", start: "top 85%",
-        onEnter: () => {
-            if(!chartRendered) {
-                new Chart(ctx, {
-                    type: 'line',
-                    data: {
-                        labels: ['Phase 1', 'Phase 2', 'Phase 3', 'Phase 4 (Target)'],
-                        datasets: [{
-                            label: 'Battery Production Capacity (GWh)',
-                            data: [15, 35, 70, 100],
-                            borderColor: '#c9a84c', borderWidth: 3, tension: 0.35, fill: false
-                        }]
-                    },
-                    options: {
-                        responsive: true, maintainAspectRatio: false,
-                        animation: { duration: 2200, easing: 'easeOutQuart' },
-                        plugins: { legend: { labels: { color: '#ede9e0' } } },
-                        scales: { x: { grid: { color: 'rgba(255,255,255,0.05)' } }, y: { grid: { color: 'rgba(255,255,255,0.05)' } } }
-                    }
-                });
-                chartRendered = true;
-            }
-        }
-    });
+    const GOLD = '#c9a84c', FG = '#ede9e0', MUTED = '#787570', RED = '#e05a00';
+    const GRID = 'rgba(255,255,255,0.05)';
+    Chart.defaults.color = 'rgba(237,233,224,0.7)';
+    Chart.defaults.font.family = "'DM Sans', sans-serif";
+    const built = {};
+    function buildChart(id, factory) {
+        const el = document.getElementById(id);
+        if (!el) return;
+        ScrollTrigger.create({ trigger: el, start: "top 90%", once: true, onEnter: () => { built[id] = factory(el.getContext('2d')); } });
+    }
+
+    buildChart('distanceChart', ctx => new Chart(ctx, {
+        type: 'bar',
+        data: { labels: ['VW, Wolfsburg','Audi, Ingolstadt','BMW, Munich','Porsche, Stuttgart','Ford Europe, Cologne','Fiat, Turin','LG Ochang, Korea'],
+            datasets: [ { label: 'Km from Wroclaw', data: [448,466,498,606,695,951,8146], backgroundColor: [GOLD,GOLD,GOLD,GOLD,GOLD,GOLD,RED], borderRadius: 4 } ] },
+        options: { responsive: true, maintainAspectRatio: false, animation: { duration: 1600, easing: 'easeOutQuart' }, indexAxis: 'y', plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => c.parsed.x.toLocaleString('en-US') + ' km' } } },
+            scales: { x: { beginAtZero: true, grid: { color: GRID }, ticks: { callback: v => v.toLocaleString('en-US') } }, y: { grid: { display: false } } } }
+    }));
 
     const toggle = document.getElementById('case-menu-toggle');
     const menu = document.getElementById('case-mobile-menu');
     toggle.addEventListener('click', () => { menu.style.display = 'flex'; });
-
-    document.querySelectorAll('.faq-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const isExpanded = btn.getAttribute('aria-expanded') === 'true';
-            btn.setAttribute('aria-expanded', !isExpanded);
-            const content = document.getElementById(btn.getAttribute('aria-controls'));
-            content.style.maxHeight = isExpanded ? null : content.scrollHeight + "px";
-        });
-    });
 </script>
-
 </body>
 </html>

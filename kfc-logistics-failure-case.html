@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KFC's Logistics Failure | Strategy & Operations Case Study</title>
+    <title>KFC's Logistics Failure | Supply Chain Resilience Case Study</title>
 
-    <meta name="description" content="Supply chain fragility case study by Prapanch Kokkalemada. How a single-warehouse 3PL transition shut down two-thirds of KFC's UK stores.">
-    <meta property="og:title" content="KFC's Logistics Failure — Supply Chain Fragility Case Study">
-    <meta property="og:description" content="Supply chain deep dive by Prapanch Kokkalemada, Strategy & Operations Transformation specialist.">
-    <meta property="og:image" content="https://punch-k.github.io/Portfolio/3.png">
+    <meta name="description" content="Portfolio case study by Prapanch Kokkalemada. How a single-depot 3PL switch closed hundreds of KFC UK restaurants in February 2018.">
+    <meta property="og:title" content="KFC's Logistics Failure | Supply Chain Resilience Case Study">
+    <meta property="og:description" content="Portfolio case study by Prapanch Kokkalemada. How a single-depot 3PL switch closed hundreds of KFC UK restaurants in February 2018.">
     <meta property="og:url" content="https://punch-k.github.io/Portfolio/kfc-logistics-failure-case.html">
     <link rel="canonical" href="https://punch-k.github.io/Portfolio/kfc-logistics-failure-case.html">
 
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=7">
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
@@ -36,7 +35,7 @@
         .nav-connect:hover { background: var(--gold); color: var(--bg); }
         @media (max-width: 900px) { .nav-links { display: none; } .case-nav { padding: 1rem 1.5rem; } #case-menu-toggle { display: block !important; } }
         .hero { height: 75vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; padding: 0 2rem; border-bottom: 1px solid var(--line); }
-        .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('https://images.unsplash.com/photo-1580554530778-ca36943938b2?q=80&w=1600&auto=format&fit=crop'); background-size: cover; background-position: center; opacity: 0; filter: grayscale(90%) brightness(0.25); z-index: 0; }
+        .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(ellipse at 50% 35%, rgba(201,168,76,0.16), transparent 60%), repeating-radial-gradient(circle at 50% 120%, rgba(237,233,224,0.035) 0 2px, transparent 2px 26px); opacity: 0; z-index: 0; }
         .hero-content { position: relative; z-index: 10; display: flex; flex-direction: column; align-items: center; }
         .breadcrumbs { display: flex; gap: 0.5rem; color: rgba(237,233,224,0.6); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 2rem; opacity: 0; }
         .breadcrumbs a { color: var(--gold); text-decoration: none; }
@@ -99,6 +98,54 @@
             .pull-quote p, .stat-num { color: black; }
             .exec-summary { border-left-color: black; background: #f9f9f9; }
         }
+    
+        .bluf-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.8rem; }
+        .bluf-item p { margin: 0; font-size: 0.98rem; line-height: 1.7; color: rgba(237,233,224,0.9); }
+        .bluf-label { display: block; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem; }
+        .banner-btns { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+        .banner-btn-ghost { background: transparent; color: var(--gold); border: 1px solid var(--gold); }
+        .banner-btn-ghost:hover { background: rgba(201,168,76,0.12); }
+        .article-body sup a { text-decoration: none; font-size: 0.7em; margin-left: 1px; }
+        .timeline { border-left: 1px solid var(--line); margin: 0 0 2.5rem; padding-left: 1.5rem; display: flex; flex-direction: column; gap: 1.4rem; }
+        .tl-row { position: relative; }
+        .tl-row::before { content: ''; position: absolute; left: calc(-1.5rem - 5px); top: 0.45rem; width: 9px; height: 9px; border-radius: 50%; background: var(--gold); }
+        .tl-date { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.1em; color: var(--gold); font-size: 1.1rem; }
+        .tl-row p { margin: 0.2rem 0 0 !important; font-size: 1.02rem !important; }
+        .chart-box { position: relative; height: 380px; background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 12px; padding: 1.2rem; margin: 1.5rem 0 0.8rem; box-sizing: border-box; }
+        .chart-box-sm { height: 320px; margin-top: 2rem; }
+        .chart-note { font-size: 0.85rem !important; color: rgba(237,233,224,0.5) !important; line-height: 1.6 !important; }
+        .sub-h { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.08em; font-size: 1.5rem; color: var(--fg); margin: 3rem 0 1rem; font-weight: 400; }
+        .scenario-toggle { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+        .sc-btn { background: none; border: 1px solid var(--line); color: rgba(237,233,224,0.45); font-family: var(--sans); font-size: 0.78rem; letter-spacing: 0.08em; padding: 0.5rem 1rem; border-radius: 50px; cursor: pointer; transition: all 0.25s; }
+        .sc-btn.active { border-color: var(--gold); color: var(--gold); background: rgba(201,168,76,0.08); }
+        .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 1.5rem 0; border: 1px solid var(--line); border-radius: 8px; }
+        .data-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; min-width: 520px; }
+        .data-table th { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.08em; font-weight: 400; font-size: 1rem; color: var(--gold); text-align: left; padding: 0.8rem 1rem; border-bottom: 1px solid var(--line); background: rgba(201,168,76,0.04); }
+        .data-table td { padding: 0.7rem 1rem; border-bottom: 1px solid rgba(237,233,224,0.06); color: rgba(237,233,224,0.8); }
+        .data-table tr:last-child td { border-bottom: none; }
+        .data-table td.hl { color: var(--gold); }
+        .tableau-frame { position: relative; width: 100%; height: 860px; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: #fff; margin: 1.5rem 0 0.8rem; }
+        .tableau-frame-sm { height: 720px; }
+        .tableau-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
+        .insight-list { display: flex; flex-direction: column; gap: 1.6rem; margin-bottom: 3rem; }
+        .insight { display: grid; grid-template-columns: 3.2rem 1fr; gap: 1rem; border-top: 1px solid var(--line); padding-top: 1.4rem; }
+        .insight-num { font-family: var(--display); font-size: 2rem; color: var(--gold); line-height: 1; }
+        .insight h4 { margin: 0 0 0.5rem; font-family: var(--display); font-size: 1.45rem; font-weight: 500; color: var(--fg); line-height: 1.25; }
+        .insight p { margin: 0 !important; font-size: 1.02rem !important; }
+        .recommend-box { border: 1px solid rgba(201,168,76,0.4); background: rgba(201,168,76,0.06); border-radius: 8px; padding: 2rem; margin-bottom: 3rem; }
+        .recommend-box p { margin: 0 !important; font-size: 1.05rem !important; }
+        .stat-box { text-align: center; }
+        .case-layout > * { min-width: 0; }
+        @media (max-width: 900px) { .bluf-grid { grid-template-columns: 1fr; gap: 1.3rem; } }
+        @media (max-width: 600px) {
+            .chart-box { height: 300px; padding: 0.8rem; }
+            .tableau-frame { height: 1150px; }
+            .tableau-frame-sm { height: 980px; }
+            .insight { grid-template-columns: 1fr; gap: 0.4rem; }
+            .recommend-box { padding: 1.4rem; }
+            .data-table { font-size: 0.85rem; }
+        }
+        @media print { .tableau-frame, .scenario-toggle { display: none !important; } .data-table td, .data-table th { color: black; } }
         /* keep the contents sidebar sticky: overflow-x hidden on html/body breaks position: sticky, clip does not */
         html, body { overflow-x: clip !important; }
     </style>
@@ -135,44 +182,37 @@
 <header class="hero">
     <div class="hero-bg"></div>
     <div class="hero-content">
-        <div class="breadcrumbs hero-anim">
-            <a href="index.html">Portfolio</a> / <a href="index.html#section-cases">Research</a> / Supply Chain Fragility
-        </div>
+        <div class="breadcrumbs hero-anim"><a href="index.html">Portfolio</a> / <a href="index.html#section-cases">Research</a> / Supply Chain Fragility</div>
         <h1 class="hero-anim" style="font-family: var(--display); font-size: clamp(3.2rem, 7vw, 6.5rem); color: var(--gold); margin: 0; line-height: 1;">KFC'S LOGISTICS FAILURE</h1>
-        <p class="hero-anim" style="font-size: 1.2rem; max-width: 650px; margin-top: 2rem; line-height: 1.8; color: var(--fg); font-weight: 300;">
-            February 2018: two-thirds of KFC's 900 UK restaurants closed because of chicken. The cause wasn't chickens — it was a single warehouse.
-        </p>
+        <p class="hero-anim" style="font-size: 1.2rem; max-width: 680px; margin-top: 2rem; line-height: 1.8; color: var(--fg); font-weight: 300;">On 14 February 2018 KFC UK moved restaurant deliveries from six Bidvest depots to a single DHL depot in Rugby. Within five days, around 575 of its roughly 900 restaurants in the UK and Ireland were closed.</p>
     </div>
 </header>
 
 <div class="exec-summary gsap-reveal">
     <h3>EXECUTIVE SUMMARY (BLUF)</h3>
-    <p style="margin: 0; font-size: 1.05rem; line-height: 1.7; color: rgba(237,233,224,0.9);">
-        In February 2018, KFC switched its UK 3PL provider from Bidvest Logistics — which ran six distribution warehouses — to DHL, which centralized fresh-chicken distribution through a single depot in Rugby. The depot launched understaffed and under-trained for the scale of fresh-food logistics involved, and within days more than half of KFC's roughly 900 UK stores had closed. Reported turnover fell from £445.7M to £207.3M year over year. This case is a study in how a cost-driven 3PL consolidation can trade away the redundancy that a fresh-food supply chain actually depends on.
-    </p>
+    <div class="bluf-grid"><div class="bluf-item"><span class="bluf-label">The problem</span><p>KFC switched its UK logistics contract to DHL, which ran fresh-chicken distribution through one depot in Rugby instead of the six Bidvest had used. The new operation could not handle the volume from day one, and deliveries were missed or incomplete.</p></div><div class="bluf-item"><span class="bluf-label">Why solve it</span><p>With no backup depot, every failure at Rugby reached the restaurants directly. On the evening of 18 February only 266 of 870 restaurants were open, and more than 470 were still closed on 20 February. Each closed day lost sales and spoiled fresh stock.</p></div><div class="bluf-item"><span class="bluf-label">The answer</span><p>Treat any 3PL switch for a perishable network as a resilience test, not a cost exercise. Run old and new networks in parallel, cut over region by region, keep the incumbent on standby, and set go or no-go gates on staffing and fill rate before each step.</p></div></div>
 </div>
 
 <div class="sim-link-banner gsap-reveal">
-    <p class="sim-link-banner-text"><strong>Try it yourself.</strong> Model the staffing trade-off that broke down at the Rugby depot.</p>
-    <a href="simulators.html#queue-staffing-lab" class="sim-link-banner-btn">Open Queue &amp; Staffing Lab ↗</a>
+    <p class="sim-link-banner-text"><strong>Explore the data.</strong> Tableau view of KFC restaurants closed on 18, 19 and 20 February 2018.</p>
+    <div class="banner-btns">
+        <a href="https://public.tableau.com/app/profile/prapanch.kokkalemada/viz/KFCUKChickenCrisis2018/KFCUKandIrelandRestaurantsClosed18-20Feb2018" class="sim-link-banner-btn" target="_blank" rel="noopener noreferrer">Tableau ↗</a>
+        <a href="simulators.html#queue-staffing-lab" class="sim-link-banner-btn banner-btn-ghost">Queue &amp; Staffing Lab ↗</a>
+    </div>
 </div>
 
 <div class="case-layout">
     <aside class="case-sidebar">
         <nav aria-label="Table of Contents">
             <span class="meta-title">CONTENTS</span>
-            <ul class="toc-list" id="toc-list">
-                <li><a href="#the-switch" class="active">I. The Switch</a></li>
-                <li><a href="#the-single-point-of-failure">II. The Single Point of Failure</a></li>
-                <li><a href="#the-response">III. The Response</a></li>
-                <li><a href="#the-lesson">IV. The Lesson</a></li>
-            </ul>
+            <ul class="toc-list" id="toc-list"><li><a href="#the-switch" class="active">I. The Switch</a></li><li><a href="#single-point">II. The Single Point of Failure</a></li><li><a href="#the-closures">III. The Closures</a></li><li><a href="#the-dashboard">IV. The Dashboard</a></li><li><a href="#insights">V. Insights</a></li></ul>
         </nav>
         <div class="meta-block">
             <span class="meta-title">CASE DETAILS</span>
-            <p style="margin: 0 0 0.5rem 0;"><strong>Focus:</strong> Supply Chain Resilience, 3PL Strategy</p>
+            <p style="margin: 0 0 0.5rem 0;"><strong>Focus:</strong> Supply Chain Resilience, 3PL Transitions</p>
             <p style="margin: 0 0 0.5rem 0;"><strong>Read Time:</strong> 5 Minutes</p>
-            <p style="margin: 0;"><strong>Type:</strong> Public case study, real events</p>
+            <p style="margin: 0 0 0.5rem 0;"><strong>Tools:</strong> Tableau, public reporting</p>
+            <p style="margin: 0;"><strong>Type:</strong> Portfolio Case Study. Public data, independent analysis</p>
             <button class="print-btn" onclick="window.print()">🖨️ Print Case Study</button>
         </div>
     </aside>
@@ -180,75 +220,79 @@
     <main class="article-body">
         <section id="the-switch" class="scroll-section gsap-reveal">
             <h2>I. THE SWITCH</h2>
-            <p>KFC UK moved its logistics contract from Bidvest to DHL, reportedly to cut delivery costs. DHL's new operating model consolidated fresh-chicken distribution into a single Rugby depot — replacing Bidvest's six-warehouse network with one. On paper, this looked like a straightforward efficiency play: fewer facilities, simpler routing, lower fixed cost.</p>
-            <p>In practice, it collapsed the network's redundancy to zero. A fresh, perishable-goods supply chain that used to have five backup nodes if one site had a problem now had none.</p>
+            <p>KFC UK moved its logistics contract from Bidvest Logistics to DHL, with DHL taking over on 14 February 2018.<sup><a href="#src-1">1</a></sup><sup><a href="#src-5">5</a></sup> DHL's model consolidated fresh-chicken distribution into one depot in Rugby, replacing a network of six warehouses.<sup><a href="#src-1">1</a></sup> On paper it was a simpler, cheaper network. In practice it removed every backup the old network had.</p>
+            <div class="timeline">
+                <div class="tl-row"><span class="tl-date">14 Feb 2018</span><p>DHL takes over KFC UK distribution from Bidvest, operating from a single depot in Rugby.<sup><a href="#src-5">5</a></sup></p></div>
+                <div class="tl-row"><span class="tl-date">18 Feb 2018</span><p>Only 266 of 870 restaurants in the UK and Ireland are open.<sup><a href="#src-5">5</a></sup></p></div>
+                <div class="tl-row"><span class="tl-date">19 Feb 2018</span><p>About 575 restaurants are closed.<sup><a href="#src-6">6</a></sup><sup><a href="#src-7">7</a></sup></p></div>
+                <div class="tl-row"><span class="tl-date">20 Feb 2018</span><p>About 470 restaurants are still closed as deliveries slowly recover.<sup><a href="#src-6">6</a></sup></p></div>
+            </div>
         </section>
 
         <blockquote class="pull-quote gsap-reveal">
-            <p>"Six warehouses is a supply chain. One warehouse is a single point of failure wearing a supply chain's clothing."</p>
-            <span>— Post-Mortem Analysis</span>
+            <p>"Six warehouses is a supply chain. One warehouse is a single point of failure."</p>
+            <span>Case thesis</span>
         </blockquote>
 
-        <section id="the-single-point-of-failure" class="scroll-section gsap-reveal">
+        <section id="single-point" class="scroll-section gsap-reveal">
             <h2>II. THE SINGLE POINT OF FAILURE</h2>
-            <p>The Rugby depot launched without the staffing or training depth the volume required. Select a workstream below to see how the failure compounded.</p>
-
+            <p>Select a workstream to see how the failure compounded.</p>
             <div class="comp-tabs">
-                <button class="comp-tab active" onclick="openTab(event, 'operational-failure')">Operational Failure</button>
-                <button class="comp-tab" onclick="openTab(event, 'cascading-impact')">Cascading Impact</button>
+                <button class="comp-tab active" onclick="openTab(event, 'tab-ops')">Operational Failure</button>
+                <button class="comp-tab" onclick="openTab(event, 'tab-cascade')">Cascading Impact</button>
             </div>
-            <div id="operational-failure" class="comp-panel active">
-                <p><strong>Understaffed Launch:</strong> The depot lacked sufficient trained staff to handle fresh-food logistics at KFC UK's full scale, leading to mishandling and spoilage of product from day one of the transition — a go-live problem, not a steady-state one.</p>
-            </div>
-            <div id="cascading-impact" class="comp-panel">
-                <p><strong>Store-Level Shutdown:</strong> With no redundant distribution point to reroute through, delivery failures at the single depot propagated directly to store shelves. More than half of KFC's ~900 UK outlets closed within days, and outlets stayed shut until deliveries stabilized.</p>
-            </div>
-        </section>
-
-        <section id="the-response" class="scroll-section gsap-reveal">
-            <h2 style="color: var(--gold);">III. THE RESPONSE</h2>
-            <p>KFC returned to Bidvest Logistics to restore deliveries while DHL's operation was fixed — reinstating the redundancy the network had just given up. On the brand side, KFC ran a widely praised self-deprecating apology campaign ("FCK, We're Sorry") that turned a supply chain failure into, unusually, a reputational net positive — a reminder that operational recovery speed and communications tone are two separate levers, and both matter.</p>
+            <div id="tab-ops" class="comp-panel active"><p><strong>A go-live problem.</strong> DHL said operational issues meant a number of deliveries had been incomplete or delayed.<sup><a href="#src-5">5</a></sup> Fresh chicken has a short shelf life, so a depot that falls behind cannot catch up by working through a backlog later.</p></div>
+            <div id="tab-cascade" class="comp-panel"><p><strong>No reroute available.</strong> With one depot serving the whole country, a problem at Rugby became a problem in every restaurant. Under the old six-depot network, a failure at one site could have been covered by the others.<sup><a href="#src-2">2</a></sup><sup><a href="#src-3">3</a></sup></p></div>
         </section>
 
         <section class="stat-banner gsap-reveal">
-            <div class="stat-box" style="text-align: center;">
-                <div class="stat-num counter" data-target="1">0</div>
-                <div class="stat-label">Depot (from 6)</div>
+            <div class="stat-box"><div class="stat-num"><span class="counter" data-target="6">0</span> to 1</div><div class="stat-label">Distribution depots</div></div>
+            <div class="stat-box"><div class="stat-num"><span class="counter" data-target="604">0</span></div><div class="stat-label">Restaurants closed, 18 Feb</div></div>
+            <div class="stat-box"><div class="stat-num"><span class="counter" data-target="470">0</span></div><div class="stat-label">Still closed, 20 Feb</div></div>
+        </section>
+
+        <section id="the-closures" class="scroll-section gsap-reveal">
+            <h2>III. THE CLOSURES</h2>
+            <p>Daily counts show both the depth of the failure and how slowly it eased. Counts differ slightly by outlet and by whether Ireland is included, so each figure is shown with its source.</p>
+            <div class="chart-box chart-box-sm"><canvas id="closuresChart" aria-label="KFC restaurants closed on 18, 19 and 20 February 2018"></canvas></div>
+            <div class="table-wrap"><table class="data-table">
+                <thead><tr><th>Date</th><th>Restaurants closed</th><th>Network size used</th><th>Source</th></tr></thead>
+                <tbody>
+                <tr><td>18 Feb 2018</td><td>604 (266 open)</td><td>870</td><td>Ikon London Magazine</td></tr>
+                <tr><td>19 Feb 2018</td><td>About 575</td><td>About 900</td><td>Fortune</td></tr>
+                <tr><td>20 Feb 2018</td><td>About 470</td><td>About 900</td><td>Fortune</td></tr>
+                </tbody></table></div>
+        </section>
+
+        <section id="the-dashboard" class="scroll-section gsap-reveal">
+            <h2>IV. THE DASHBOARD</h2>
+            <p>The Tableau view shows restaurants closed on each of the three worst days. Hover over a bar to see its value.</p>
+            <div class="tableau-frame tableau-frame-sm">
+                <iframe src="https://public.tableau.com/views/KFCUKChickenCrisis2018/KFCUKandIrelandRestaurantsClosed18-20Feb2018?:showVizHome=no&amp;:embed=true&amp;:toolbar=bottom&amp;:tabs=no" title="Kfc'S Logistics Failure, Tableau Public dashboard" loading="lazy" allowfullscreen></iframe>
             </div>
-            <div class="stat-box" style="text-align: center;">
-                <div class="stat-num counter" data-target="50">0</div>
-                <div class="stat-label">%+ of UK Stores Closed</div>
-            </div>
-            <div class="stat-box" style="text-align: center;">
-                <div class="stat-num counter" data-target="53">0</div>
-                <div class="stat-label">% Turnover Decline (£445.7M→£207.3M)</div>
+            <p class="chart-note"><a href="https://public.tableau.com/app/profile/prapanch.kokkalemada/viz/KFCUKChickenCrisis2018/KFCUKandIrelandRestaurantsClosed18-20Feb2018" target="_blank" rel="noopener noreferrer">Open in Tableau Public ↗</a> · <a href="https://github.com/Punch-k/Portfolio/tree/main/kfc-logistics" target="_blank" rel="noopener noreferrer">Data files ↗</a></p>
+        </section>
+
+        <section id="insights" class="scroll-section gsap-reveal">
+            <h2 style="color: var(--gold);">V. INSIGHTS</h2>
+            <div class="insight-list"><div class="insight"><span class="insight-num">01</span><div><h4>Cost per depot is visible; the value of redundancy is not.</h4><p>Cutting from six depots to one looks efficient until the day one site fails. Redundancy has to be priced as insurance in the business case.</p></div></div><div class="insight"><span class="insight-num">02</span><div><h4>Perishables leave no room to recover.</h4><p>A late delivery of dry goods is a delay; a late delivery of fresh chicken is waste and a closed restaurant.</p></div></div><div class="insight"><span class="insight-num">03</span><div><h4>Big-bang cutovers concentrate risk.</h4><p>Switching the whole country on one date meant every restaurant felt the go-live problems at once.</p></div></div><div class="insight"><span class="insight-num">04</span><div><h4>Recovery speed and honest communication matter.</h4><p>KFC rebuilt supply over the following days and was open about the failure, which limited the damage to the brand.</p></div></div></div>
+            <div class="recommend-box">
+                <span class="bluf-label">Recommendation</span>
+                <p>For any 3PL transition on a perishable network: <strong>run in parallel</strong> with the incumbent for several weeks; <strong>cut over by region</strong>, not nationally; <strong>keep the incumbent on standby</strong> until the new network hits agreed fill-rate targets; and <strong>set go or no-go gates</strong> on staffing, system readiness and on-time delivery before each step.</p>
             </div>
         </section>
 
-        <section id="the-lesson" class="scroll-section gsap-reveal">
-            <h2>IV. THE LESSON</h2>
-            <p>The KFC case is now a standard supply-chain teaching example precisely because the mistake is so easy to make: cost-per-warehouse is visible and easy to optimize; the value of redundancy is invisible until the day it's needed. Any 3PL transition for a perishable-goods network needs an explicit redundancy stress-test as a go/no-go gate — not an afterthought discovered during week one of a new depot's ramp-up.</p>
-            <div style="height: 380px; background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 12px; padding: 1.5rem; margin-top: 2rem;">
-                <canvas id="warehouseChart"></canvas>
-            </div>
-        </section>
-
-        <p class="case-disclaimer">Disclaimer: this case study is for academic and demonstrative purposes. Analysis and figures are synthesized from the public sources below to illustrate strategic framework application; all trademarks and brand assets belong to their respective owners.</p>
+        <p class="case-disclaimer">Disclaimer: Portfolio case study for academic and demonstrative purposes. This is an independent analysis, not affiliated with or endorsed by KFC, DHL or Bidvest. Facts and figures come from the public sources below; the recommendation is the author's view. All trademarks belong to their respective owners.</p>
         <div class="sources-block">
-            <strong>Sources:</strong> This case study synthesizes publicly reported facts from business and supply-chain press coverage of the 2018 event.
-            <ol>
-                <li><a href="https://www.supplychaindive.com/news/chicken-shortage-KFC-closures-UK-DHL-suppliers-logistics/517636/" target="_blank" rel="noopener noreferrer">Supply Chain Dive — "Did too many chickens cross the road? KFC stores close following shortage"</a></li>
-                <li><a href="https://supplychaingamechanger.com/kfc-ran-out-of-chicken-what-supply-chain-lessons-can-we-learn/" target="_blank" rel="noopener noreferrer">Supply Chain Game Changer — "KFC Ran Out of Chicken! What Supply Chain Lessons Can We Learn?"</a></li>
-                <li><a href="https://supplychainnuggets.com/lessons-from-kfcs-supplier-change-issues-in-the-uk/" target="_blank" rel="noopener noreferrer">Supply Chain Nuggets — "Why KFC's Supplier Change Failed in The UK"</a></li>
-                <li><a href="https://gulfnews.com/business/retail/chicken-shortage-shuts-hundreds-of-kfc-stores-in-uk-1.2176434" target="_blank" rel="noopener noreferrer">Gulf News — "Chicken shortage shuts hundreds of KFC stores in UK"</a></li>
-            </ol>
+            <strong>Sources:</strong>
+            <ol><li id="src-1"><a href="https://www.supplychaindive.com/news/chicken-shortage-KFC-closures-UK-DHL-suppliers-logistics/517636/" target="_blank" rel="noopener noreferrer">Supply Chain Dive, "Did too many chickens cross the road? KFC stores close following shortage"</a></li><li id="src-2"><a href="https://supplychaingamechanger.com/kfc-ran-out-of-chicken-what-supply-chain-lessons-can-we-learn/" target="_blank" rel="noopener noreferrer">Supply Chain Game Changer, "KFC Ran Out of Chicken! What Supply Chain Lessons Can We Learn?"</a></li><li id="src-3"><a href="https://supplychainnuggets.com/lessons-from-kfcs-supplier-change-issues-in-the-uk/" target="_blank" rel="noopener noreferrer">Supply Chain Nuggets, "Why KFC's Supplier Change Failed in The UK"</a></li><li id="src-4"><a href="https://gulfnews.com/business/retail/chicken-shortage-shuts-hundreds-of-kfc-stores-in-uk-1.2176434" target="_blank" rel="noopener noreferrer">Gulf News, "Chicken shortage shuts hundreds of KFC stores in UK"</a></li><li id="src-5"><a href="https://www.ikonlondonmagazine.com/the-inside-story-of-the-kfc-chicken-shortage-of-2018/" target="_blank" rel="noopener noreferrer">Ikon London Magazine, "The Inside Story of the KFC Chicken Shortage of 2018"</a></li><li id="src-6"><a href="https://fortune.com/2018/02/20/kfc-still-shut-uk/" target="_blank" rel="noopener noreferrer">Fortune, KFC restaurants still shut in the UK (Feb 20, 2018)</a></li><li id="src-7"><a href="https://www.euronews.com/2018/02/20/chicken-shortage-forces-kfc-to-close-over-half-its-uk-restaurants" target="_blank" rel="noopener noreferrer">Euronews, "Chicken shortage forces KFC to close over half its UK restaurants" (Feb 20, 2018)</a></li></ol>
         </div>
     </main>
 </div>
 
-<a href="zara-fast-fashion-case.html" class="next-project">
+<a href="scopsim.html" class="next-project">
     <span>Next Case Study</span>
-    <h2>Can Zara Fast-Forward Fashion →</h2>
+    <h2>SCOPSim: Supply Chain Operations Simulation →</h2>
 </a>
 
 <section id="section-get-in-touch" class="contact-section-shell" aria-labelledby="contact-heading">
@@ -311,23 +355,19 @@
     window.addEventListener('scroll', () => {
         let current = '';
         sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            if (pageYOffset >= (sectionTop - 200)) { current = section.getAttribute('id'); }
+            if (window.pageYOffset >= (section.offsetTop - 200)) { current = section.getAttribute('id'); }
         });
         navLinks.forEach(link => {
             link.classList.remove('active');
-            if (link.getAttribute('href').includes(current)) { link.classList.add('active'); }
+            if (current && link.getAttribute('href') === '#' + current) { link.classList.add('active'); }
         });
     });
 
     function openTab(evt, tabName) {
-        let i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("comp-panel");
-        for (i = 0; i < tabcontent.length; i++) { tabcontent[i].style.display = "none"; }
-        tablinks = document.getElementsByClassName("comp-tab");
-        for (i = 0; i < tablinks.length; i++) { tablinks[i].className = tablinks[i].className.replace(" active", ""); }
-        document.getElementById(tabName).style.display = "block";
-        evt.currentTarget.className += " active";
+        document.querySelectorAll('.comp-panel').forEach(p => { p.style.display = 'none'; });
+        document.querySelectorAll('.comp-tab').forEach(t => t.classList.remove('active'));
+        document.getElementById(tabName).style.display = 'block';
+        evt.currentTarget.classList.add('active');
     }
 
     gsap.registerPlugin(ScrollTrigger);
@@ -349,7 +389,7 @@
                 const target = +counter.getAttribute('data-target');
                 let current = 0;
                 const update = () => {
-                    current += Math.max(target,1) / 60;
+                    current += Math.max(target, 1) / 60;
                     if (current < target) { counter.innerText = Math.ceil(current); requestAnimationFrame(update); }
                     else { counter.innerText = target; }
                 };
@@ -358,46 +398,28 @@
         }
     });
 
-    const ctx = document.getElementById('warehouseChart').getContext('2d');
-    let chartRendered = false;
-    ScrollTrigger.create({
-        trigger: "#warehouseChart", start: "top 85%",
-        onEnter: () => {
-            if(!chartRendered) {
-                new Chart(ctx, {
-                    type: 'bar',
-                    data: {
-                        labels: ['Bidvest Network (Pre-2018)', 'DHL Network (Feb 2018)'],
-                        datasets: [
-                            { label: 'Warehouses', data: [6, 1], backgroundColor: '#c9a84c' },
-                            { label: 'UK Stores Affected (%)', data: [0, 53], backgroundColor: '#ede9e0' }
-                        ]
-                    },
-                    options: {
-                        responsive: true, maintainAspectRatio: false,
-                        animation: { duration: 2000, easing: 'easeOutQuart' },
-                        plugins: { legend: { labels: { color: '#ede9e0' } } },
-                        scales: { x: { grid: { color: 'rgba(255,255,255,0.05)' } }, y: { grid: { color: 'rgba(255,255,255,0.05)' } } }
-                    }
-                });
-                chartRendered = true;
-            }
-        }
-    });
+    const GOLD = '#c9a84c', FG = '#ede9e0', MUTED = '#787570', RED = '#e05a00';
+    const GRID = 'rgba(255,255,255,0.05)';
+    Chart.defaults.color = 'rgba(237,233,224,0.7)';
+    Chart.defaults.font.family = "'DM Sans', sans-serif";
+    const built = {};
+    function buildChart(id, factory) {
+        const el = document.getElementById(id);
+        if (!el) return;
+        ScrollTrigger.create({ trigger: el, start: "top 90%", once: true, onEnter: () => { built[id] = factory(el.getContext('2d')); } });
+    }
+
+    buildChart('closuresChart', ctx => new Chart(ctx, {
+        type: 'bar',
+        data: { labels: ['18 Feb', '19 Feb', '20 Feb'],
+            datasets: [ { label: 'Restaurants closed', data: [604, 575, 470], backgroundColor: [RED, GOLD, 'rgba(201,168,76,0.5)'], borderRadius: 4 } ] },
+        options: { responsive: true, maintainAspectRatio: false, animation: { duration: 1600, easing: 'easeOutQuart' }, indexAxis: 'y', plugins: { legend: { display: false } },
+            scales: { x: { beginAtZero: true, grid: { color: GRID } }, y: { grid: { display: false } } } }
+    }));
 
     const toggle = document.getElementById('case-menu-toggle');
     const menu = document.getElementById('case-mobile-menu');
     toggle.addEventListener('click', () => { menu.style.display = 'flex'; });
-
-    document.querySelectorAll('.faq-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const isExpanded = btn.getAttribute('aria-expanded') === 'true';
-            btn.setAttribute('aria-expanded', !isExpanded);
-            const content = document.getElementById(btn.getAttribute('aria-controls'));
-            content.style.maxHeight = isExpanded ? null : content.scrollHeight + "px";
-        });
-    });
 </script>
-
 </body>
 </html>
