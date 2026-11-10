@@ -3,92 +3,240 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Category Sourcing Strategy | Prapanch Kokkalemada</title>
-    <meta name="author" content="Prapanch Kokkalemada">
-    <meta name="description" content="Portfolio case study by Prapanch Kokkalemada. Spend cube, should-cost, TCO, supplier scorecard, RFQ scoring, negotiation playbook and contract compliance for a corrugated packaging category.">
+    <title>Category Sourcing Strategy | Portfolio Case Study</title>
+
+    <meta name="description" content="Portfolio case study by Prapanch Kokkalemada. Should-cost, spend cube, TCO, supplier scorecard, RFQ scoring, negotiation and contract compliance for corrugated packaging, anchored in verified Ward Tires procurement work.">
     <meta property="og:title" content="Category Sourcing Strategy | Portfolio Case Study">
     <meta property="og:description" content="A sourcing toolkit built on public BLS and EIA cost data, anchored in verified Ward Tires procurement work.">
     <meta property="og:url" content="https://punch-k.github.io/Portfolio/category-sourcing-strategy/">
     <link rel="canonical" href="https://punch-k.github.io/Portfolio/category-sourcing-strategy/">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css?v=7">
-    <link rel="stylesheet" href="styles.css?v=1">
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <style>
+        body { background: var(--bg); color: var(--fg); font-family: var(--sans); margin: 0; padding: 0; overflow-x: hidden; scroll-behavior: smooth; }
+        #reading-progress { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 1000; transition: width 0.1s ease; }
+        #back-to-top { position: fixed; bottom: 2rem; right: 2rem; background: var(--fg); color: var(--bg); border: none; padding: 1rem; border-radius: 50%; cursor: pointer; z-index: 999; opacity: 0; transform: translateY(20px); transition: all 0.3s ease; font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; }
+        #back-to-top.visible { opacity: 1; transform: translateY(0); }
+        #back-to-top:hover { background: var(--gold); }
+        .case-nav { position: fixed; top: 0; left: 0; width: 100%; padding: 1.5rem 4rem; display: flex; justify-content: space-between; align-items: center; background: rgba(10, 11, 13, 0.85); backdrop-filter: blur(12px); z-index: 100; border-bottom: 1px solid rgba(237,233,224,0.05); box-sizing: border-box; }
+        .nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; width: 100%; }
+        /* .nav-logo styling now comes solely from the shared style.css rule -- no local
+           override here, so this page can't silently drift from the rest of the site again. */
+        .nav-links { display: flex; gap: 2rem; }
+        /* .nav-links a styling now comes solely from the shared style.css rule -- no
+           local override here, so this page can't silently drift from the rest of the site. */
+        .nav-connect { border: 1px solid var(--gold); color: var(--gold); padding: 0.6rem 1.5rem; border-radius: 50px; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; transition: all 0.3s ease; }
+        .nav-connect:hover { background: var(--gold); color: var(--bg); }
+        @media (max-width: 900px) { .nav-links { display: none; } .case-nav { padding: 1rem 1.5rem; } #case-menu-toggle { display: block !important; } }
+        .hero { height: 75vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; padding: 0 2rem; border-bottom: 1px solid var(--line); }
+        .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(ellipse at 50% 35%, rgba(201,168,76,0.16), transparent 60%), repeating-radial-gradient(circle at 50% 120%, rgba(237,233,224,0.035) 0 2px, transparent 2px 26px); opacity: 0; z-index: 0; }
+        .hero-content { position: relative; z-index: 10; display: flex; flex-direction: column; align-items: center; }
+        .breadcrumbs { display: flex; gap: 0.5rem; color: rgba(237,233,224,0.6); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 2rem; opacity: 0; }
+        .breadcrumbs a { color: var(--gold); text-decoration: none; }
+        .exec-summary { background: rgba(201,168,76,0.05); border-left: 4px solid var(--gold); padding: 2.5rem; margin: -3rem auto 4rem; position: relative; z-index: 20; max-width: 1000px; border-radius: 0 8px 8px 0; backdrop-filter: blur(10px); }
+        .exec-summary h3 { font-family: 'Bebas Neue', sans-serif; color: var(--gold); margin-top: 0; font-size: 1.5rem; letter-spacing: 0.1em; }
+        .case-layout { display: grid; grid-template-columns: 250px 1fr; gap: 5rem; max-width: 1200px; margin: 0 auto; padding: 0 2rem 6rem; align-items: start; }
+        .case-sidebar { position: sticky; top: 120px; display: flex; flex-direction: column; gap: 3rem; }
+        .toc-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem; border-left: 1px solid var(--line); }
+        .toc-list li a { text-decoration: none; color: rgba(237,233,224,0.5); font-size: 0.9rem; transition: all 0.3s ease; padding-left: 1.5rem; display: block; position: relative; }
+        .toc-list li a::before { content: ''; position: absolute; left: -1px; top: 0; height: 100%; width: 2px; background: transparent; transition: background 0.3s ease; }
+        .toc-list li a:hover { color: var(--fg); }
+        .toc-list li a.active { color: var(--gold); font-weight: 500; }
+        .toc-list li a.active::before { background: var(--gold); }
+        .meta-block { font-size: 0.8rem; color: rgba(237,233,224,0.6); }
+        .meta-title { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.1em; color: var(--fg); margin-bottom: 0.5rem; display: block; font-size: 1rem; }
+        .print-btn { background: none; border: 1px solid var(--line); color: var(--fg); padding: 0.5rem 1rem; cursor: pointer; font-family: var(--sans); font-size: 0.8rem; transition: all 0.3s; margin-top: 1rem; width: 100%; text-align: left; }
+        .print-btn:hover { border-color: var(--gold); color: var(--gold); }
+        @media (max-width: 900px) { .case-layout { grid-template-columns: 1fr; } .case-sidebar { display: none; } }
+        .article-body h2 { font-family: var(--display); font-size: clamp(1.9rem, 7vw, 2.8rem); color: var(--fg); margin-top: 0; margin-bottom: 1.5rem; line-height: 1.15; position: relative; padding-top: 4rem; }
+        .article-body p { font-size: 1.15rem; color: rgba(237,233,224,0.8); line-height: 1.8; margin-bottom: 2rem; font-weight: 300; }
+        .article-body a { color: var(--gold); }
+        .gsap-reveal { opacity: 0; transform: translateY(40px); }
+        .comp-tabs { display: flex; gap: 1rem; border-bottom: 1px solid var(--line); margin-bottom: 2rem; }
+        .comp-tab { background: none; border: none; color: rgba(237,233,224,0.5); font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: 0.05em; padding: 1rem 2rem; cursor: pointer; transition: all 0.3s; position: relative; }
+        .comp-tab::after { content: ''; position: absolute; bottom: -1px; left: 0; width: 100%; height: 2px; background: transparent; transition: background 0.3s; }
+        .comp-tab.active { color: var(--gold); }
+        .comp-tab.active::after { background: var(--gold); }
+        .comp-panel { display: none; animation: fadeIn 0.5s ease; }
+        .comp-panel.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .pull-quote { margin: 4rem 0; padding: 3rem; border: 1px solid var(--line); text-align: center; background: rgba(255,255,255,0.02); }
+        .pull-quote p { font-family: var(--display); font-size: 2rem; color: var(--gold); line-height: 1.3; margin: 0 0 1rem 0; font-style: italic; }
+        .pull-quote span { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.1em; color: rgba(237,233,224,0.5); }
+        .stat-banner { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 2rem; background: rgba(255,255,255,0.02); border: 1px solid var(--line); padding: 3rem; border-radius: 8px; margin: 4rem 0; }
+        .stat-num { font-family: var(--display); font-size: 4rem; color: var(--gold); line-height: 1; }
+        .stat-label { font-size: 0.85rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(237,233,224,0.6); margin-top: 0.5rem; }
+        .sources-block { font-size: 0.85rem; color: rgba(237,233,224,0.55); line-height: 1.9; border-top: 1px solid var(--line); padding-top: 2rem; margin-top: 3rem; }
+        .sources-block strong { color: var(--gold); }
+        .sources-block ol { padding-left: 1.2rem; margin: 0.75rem 0 0; }
+        .next-project { margin-top: 8rem; border-top: 1px solid var(--line); padding: 6rem 2rem; text-align: center; background: linear-gradient(180deg, transparent, rgba(201,168,76,0.03)); transition: background 0.4s; display: block; text-decoration: none; }
+        .next-project:hover { background: rgba(201,168,76,0.08); }
+        .next-project span { display: block; font-size: 0.85rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(237,233,224,0.6); margin-bottom: 1rem; }
+        .next-project h2 { font-family: var(--display); font-size: clamp(3rem, 5vw, 5rem); color: var(--gold); margin: 0; transition: transform 0.4s; }
+        .next-project:hover h2 { transform: translateY(-10px); }
+        @media (max-width: 600px) {
+            .case-layout { padding: 0 1.2rem 4rem; }
+            .exec-summary { padding: 1.5rem; margin: -2rem 1rem 3rem; }
+            .comp-tabs { flex-wrap: wrap; gap: .5rem; }
+            .comp-tab { font-size: 1.1rem; padding: .7rem 1.2rem; }
+            .stat-num { font-size: clamp(2.2rem, 12vw, 4rem); }
+            .pull-quote { padding: 1.8rem 1.2rem; }
+            .pull-quote p { font-size: 1.4rem; }
+            .hero { padding: 0 1.2rem; }
+        }
+        @media print {
+            body { background: white; color: black; }
+            .case-nav, #reading-progress, .case-sidebar, .next-project, #section-get-in-touch, .site-footer, #back-to-top { display: none !important; }
+            .case-layout { grid-template-columns: 1fr; margin: 0; padding: 0; }
+            .article-body h2 { color: black; padding-top: 2rem; }
+            .pull-quote p, .stat-num { color: black; }
+            .exec-summary { border-left-color: black; background: #f9f9f9; }
+        }
+    
+        .bluf-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.8rem; }
+        .bluf-item p { margin: 0; font-size: 0.98rem; line-height: 1.7; color: rgba(237,233,224,0.9); }
+        .bluf-label { display: block; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem; }
+        .banner-btns { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+        .banner-btn-ghost { background: transparent; color: var(--gold); border: 1px solid var(--gold); }
+        .banner-btn-ghost:hover { background: rgba(201,168,76,0.12); }
+        .article-body sup a { text-decoration: none; font-size: 0.7em; margin-left: 1px; }
+        .timeline { border-left: 1px solid var(--line); margin: 0 0 2.5rem; padding-left: 1.5rem; display: flex; flex-direction: column; gap: 1.4rem; }
+        .tl-row { position: relative; }
+        .tl-row::before { content: ''; position: absolute; left: calc(-1.5rem - 5px); top: 0.45rem; width: 9px; height: 9px; border-radius: 50%; background: var(--gold); }
+        .tl-date { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.1em; color: var(--gold); font-size: 1.1rem; }
+        .tl-row p { margin: 0.2rem 0 0 !important; font-size: 1.02rem !important; }
+        .chart-box { position: relative; height: 380px; background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 12px; padding: 1.2rem; margin: 1.5rem 0 0.8rem; box-sizing: border-box; }
+        .chart-box-sm { height: 320px; margin-top: 2rem; }
+        .chart-note { font-size: 0.85rem !important; color: rgba(237,233,224,0.5) !important; line-height: 1.6 !important; }
+        .sub-h { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.08em; font-size: 1.5rem; color: var(--fg); margin: 3rem 0 1rem; font-weight: 400; }
+        .scenario-toggle { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+        .sc-btn { background: none; border: 1px solid var(--line); color: rgba(237,233,224,0.45); font-family: var(--sans); font-size: 0.78rem; letter-spacing: 0.08em; padding: 0.5rem 1rem; border-radius: 50px; cursor: pointer; transition: all 0.25s; }
+        .sc-btn.active { border-color: var(--gold); color: var(--gold); background: rgba(201,168,76,0.08); }
+        .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 1.5rem 0; border: 1px solid var(--line); border-radius: 8px; }
+        .data-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; min-width: 520px; }
+        .data-table th { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.08em; font-weight: 400; font-size: 1rem; color: var(--gold); text-align: left; padding: 0.8rem 1rem; border-bottom: 1px solid var(--line); background: rgba(201,168,76,0.04); }
+        .data-table td { padding: 0.7rem 1rem; border-bottom: 1px solid rgba(237,233,224,0.06); color: rgba(237,233,224,0.8); }
+        .data-table tr:last-child td { border-bottom: none; }
+        .data-table td.hl { color: var(--gold); }
+        .tableau-frame { position: relative; width: 100%; height: 860px; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: #fff; margin: 1.5rem 0 0.8rem; }
+        .tableau-frame-sm { height: 720px; }
+        .tableau-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
+        .insight-list { display: flex; flex-direction: column; gap: 1.6rem; margin-bottom: 3rem; }
+        .insight { display: grid; grid-template-columns: 3.2rem 1fr; gap: 1rem; border-top: 1px solid var(--line); padding-top: 1.4rem; }
+        .insight-num { font-family: var(--display); font-size: 2rem; color: var(--gold); line-height: 1; }
+        .insight h4 { margin: 0 0 0.5rem; font-family: var(--display); font-size: 1.45rem; font-weight: 500; color: var(--fg); line-height: 1.25; }
+        .insight p { margin: 0 !important; font-size: 1.02rem !important; }
+        .recommend-box { border: 1px solid rgba(201,168,76,0.4); background: rgba(201,168,76,0.06); border-radius: 8px; padding: 2rem; margin-bottom: 3rem; }
+        .recommend-box p { margin: 0 !important; font-size: 1.05rem !important; }
+        .stat-box { text-align: center; }
+        .case-layout > * { min-width: 0; }
+        @media (max-width: 900px) { .bluf-grid { grid-template-columns: 1fr; gap: 1.3rem; } }
+        @media (max-width: 600px) {
+            .chart-box { height: 300px; padding: 0.8rem; }
+            .tableau-frame { height: 1150px; }
+            .insight { grid-template-columns: 1fr; gap: 0.4rem; }
+            .recommend-box { padding: 1.4rem; }
+            .data-table { font-size: 0.85rem; }
+        }
+        @media print { .tableau-frame, .scenario-toggle { display: none !important; } .data-table td, .data-table th { color: black; } }
+        /* keep the contents sidebar sticky: overflow-x hidden on html/body breaks position: sticky, clip does not */
+        html, body { overflow-x: clip !important; }
+        /* Sourcing page: long contents list, so let the sticky sidebar scroll on its own */
+        .case-sidebar { max-height: calc(100vh - 140px); overflow-y: auto; scrollbar-width: thin; }
+        .article-body .proj-section { padding-top: 3.5rem; }
+        .article-body .proj-stats { margin-bottom: 1rem; }
+        @media (max-width: 600px) { .tableau-frame-sm { height: 980px; } .article-body table.ssens-table { display: block; overflow-x: auto; max-width: 100%; } }
+    </style>
+    <link rel="stylesheet" href="styles.css?v=2">
+
 </head>
 <body>
 
-    <div id="aura" aria-hidden="true"></div>
-    <div id="sprog" aria-hidden="true"></div>
-    <div id="cdot" aria-hidden="true"></div>
-    <div id="cring" aria-hidden="true"></div>
-    <div id="ctip" aria-hidden="true"></div>
+<div id="reading-progress"></div>
+<button id="back-to-top" aria-label="Scroll to top" onclick="window.scrollTo(0,0)">↑</button>
 
-    <nav id="mobile-menu" role="navigation" aria-label="Mobile menu">
-        <a href="../index.html#scrub-section">Home</a>
-        <a href="../index.html#section-cases">Cases</a>
-        <a href="../index.html#section-skills">Skills</a>
-        <a href="../simulators.html">Simulators</a>
-        <a href="../index.html#section-get-in-touch">Contact</a>
-        <a href="../index.html#section-get-in-touch" class="mob-cta">Let's Connect ↗</a>
-    </nav>
+<nav class="case-nav">
+    <div class="nav-container">
+        <a href="../index.html" class="nav-logo">PRAPANCH <span>KOKKALEMADA</span></a>
+        <div class="nav-links">
+            <a href="../index.html#section-intro">ABOUT</a>
+            <a href="../index.html#section-cases" style="color: var(--gold);">RESEARCH</a>
+            <a href="../simulators.html">SIMULATORS</a>
+            <a href="../index.html#section-skills">SKILLS</a>
+            <a href="../about.html">GALLERY</a>
+        </div>
+        <button id="case-menu-toggle" style="display:none; background:none; border:none; color:var(--fg); font-size:1.5rem; cursor:pointer;" aria-label="Open navigation">☰</button>
+        <a href="mailto:kokkalem@msu.edu" class="nav-connect">LET'S CONNECT ↗</a>
+    </div>
+</nav>
 
-    <nav id="mainnav" role="navigation" aria-label="Primary navigation">
-        <a class="nav-logo" href="../index.html">PRAPANCH <span>KOKKALEMADA</span></a>
-        <ul class="nav-links">
-            <li><a href="../index.html#section-intro">About</a></li>
-            <li><a href="../index.html#section-cases" class="act">Research</a></li>
-            <li><a href="../simulators.html">Simulators</a></li>
-            <li><a href="../index.html#section-skills">Skills</a></li>
-            <li><a href="../about.html">Gallery</a></li>
-        </ul>
-        <a class="nav-cta" href="../index.html#section-get-in-touch"><span>Let's Connect ↗</span></a>
-        <button id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
-            <span></span><span></span><span></span>
-        </button>
-    </nav>
+<div id="case-mobile-menu" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:var(--bg);z-index:200;flex-direction:column;align-items:center;justify-content:center;gap:2rem;">
+    <button onclick="document.getElementById('case-mobile-menu').style.display='none';" style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;color:var(--fg);font-size:2rem; cursor:pointer;">&times;</button>
+    <a href="../index.html#section-intro" style="font-family:var(--display);font-size:2.5rem;color:var(--fg);text-decoration:none;">ABOUT</a>
+    <a href="../index.html#section-cases" style="font-family:var(--display);font-size:2.5rem;color:var(--gold);text-decoration:none;">RESEARCH</a>
+    <a href="../simulators.html" style="font-family:var(--display);font-size:2.5rem;color:var(--fg);text-decoration:none;">SIMULATORS</a>
+    <a href="../index.html#section-skills" style="font-family:var(--display);font-size:2.5rem;color:var(--fg);text-decoration:none;">SKILLS</a>
+    <a href="../about.html" style="font-family:var(--display);font-size:2.5rem;color:var(--fg);text-decoration:none;">GALLERY</a>
+</div>
 
-    <header class="proj-hero">
-        <div class="proj-breadcrumbs"><a href="../index.html">Portfolio</a> / <a href="../index.html#section-cases">Research</a> / Sourcing</div>
-        <span class="case-badge">Portfolio Case Study</span>
-        <h1>Category <em>Sourcing Strategy.</em></h1>
-        <p>A full sourcing toolkit, run end to end on one category. It starts from my procurement work at Ward Tires. Then it applies the same method to a fresh indirect category: corrugated packaging.</p>
-        <p class="proj-hero-note">Two kinds of numbers appear on this page. <span class="verified">Verified</span> marks my own Ward Tires figures. <span class="assump">Assumption</span> marks model inputs for the corrugated case. Market cost data is real and comes from BLS and EIA.</p>
-    </header>
+<header class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+        <div class="breadcrumbs hero-anim"><a href="../index.html">Portfolio</a> / <a href="../index.html#section-cases">Research</a> / Strategic Sourcing</div>
+        <h1 class="hero-anim" style="font-family: var(--display); font-size: clamp(3.2rem, 7vw, 6.5rem); color: var(--gold); margin: 0; line-height: 1;">CATEGORY SOURCING STRATEGY</h1>
+        <p class="hero-anim" style="font-size: 1.2rem; max-width: 680px; margin-top: 2rem; line-height: 1.8; color: var(--fg); font-weight: 300;">The producer price index for corrugated boxes is up about 66% since January 2015. Buyers who negotiate on unit price alone miss where most of that cost comes from, and where most of the savings are.</p>
+    </div>
+</header>
 
-    <div class="stat-strip proj-stats" aria-label="Headline figures">
+<div class="exec-summary gsap-reveal">
+    <h3>EXECUTIVE SUMMARY (BLUF)</h3>
+    <div class="bluf-grid">
+        <div class="bluf-item"><span class="bluf-label">The problem</span><p>Corrugated packaging is an indirect category whose price follows paperboard, energy, labor and diesel. Those inputs swing hard, and suppliers pass the swings on. Without a view of what a box should cost, buyers cannot tell a fair increase from an inflated one.</p></div>
+        <div class="bluf-item"><span class="bluf-label">Why solve it</span><p>Packaging sits inside the landed cost of every product shipped. At Ward Tires, managing OEM procurement of about $350K a month on landed cost rather than unit price delivered a 20% landed cost reduction. The same discipline applies to any indirect category.</p></div>
+        <div class="bluf-item"><span class="bluf-label">The answer</span><p>Run the category end to end: build a should-cost from public indexes, map spend, compare suppliers on total cost of ownership, score them, run a weighted RFQ, negotiate from the floor and walk-away, then make sure invoices match the contract. Award to two suppliers with index-linked pricing.</p></div>
+    </div>
+</div>
+
+<div class="sim-link-banner gsap-reveal">
+    <p class="sim-link-banner-text"><strong>Explore the model.</strong> Tableau view of the cost drivers, plus the code and data behind every tool on this page.</p>
+    <div class="banner-btns">
+        <a href="https://public.tableau.com/app/profile/prapanch.kokkalemada/viz/CorrugatedPackagingCostDrivers/CorrugatedPackagingCostDriversIndexJan2015100BLSEIA" class="sim-link-banner-btn" target="_blank" rel="noopener noreferrer">Tableau ↗</a>
+        <a href="https://github.com/Punch-k/Portfolio/tree/main/category-sourcing-strategy" class="sim-link-banner-btn banner-btn-ghost" target="_blank" rel="noopener noreferrer">Code and data ↗</a>
+    </div>
+</div>
+
+<div class="case-layout">
+    <aside class="case-sidebar">
+        <nav aria-label="Table of Contents">
+            <span class="meta-title">CONTENTS</span>
+            <ul class="toc-list" id="toc-list"><li><a href="#sec-ward" class="active">01. Ward Tires</a></li><li><a href="#sec-market">02. Should-Cost</a></li><li><a href="#sec-cube">03. Spend Cube</a></li><li><a href="#sec-tco">04. TCO</a></li><li><a href="#sec-score">05. Scorecard</a></li><li><a href="#sec-rfq">06. RFQ</a></li><li><a href="#sec-nego">07. Negotiation</a></li><li><a href="#sec-comp">08. Compliance</a></li><li><a href="#the-dashboard">09. Dashboard</a></li><li><a href="#insights">10. Insights</a></li><li><a href="#sec-sources">Sources</a></li></ul>
+        </nav>
+        <div class="meta-block">
+            <span class="meta-title">CASE DETAILS</span>
+            <p style="margin: 0 0 0.5rem 0;"><strong>Focus:</strong> Strategic Sourcing, Total Cost of Ownership</p>
+            <p style="margin: 0 0 0.5rem 0;"><strong>Read Time:</strong> 10 Minutes</p>
+            <p style="margin: 0 0 0.5rem 0;"><strong>Tools:</strong> JavaScript models, Tableau, BLS and EIA data</p>
+            <p style="margin: 0;"><strong>Type:</strong> Portfolio Case Study. Verified Ward Tires figures plus labeled model assumptions</p>
+            <button class="print-btn" onclick="window.print()">🖨️ Print Case Study</button>
+        </div>
+    </aside>
+
+    <main class="article-body">
+        <div class="stat-strip proj-stats" aria-label="Headline figures">
         <div class="stat-strip-item"><div class="stat-strip-n">$350<span>K</span></div><div class="stat-strip-l">Monthly procurement spend<br><em>Ward Tires, verified</em></div></div>
         <div class="stat-strip-item"><div class="stat-strip-n">20<span>%</span></div><div class="stat-strip-l">Landed cost reduction<br><em>Ward Tires, verified</em></div></div>
         <div class="stat-strip-item"><div class="stat-strip-n" id="k-box">--</div><div class="stat-strip-l">Box price index change<br><em id="k-box-sub">BLS PPI</em></div></div>
         <div class="stat-strip-item"><div class="stat-strip-n" id="k-opp">--</div><div class="stat-strip-l">Modeled savings, dual source award<br><em>corrugated case, illustrative</em></div></div>
     </div>
 
-    <div class="sim-link-banner proj-links">
-        <p class="sim-link-banner-text"><strong>Code and data.</strong> The should-cost, spend cube, TCO, RFQ and compliance models all run from the files in this folder.</p>
-        <div class="proj-link-btns">
-            <a href="https://github.com/Punch-k/Portfolio/tree/main/category-sourcing-strategy" class="sim-link-banner-btn" target="_blank" rel="noopener noreferrer">View code ↗</a>
-            <a href="https://github.com/Punch-k/Portfolio/blob/main/category-sourcing-strategy/data.json" class="proj-link-sec" target="_blank" rel="noopener noreferrer">Data ↗</a>
-        </div>
-    </div>
-
-    <main class="proj-wrap">
-
-        <div class="sim-tabs" role="tablist" id="steps">
-            <button class="sim-tab-btn active" data-go="sec-ward"><span class="stb-num">01</span> Ward Tires</button>
-            <button class="sim-tab-btn" data-go="sec-market"><span class="stb-num">02</span> Should-Cost</button>
-            <button class="sim-tab-btn" data-go="sec-cube"><span class="stb-num">03</span> Spend Cube</button>
-            <button class="sim-tab-btn" data-go="sec-tco"><span class="stb-num">04</span> TCO</button>
-            <button class="sim-tab-btn" data-go="sec-score"><span class="stb-num">05</span> Scorecard</button>
-            <button class="sim-tab-btn" data-go="sec-rfq"><span class="stb-num">06</span> RFQ</button>
-            <button class="sim-tab-btn" data-go="sec-nego"><span class="stb-num">07</span> Negotiation</button>
-            <button class="sim-tab-btn" data-go="sec-comp"><span class="stb-num">08</span> Compliance</button>
-        </div>
-
-        <!-- 01 WARD TIRES -->
-        <section class="proj-section" id="sec-ward">
+    
+<section class="proj-section scroll-section" id="sec-ward">
             <div class="sim-section-head">
                 <p class="sec-num">01. Where this comes from</p>
                 <h3>Ward Tires, Calgary</h3>
@@ -107,7 +255,7 @@
         </section>
 
         <!-- 02 MARKET + SHOULD COST -->
-        <section class="proj-section" id="sec-market">
+        <section class="proj-section scroll-section" id="sec-market">
             <div class="sim-section-head">
                 <p class="sec-num">02. Market and Should-Cost</p>
                 <h3>What a box should cost</h3>
@@ -150,7 +298,7 @@
         </section>
 
         <!-- 03 SPEND CUBE -->
-        <section class="proj-section" id="sec-cube">
+        <section class="proj-section scroll-section" id="sec-cube">
             <div class="sim-section-head">
                 <p class="sec-num">03. Spend Cube</p>
                 <h3>Who buys what, from whom, at what price</h3>
@@ -172,7 +320,7 @@
         </section>
 
         <!-- 04 TCO -->
-        <section class="proj-section" id="sec-tco">
+        <section class="proj-section scroll-section" id="sec-tco">
             <div class="sim-section-head">
                 <p class="sec-num">04. Total Cost of Ownership</p>
                 <h3>The cheapest box is not always the cheapest</h3>
@@ -202,7 +350,7 @@
         </section>
 
         <!-- 05 SCORECARD -->
-        <section class="proj-section" id="sec-score">
+        <section class="proj-section scroll-section" id="sec-score">
             <div class="sim-section-head">
                 <p class="sec-num">05. Supplier Scorecard</p>
                 <h3>Weighted performance, not gut feel</h3>
@@ -221,7 +369,7 @@
         </section>
 
         <!-- 06 RFQ -->
-        <section class="proj-section" id="sec-rfq">
+        <section class="proj-section scroll-section" id="sec-rfq">
             <div class="sim-section-head">
                 <p class="sec-num">06. RFQ Scoring Sheet</p>
                 <h3>Score the bids, then choose the award</h3>
@@ -239,7 +387,7 @@
         </section>
 
         <!-- 07 NEGOTIATION -->
-        <section class="proj-section" id="sec-nego">
+        <section class="proj-section scroll-section" id="sec-nego">
             <div class="sim-section-head">
                 <p class="sec-num">07. Negotiation Playbook</p>
                 <h3>Know the floor, the walk-away and the ask</h3>
@@ -257,7 +405,7 @@
         </section>
 
         <!-- 08 COMPLIANCE -->
-        <section class="proj-section" id="sec-comp">
+        <section class="proj-section scroll-section" id="sec-comp">
             <div class="sim-section-head">
                 <p class="sec-num">08. Contract Compliance Tracker</p>
                 <h3>Savings only count if invoices match the contract</h3>
@@ -277,25 +425,152 @@
             <p class="table-note">Showing the 40 largest exceptions. Invoice lines are illustrative. The allowed price uses real index values.</p>
         </section>
 
-        <section class="proj-section sources" id="sec-sources">
+        
+        <section id="the-dashboard" class="scroll-section gsap-reveal">
+            <h2>09. THE DASHBOARD</h2>
+            <p>The Tableau view tracks the main cost drivers behind a corrugated box, each indexed to January 2015 = 100, from the same BLS and EIA series the should-cost model uses. Hover over a line to see the monthly value.</p>
+            <div class="tableau-frame tableau-frame-sm">
+                <iframe src="https://public.tableau.com/views/CorrugatedPackagingCostDrivers/CorrugatedPackagingCostDriversIndexJan2015100BLSEIA?:showVizHome=no&amp;:embed=true&amp;:toolbar=bottom&amp;:tabs=no" title="Corrugated packaging cost drivers, Tableau Public" loading="lazy" allowfullscreen></iframe>
+            </div>
+            <p class="chart-note"><a href="https://public.tableau.com/app/profile/prapanch.kokkalemada/viz/CorrugatedPackagingCostDrivers/CorrugatedPackagingCostDriversIndexJan2015100BLSEIA" target="_blank" rel="noopener noreferrer">Open in Tableau Public ↗</a> · <a href="https://github.com/Punch-k/Portfolio/tree/main/sourcing/tableau" target="_blank" rel="noopener noreferrer">Data file ↗</a></p>
+        </section>
+
+        <section id="insights" class="scroll-section gsap-reveal">
+            <h2 style="color: var(--gold);">10. INSIGHTS</h2>
+            <div class="insight-list">
+                <div class="insight"><span class="insight-num">01</span><div><h4>Box prices follow paperboard, so price should too.</h4><p>The box index tracks the paperboard mills index closely. Linking contract price to that index replaces an annual argument with a formula both sides can check.</p></div></div>
+                <div class="insight"><span class="insight-num">02</span><div><h4>The cheapest bid is not the cheapest box.</h4><p>Freight, damage, lead time and inventory can reverse a ranking based on unit price. Total cost of ownership is the only fair comparison.</p></div></div>
+                <div class="insight"><span class="insight-num">03</span><div><h4>Two suppliers buy resilience and leverage.</h4><p>A primary and secondary award protects supply and keeps both suppliers competing for volume at each review.</p></div></div>
+                <div class="insight"><span class="insight-num">04</span><div><h4>Savings only count when invoices match.</h4><p>Negotiated prices leak through off-contract buying and pricing errors. Compliance checks turn modeled savings into real ones.</p></div></div>
+            </div>
+            <div class="recommend-box">
+                <span class="bluf-label">Recommendation</span>
+                <p><strong>Award</strong> a dual-source contract with a primary and secondary supplier. <strong>Price</strong> on a formula linked to the paperboard index, reviewed quarterly. <strong>Measure</strong> suppliers on a scorecard covering cost, quality, delivery and service. <strong>Audit</strong> invoices against the contract every month and recover overcharges.</p>
+            </div>
+        </section>
+
+        <section class="proj-section sources scroll-section" id="sec-sources">
             <div class="sim-section-head"><p class="sec-num">Data and Method</p><h3>Sources and assumptions</h3></div>
             <ol class="src-list" id="src-list"></ol>
             <p class="case-disclaimer">This is a portfolio case study, not work done for an employer. The only employment figures are the two marked Verified. All corrugated volumes, prices, bids, supplier profiles and invoices are assumptions built to show the method. Suppliers are anonymous archetypes, not real companies.</p>
         </section>
+    
     </main>
+</div>
 
-    <footer class="site-footer" role="contentinfo">
-        <div class="footer-left">
-            <span class="ft-logo">Category Sourcing Strategy. A portfolio case study by Prapanch Kokkalemada.</span>
+<a href="../kfc-logistics-failure-case.html" class="next-project">
+    <span>Next Case Study</span>
+    <h2>KFC's Logistics Failure →</h2>
+</a>
+
+<section id="section-get-in-touch" class="contact-section-shell" aria-labelledby="contact-heading">
+    <div class="connect-grid">
+        <div class="ct-content gsap-reveal">
+            <div class="sec-eyebrow-row">
+                <span class="sec-eyebrow-label">Let's Connect</span>
+                <div class="sec-eyebrow-line"></div>
+            </div>
+            <h2 class="contact-display-heading" id="contact-heading">
+                Initiate<br><em class="contact-display-em">Dialogue.</em>
+            </h2>
         </div>
-        <nav class="footer-links" aria-label="Footer links">
-            <a href="mailto:kokkalem@msu.edu" class="ft-link">E-MAIL</a>
-            <a href="https://linkedin.com/in/prapanchkokkalemada/" class="ft-link" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
-            <a href="https://broad.campusgroups.com/gscma/events/" class="ft-link" target="_blank" rel="noopener noreferrer">🏅&nbsp;GSCMA</a>
-            <button class="ft-top-btn" id="footer-top-btn" aria-label="Scroll to top of page">↑ Top</button>
-        </nav>
-    </footer>
+        <div class="ct-visual gsap-reveal">
+            <div class="photo-portrait-frame">
+                <img src="../sparty.jpg" alt="Punch Kokkalemada with Sparty at Michigan State University" class="contact-portrait-img" loading="lazy">
+                <div class="portrait-location-badge">
+                    <span class="portrait-location-eyebrow">Current Base</span>
+                    <span class="portrait-location-city">East Lansing, MI</span>
+                </div>
+            </div>
+            <div class="ct-status-badge">
+                <div class="ct-status-dot-wrap" aria-hidden="true">
+                    <span class="ct-status-dot"></span>
+                    <span class="ct-status-pulse"></span>
+                </div>
+                <div class="ct-status-text">
+                    <span class="ct-status-eyebrow">System Status: Active</span>
+                    <span class="ct-status-label">Open to Full-Time · May 2026</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <script src="app.js?v=1"></script>
+<footer class="site-footer" role="contentinfo">
+    <div class="footer-left">
+        <span class="ft-logo">MBA Candidate © 2026 · Broad College of Business</span>
+    </div>
+    <nav class="footer-links" aria-label="Footer links">
+        <a href="mailto:kokkalem@msu.edu" class="ft-link">E-MAIL</a>
+        <a href="https://linkedin.com/in/prapanchkokkalemada/" class="ft-link" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+        <button class="ft-top-btn" id="footer-top-btn" aria-label="Scroll to top of page" onclick="window.scrollTo(0,0)">↑ Top</button>
+    </nav>
+</footer>
+
+<script>
+    window.addEventListener('scroll', () => {
+        const scrollTop = document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const progress = (scrollTop / scrollHeight) * 100;
+        document.getElementById('reading-progress').style.width = progress + '%';
+        const backToTop = document.getElementById('back-to-top');
+        if (progress > 50) { backToTop.classList.add('visible'); }
+        else { backToTop.classList.remove('visible'); }
+    });
+
+    const sections = document.querySelectorAll('.scroll-section');
+    const navLinks = document.querySelectorAll('.toc-list li a');
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            if (window.pageYOffset >= (section.offsetTop - 200)) { current = section.getAttribute('id'); }
+        });
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (current && link.getAttribute('href') === '#' + current) { link.classList.add('active'); }
+        });
+    });
+
+    function openTab(evt, tabName) {
+        document.querySelectorAll('.comp-panel').forEach(p => { p.style.display = 'none'; });
+        document.querySelectorAll('.comp-tab').forEach(t => t.classList.remove('active'));
+        document.getElementById(tabName).style.display = 'block';
+        evt.currentTarget.classList.add('active');
+    }
+
+    gsap.registerPlugin(ScrollTrigger);
+    const heroTl = gsap.timeline();
+    heroTl.to(".hero-bg", { opacity: 1, duration: 2, ease: "power2.out" })
+          .to(".hero-anim", { y: 0, opacity: 1, duration: 1, stagger: 0.2, ease: "power3.out" }, "-=1.5");
+
+    gsap.utils.toArray('.gsap-reveal').forEach(section => {
+        gsap.to(section, {
+            scrollTrigger: { trigger: section, start: "top 85%" },
+            y: 0, opacity: 1, duration: 1, ease: "power3.out"
+        });
+    });
+
+    ScrollTrigger.create({
+        trigger: ".stat-banner", start: "top 80%", once: true,
+        onEnter: () => {
+            document.querySelectorAll('.counter').forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                let current = 0;
+                const update = () => {
+                    current += Math.max(target, 1) / 60;
+                    if (current < target) { counter.innerText = Math.ceil(current); requestAnimationFrame(update); }
+                    else { counter.innerText = target; }
+                };
+                update();
+            });
+        }
+    });
+
+
+    const toggle = document.getElementById('case-menu-toggle');
+    const menu = document.getElementById('case-mobile-menu');
+    toggle.addEventListener('click', () => { menu.style.display = 'flex'; });
+</script>
+<script src="app.js?v=1"></script>
 </body>
 </html>
