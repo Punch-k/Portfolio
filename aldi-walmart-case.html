@@ -3,33 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aldi vs. Walmart | Strategy & Operations Case Study</title>
-    
-    <meta name="description" content="Retail strategy deep dive by Prapanch Kokkalemada. How Aldi leveraged private labels and inflation to disrupt Walmart.">
-    <meta property="og:title" content="Aldi vs. Walmart — Retail Strategy Case Study">
-    <meta property="og:description" content="Retail strategy deep dive by Prapanch Kokkalemada, Strategy & Operations Transformation specialist.">
-    <meta property="og:image" content="https://punch-k.github.io/Portfolio/AboutIMG/About1.jpeg">
+    <title>Aldi vs. Walmart | Retail Strategy Case Study</title>
+
+    <meta name="description" content="Portfolio case study by Prapanch Kokkalemada. Aldi is adding more than 180 US stores in 2026 and targets 3,200 by 2028. How Walmart should defend the weekly grocery trip.">
+    <meta property="og:title" content="Aldi vs. Walmart: Retail Strategy Case Study">
+    <meta property="og:description" content="Store network, private label and grocery share: how Walmart should respond to Aldi's US expansion. Tableau dashboard and sourced data.">
     <meta property="og:url" content="https://punch-k.github.io/Portfolio/aldi-walmart-case.html">
     <link rel="canonical" href="https://punch-k.github.io/Portfolio/aldi-walmart-case.html">
 
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=7">
-    
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
     <style>
         body { background: var(--bg); color: var(--fg); font-family: var(--sans); margin: 0; padding: 0; overflow-x: hidden; scroll-behavior: smooth; }
-
-        /* ── ARTICLE UTILITIES ── */
         #reading-progress { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 1000; transition: width 0.1s ease; }
-        
         #back-to-top { position: fixed; bottom: 2rem; right: 2rem; background: var(--fg); color: var(--bg); border: none; padding: 1rem; border-radius: 50%; cursor: pointer; z-index: 999; opacity: 0; transform: translateY(20px); transition: all 0.3s ease; font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; }
         #back-to-top.visible { opacity: 1; transform: translateY(0); }
         #back-to-top:hover { background: var(--gold); }
-
-        /* ── SEAMLESS NAVIGATION ── */
         .case-nav { position: fixed; top: 0; left: 0; width: 100%; padding: 1.5rem 4rem; display: flex; justify-content: space-between; align-items: center; background: rgba(10, 11, 13, 0.85); backdrop-filter: blur(12px); z-index: 100; border-bottom: 1px solid rgba(237,233,224,0.05); box-sizing: border-box; }
         .nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; width: 100%; }
         /* .nav-logo styling now comes solely from the shared style.css rule -- no local
@@ -40,21 +34,14 @@
         .nav-connect { border: 1px solid var(--gold); color: var(--gold); padding: 0.6rem 1.5rem; border-radius: 50px; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; transition: all 0.3s ease; }
         .nav-connect:hover { background: var(--gold); color: var(--bg); }
         @media (max-width: 900px) { .nav-links { display: none; } .case-nav { padding: 1rem 1.5rem; } #case-menu-toggle { display: block !important; } }
-
-        /* ── HERO & BREADCRUMBS ── */
         .hero { height: 75vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; padding: 0 2rem; border-bottom: 1px solid var(--line); }
-        .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1600&auto=format&fit=crop'); background-size: cover; background-position: center; opacity: 0; filter: grayscale(90%) brightness(0.25); z-index: 0; }
+        .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(ellipse at 50% 35%, rgba(201,168,76,0.16), transparent 60%), repeating-radial-gradient(circle at 50% 120%, rgba(237,233,224,0.035) 0 2px, transparent 2px 26px); opacity: 0; z-index: 0; }
         .hero-content { position: relative; z-index: 10; display: flex; flex-direction: column; align-items: center; }
         .breadcrumbs { display: flex; gap: 0.5rem; color: rgba(237,233,224,0.6); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 2rem; opacity: 0; }
         .breadcrumbs a { color: var(--gold); text-decoration: none; }
-        
         .exec-summary { background: rgba(201,168,76,0.05); border-left: 4px solid var(--gold); padding: 2.5rem; margin: -3rem auto 4rem; position: relative; z-index: 20; max-width: 1000px; border-radius: 0 8px 8px 0; backdrop-filter: blur(10px); }
         .exec-summary h3 { font-family: 'Bebas Neue', sans-serif; color: var(--gold); margin-top: 0; font-size: 1.5rem; letter-spacing: 0.1em; }
-
-        /* ── GRID LAYOUT: SIDEBAR + CONTENT ── */
         .case-layout { display: grid; grid-template-columns: 250px 1fr; gap: 5rem; max-width: 1200px; margin: 0 auto; padding: 0 2rem 6rem; align-items: start; }
-        
-        /* Sticky Sidebar */
         .case-sidebar { position: sticky; top: 120px; display: flex; flex-direction: column; gap: 3rem; }
         .toc-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem; border-left: 1px solid var(--line); }
         .toc-list li a { text-decoration: none; color: rgba(237,233,224,0.5); font-size: 0.9rem; transition: all 0.3s ease; padding-left: 1.5rem; display: block; position: relative; }
@@ -62,21 +49,15 @@
         .toc-list li a:hover { color: var(--fg); }
         .toc-list li a.active { color: var(--gold); font-weight: 500; }
         .toc-list li a.active::before { background: var(--gold); }
-        
         .meta-block { font-size: 0.8rem; color: rgba(237,233,224,0.6); }
         .meta-title { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.1em; color: var(--fg); margin-bottom: 0.5rem; display: block; font-size: 1rem; }
         .print-btn { background: none; border: 1px solid var(--line); color: var(--fg); padding: 0.5rem 1rem; cursor: pointer; font-family: var(--sans); font-size: 0.8rem; transition: all 0.3s; margin-top: 1rem; width: 100%; text-align: left; }
         .print-btn:hover { border-color: var(--gold); color: var(--gold); }
-
         @media (max-width: 900px) { .case-layout { grid-template-columns: 1fr; } .case-sidebar { display: none; } }
-
-        /* ── CONTENT STYLES ── */
         .article-body h2 { font-family: var(--display); font-size: clamp(1.9rem, 7vw, 2.8rem); color: var(--fg); margin-top: 0; margin-bottom: 1.5rem; line-height: 1.15; position: relative; padding-top: 4rem; }
         .article-body p { font-size: 1.15rem; color: rgba(237,233,224,0.8); line-height: 1.8; margin-bottom: 2rem; font-weight: 300; }
         .article-body a { color: var(--gold); }
         .gsap-reveal { opacity: 0; transform: translateY(40px); }
-
-        /* ── INTERACTIVE TABS ── */
         .comp-tabs { display: flex; gap: 1rem; border-bottom: 1px solid var(--line); margin-bottom: 2rem; }
         .comp-tab { background: none; border: none; color: rgba(237,233,224,0.5); font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: 0.05em; padding: 1rem 2rem; cursor: pointer; transition: all 0.3s; position: relative; }
         .comp-tab::after { content: ''; position: absolute; bottom: -1px; left: 0; width: 100%; height: 2px; background: transparent; transition: background 0.3s; }
@@ -85,27 +66,20 @@
         .comp-panel { display: none; animation: fadeIn 0.5s ease; }
         .comp-panel.active { display: block; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-
-        /* ── PULL QUOTE ── */
         .pull-quote { margin: 4rem 0; padding: 3rem; border: 1px solid var(--line); text-align: center; background: rgba(255,255,255,0.02); }
         .pull-quote p { font-family: var(--display); font-size: 2rem; color: var(--gold); line-height: 1.3; margin: 0 0 1rem 0; font-style: italic; }
         .pull-quote span { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.1em; color: rgba(237,233,224,0.5); }
-
-        /* ── STATS & CHARTS ── */
         .stat-banner { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 2rem; background: rgba(255,255,255,0.02); border: 1px solid var(--line); padding: 3rem; border-radius: 8px; margin: 4rem 0; }
         .stat-num { font-family: var(--display); font-size: 4rem; color: var(--gold); line-height: 1; }
         .stat-label { font-size: 0.85rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(237,233,224,0.6); margin-top: 0.5rem; }
         .sources-block { font-size: 0.85rem; color: rgba(237,233,224,0.55); line-height: 1.9; border-top: 1px solid var(--line); padding-top: 2rem; margin-top: 3rem; }
         .sources-block strong { color: var(--gold); }
         .sources-block ol { padding-left: 1.2rem; margin: 0.75rem 0 0; }
-
-        /* ── NEXT PROJECT LOOP ── */
         .next-project { margin-top: 8rem; border-top: 1px solid var(--line); padding: 6rem 2rem; text-align: center; background: linear-gradient(180deg, transparent, rgba(201,168,76,0.03)); transition: background 0.4s; display: block; text-decoration: none; }
         .next-project:hover { background: rgba(201,168,76,0.08); }
         .next-project span { display: block; font-size: 0.85rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(237,233,224,0.6); margin-bottom: 1rem; }
         .next-project h2 { font-family: var(--display); font-size: clamp(3rem, 5vw, 5rem); color: var(--gold); margin: 0; transition: transform 0.4s; }
         .next-project:hover h2 { transform: translateY(-10px); }
-
         @media (max-width: 600px) {
             .case-layout { padding: 0 1.2rem 4rem; }
             .exec-summary { padding: 1.5rem; margin: -2rem 1rem 3rem; }
@@ -124,6 +98,54 @@
             .pull-quote p, .stat-num { color: black; }
             .exec-summary { border-left-color: black; background: #f9f9f9; }
         }
+    
+        .bluf-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.8rem; }
+        .bluf-item p { margin: 0; font-size: 0.98rem; line-height: 1.7; color: rgba(237,233,224,0.9); }
+        .bluf-label { display: block; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem; }
+        .banner-btns { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+        .banner-btn-ghost { background: transparent; color: var(--gold); border: 1px solid var(--gold); }
+        .banner-btn-ghost:hover { background: rgba(201,168,76,0.12); }
+        .article-body sup a { text-decoration: none; font-size: 0.7em; margin-left: 1px; }
+        .timeline { border-left: 1px solid var(--line); margin: 0 0 2.5rem; padding-left: 1.5rem; display: flex; flex-direction: column; gap: 1.4rem; }
+        .tl-row { position: relative; }
+        .tl-row::before { content: ''; position: absolute; left: calc(-1.5rem - 5px); top: 0.45rem; width: 9px; height: 9px; border-radius: 50%; background: var(--gold); }
+        .tl-date { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.1em; color: var(--gold); font-size: 1.1rem; }
+        .tl-row p { margin: 0.2rem 0 0 !important; font-size: 1.02rem !important; }
+        .chart-box { position: relative; height: 380px; background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 12px; padding: 1.2rem; margin: 1.5rem 0 0.8rem; box-sizing: border-box; }
+        .chart-box-sm { height: 320px; margin-top: 2rem; }
+        .chart-note { font-size: 0.85rem !important; color: rgba(237,233,224,0.5) !important; line-height: 1.6 !important; }
+        .sub-h { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.08em; font-size: 1.5rem; color: var(--fg); margin: 3rem 0 1rem; font-weight: 400; }
+        .scenario-toggle { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+        .sc-btn { background: none; border: 1px solid var(--line); color: rgba(237,233,224,0.45); font-family: var(--sans); font-size: 0.78rem; letter-spacing: 0.08em; padding: 0.5rem 1rem; border-radius: 50px; cursor: pointer; transition: all 0.25s; }
+        .sc-btn.active { border-color: var(--gold); color: var(--gold); background: rgba(201,168,76,0.08); }
+        .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 1.5rem 0; border: 1px solid var(--line); border-radius: 8px; }
+        .data-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; min-width: 520px; }
+        .data-table th { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.08em; font-weight: 400; font-size: 1rem; color: var(--gold); text-align: left; padding: 0.8rem 1rem; border-bottom: 1px solid var(--line); background: rgba(201,168,76,0.04); }
+        .data-table td { padding: 0.7rem 1rem; border-bottom: 1px solid rgba(237,233,224,0.06); color: rgba(237,233,224,0.8); }
+        .data-table tr:last-child td { border-bottom: none; }
+        .data-table td.hl { color: var(--gold); }
+        .tableau-frame { position: relative; width: 100%; height: 860px; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: #fff; margin: 1.5rem 0 0.8rem; }
+        .tableau-frame-sm { height: 720px; }
+        .tableau-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
+        .insight-list { display: flex; flex-direction: column; gap: 1.6rem; margin-bottom: 3rem; }
+        .insight { display: grid; grid-template-columns: 3.2rem 1fr; gap: 1rem; border-top: 1px solid var(--line); padding-top: 1.4rem; }
+        .insight-num { font-family: var(--display); font-size: 2rem; color: var(--gold); line-height: 1; }
+        .insight h4 { margin: 0 0 0.5rem; font-family: var(--display); font-size: 1.45rem; font-weight: 500; color: var(--fg); line-height: 1.25; }
+        .insight p { margin: 0 !important; font-size: 1.02rem !important; }
+        .recommend-box { border: 1px solid rgba(201,168,76,0.4); background: rgba(201,168,76,0.06); border-radius: 8px; padding: 2rem; margin-bottom: 3rem; }
+        .recommend-box p { margin: 0 !important; font-size: 1.05rem !important; }
+        .stat-box { text-align: center; }
+        .case-layout > * { min-width: 0; }
+        @media (max-width: 900px) { .bluf-grid { grid-template-columns: 1fr; gap: 1.3rem; } }
+        @media (max-width: 600px) {
+            .chart-box { height: 300px; padding: 0.8rem; }
+            .tableau-frame { height: 1150px; }
+            .tableau-frame-sm { height: 980px; }
+            .insight { grid-template-columns: 1fr; gap: 0.4rem; }
+            .recommend-box { padding: 1.4rem; }
+            .data-table { font-size: 0.85rem; }
+        }
+        @media print { .tableau-frame, .scenario-toggle { display: none !important; } .data-table td, .data-table th { color: black; } }
         /* keep the contents sidebar sticky: overflow-x hidden on html/body breaks position: sticky, clip does not */
         html, body { overflow-x: clip !important; }
     </style>
@@ -161,116 +183,161 @@
     <div class="hero-bg"></div>
     <div class="hero-content">
         <div class="breadcrumbs hero-anim">
-            <a href="index.html">Portfolio</a> / <a href="index.html#section-cases">Research</a> / Strategy
+            <a href="index.html">Portfolio</a> / <a href="index.html#section-cases">Research</a> / Retail Strategy
         </div>
-        <h1 class="hero-anim" style="font-family: var(--display); font-size: clamp(3.5rem, 8vw, 7rem); color: var(--gold); margin: 0; line-height: 1;">ALDI VS. WALMART</h1>
-        <p class="hero-anim" style="font-size: 1.2rem; max-width: 650px; margin-top: 2rem; line-height: 1.8; color: var(--fg); font-weight: 300;">
-            How a German hard-discounter leveraged private labels and massive inflation to disrupt the world's largest retailer.
+        <h1 class="hero-anim" style="font-family: var(--display); font-size: clamp(3.2rem, 7vw, 6.5rem); color: var(--gold); margin: 0; line-height: 1;">ALDI VS. WALMART</h1>
+        <p class="hero-anim" style="font-size: 1.2rem; max-width: 680px; margin-top: 2rem; line-height: 1.8; color: var(--fg); font-weight: 300;">
+            Walmart takes about 21% of every US grocery dollar. Aldi takes 2.8%, but it is opening more than 180 stores this year and plans to reach 3,200 by 2028. The question is not who is bigger. It is who the next value shopper visits first.
         </p>
     </div>
 </header>
 
 <div class="exec-summary gsap-reveal">
     <h3>EXECUTIVE SUMMARY (BLUF)</h3>
-    <p style="margin: 0; font-size: 1.05rem; line-height: 1.7; color: rgba(237,233,224,0.9);">
-        Walmart’s traditional moat—scale and Everyday Low Prices—is being challenged by Aldi's hyper-efficient, limited-SKU operations. By reducing choices to 1,400 core items (80% private label) and maximizing floor labor efficiency, Aldi captured 17 million new customers in a high-inflation environment, shifting the competitive paradigm in US grocery retail.
-    </p>
+    <div class="bluf-grid">
+        <div class="bluf-item">
+            <span class="bluf-label">The problem</span>
+            <p>Aldi is growing its US store count fast, from 2,361 locations in early 2024 to 2,614 at the end of 2025, with nearly 2,800 planned by the end of 2026. It reported 17 million new customers in 2025, and much of its new growth lands in the Southeast through converted Winn-Dixie and Harveys stores.</p>
+        </div>
+        <div class="bluf-item">
+            <span class="bluf-label">Why solve it</span>
+            <p>For Walmart, grocery is the weekly trip that brings shoppers into a Supercenter. A household that moves that trip to a small Aldi box also stops walking past everything else Walmart sells. Aldi's model is cheaper to run per store, so it can keep opening locations near Walmart's 3,560 Supercenters.</p>
+        </div>
+        <div class="bluf-item">
+            <span class="bluf-label">The answer</span>
+            <p>Walmart should not try to out-simplify Aldi. It should defend the trip where its model wins: online pickup and delivery, a sharper private label price ladder on key staples, and smaller Neighborhood Market formats in the markets where Aldi is converting stores.</p>
+        </div>
+    </div>
 </div>
 
 <div class="sim-link-banner gsap-reveal">
-    <p class="sim-link-banner-text"><strong>Try it yourself.</strong> See the cost math behind lean vs. bulk-buy strategy.</p>
-    <a href="simulators.html#inventory-lab" class="sim-link-banner-btn">Open Inventory Lab ↗</a>
+    <p class="sim-link-banner-text"><strong>Explore the data.</strong> Tableau dashboard of Aldi's store path, Walmart's US formats and grocery share.</p>
+    <div class="banner-btns">
+        <a href="https://public.tableau.com/app/profile/prapanch.kokkalemada/viz/AldivsWalmartFootprint/AldivsWalmartUSFootprintandGroceryShare" class="sim-link-banner-btn" target="_blank" rel="noopener noreferrer">Tableau ↗</a>
+        <a href="simulators.html#inventory-lab" class="sim-link-banner-btn banner-btn-ghost">Inventory Lab ↗</a>
+    </div>
 </div>
 
 <div class="case-layout">
-    
     <aside class="case-sidebar">
         <nav aria-label="Table of Contents">
             <span class="meta-title">CONTENTS</span>
             <ul class="toc-list" id="toc-list">
-                <li><a href="#baseline-collision" class="active">I. Baseline Collision</a></li>
-                <li><a href="#operational-models">II. Operational Models</a></li>
-                <li><a href="#the-escalation">III. The 2026 Escalation</a></li>
-                <li><a href="#data-trajectory">IV. Data Trajectory</a></li>
+                <li><a href="#two-models" class="active">I. Two Models</a></li>
+                <li><a href="#the-expansion">II. The Expansion</a></li>
+                <li><a href="#the-footprint">III. The Footprint</a></li>
+                <li><a href="#the-dashboard">IV. The Dashboard</a></li>
+                <li><a href="#insights">V. Insights</a></li>
             </ul>
         </nav>
-
         <div class="meta-block">
             <span class="meta-title">CASE DETAILS</span>
-            <p style="margin: 0 0 0.5rem 0;"><strong>Date:</strong> April 2026</p>
-            <p style="margin: 0 0 0.5rem 0;"><strong>Read Time:</strong> 5 Minutes</p>
-            <p style="margin: 0;"><strong>Focus:</strong> Supply Chain, GTM Strategy</p>
+            <p style="margin: 0 0 0.5rem 0;"><strong>Focus:</strong> Retail Strategy, Store Network, Private Label</p>
+            <p style="margin: 0 0 0.5rem 0;"><strong>Read Time:</strong> 6 Minutes</p>
+            <p style="margin: 0 0 0.5rem 0;"><strong>Tools:</strong> Tableau, public filings</p>
+            <p style="margin: 0;"><strong>Type:</strong> Portfolio Case Study. Public data, independent analysis</p>
             <button class="print-btn" onclick="window.print()">🖨️ Print Case Study</button>
         </div>
     </aside>
 
     <main class="article-body">
-        
-        <section id="baseline-collision" class="scroll-section gsap-reveal">
-            <h2>I. THE BASELINE COLLISION</h2>
-            <p>Historically, Walmart dominated through its massive Vendor-Managed Inventory (VMI) logistics network and "Everyday Low Prices." By 2019, Aldi asserted itself as a genuine threat, opening locations aggressively near Walmart Supercenters.</p>
-            <p>While a standard Walmart carried 150,000 SKUs, Aldi utilized a hyper-efficient model with only 1,400 curated items per store—eliminating choice to maximize operational velocity and purchasing power. This forces a direct operational clash: scale-through-volume vs. margin-through-simplicity.</p>
+        <section id="two-models" class="scroll-section gsap-reveal">
+            <h2>I. TWO MODELS</h2>
+            <p>Walmart wins grocery through scale. As of April 30, 2025 it ran 4,606 Walmart US stores, including 3,560 Supercenters averaging close to 178,000 square feet each.<sup><a href="#src-4">4</a></sup> A Supercenter puts groceries next to general merchandise, so the weekly food trip pulls shoppers past everything else the store sells.</p>
+            <p>Aldi wins through simplicity. More than 90% of its assortment is its own private label, and its stores carry a short list of items rather than tens of thousands.<sup><a href="#src-2">2</a></sup> Fewer items mean fewer suppliers to manage, faster restocking and a smaller box that is cheaper to build and staff. Select a model below.</p>
+            <div class="comp-tabs">
+                <button class="comp-tab active" onclick="openTab(event, 'tab-aldi')">The Aldi Model</button>
+                <button class="comp-tab" onclick="openTab(event, 'tab-walmart')">The Walmart Model</button>
+            </div>
+            <div id="tab-aldi" class="comp-panel active">
+                <p><strong>Margin through simplicity.</strong> A narrow assortment built on private label lets Aldi buy in very large volume per item and control its own product specifications. Products are displayed in their shipping cartons, and the store format is small and repeatable, so each new location is quick to open. The trade-off is choice: shoppers looking for a specific national brand often still need a second stop.</p>
+            </div>
+            <div id="tab-walmart" class="comp-panel">
+                <p><strong>Scale through volume and convenience.</strong> Walmart spreads its supply chain over thousands of large stores and a broad assortment, and adds online pickup and delivery on top of the same stores. Groceries are the reason to visit often; general merchandise, pharmacy and services carry the margin. The trade-off is cost: a 178,000 square foot box is expensive to open, so Walmart adds few new Supercenters and relies on its existing base.</p>
+            </div>
         </section>
 
         <blockquote class="pull-quote gsap-reveal">
-            <p>"Aldi isn't just selling groceries; they are selling back the customer's time through the paradox of limited choice."</p>
-            <span>— Operations Strategy Insight</span>
+            <p>"Walmart sells the whole trip. Aldi sells the shortest trip."</p>
+            <span>Case thesis</span>
         </blockquote>
 
-        <section id="operational-models" class="scroll-section gsap-reveal">
-            <h2>II. OPERATIONAL MODELS</h2>
-            <p>To understand the disruption, we must isolate the specific mechanics each retailer uses to drive profitability. Select a model below to explore the strategic differences.</p>
-            
-            <div class="comp-tabs">
-                <button class="comp-tab active" onclick="openTab(event, 'aldi-model')">The Aldi Model</button>
-                <button class="comp-tab" onclick="openTab(event, 'walmart-model')">The Walmart Pivot</button>
+        <section id="the-expansion" class="scroll-section gsap-reveal">
+            <h2>II. THE EXPANSION</h2>
+            <p>Aldi has turned a steady growth plan into one of the fastest store rollouts in US grocery.</p>
+            <div class="timeline">
+                <div class="tl-row"><span class="tl-date">Mar 2024</span><p>Aldi announces plans to add 800 US stores by the end of 2028, backed by more than $9 billion of investment over five years, starting from 2,361 locations.<sup><a href="#src-1">1</a></sup></p></div>
+                <div class="tl-row"><span class="tl-date">2024</span><p>Aldi acquires Southeastern Grocers, owner of Winn-Dixie and Harveys, and begins converting stores to the Aldi format across the Southeast.<sup><a href="#src-3">3</a></sup></p></div>
+                <div class="tl-row"><span class="tl-date">2025</span><p>Aldi reports 17 million new customers and says one in three US households shopped at Aldi during the year.<sup><a href="#src-3">3</a></sup> It ends the year with 2,614 US stores.<sup><a href="#src-2">2</a></sup></p></div>
+                <div class="tl-row"><span class="tl-date">Jan 2026</span><p>Aldi plans more than 180 new stores across 31 states in 2026, including close to 80 Southeastern Grocers conversions, reaching nearly 2,800 stores by year end and 3,200 by the end of 2028.<sup><a href="#src-3">3</a></sup></p></div>
             </div>
-            
-            <div id="aldi-model" class="comp-panel active">
-                <p><strong>Lean Inventory & Labor:</strong> Aldi operations are defined by 80% Private Label units. By relying on pallet-based displays and multi-sided barcodes, they eliminate the need for aisle-stocking labor and drastically increase checkout velocity. Their real estate footprint remains small (under 20,000 sq ft), keeping capital expenditures low.</p>
-            </div>
-            
-            <div id="walmart-model" class="comp-panel">
-                <p><strong>Digital Ecosystem & Volume:</strong> Walmart recognized the physical threat and transitioned from aggressive footprint expansion to digital mastery. They prioritized Click-and-Collect operations, massive supply chain automation, and leveraging their customer data to build high-margin retail media networks to subsidize low grocery margins.</p>
-            </div>
-        </section>
-
-        <section id="the-escalation" class="scroll-section gsap-reveal">
-            <h2 style="color: var(--gold);">III. THE 2026 ESCALATION</h2>
-            <p>Inflation acted as an accelerant for Aldi. In 2025 alone, Aldi saw 17 million new customers, pushing grocery market share from 4.3% to 5.7%. With the acquisition of Southeastern Grocers, Aldi is committing to 180 new stores in 2026, targeting the Sunbelt region specifically.</p>
         </section>
 
         <section class="stat-banner gsap-reveal">
-            <div class="stat-box" style="text-align: center;">
-                <div class="stat-num counter" data-target="180">0</div>
-                <div class="stat-label">New Stores in 2026</div>
-            </div>
-            <div class="stat-box" style="text-align: center;">
-                <div class="stat-num counter" data-target="17">0</div>
-                <div class="stat-label">Million New Users</div>
-            </div>
-            <div class="stat-box" style="text-align: center;">
-                <div class="stat-num counter" data-target="3200">0</div>
-                <div class="stat-label">Store Goal by 2028</div>
+            <div class="stat-box"><div class="stat-num"><span class="counter" data-target="180">0</span>+</div><div class="stat-label">New Aldi stores in 2026</div></div>
+            <div class="stat-box"><div class="stat-num"><span class="counter" data-target="17">0</span>M</div><div class="stat-label">New Aldi customers, 2025</div></div>
+            <div class="stat-box"><div class="stat-num"><span class="counter" data-target="3200">0</span></div><div class="stat-label">Aldi store target, 2028</div></div>
+        </section>
+
+        <section id="the-footprint" class="scroll-section gsap-reveal">
+            <h2>III. THE FOOTPRINT</h2>
+            <p>Store count shows the gap Aldi is closing. Aldi's path rises from 2,361 stores to a 3,200 store target, while Walmart's Supercenter base holds near 3,560. By 2028 Aldi would run almost as many stores as Walmart has Supercenters, in a box a small fraction of the size.</p>
+            <div class="chart-box"><canvas id="footprintChart" aria-label="Aldi US store count, reported and target, against Walmart Supercenters"></canvas></div>
+            <p class="chart-note">Aldi 2024 and 2025 are reported counts; 2026 and 2028 are company targets. Walmart Supercenters as of April 30, 2025.</p>
+            <p>Share tells the other half. Walmart holds about 21% of US grocery spending and Aldi about 2.8%, based on Numerator data through early October 2025.<sup><a href="#src-2">2</a></sup> Aldi is not taking Walmart's position; it is taking specific trips from specific households, one new store at a time.</p>
+            <div class="table-wrap">
+                <table class="data-table">
+                    <thead><tr><th>Measure</th><th>Walmart</th><th>Aldi</th><th>Source</th></tr></thead>
+                    <tbody>
+                        <tr><td>US grocery share</td><td>21%</td><td>2.8%</td><td>Numerator via CNBC</td></tr>
+                        <tr><td>US store count</td><td>4,606 Walmart US (3,560 Supercenters)</td><td>2,614 (Dec 2025)</td><td>Walmart filings, CNBC</td></tr>
+                        <tr><td>Typical box size</td><td>About 178,000 sq ft (Supercenter)</td><td>Small format</td><td>Walmart unit counts</td></tr>
+                        <tr><td>Private label share</td><td>Not disclosed here</td><td>More than 90% of assortment</td><td>CNBC</td></tr>
+                        <tr><td>Growth plan</td><td>Base held near flat</td><td>3,200 stores by end of 2028</td><td>ALDI US</td></tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
-        <section id="data-trajectory" class="scroll-section gsap-reveal">
-            <h2>IV. THE DATA TRAJECTORY</h2>
-            <p>Visualizing the physical footprint growth reveals Aldi's strategy: relentless, steady expansion compared to Walmart's saturated, flat-lining physical footprint.</p>
-            <div style="height: 400px; background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 12px; padding: 1.5rem; margin-top: 2rem;">
-                <canvas id="walmartChart"></canvas>
+        <section id="the-dashboard" class="scroll-section gsap-reveal">
+            <h2>IV. THE DASHBOARD</h2>
+            <p>The Tableau dashboard brings the three views together: Aldi's reported and target store count, Walmart's US stores by format, and US grocery share. Hover over any bar to see its value.</p>
+            <div class="tableau-frame tableau-frame-sm">
+                <iframe src="https://public.tableau.com/views/AldivsWalmartFootprint/AldivsWalmartUSFootprintandGroceryShare?:showVizHome=no&amp;:embed=true&amp;:toolbar=bottom&amp;:tabs=no" title="Aldi vs Walmart, Tableau Public dashboard" loading="lazy" allowfullscreen></iframe>
+            </div>
+            <p class="chart-note"><a href="https://public.tableau.com/app/profile/prapanch.kokkalemada/viz/AldivsWalmartFootprint/AldivsWalmartUSFootprintandGroceryShare" target="_blank" rel="noopener noreferrer">Open in Tableau Public ↗</a> · <a href="https://github.com/Punch-k/Portfolio/tree/main/aldi-walmart" target="_blank" rel="noopener noreferrer">Data files ↗</a></p>
+        </section>
+
+        <section id="insights" class="scroll-section gsap-reveal">
+            <h2 style="color: var(--gold);">V. INSIGHTS</h2>
+            <div class="insight-list">
+                <div class="insight"><span class="insight-num">01</span><div><h4>Aldi competes for trips, not share.</h4><p>At 2.8% of grocery spending, Aldi is far smaller than Walmart. Its threat is that each new store pulls the weekly staples trip from nearby households, and that trip is what brings shoppers into a Supercenter.</p></div></div>
+                <div class="insight"><span class="insight-num">02</span><div><h4>Store count is Aldi's real lever.</h4><p>A small, repeatable box lets Aldi add more than 180 stores in a year. Walmart's large format is expensive to replicate, so its answer has to come from the stores and channels it already has.</p></div></div>
+                <div class="insight"><span class="insight-num">03</span><div><h4>Private label is the price engine.</h4><p>With more than 90% of its assortment under its own brands, Aldi controls cost and specification on the items it sells. Walmart's best counter on price is its own private label on the same staples.</p></div></div>
+                <div class="insight"><span class="insight-num">04</span><div><h4>The Southeast is the front line.</h4><p>Converting Winn-Dixie and Harveys stores gives Aldi ready-made sites in markets where Walmart is strong, faster than building new stores.</p></div></div>
+            </div>
+            <div class="recommend-box">
+                <span class="bluf-label">Recommendation</span>
+                <p>Walmart should defend the weekly trip rather than match Aldi's format. <strong>Price:</strong> hold a visible private label price gap on the 100 or so staples that drive a basket. <strong>Convenience:</strong> push pickup and delivery in neighborhoods within a short drive of new Aldi stores. <strong>Format:</strong> use Neighborhood Markets, already 671 stores, as the smaller-box answer in Southeast conversion markets. <strong>Measure:</strong> track trip frequency, not only share, in trade areas around each Aldi opening.</p>
             </div>
         </section>
 
-        <p class="case-disclaimer">Disclaimer: this case study is for academic and demonstrative purposes. Analysis and figures are synthesized from public reporting on Aldi and Walmart's retail strategies to illustrate strategic framework application; all trademarks and brand assets belong to their respective owners.</p>
-
+        <p class="case-disclaimer">Disclaimer: Portfolio case study for academic and demonstrative purposes. This is an independent analysis, not affiliated with or endorsed by Aldi or Walmart. Facts and figures come from the public sources below; the recommendation is the author's view. All trademarks belong to their respective owners.</p>
+        <div class="sources-block">
+            <strong>Sources:</strong>
+            <ol>
+                <li id="src-1"><a href="https://www.grocerydive.com/news/aldi-800-stores-end-of-2028-growth/709612/" target="_blank" rel="noopener noreferrer">Grocery Dive, "Aldi to add 800 stores by end of 2028" (Mar 7, 2024)</a></li>
+                <li id="src-2"><a href="https://www.cnbc.com/2026/01/12/aldi-open-180-us-stores-2026.html" target="_blank" rel="noopener noreferrer">CNBC, "Aldi to open 180 U.S. stores in 2026 as shoppers seek value" (Jan 12, 2026)</a></li>
+                <li id="src-3"><a href="https://corporate.aldi.us/newsroom/news/aldi-us-doubles-down-on-growth-in-2026" target="_blank" rel="noopener noreferrer">ALDI US, "ALDI US Doubles Down on Growth in 2026" (Jan 12, 2026)</a></li>
+                <li id="src-4"><a href="https://stock.walmart.com/_assets/_81906fd8150d99dd80e92168ae1aff5d/walmart/db/938/9953/unit_count_square_footage/Unit+Counts+and+Square+Footage+%28FY26+Q1%29.pdf" target="_blank" rel="noopener noreferrer">Walmart, "Unit Counts and Square Footage (FY26 Q1)", as of April 30, 2025</a></li>
+            </ol>
+        </div>
     </main>
 </div>
 
-<a href="boeing-safety-crisis-case.html" class="next-project">
+<a href="sop-inventory-optimization/" class="next-project">
     <span>Next Case Study</span>
-    <h2>Boeing: Safety Crisis →</h2>
+    <h2>S&amp;OP and Inventory Optimization →</h2>
 </a>
 
 <section id="section-get-in-touch" class="contact-section-shell" aria-labelledby="contact-heading">
@@ -283,9 +350,7 @@
             <h2 class="contact-display-heading" id="contact-heading">
                 Initiate<br><em class="contact-display-em">Dialogue.</em>
             </h2>
-
         </div>
-
         <div class="ct-visual gsap-reveal">
             <div class="photo-portrait-frame">
                 <img src="sparty.jpg" alt="Punch Kokkalemada with Sparty at Michigan State University" class="contact-portrait-img" loading="lazy">
@@ -320,61 +385,41 @@
 </footer>
 
 <script>
-    // 1. READING PROGRESS & BACK TO TOP
     window.addEventListener('scroll', () => {
         const scrollTop = document.documentElement.scrollTop;
         const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         const progress = (scrollTop / scrollHeight) * 100;
         document.getElementById('reading-progress').style.width = progress + '%';
-        
-        // Show back to top button after scrolling 50%
         const backToTop = document.getElementById('back-to-top');
-        if (progress > 50) { backToTop.classList.add('visible'); } 
+        if (progress > 50) { backToTop.classList.add('visible'); }
         else { backToTop.classList.remove('visible'); }
     });
 
-    // 2. STICKY TOC HIGHLIGHTING
     const sections = document.querySelectorAll('.scroll-section');
     const navLinks = document.querySelectorAll('.toc-list li a');
-
     window.addEventListener('scroll', () => {
         let current = '';
         sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (pageYOffset >= (sectionTop - 200)) {
-                current = section.getAttribute('id');
-            }
+            if (window.pageYOffset >= (section.offsetTop - 200)) { current = section.getAttribute('id'); }
         });
-
         navLinks.forEach(link => {
             link.classList.remove('active');
-            if (link.getAttribute('href').includes(current)) {
-                link.classList.add('active');
-            }
+            if (current && link.getAttribute('href') === '#' + current) { link.classList.add('active'); }
         });
     });
 
-    // 3. TAB LOGIC
     function openTab(evt, tabName) {
-        let i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("comp-panel");
-        for (i = 0; i < tabcontent.length; i++) { tabcontent[i].style.display = "none"; }
-        tablinks = document.getElementsByClassName("comp-tab");
-        for (i = 0; i < tablinks.length; i++) { tablinks[i].className = tablinks[i].className.replace(" active", ""); }
-        document.getElementById(tabName).style.display = "block";
-        evt.currentTarget.className += " active";
+        document.querySelectorAll('.comp-panel').forEach(p => { p.style.display = 'none'; });
+        document.querySelectorAll('.comp-tab').forEach(t => t.classList.remove('active'));
+        document.getElementById(tabName).style.display = 'block';
+        evt.currentTarget.classList.add('active');
     }
 
-    // 4. GSAP ANIMATIONS
     gsap.registerPlugin(ScrollTrigger);
-
-    // Hero Timeline
     const heroTl = gsap.timeline();
     heroTl.to(".hero-bg", { opacity: 1, duration: 2, ease: "power2.out" })
           .to(".hero-anim", { y: 0, opacity: 1, duration: 1, stagger: 0.2, ease: "power3.out" }, "-=1.5");
 
-    // Scroll Reveals
     gsap.utils.toArray('.gsap-reveal').forEach(section => {
         gsap.to(section, {
             scrollTrigger: { trigger: section, start: "top 85%" },
@@ -382,78 +427,54 @@
         });
     });
 
-    // 5. STAT COUNTERS (Triggered via GSAP)
     ScrollTrigger.create({
-        trigger: ".stat-banner",
-        start: "top 80%",
-        once: true,
+        trigger: ".stat-banner", start: "top 80%", once: true,
         onEnter: () => {
             document.querySelectorAll('.counter').forEach(counter => {
                 const target = +counter.getAttribute('data-target');
                 let current = 0;
                 const update = () => {
-                    current += target / 60;
-                    if (current < target) {
-                        counter.innerText = Math.ceil(current);
-                        requestAnimationFrame(update);
-                    } else {
-                        counter.innerText = target === 17 ? "17M" : (target === 3200 ? "3,200" : target);
-                    }
+                    current += Math.max(target, 1) / 60;
+                    if (current < target) { counter.innerText = Math.ceil(current); requestAnimationFrame(update); }
+                    else { counter.innerText = target; }
                 };
                 update();
             });
         }
     });
 
-    // 6. CHART.JS
-    const ctx = document.getElementById('walmartChart').getContext('2d');
-    let chartRendered = false;
+    const GOLD = '#c9a84c', FG = '#ede9e0', MUTED = '#787570', RED = '#e05a00';
+    const GRID = 'rgba(255,255,255,0.05)';
+    Chart.defaults.color = 'rgba(237,233,224,0.7)';
+    Chart.defaults.font.family = "'DM Sans', sans-serif";
+    const built = {};
+    function buildChart(id, factory) {
+        const el = document.getElementById(id);
+        if (!el) return;
+        ScrollTrigger.create({ trigger: el, start: "top 90%", once: true, onEnter: () => { built[id] = factory(el.getContext('2d')); } });
+    }
 
-    ScrollTrigger.create({
-        trigger: "#walmartChart",
-        start: "top 85%",
-        onEnter: () => {
-            if(!chartRendered) {
-                new Chart(ctx, {
-                    type: 'line',
-                    data: {
-                        labels: ['2011', '2014', '2017', '2020', '2023', '2026'],
-                        datasets: [{
-                            label: 'Walmart Supercenters',
-                            data: [3000, 3300, 3500, 3570, 3560, 3550],
-                            borderColor: '#ede9e0', tension: 0.4, fill: false
-                        }, {
-                            label: 'Aldi Growth Curve',
-                            data: [1200, 1600, 2100, 2600, 2900, 3200],
-                            borderColor: '#c9a84c', borderWidth: 3, tension: 0.4, fill: false
-                        }]
-                    },
-                    options: { 
-                        responsive: true, maintainAspectRatio: false, 
-                        animation: { duration: 2500, easing: 'easeOutQuart' },
-                        plugins: { legend: { labels: { color: '#ede9e0' } } },
-                        scales: { x: { grid: { color: 'rgba(255,255,255,0.05)' } }, y: { grid: { color: 'rgba(255,255,255,0.05)' } } }
-                    }
-                });
-                chartRendered = true;
-            }
+    buildChart('footprintChart', ctx => new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Mar 2024', 'Dec 2025', 'End 2026 (target)', 'End 2028 (target)'],
+            datasets: [
+                { type: 'line', label: 'Walmart Supercenters (Apr 2025)', data: [3560, 3560, 3560, 3560], borderColor: FG, borderDash: [6, 5], borderWidth: 2, pointRadius: 0, order: 0 },
+                { type: 'bar', label: 'Aldi US stores', data: [2361, 2614, 2800, 3200], backgroundColor: [GOLD, GOLD, 'rgba(201,168,76,0.4)', 'rgba(201,168,76,0.4)'], borderColor: GOLD, borderWidth: 1, borderRadius: 4, order: 1 }
+            ]
+        },
+        options: {
+            responsive: true, maintainAspectRatio: false,
+            animation: { duration: 1600, easing: 'easeOutQuart' },
+            plugins: { legend: { labels: { color: FG, boxWidth: 12 } },
+                tooltip: { callbacks: { label: c => c.dataset.label + ': ' + c.parsed.y.toLocaleString('en-US') + ' stores' } } },
+            scales: { x: { grid: { color: GRID } }, y: { min: 0, grid: { color: GRID }, ticks: { callback: v => v.toLocaleString('en-US') } } }
         }
-    });
+    }));
 
-    // 7. MOBILE MENU & ACCORDION
     const toggle = document.getElementById('case-menu-toggle');
     const menu = document.getElementById('case-mobile-menu');
     toggle.addEventListener('click', () => { menu.style.display = 'flex'; });
-
-    document.querySelectorAll('.faq-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const isExpanded = btn.getAttribute('aria-expanded') === 'true';
-            btn.setAttribute('aria-expanded', !isExpanded);
-            const content = document.getElementById(btn.getAttribute('aria-controls'));
-            content.style.maxHeight = isExpanded ? null : content.scrollHeight + "px";
-        });
-    });
 </script>
-
 </body>
 </html>
