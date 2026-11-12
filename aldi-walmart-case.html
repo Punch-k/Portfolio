@@ -129,6 +129,7 @@
         .data-table td.hl { color: var(--gold); }
         .tableau-frame { position: relative; width: 100%; height: 860px; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: #fff; margin: 1.5rem 0 0.8rem; }
         .tableau-frame-sm { height: 720px; }
+        .tableau-frame-tall { height: 1540px; }
         .tableau-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
         .insight-list { display: flex; flex-direction: column; gap: 1.6rem; margin-bottom: 3rem; }
         .insight { display: grid; grid-template-columns: 3.2rem 1fr; gap: 1rem; border-top: 1px solid var(--line); padding-top: 1.4rem; }
@@ -144,6 +145,7 @@
             .chart-box { height: 300px; padding: 0.8rem; }
             .tableau-frame { height: 1150px; }
             .tableau-frame-sm { height: 980px; }
+            .tableau-frame-tall { height: 1540px; }
             .insight { grid-template-columns: 1fr; gap: 0.4rem; }
             .recommend-box { padding: 1.4rem; }
             .data-table { font-size: 0.85rem; }
@@ -304,8 +306,8 @@
 
         <section id="the-dashboard" class="scroll-section gsap-reveal">
             <h2>IV. THE DASHBOARD</h2>
-            <p>The Tableau dashboard brings the three views together: Aldi's reported and target store count, and US grocery share (Walmart 21.0% vs Aldi 2.8%), with the key insights and sources alongside. Hover over any bar to see its value.</p>
-            <div class="tableau-frame tableau-frame-sm">
+            <p>The Tableau dashboard compares Aldi with seven rivals (Walmart, Kroger, Costco, Trader Joe's, H-E-B, Wegmans and Lidl): US stores over time, latest store count, states served, share of US grocery spending (Walmart 21.0% vs Aldi 2.8%) and net stores added in the last two years. Use the Retailer filter to choose which grocers to compare, and hover over any mark to see its value.</p>
+            <div class="tableau-frame tableau-frame-tall">
                 <iframe src="https://public.tableau.com/views/AldivsWalmartUSGroceryFootprint/AldisRaceto3200USStores?:showVizHome=no&amp;:embed=true&amp;:toolbar=bottom&amp;:tabs=no" title="Aldi vs Walmart, Tableau Public dashboard" loading="lazy" allowfullscreen></iframe>
             </div>
             <p class="chart-note"><a href="https://public.tableau.com/app/profile/prapanch.kokkalemada/viz/AldivsWalmartUSGroceryFootprint/AldisRaceto3200USStores" target="_blank" rel="noopener noreferrer">Open in Tableau Public ↗</a> · <a href="https://github.com/Punch-k/Portfolio/tree/main/aldi-walmart" target="_blank" rel="noopener noreferrer">Data files ↗</a></p>
