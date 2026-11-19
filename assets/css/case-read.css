@@ -1,0 +1,48 @@
+/* Case reading layer, shared by every case page. Loaded after each page's own styles.
+   Goals: line length near 70 characters, steadier body text on the dark background,
+   tighter vertical rhythm. Charts, tables and Tableau embeds keep the full column width. */
+
+/* Hero: less empty height above the summary */
+.case-page .hero { height: auto; min-height: 58vh; padding-top: 7.5rem; padding-bottom: 4.5rem; }
+
+/* Layout: a bit less gutter between the contents sidebar and the text */
+.case-page .case-layout { gap: 3.5rem; }
+
+/* Text measure: about 70 characters per line */
+.case-page .article-body .scroll-section > p,
+.case-page .article-body h2,
+.case-page .article-body h3,
+.case-page .article-body ul,
+.case-page .article-body ol,
+.case-page .article-body .timeline,
+.case-page .article-body .insight-list { max-width: 44rem; }
+
+/* Body text: regular weight and a little more contrast, tighter leading */
+.case-page .article-body .scroll-section > p:not([class]) { font-size: 1.125rem; font-weight: 400; line-height: 1.7; color: rgba(237,233,224,.86); margin-bottom: 1.35rem; }
+.case-page .article-body li { line-height: 1.7; }
+.case-page .article-body strong { color: var(--fg); font-weight: 600; }
+
+/* Headings: smaller section titles, title case, less space above and below */
+.case-page .article-body h2 { font-size: clamp(1.75rem, 4.2vw, 2.3rem); line-height: 1.15; padding-top: 1.75rem; margin-bottom: 1rem; letter-spacing: .005em; }
+.case-page .article-body h3 { margin-top: 2rem; margin-bottom: .6rem; }
+
+/* Callouts: same look, less padding */
+.case-page .pull-quote { margin: 2rem 0; padding: 1.9rem 2rem; }
+.case-page .pull-quote p { font-size: 1.65rem; max-width: none; margin-bottom: .6rem; }
+.case-page .stat-banner { margin: 2rem 0; padding: 1.9rem 2rem; gap: 1.5rem; }
+.case-page .timeline { gap: 1rem; margin-bottom: 1.75rem; }
+.case-page .tl-row p, .case-page .insight p { line-height: 1.6; font-weight: 400; color: rgba(237,233,224,.82); }
+.case-page .insight-list { gap: 1.1rem; margin-bottom: 2rem; }
+.case-page .insight { padding-top: 1rem; }
+.case-page .exec-summary { margin-bottom: 3rem; }
+
+/* Sources and disclaimer: readable rather than faint */
+.case-page .sources-block { color: rgba(237,233,224,.65); line-height: 1.7; margin-top: 2.25rem; padding-top: 1.5rem; }
+
+@media (max-width: 768px) {
+  .case-page .hero { min-height: 0; padding-top: 6.5rem; padding-bottom: 3.5rem; }
+  .case-page .article-body .scroll-section > p:not([class]) { font-size: 1.05rem; line-height: 1.65; }
+  .case-page .pull-quote { padding: 1.4rem 1.2rem; }
+  .case-page .pull-quote p { font-size: 1.35rem; }
+  .case-page .stat-banner { padding: 1.4rem 1.2rem; }
+}
