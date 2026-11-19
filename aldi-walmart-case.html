@@ -27,16 +27,10 @@
         #back-to-top { position: fixed; bottom: 2rem; right: 2rem; background: var(--fg); color: var(--bg); border: none; padding: 1rem; border-radius: 50%; cursor: pointer; z-index: 999; opacity: 0; transform: translateY(20px); transition: all 0.3s ease; font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; }
         #back-to-top.visible { opacity: 1; transform: translateY(0); }
         #back-to-top:hover { background: var(--gold); }
-        .case-nav { position: fixed; top: 0; left: 0; width: 100%; padding: 1.5rem 4rem; display: flex; justify-content: space-between; align-items: center; background: rgba(10, 11, 13, 0.85); backdrop-filter: blur(12px); z-index: 100; border-bottom: 1px solid rgba(237,233,224,0.05); box-sizing: border-box; }
-        .nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; width: 100%; }
         /* .nav-logo styling now comes solely from the shared assets/css/style.css rule -- no local
            override here, so this page can't silently drift from the rest of the site again. */
-        .nav-links { display: flex; gap: 2rem; }
         /* .nav-links a styling now comes solely from the shared assets/css/style.css rule -- no
            local override here, so this page can't silently drift from the rest of the site. */
-        .nav-connect { border: 1px solid var(--gold); color: var(--gold); padding: 0.6rem 1.5rem; border-radius: 50px; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; transition: all 0.3s ease; }
-        .nav-connect:hover { background: var(--gold); color: var(--bg); }
-        @media (max-width: 900px) { .nav-links { display: none; } .case-nav { padding: 1rem 1.5rem; } #case-menu-toggle { display: block !important; } }
         .hero { height: 75vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; padding: 0 2rem; border-bottom: 1px solid var(--line); }
         .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(ellipse at 50% 35%, rgba(201,168,76,0.16), transparent 60%), repeating-radial-gradient(circle at 50% 120%, rgba(237,233,224,0.035) 0 2px, transparent 2px 26px); opacity: 0; z-index: 0; }
         .hero-content { position: relative; z-index: 10; display: flex; flex-direction: column; align-items: center; }
@@ -96,7 +90,7 @@
         }
         @media print {
             body { background: white; color: black; }
-            .case-nav, #reading-progress, .case-sidebar, .next-project, #section-get-in-touch, .site-footer, #back-to-top { display: none !important; }
+            #mainnav, #mobile-menu, #reading-progress, .case-sidebar, .next-project, #section-get-in-touch, .site-footer, #back-to-top { display: none !important; }
             .case-layout { grid-template-columns: 1fr; margin: 0; padding: 0; }
             .article-body h2 { color: black; padding-top: 2rem; }
             .pull-quote p, .stat-num { color: black; }
@@ -155,35 +149,36 @@
         /* keep the contents sidebar sticky: overflow-x hidden on html/body breaks position: sticky, clip does not */
         html, body { overflow-x: clip !important; }
     </style>
+    <link rel="stylesheet" href="assets/css/case-read.css?v=1">
 </head>
-<body>
+<body class="case-page">
 
 <div id="reading-progress"></div>
 <button id="back-to-top" aria-label="Scroll to top" onclick="window.scrollTo(0,0)">↑</button>
 
-<nav class="case-nav">
-    <div class="nav-container">
-        <a href="index.html" class="nav-logo">PRAPANCH <span>KOKKALEMADA</span></a>
-        <div class="nav-links">
-            <a href="index.html#section-intro">ABOUT</a>
-            <a href="index.html#section-cases" style="color: var(--gold);">RESEARCH</a>
-            <a href="simulators.html">SIMULATORS</a>
-            <a href="index.html#section-skills">SKILLS</a>
-            <a href="about.html">GALLERY</a>
-        </div>
-        <button id="case-menu-toggle" style="display:none; background:none; border:none; color:var(--fg); font-size:1.5rem; cursor:pointer;" aria-label="Open navigation">☰</button>
-        <a href="mailto:p.kokkalemada@gmail.com" class="nav-connect">LET'S CONNECT ↗</a>
-    </div>
+<nav id="mainnav" role="navigation" aria-label="Primary navigation">
+    <a class="nav-logo" href="index.html">PRAPANCH <span>KOKKALEMADA</span></a>
+    <ul class="nav-links">
+        <li><a href="index.html#section-intro">About</a></li>
+        <li><a href="index.html#section-cases" class="act">Research</a></li>
+        <li><a href="simulators.html">Simulators</a></li>
+        <li><a href="index.html#section-skills">Skills</a></li>
+        <li><a href="about.html">Gallery</a></li>
+    </ul>
+    <a class="nav-cta" href="index.html#section-get-in-touch"><span>Let's Connect ↗</span></a>
+    <button id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+<nav id="mobile-menu" role="navigation" aria-label="Mobile menu">
+    <a href="index.html#scrub-section">Home</a>
+    <a href="index.html#section-cases">Cases</a>
+    <a href="index.html#section-skills">Skills</a>
+    <a href="simulators.html">Simulators</a>
+    <a href="index.html#section-get-in-touch">Contact</a>
+    <a href="index.html#section-get-in-touch" class="mob-cta">Let's Connect ↗</a>
 </nav>
 
-<div id="case-mobile-menu" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:var(--bg);z-index:200;flex-direction:column;align-items:center;justify-content:center;gap:2rem;">
-    <button onclick="document.getElementById('case-mobile-menu').style.display='none';" style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;color:var(--fg);font-size:2rem; cursor:pointer;">&times;</button>
-    <a href="index.html#section-intro" style="font-family:var(--display);font-size:2.5rem;color:var(--fg);text-decoration:none;">ABOUT</a>
-    <a href="index.html#section-cases" style="font-family:var(--display);font-size:2.5rem;color:var(--gold);text-decoration:none;">RESEARCH</a>
-    <a href="simulators.html" style="font-family:var(--display);font-size:2.5rem;color:var(--fg);text-decoration:none;">SIMULATORS</a>
-    <a href="index.html#section-skills" style="font-family:var(--display);font-size:2.5rem;color:var(--fg);text-decoration:none;">SKILLS</a>
-    <a href="about.html" style="font-family:var(--display);font-size:2.5rem;color:var(--fg);text-decoration:none;">GALLERY</a>
-</div>
 
 <header class="hero">
     <div class="hero-bg"></div>
@@ -241,7 +236,7 @@
 
     <main class="article-body">
         <section id="two-models" class="scroll-section gsap-reveal">
-            <h2>I. TWO MODELS</h2>
+            <h2>I. Two Models</h2>
             <p>Walmart wins grocery through scale. As of April 30, 2025 it ran 4,606 Walmart US stores, including 3,560 Supercenters averaging close to 178,000 square feet each.<sup><a href="#src-4">4</a></sup> A Supercenter puts groceries next to general merchandise, so the weekly food trip pulls shoppers past everything else the store sells.</p>
             <p>Aldi wins through simplicity. More than 90% of its assortment is its own private label, and its stores carry a short list of items rather than tens of thousands.<sup><a href="#src-2">2</a></sup> Fewer items mean fewer suppliers to manage, <a class="word-link" href="simulators.html#inventory-lab">faster restocking</a> and a smaller box that is cheaper to build and staff. Select a model below.</p>
             <div class="comp-tabs">
@@ -262,7 +257,7 @@
         </blockquote>
 
         <section id="the-expansion" class="scroll-section gsap-reveal">
-            <h2>II. THE EXPANSION</h2>
+            <h2>II. The Expansion</h2>
             <p>Aldi has turned a steady growth plan into one of the fastest store rollouts in US grocery.</p>
             <div class="timeline">
                 <div class="tl-row"><span class="tl-date">Mar 2024</span><p>Aldi announces plans to add 800 US stores by the end of 2028, backed by more than $9 billion of investment over five years, starting from 2,361 locations.<sup><a href="#src-1">1</a></sup></p></div>
@@ -279,7 +274,7 @@
         </section>
 
         <section id="the-footprint" class="scroll-section gsap-reveal">
-            <h2>III. THE FOOTPRINT</h2>
+            <h2>III. The Footprint</h2>
             <p>Store count shows the gap Aldi is closing. Aldi's path rises from 2,361 stores to a 3,200 store target, while Walmart's Supercenter base holds near 3,560. By 2028 Aldi would run almost as many stores as Walmart has Supercenters, in a box a small fraction of the size.</p>
             <div class="chart-box"><canvas id="footprintChart" aria-label="Aldi US store count, reported and target, against Walmart Supercenters"></canvas></div>
             <p class="chart-note">Aldi 2024 and 2025 are reported counts; 2026 and 2028 are company targets. Walmart Supercenters as of April 30, 2025.</p>
@@ -299,7 +294,7 @@
         </section>
 
         <section id="the-dashboard" class="scroll-section gsap-reveal">
-            <h2>IV. THE DASHBOARD</h2>
+            <h2>IV. The Dashboard</h2>
             <p>The <a class="word-link" href="https://public.tableau.com/app/profile/prapanch.kokkalemada/viz/AldivsWalmartUSGroceryFootprint/AldisRaceto3200USStores" target="_blank" rel="noopener noreferrer">Tableau dashboard</a> compares Aldi with seven rivals (Walmart, Kroger, Costco, Trader Joe's, H-E-B, Wegmans and Lidl): US stores over time, latest store count, states served, share of US grocery spending (Walmart 21.0% vs Aldi 2.8%) and net stores added in the last two years. Use the Retailer filter to choose which grocers to compare, and hover over any mark to see its value.</p>
             <div class="tableau-frame tableau-frame-tall">
                 <iframe src="https://public.tableau.com/views/AldivsWalmartUSGroceryFootprint/AldisRaceto3200USStores?:showVizHome=no&amp;:embed=true&amp;:toolbar=bottom&amp;:tabs=no" title="Aldi vs Walmart, Tableau Public dashboard" loading="lazy" allowfullscreen></iframe>
@@ -308,7 +303,7 @@
         </section>
 
         <section id="insights" class="scroll-section gsap-reveal">
-            <h2 style="color: var(--gold);">V. INSIGHTS</h2>
+            <h2 style="color: var(--gold);">V. Insights</h2>
             <div class="insight-list">
                 <div class="insight"><span class="insight-num">01</span><div><h4>Aldi competes for trips, not share.</h4><p>At 2.8% of grocery spending, Aldi is far smaller than Walmart. Its threat is that each new store pulls the weekly staples trip from nearby households, and that trip is what brings shoppers into a Supercenter.</p></div></div>
                 <div class="insight"><span class="insight-num">02</span><div><h4>Store count is Aldi's real lever.</h4><p>A small, repeatable box lets Aldi add more than 180 stores in a year. Walmart's large format is expensive to replicate, so its answer has to come from the stores and channels it already has.</p></div></div>
@@ -536,9 +531,15 @@
         }
     }));
 
-    const toggle = document.getElementById('case-menu-toggle');
-    const menu = document.getElementById('case-mobile-menu');
-    toggle.addEventListener('click', () => { menu.style.display = 'flex'; });
+    /* Header: same behaviour as the homepage (darkens on scroll, hamburger menu on mobile) */
+    (function () {
+        var nav = document.getElementById('mainnav'), toggle = document.getElementById('nav-toggle'), menu = document.getElementById('mobile-menu');
+        window.addEventListener('scroll', function () { if (nav) nav.classList.toggle('stk', window.scrollY > 55); }, { passive: true });
+        if (!toggle || !menu) return;
+        function setOpen(open) { toggle.classList.toggle('open', open); menu.classList.toggle('open', open); toggle.setAttribute('aria-expanded', open ? 'true' : 'false'); document.body.style.overflow = open ? 'hidden' : ''; }
+        toggle.addEventListener('click', function () { setOpen(!menu.classList.contains('open')); });
+        menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setOpen(false); }); });
+    })();
 </script>
 </body>
 </html>

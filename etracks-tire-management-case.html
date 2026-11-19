@@ -27,16 +27,10 @@
         #back-to-top { position: fixed; bottom: 2rem; right: 2rem; background: var(--fg); color: var(--bg); border: none; padding: 1rem; border-radius: 50%; cursor: pointer; z-index: 999; opacity: 0; transform: translateY(20px); transition: all 0.3s ease; font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; }
         #back-to-top.visible { opacity: 1; transform: translateY(0); }
         #back-to-top:hover { background: var(--gold); }
-        .case-nav { position: fixed; top: 0; left: 0; width: 100%; padding: 1.5rem 4rem; display: flex; justify-content: space-between; align-items: center; background: rgba(10, 11, 13, 0.85); backdrop-filter: blur(12px); z-index: 100; border-bottom: 1px solid rgba(237,233,224,0.05); box-sizing: border-box; }
-        .nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; width: 100%; }
         /* .nav-logo styling now comes solely from the shared assets/css/style.css rule -- no local
            override here, so this page can't silently drift from the rest of the site again. */
-        .nav-links { display: flex; gap: 2rem; }
         /* .nav-links a styling now comes solely from the shared assets/css/style.css rule -- no
            local override here, so this page can't silently drift from the rest of the site. */
-        .nav-connect { border: 1px solid var(--gold); color: var(--gold); padding: 0.6rem 1.5rem; border-radius: 50px; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; transition: all 0.3s ease; }
-        .nav-connect:hover { background: var(--gold); color: var(--bg); }
-        @media (max-width: 900px) { .nav-links { display: none; } .case-nav { padding: 1rem 1.5rem; } #case-menu-toggle { display: block !important; } }
         .hero { height: 75vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; padding: 0 2rem; border-bottom: 1px solid var(--line); }
         .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(ellipse at 50% 35%, rgba(201,168,76,0.16), transparent 60%), repeating-radial-gradient(circle at 50% 120%, rgba(237,233,224,0.035) 0 2px, transparent 2px 26px); opacity: 0; z-index: 0; }
         .hero-content { position: relative; z-index: 10; display: flex; flex-direction: column; align-items: center; }
@@ -96,7 +90,7 @@
         }
         @media print {
             body { background: white; color: black; }
-            .case-nav, #reading-progress, .case-sidebar, .next-project, #section-get-in-touch, .site-footer, #back-to-top { display: none !important; }
+            #mainnav, #mobile-menu, #reading-progress, .case-sidebar, .next-project, #section-get-in-touch, .site-footer, #back-to-top { display: none !important; }
             .case-layout { grid-template-columns: 1fr; margin: 0; padding: 0; }
             .article-body h2 { color: black; padding-top: 2rem; }
             .pull-quote p, .stat-num { color: black; }
@@ -151,35 +145,36 @@
         /* keep the contents sidebar sticky: overflow-x hidden on html/body breaks position: sticky, clip does not */
         html, body { overflow-x: clip !important; }
     </style>
+    <link rel="stylesheet" href="assets/css/case-read.css?v=1">
 </head>
-<body>
+<body class="case-page">
 
 <div id="reading-progress"></div>
 <button id="back-to-top" aria-label="Scroll to top" onclick="window.scrollTo(0,0)">↑</button>
 
-<nav class="case-nav">
-    <div class="nav-container">
-        <a href="index.html" class="nav-logo">PRAPANCH <span>KOKKALEMADA</span></a>
-        <div class="nav-links">
-            <a href="index.html#section-intro">ABOUT</a>
-            <a href="index.html#section-cases" style="color: var(--gold);">RESEARCH</a>
-            <a href="simulators.html">SIMULATORS</a>
-            <a href="index.html#section-skills">SKILLS</a>
-            <a href="about.html">GALLERY</a>
-        </div>
-        <button id="case-menu-toggle" style="display:none; background:none; border:none; color:var(--fg); font-size:1.5rem; cursor:pointer;" aria-label="Open navigation">☰</button>
-        <a href="mailto:p.kokkalemada@gmail.com" class="nav-connect">LET'S CONNECT ↗</a>
-    </div>
+<nav id="mainnav" role="navigation" aria-label="Primary navigation">
+    <a class="nav-logo" href="index.html">PRAPANCH <span>KOKKALEMADA</span></a>
+    <ul class="nav-links">
+        <li><a href="index.html#section-intro">About</a></li>
+        <li><a href="index.html#section-cases" class="act">Research</a></li>
+        <li><a href="simulators.html">Simulators</a></li>
+        <li><a href="index.html#section-skills">Skills</a></li>
+        <li><a href="about.html">Gallery</a></li>
+    </ul>
+    <a class="nav-cta" href="index.html#section-get-in-touch"><span>Let's Connect ↗</span></a>
+    <button id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+<nav id="mobile-menu" role="navigation" aria-label="Mobile menu">
+    <a href="index.html#scrub-section">Home</a>
+    <a href="index.html#section-cases">Cases</a>
+    <a href="index.html#section-skills">Skills</a>
+    <a href="simulators.html">Simulators</a>
+    <a href="index.html#section-get-in-touch">Contact</a>
+    <a href="index.html#section-get-in-touch" class="mob-cta">Let's Connect ↗</a>
 </nav>
 
-<div id="case-mobile-menu" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:var(--bg);z-index:200;flex-direction:column;align-items:center;justify-content:center;gap:2rem;">
-    <button onclick="document.getElementById('case-mobile-menu').style.display='none';" style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;color:var(--fg);font-size:2rem; cursor:pointer;">&times;</button>
-    <a href="index.html#section-intro" style="font-family:var(--display);font-size:2.5rem;color:var(--fg);text-decoration:none;">ABOUT</a>
-    <a href="index.html#section-cases" style="font-family:var(--display);font-size:2.5rem;color:var(--gold);text-decoration:none;">RESEARCH</a>
-    <a href="simulators.html" style="font-family:var(--display);font-size:2.5rem;color:var(--fg);text-decoration:none;">SIMULATORS</a>
-    <a href="index.html#section-skills" style="font-family:var(--display);font-size:2.5rem;color:var(--fg);text-decoration:none;">SKILLS</a>
-    <a href="about.html" style="font-family:var(--display);font-size:2.5rem;color:var(--fg);text-decoration:none;">GALLERY</a>
-</div>
 
 <header class="hero">
     <div class="hero-bg"></div>
@@ -238,7 +233,7 @@
 
     <main class="article-body">
         <section id="the-mandate" class="scroll-section gsap-reveal">
-            <h2>I. THE MANDATE</h2>
+            <h2>I. The Mandate</h2>
             <p>Ontario runs tire recycling through extended producer responsibility. Under the Tires Regulation (O. Reg. 225/18), producers must manage a share of the tires they supply into the province. Most meet that obligation through a PRO, which runs collection sites, hires haulers and pays processors. eTracks is the largest PRO, with roughly 70% of the market.<sup><a href="#src-4">4</a></sup></p>
             <div class="timeline">
                 <div class="tl-row"><span class="tl-date">Jan 2025</span><p>The target drops from 85% to 65%. Several PROs slow or stop collecting once they hit it, and the number of required sites falls to about 4,450.<sup><a href="#src-3">3</a></sup><sup><a href="#src-4">4</a></sup></p></div>
@@ -255,7 +250,7 @@
         </blockquote>
 
         <section id="the-gap" class="scroll-section gsap-reveal">
-            <h2>II. THE GAP</h2>
+            <h2>II. The Gap</h2>
             <p>The target is measured against the three-year average weight of tires <em>supplied</em>. But about 15% of that weight wears off as tread before a tire is scrapped, and the market keeps growing. So 80% of supply works out to 91.4% of the scrap that is actually generated.</p>
             <p>A collection site can only take tires from the generators near it. In the model, today's network reaches 88.1% of scrap, weighted by where scrap is generated. Before any backlog, leakage or capacity limit, that caps the highest target the network could meet at about 77%. The market-wide shortfall is about 6,000 t a year, or roughly 550,000 tires that no amount of hauling can reach.</p>
             <div class="chart-box"><canvas id="gapChart" aria-label="Required management versus realistically collectable tonnes, 2025 to 2030"></canvas></div>
@@ -269,7 +264,7 @@
         </section>
 
         <section id="where-tires-get-stuck" class="scroll-section gsap-reveal">
-            <h2>III. WHERE TIRES GET STUCK</h2>
+            <h2>III. Where Tires Get Stuck</h2>
             <p>The model follows eTracks' 70% share month by month: tires generated, reached, accepted at a site, hauled, and processed. Losses come from four places. Select one.</p>
 
             <div class="comp-tabs">
@@ -313,7 +308,7 @@
         </section>
 
         <section id="three-plans" class="scroll-section gsap-reveal">
-            <h2>IV. THREE PLANS</h2>
+            <h2>IV. Three Plans</h2>
             <p>Each scenario runs its own calculation engine over 2027 to 2030. <strong>Flat budget</strong> keeps today's network: 6,500 sites, 108,000 t of hauling, 112,000 t of processing, and the 2025 habit of slowing hauling once the target is met. <strong>Balanced plan</strong> adds 1,300 sites, a 125,000 t hauling base with 40% surge capacity in the six peak months, 128,000 t of processing and call-in pickups, and it does not pause. <strong>Stress test</strong> keeps today's network but adds sharper peaks, more leakage and 8% processing outages.</p>
             <div class="table-wrap">
                 <table class="data-table">
@@ -338,7 +333,7 @@
         </section>
 
         <section id="the-dashboard" class="scroll-section gsap-reveal">
-            <h2>V. THE DASHBOARD</h2>
+            <h2>V. The Dashboard</h2>
             <p>The <a class="word-link" href="https://public.tableau.com/app/profile/prapanch.kokkalemada/viz/eTracksTireManagementModel/eTracksTireManagementModelFlatvsBalancedvsStresshypotheticalfigures" target="_blank" rel="noopener noreferrer">Tableau dashboard</a> is built from the model's 60-month output for all three scenarios: tires waiting by month, tonnes short of the target by year, and total cost split into operating cost and penalty. Hover over any mark to see its values.</p>
             <div class="tableau-frame">
                 <iframe src="https://public.tableau.com/views/eTracksTireManagementModel/eTracksTireManagementModelFlatvsBalancedvsStresshypotheticalfigures?:showVizHome=no&amp;:embed=true&amp;:toolbar=bottom&amp;:tabs=no" title="eTracks Tire Management Model, Tableau Public dashboard" loading="lazy" allowfullscreen></iframe>
@@ -347,7 +342,7 @@
         </section>
 
         <section id="insights" class="scroll-section gsap-reveal">
-            <h2 style="color: var(--gold);">VI. INSIGHTS</h2>
+            <h2 style="color: var(--gold);">VI. Insights</h2>
             <div class="insight-list">
                 <div class="insight"><span class="insight-num">01</span><div><h4>It is a reach problem before it is a hauling problem.</h4><p>Below 91% reach, no hauling budget can deliver 80% of supply. The first dollars should go to sites and call-in pickups, which together lift reach from 88% to 95%. The North needs depots and call-ins, not more drop-off sites.</p></div></div>
                 <div class="insight"><span class="insight-num">02</span><div><h4>The backlog comes from a seasonal mismatch, not a shortage of total capacity.</h4><p>Over a year, hauling of 108,000 t is close to what reaches a site. The problem is timing: generation nearly triples from January to April while hauling stays flat. Surge capacity in the six peak months, about 17,000 t a year, does more than a bigger flat budget would.</p></div></div>
@@ -667,9 +662,15 @@
         }
     }));
 
-    const toggle = document.getElementById('case-menu-toggle');
-    const menu = document.getElementById('case-mobile-menu');
-    toggle.addEventListener('click', () => { menu.style.display = 'flex'; });
+    /* Header: same behaviour as the homepage (darkens on scroll, hamburger menu on mobile) */
+    (function () {
+        var nav = document.getElementById('mainnav'), toggle = document.getElementById('nav-toggle'), menu = document.getElementById('mobile-menu');
+        window.addEventListener('scroll', function () { if (nav) nav.classList.toggle('stk', window.scrollY > 55); }, { passive: true });
+        if (!toggle || !menu) return;
+        function setOpen(open) { toggle.classList.toggle('open', open); menu.classList.toggle('open', open); toggle.setAttribute('aria-expanded', open ? 'true' : 'false'); document.body.style.overflow = open ? 'hidden' : ''; }
+        toggle.addEventListener('click', function () { setOpen(!menu.classList.contains('open')); });
+        menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setOpen(false); }); });
+    })();
 </script>
 </body>
 </html>

@@ -27,16 +27,10 @@
         #back-to-top { position: fixed; bottom: 2rem; right: 2rem; background: var(--fg); color: var(--bg); border: none; padding: 1rem; border-radius: 50%; cursor: pointer; z-index: 999; opacity: 0; transform: translateY(20px); transition: all 0.3s ease; font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; }
         #back-to-top.visible { opacity: 1; transform: translateY(0); }
         #back-to-top:hover { background: var(--gold); }
-        .case-nav { position: fixed; top: 0; left: 0; width: 100%; padding: 1.5rem 4rem; display: flex; justify-content: space-between; align-items: center; background: rgba(10, 11, 13, 0.85); backdrop-filter: blur(12px); z-index: 100; border-bottom: 1px solid rgba(237,233,224,0.05); box-sizing: border-box; }
-        .nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; width: 100%; }
         /* .nav-logo styling now comes solely from the shared assets/css/style.css rule -- no local
            override here, so this page can't silently drift from the rest of the site again. */
-        .nav-links { display: flex; gap: 2rem; }
         /* .nav-links a styling now comes solely from the shared assets/css/style.css rule -- no
            local override here, so this page can't silently drift from the rest of the site. */
-        .nav-connect { border: 1px solid var(--gold); color: var(--gold); padding: 0.6rem 1.5rem; border-radius: 50px; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; transition: all 0.3s ease; }
-        .nav-connect:hover { background: var(--gold); color: var(--bg); }
-        @media (max-width: 900px) { .nav-links { display: none; } .case-nav { padding: 1rem 1.5rem; } #case-menu-toggle { display: block !important; } }
         .hero { height: 75vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; padding: 0 2rem; border-bottom: 1px solid var(--line); }
         .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(ellipse at 50% 35%, rgba(201,168,76,0.16), transparent 60%), repeating-radial-gradient(circle at 50% 120%, rgba(237,233,224,0.035) 0 2px, transparent 2px 26px); opacity: 0; z-index: 0; }
         .hero-content { position: relative; z-index: 10; display: flex; flex-direction: column; align-items: center; }
@@ -96,7 +90,7 @@
         }
         @media print {
             body { background: white; color: black; }
-            .case-nav, #reading-progress, .case-sidebar, .next-project, #section-get-in-touch, .site-footer, #back-to-top { display: none !important; }
+            #mainnav, #mobile-menu, #reading-progress, .case-sidebar, .next-project, #section-get-in-touch, .site-footer, #back-to-top { display: none !important; }
             .case-layout { grid-template-columns: 1fr; margin: 0; padding: 0; }
             .article-body h2 { color: black; padding-top: 2rem; }
             .pull-quote p, .stat-num { color: black; }
@@ -153,35 +147,36 @@
         /* keep the contents sidebar sticky: overflow-x hidden on html/body breaks position: sticky, clip does not */
         html, body { overflow-x: clip !important; }
     </style>
+    <link rel="stylesheet" href="assets/css/case-read.css?v=1">
 </head>
-<body>
+<body class="case-page">
 
 <div id="reading-progress"></div>
 <button id="back-to-top" aria-label="Scroll to top" onclick="window.scrollTo(0,0)">↑</button>
 
-<nav class="case-nav">
-    <div class="nav-container">
-        <a href="index.html" class="nav-logo">PRAPANCH <span>KOKKALEMADA</span></a>
-        <div class="nav-links">
-            <a href="index.html#section-intro">ABOUT</a>
-            <a href="index.html#section-cases" style="color: var(--gold);">RESEARCH</a>
-            <a href="simulators.html">SIMULATORS</a>
-            <a href="index.html#section-skills">SKILLS</a>
-            <a href="about.html">GALLERY</a>
-        </div>
-        <button id="case-menu-toggle" style="display:none; background:none; border:none; color:var(--fg); font-size:1.5rem; cursor:pointer;" aria-label="Open navigation">☰</button>
-        <a href="mailto:p.kokkalemada@gmail.com" class="nav-connect">LET'S CONNECT ↗</a>
-    </div>
+<nav id="mainnav" role="navigation" aria-label="Primary navigation">
+    <a class="nav-logo" href="index.html">PRAPANCH <span>KOKKALEMADA</span></a>
+    <ul class="nav-links">
+        <li><a href="index.html#section-intro">About</a></li>
+        <li><a href="index.html#section-cases" class="act">Research</a></li>
+        <li><a href="simulators.html">Simulators</a></li>
+        <li><a href="index.html#section-skills">Skills</a></li>
+        <li><a href="about.html">Gallery</a></li>
+    </ul>
+    <a class="nav-cta" href="index.html#section-get-in-touch"><span>Let's Connect ↗</span></a>
+    <button id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+<nav id="mobile-menu" role="navigation" aria-label="Mobile menu">
+    <a href="index.html#scrub-section">Home</a>
+    <a href="index.html#section-cases">Cases</a>
+    <a href="index.html#section-skills">Skills</a>
+    <a href="simulators.html">Simulators</a>
+    <a href="index.html#section-get-in-touch">Contact</a>
+    <a href="index.html#section-get-in-touch" class="mob-cta">Let's Connect ↗</a>
 </nav>
 
-<div id="case-mobile-menu" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:var(--bg);z-index:200;flex-direction:column;align-items:center;justify-content:center;gap:2rem;">
-    <button onclick="document.getElementById('case-mobile-menu').style.display='none';" style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;color:var(--fg);font-size:2rem; cursor:pointer;">&times;</button>
-    <a href="index.html#section-intro" style="font-family:var(--display);font-size:2.5rem;color:var(--fg);text-decoration:none;">ABOUT</a>
-    <a href="index.html#section-cases" style="font-family:var(--display);font-size:2.5rem;color:var(--gold);text-decoration:none;">RESEARCH</a>
-    <a href="simulators.html" style="font-family:var(--display);font-size:2.5rem;color:var(--fg);text-decoration:none;">SIMULATORS</a>
-    <a href="index.html#section-skills" style="font-family:var(--display);font-size:2.5rem;color:var(--fg);text-decoration:none;">SKILLS</a>
-    <a href="about.html" style="font-family:var(--display);font-size:2.5rem;color:var(--fg);text-decoration:none;">GALLERY</a>
-</div>
 
 <header class="hero">
     <div class="hero-bg"></div>
@@ -216,7 +211,7 @@
 
     <main class="article-body">
         <section id="why-poland" class="scroll-section gsap-reveal">
-            <h2>I. WHY POLAND</h2>
+            <h2>I. Why Poland</h2>
             <p>LG Chem, now operating as LG Energy Solution, chose Kobierzyce near Wroclaw in southwestern Poland for its European battery plant. The site sits in a special economic zone on about 100 hectares and has expanded in stages.<sup><a href="#src-1">1</a></sup><sup><a href="#src-2">2</a></sup> LG describes it as the largest battery plant in Europe.<sup><a href="#src-5">5</a></sup></p>
             <p>Wroclaw is within trucking distance of the German and Central European car industry, which is where the batteries are installed. Its customers include Audi, BMW, Fiat, Ford, Porsche and Volkswagen.<sup><a href="#src-2">2</a></sup></p>
         </section>
@@ -227,7 +222,7 @@
         </blockquote>
 
         <section id="integration" class="scroll-section gsap-reveal">
-            <h2>II. FULL INTEGRATION</h2>
+            <h2>II. Full Integration</h2>
             <p>The Wroclaw complex produces every stage of the battery, from electrodes to cells, modules and finished packs.<sup><a href="#src-3">3</a></sup><sup><a href="#src-4">4</a></sup> Select a workstream.</p>
             <div class="comp-tabs">
                 <button class="comp-tab active" onclick="openTab(event, 'tab-cap')">Capacity &amp; Scale</button>
@@ -244,7 +239,7 @@
         </section>
 
         <section id="proximity" class="scroll-section gsap-reveal">
-            <h2>III. THE PROXIMITY MATH</h2>
+            <h2>III. The Proximity Math</h2>
             <p>Straight-line distance shows the trade-off. Every customer headquarters is within about 950 km of Wroclaw, a day by truck. LG's home plant in Ochang, Korea is more than 8,100 km away in a straight line, and much further by sea.</p>
             <div class="chart-box chart-box-sm"><canvas id="distanceChart" aria-label="Great-circle distance in km from Wroclaw to automaker headquarters and to LG's Ochang plant"></canvas></div>
             <p class="chart-note">Great-circle distances calculated from coordinates of each city. Headquarters are used as a reference point; they are not necessarily the plants each battery ships to.</p>
@@ -254,7 +249,7 @@
         </section>
 
         <section id="the-dashboard" class="scroll-section gsap-reveal">
-            <h2>IV. THE DASHBOARD</h2>
+            <h2>IV. The Dashboard</h2>
             <p>The <a class="word-link" href="https://public.tableau.com/app/profile/prapanch.kokkalemada/viz/LGWroclawEVBatteryNearshoring/611kmvs8146kmWhyLGBuildsBatteriesinPoland" target="_blank" rel="noopener noreferrer">dashboard</a> maps the Wroclaw plant, the head offices of its European automaker customers and LG’s home plant in Korea, and ranks each by distance: six customers sit 448 to 951 km away, against 8,146 km to Ochang. Hover over a point or bar for details.</p>
             <div class="tableau-frame tableau-frame-sm">
                 <iframe src="https://public.tableau.com/views/LGWroclawEVBatteryNearshoring/611kmvs8146kmWhyLGBuildsBatteriesinPoland?:showVizHome=no&amp;:embed=true&amp;:toolbar=bottom&amp;:tabs=no" title="Lg Wroclaw, Tableau Public dashboard" loading="lazy" allowfullscreen></iframe>
@@ -263,7 +258,7 @@
         </section>
 
         <section id="insights" class="scroll-section gsap-reveal">
-            <h2 style="color: var(--gold);">V. INSIGHTS</h2>
+            <h2 style="color: var(--gold);">V. Insights</h2>
             <div class="insight-list"><div class="insight"><span class="insight-num">01</span><div><h4>Distance is a cost even when it is not on the invoice.</h4><p>Weeks of transit tie up working capital and slow down engineering changes. Being a day away lets LG and its customers fix problems quickly.</p></div></div><div class="insight"><span class="insight-num">02</span><div><h4>Phased capacity limits the downside.</h4><p>Building in stages ties each investment to confirmed demand, which matters as EV adoption in Europe moves unevenly.</p></div></div><div class="insight"><span class="insight-num">03</span><div><h4>Customer concentration is both the reason and the risk.</h4><p>The plant exists to serve a cluster of German and European automakers. A slowdown in that cluster hits the plant directly, which is why it has added bus and storage batteries.</p></div></div><div class="insight"><span class="insight-num">04</span><div><h4>Local production supports EU content rules.</h4><p>Batteries made in the EU fit more easily with rules and incentives that favor local content.</p></div></div></div>
             <div class="recommend-box">
                 <span class="bluf-label">Recommendation</span>
@@ -480,9 +475,15 @@
             scales: { x: { beginAtZero: true, grid: { color: GRID }, ticks: { callback: v => v.toLocaleString('en-US') } }, y: { grid: { display: false } } } }
     }));
 
-    const toggle = document.getElementById('case-menu-toggle');
-    const menu = document.getElementById('case-mobile-menu');
-    toggle.addEventListener('click', () => { menu.style.display = 'flex'; });
+    /* Header: same behaviour as the homepage (darkens on scroll, hamburger menu on mobile) */
+    (function () {
+        var nav = document.getElementById('mainnav'), toggle = document.getElementById('nav-toggle'), menu = document.getElementById('mobile-menu');
+        window.addEventListener('scroll', function () { if (nav) nav.classList.toggle('stk', window.scrollY > 55); }, { passive: true });
+        if (!toggle || !menu) return;
+        function setOpen(open) { toggle.classList.toggle('open', open); menu.classList.toggle('open', open); toggle.setAttribute('aria-expanded', open ? 'true' : 'false'); document.body.style.overflow = open ? 'hidden' : ''; }
+        toggle.addEventListener('click', function () { setOpen(!menu.classList.contains('open')); });
+        menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setOpen(false); }); });
+    })();
 </script>
 </body>
 </html>
