@@ -20,7 +20,7 @@
 .proj-stats .stat-strip-n { font-size: clamp(1.4rem, 3vw, 2.4rem); }
 
 .proj-wrap { max-width: 1200px; margin: 0 auto; padding: 3rem 2rem 6rem; position: relative; z-index: 2; }
-.proj-section { padding-top: 4.5rem; scroll-margin-top: 90px; }
+.proj-section { padding-top: 3rem; scroll-margin-top: 90px; }
 .proj-section + .proj-section { margin-top: 2rem; border-top: 1px solid var(--line); }
 
 /* step tabs reuse .sim-tabs / .sim-tab-btn from ../assets/css/style.css. Not sticky: the shared stylesheet

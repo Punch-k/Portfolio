@@ -17,8 +17,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/style.css?v=10">
-    <link rel="stylesheet" href="styles.css?v=1">
+    <link rel="stylesheet" href="../assets/css/style.css?v=11">
+    <link rel="stylesheet" href="styles.css?v=3">
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 </head>
@@ -59,7 +59,7 @@
         <span class="case-badge">Portfolio Case Study</span>
         <h1>S&amp;OP and <em>Inventory Optimization.</em></h1>
         <p>A working S&amp;OP model on real US retail sales. Pick a category. Compare three forecast methods. Set safety stock. See what each extra point of service costs in inventory. Then read the memo the model writes for you.</p>
-        <p class="proj-hero-note">Data: U.S. Census Bureau, Monthly Retail Trade Survey. Not seasonally adjusted sales, Jan 2015 to <span data-bind="lastMonth">the latest month</span>. All charts and tables below are calculated in your browser from the included data file.</p>
+        <p class="proj-hero-note">Data: U.S. Census Bureau, Monthly Retail Trade Survey. Not seasonally adjusted sales, Jan 2015 to <span data-bind="lastMonth">the latest month</span>. All charts and tables below are calculated in your browser from the included data file. The same results are in the <a class="word-link" href="https://public.tableau.com/app/profile/prapanch.kokkalemada/viz/SOPandInventoryOptimization/SOPForecastSafetyStockandOTIFUSCensusRetailSales" target="_blank" rel="noopener noreferrer">Tableau dashboard</a>, built from the <a class="word-link" href="https://github.com/Punch-k/Portfolio/blob/main/sop-inventory-optimization/analysis/sop_forecast.ipynb" target="_blank" rel="noopener noreferrer">Python notebook</a> and its <a class="word-link" href="https://github.com/Punch-k/Portfolio/tree/main/sop-inventory-optimization/tableau" target="_blank" rel="noopener noreferrer">data files</a>.</p>
     </header>
 
     <div class="stat-strip proj-stats" aria-label="Key results for the selected category">
@@ -69,14 +69,6 @@
         <div class="stat-strip-item"><div class="stat-strip-n" id="k-mos">--</div><div class="stat-strip-l">Months of supply<br><em>model vs Census I/S</em></div></div>
     </div>
 
-    <div class="sim-link-banner proj-links">
-        <p class="sim-link-banner-text"><strong>Tableau dashboard.</strong> Forecast vs actual, holdout accuracy and the inventory vs OTIF curve, built from the notebook output.</p>
-        <div class="proj-link-btns">
-            <a href="https://public.tableau.com/app/profile/prapanch.kokkalemada/viz/SOPandInventoryOptimization/SOPForecastSafetyStockandOTIFUSCensusRetailSales" class="sim-link-banner-btn" target="_blank" rel="noopener noreferrer">Open dashboard ↗</a>
-            <a href="https://github.com/Punch-k/Portfolio/blob/main/sop-inventory-optimization/analysis/sop_forecast.ipynb" class="proj-link-sec" target="_blank" rel="noopener noreferrer">Notebook ↗</a>
-            <a href="https://github.com/Punch-k/Portfolio/tree/main/sop-inventory-optimization/tableau" class="proj-link-sec" target="_blank" rel="noopener noreferrer">Data ↗</a>
-        </div>
-    </div>
 
     <main class="proj-wrap">
 
@@ -290,11 +282,12 @@
                 <li>Recent months in the Census series are advance or preliminary estimates and can be revised.</li>
             </ol>
             
-        <!-- FAQ (same accordion styling as the homepage) -->
-        <section class="case-faq" id="faq" aria-labelledby="case-faq-heading">
-          <style>.case-faq{margin:3rem 0 2.5rem}.case-faq .sec-num{margin-bottom:.4rem}.case-faq h3{font-family:var(--display);font-size:clamp(1.4rem,2.6vw,1.9rem);color:var(--fg);margin:0 0 1.2rem}.case-faq .faq-answer{line-height:1.65}@media (max-width:600px){.case-faq .faq-question{font-size:.98rem;padding-right:.8rem}}</style>
-          <p class="sec-num">FAQ</p>
-          <h3 id="case-faq-heading">Frequently Asked Questions</h3>
+
+        <p class="case-disclaimer">This is a portfolio case study, not work done for an employer. Policy inputs such as lead time, service level and supplier on-time rate are planning assumptions you can change. Census figures are national totals for a whole retail category, not for one company or SKU.</p>
+        </section>
+            <!-- FAQ (same accordion styling as the homepage) -->
+        <section class="case-faq" id="faq" aria-label="Frequently asked questions">
+          <style>.case-faq{margin:2rem 0 0}.case-faq .faq-answer{line-height:1.65}@media (max-width:600px){.case-faq .faq-question{font-size:.98rem;padding-right:.8rem}}</style>
           <div class="faq-wrapper">
             <div class="faq-item">
               <button type="button" class="faq-btn" aria-expanded="false" aria-controls="case-faq-a1">
@@ -353,9 +346,6 @@
             });
           })();
           </script>
-        </section>
-
-        <p class="case-disclaimer">This is a portfolio case study, not work done for an employer. Policy inputs such as lead time, service level and supplier on-time rate are planning assumptions you can change. Census figures are national totals for a whole retail category, not for one company or SKU.</p>
         </section>
     </main>
 
