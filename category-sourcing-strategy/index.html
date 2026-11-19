@@ -455,7 +455,73 @@
         <section class="proj-section sources scroll-section" id="sec-sources">
             <div class="sim-section-head"><p class="sec-num">Data and Method</p><h3>Sources and assumptions</h3></div>
             <ol class="src-list" id="src-list"></ol>
-            <p class="case-disclaimer">This is a portfolio case study, not work done for an employer. The only employment figures are the two marked Verified. All corrugated volumes, prices, bids, supplier profiles and invoices are assumptions built to show the method. Suppliers are anonymous archetypes, not real companies.</p>
+            
+        <!-- FAQ (same accordion styling as the homepage) -->
+        <section class="case-faq" id="faq" aria-labelledby="case-faq-heading">
+          <style>.case-faq{margin:3rem 0 2.5rem}.case-faq .sec-num{margin-bottom:.4rem}.case-faq h3{font-family:var(--display);font-size:clamp(1.4rem,2.6vw,1.9rem);color:var(--fg);margin:0 0 1.2rem}.case-faq .faq-answer{line-height:1.65}@media (max-width:600px){.case-faq .faq-question{font-size:.98rem;padding-right:.8rem}}</style>
+          <p class="sec-num">FAQ</p>
+          <h3 id="case-faq-heading">Frequently Asked Questions</h3>
+          <div class="faq-wrapper">
+            <div class="faq-item">
+              <button type="button" class="faq-btn" aria-expanded="false" aria-controls="case-faq-a1">
+                <span class="faq-question">Q1. What is a should-cost model?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="faq-content" id="case-faq-a1" role="region">
+                <p class="faq-answer">An estimate of what a product should cost to make, built from its cost drivers rather than from the supplier's quote. Here a corrugated box is broken into board, labor, energy, freight, overhead and margin, each moving with a real public index, so the modeled cost can be compared with what suppliers charge.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" class="faq-btn" aria-expanded="false" aria-controls="case-faq-a2">
+                <span class="faq-question">Q2. Why compare suppliers on total cost of ownership instead of unit price?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="faq-content" id="case-faq-a2" role="region">
+                <p class="faq-answer">Unit price leaves out freight, inventory forced by minimum orders, safety stock for late deliveries, defects, admin per order and the value of payment terms. Once those are added, the cheapest bid is often not the cheapest box.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" class="faq-btn" aria-expanded="false" aria-controls="case-faq-a3">
+                <span class="faq-question">Q3. Why award a dual-source contract?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="faq-content" id="case-faq-a3" role="region">
+                <p class="faq-answer">A primary and a secondary supplier protect supply if one fails and keep both competing for volume at each review. Pricing on a formula linked to the paperboard index replaces an annual price argument with a calculation both sides can check.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" class="faq-btn" aria-expanded="false" aria-controls="case-faq-a4">
+                <span class="faq-question">Q4. Which figures are real?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="faq-content" id="case-faq-a4" role="region">
+                <p class="faq-answer">Only the two marked Verified come from Ward Tires: $350K of monthly procurement spend and a 20% reduction in landed cost. All corrugated volumes, prices, bids, supplier profiles and invoices are assumptions built to show the method, and the suppliers are anonymous archetypes.</p>
+              </div>
+            </div>
+          </div>
+          <script>
+          (function () {
+            var btns = document.querySelectorAll('.case-faq .faq-btn');
+            btns.forEach(function (btn) {
+              btn.addEventListener('click', function () {
+                var open = btn.getAttribute('aria-expanded') === 'true';
+                btns.forEach(function (o) {
+                  o.setAttribute('aria-expanded', 'false');
+                  o.nextElementSibling.style.maxHeight = null;
+                  o.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+                });
+                if (!open) {
+                  btn.setAttribute('aria-expanded', 'true');
+                  btn.nextElementSibling.style.maxHeight = btn.nextElementSibling.scrollHeight + 'px';
+                  btn.querySelector('.faq-icon').style.transform = 'rotate(45deg)';
+                }
+              });
+            });
+          })();
+          </script>
+        </section>
+
+        <p class="case-disclaimer">This is a portfolio case study, not work done for an employer. The only employment figures are the two marked Verified. All corrugated volumes, prices, bids, supplier profiles and invoices are assumptions built to show the method. Suppliers are anonymous archetypes, not real companies.</p>
         </section>
     
     </main>
@@ -500,14 +566,15 @@
 </section>
 
 <footer class="site-footer" role="contentinfo">
-    <div class="footer-left">
-        <span class="ft-logo">MBA Candidate © 2026 · Broad College of Business</span>
-    </div>
-    <nav class="footer-links" aria-label="Footer links">
-        <a href="mailto:p.kokkalemada@gmail.com" class="ft-link">E-MAIL</a>
-        <a href="https://linkedin.com/in/prapanchkokkalemada/" class="ft-link" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
-        <button class="ft-top-btn" id="footer-top-btn" aria-label="Scroll to top of page" onclick="window.scrollTo(0,0)">↑ Top</button>
-    </nav>
+  <div class="footer-left">
+    <span class="ft-logo">ENGINEER 2020 | MBA 2026 </span>
+  </div>
+  <nav class="footer-links" aria-label="Footer links">
+    <a href="mailto:p.kokkalemada@gmail.com" class="ft-link">E-MAIL</a>
+    <a href="https://linkedin.com/in/prapanchkokkalemada/" class="ft-link" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+    <a href="https://broad.campusgroups.com/gscma/events/" class="ft-link" target="_blank" rel="noopener noreferrer">🏅&nbsp;GSCMA</a>
+    <button class="ft-top-btn" id="footer-top-btn" aria-label="Scroll to top of page" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ Top</button>
+  </nav>
 </footer>
 
 <script>
