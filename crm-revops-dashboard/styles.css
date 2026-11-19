@@ -1,11 +1,11 @@
 /* Project page styles.
-   Shared chrome (nav, footer, cursor, sim components, fonts, tokens) comes from ../style.css,
+   Shared chrome (nav, footer, cursor, sim components, fonts, tokens) comes from ../assets/css/style.css,
    the same stylesheet the portfolio homepage and SCOPSim use. This file only adds layout for
    the project pages and reuses the same tokens: --bg, --fg, --gold, --muted, --line,
    --success, --warning, --danger, --sans, --display, --ease. No new colors or fonts. */
 
 /* SCOPSim and the homepage hide the system cursor on desktop and draw #cdot/#cring.
-   app.js drives those. On touch screens ../style.css already restores the cursor. */
+   app.js drives those. On touch screens ../assets/css/style.css already restores the cursor. */
 
 .proj-hero { max-width: 1200px; margin: 0 auto; padding: 10rem 2rem 3rem; position: relative; z-index: 2; }
 .proj-breadcrumbs { display: flex; gap: .5rem; flex-wrap: wrap; color: rgba(237,233,224,.6); font-size: .75rem; letter-spacing: .15em; text-transform: uppercase; margin-bottom: 1.5rem; }
@@ -23,7 +23,7 @@
 .proj-section { padding-top: 4.5rem; scroll-margin-top: 90px; }
 .proj-section + .proj-section { margin-top: 2rem; border-top: 1px solid var(--line); }
 
-/* step tabs reuse .sim-tabs / .sim-tab-btn from ../style.css. Not sticky: the shared stylesheet
+/* step tabs reuse .sim-tabs / .sim-tab-btn from ../assets/css/style.css. Not sticky: the shared stylesheet
    sets overflow-x: hidden on html and body, which stops position: sticky from working. */
 #steps { position: relative; z-index: 5; margin-bottom: 0; }
 
@@ -128,7 +128,7 @@ input[type="range"]::-moz-range-thumb { width: 14px; height: 14px; border-radius
 .seg button.on { color: var(--bg); background: var(--gold); }
 .row-between { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem; }
 
-/* links to dashboard / notebook / data, reuses .sim-link-banner from ../style.css */
+/* links to dashboard / notebook / data, reuses .sim-link-banner from ../assets/css/style.css */
 .proj-links { margin: 2.5rem auto 0; max-width: 1200px; }
 .proj-link-btns { display: flex; gap: .8rem; align-items: center; flex-wrap: wrap; }
 .proj-link-sec { display: inline-flex; align-items: center; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--gold); text-decoration: none; padding: .75rem 1.1rem; border: 1px solid rgba(201,168,76,.4); border-radius: 4px; transition: background .25s; }
