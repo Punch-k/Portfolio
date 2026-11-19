@@ -277,6 +277,81 @@
             </div>
         </section>
 
+        
+        <!-- FAQ (same accordion styling as the homepage) -->
+        <section class="case-faq" id="faq" aria-labelledby="case-faq-heading">
+          <style>.case-faq{margin:3rem 0 2.5rem}.case-faq .sec-num{margin-bottom:.4rem}.case-faq h3{font-family:var(--display);font-size:clamp(1.4rem,2.6vw,1.9rem);color:var(--fg);margin:0 0 1.2rem}.case-faq .faq-answer{line-height:1.65}@media (max-width:600px){.case-faq .faq-question{font-size:.98rem;padding-right:.8rem}}</style>
+          <p class="sec-num">FAQ</p>
+          <h3 id="case-faq-heading">Frequently Asked Questions</h3>
+          <div class="faq-wrapper">
+            <div class="faq-item">
+              <button type="button" class="faq-btn" aria-expanded="false" aria-controls="case-faq-a1">
+                <span class="faq-question">Q1. Why did LG build its European battery plant in Poland?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="faq-content" id="case-faq-a1" role="region">
+                <p class="faq-answer">Proximity to customers. The Kobierzyce site near Wroclaw is within trucking distance of the German and Central European car industry: every customer headquarters in the case sits within about 950 km, roughly a day by truck, while LG's home plant in Ochang, Korea is more than 8,100 km away in a straight line.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" class="faq-btn" aria-expanded="false" aria-controls="case-faq-a2">
+                <span class="faq-question">Q2. How large is the Wroclaw plant?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="faq-content" id="case-faq-a2" role="region">
+                <p class="faq-answer">The site covers about 100 hectares in a special economic zone and has expanded in stages. Reported capacity varies by date and source, from about 70 GWh to about 86 GWh, with a stated target of 100 GWh once the latest stage is complete. LG describes it as the largest battery plant in Europe.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" class="faq-btn" aria-expanded="false" aria-controls="case-faq-a3">
+                <span class="faq-question">Q3. What does the plant produce, and for whom?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="faq-content" id="case-faq-a3" role="region">
+                <p class="faq-answer">Every stage of the battery, from electrodes to cells, modules and finished packs. Customers include Audi, BMW, Fiat, Ford, Porsche and Volkswagen, and the plant has added batteries for electric buses and energy storage.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" class="faq-btn" aria-expanded="false" aria-controls="case-faq-a4">
+                <span class="faq-question">Q4. What are the main risks of this nearshoring model?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="faq-content" id="case-faq-a4" role="region">
+                <p class="faq-answer">Customer concentration. The plant exists to serve a cluster of European automakers, so a slowdown in that cluster hits it directly. Building in phases tied to signed volumes and diversifying into energy storage limit that downside.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" class="faq-btn" aria-expanded="false" aria-controls="case-faq-a5">
+                <span class="faq-question">Q5. How are the distances in the case measured?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="faq-content" id="case-faq-a5" role="region">
+                <p class="faq-answer">They are straight-line (great-circle) distances calculated from each city's coordinates. Headquarters are a reference point; they are not necessarily the plants each battery ships to.</p>
+              </div>
+            </div>
+          </div>
+          <script>
+          (function () {
+            var btns = document.querySelectorAll('.case-faq .faq-btn');
+            btns.forEach(function (btn) {
+              btn.addEventListener('click', function () {
+                var open = btn.getAttribute('aria-expanded') === 'true';
+                btns.forEach(function (o) {
+                  o.setAttribute('aria-expanded', 'false');
+                  o.nextElementSibling.style.maxHeight = null;
+                  o.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+                });
+                if (!open) {
+                  btn.setAttribute('aria-expanded', 'true');
+                  btn.nextElementSibling.style.maxHeight = btn.nextElementSibling.scrollHeight + 'px';
+                  btn.querySelector('.faq-icon').style.transform = 'rotate(45deg)';
+                }
+              });
+            });
+          })();
+          </script>
+        </section>
+
         <p class="case-disclaimer">Disclaimer: Portfolio case study for academic and demonstrative purposes. This is an independent analysis, not affiliated with or endorsed by LG Energy Solution or any automaker named. Facts and figures come from the public sources below; the recommendation is the author's view. All trademarks belong to their respective owners.</p>
         <div class="sources-block">
             <strong>Sources:</strong>
@@ -324,14 +399,15 @@
 </section>
 
 <footer class="site-footer" role="contentinfo">
-    <div class="footer-left">
-        <span class="ft-logo">MBA Candidate © 2026 · Broad College of Business</span>
-    </div>
-    <nav class="footer-links" aria-label="Footer links">
-        <a href="mailto:p.kokkalemada@gmail.com" class="ft-link">E-MAIL</a>
-        <a href="https://linkedin.com/in/prapanchkokkalemada/" class="ft-link" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
-        <button class="ft-top-btn" id="footer-top-btn" aria-label="Scroll to top of page" onclick="window.scrollTo(0,0)">↑ Top</button>
-    </nav>
+  <div class="footer-left">
+    <span class="ft-logo">ENGINEER 2020 | MBA 2026 </span>
+  </div>
+  <nav class="footer-links" aria-label="Footer links">
+    <a href="mailto:p.kokkalemada@gmail.com" class="ft-link">E-MAIL</a>
+    <a href="https://linkedin.com/in/prapanchkokkalemada/" class="ft-link" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+    <a href="https://broad.campusgroups.com/gscma/events/" class="ft-link" target="_blank" rel="noopener noreferrer">🏅&nbsp;GSCMA</a>
+    <button class="ft-top-btn" id="footer-top-btn" aria-label="Scroll to top of page" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ Top</button>
+  </nav>
 </footer>
 
 <script>

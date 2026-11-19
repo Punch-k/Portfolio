@@ -285,6 +285,81 @@
             </div>
         </section>
 
+        
+        <!-- FAQ (same accordion styling as the homepage) -->
+        <section class="case-faq" id="faq" aria-labelledby="case-faq-heading">
+          <style>.case-faq{margin:3rem 0 2.5rem}.case-faq .sec-num{margin-bottom:.4rem}.case-faq h3{font-family:var(--display);font-size:clamp(1.4rem,2.6vw,1.9rem);color:var(--fg);margin:0 0 1.2rem}.case-faq .faq-answer{line-height:1.65}@media (max-width:600px){.case-faq .faq-question{font-size:.98rem;padding-right:.8rem}}</style>
+          <p class="sec-num">FAQ</p>
+          <h3 id="case-faq-heading">Frequently Asked Questions</h3>
+          <div class="faq-wrapper">
+            <div class="faq-item">
+              <button type="button" class="faq-btn" aria-expanded="false" aria-controls="case-faq-a1">
+                <span class="faq-question">Q1. Why did KFC switch its UK logistics from Bidvest to DHL?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="faq-content" id="case-faq-a1" role="region">
+                <p class="faq-answer">KFC UK moved its logistics contract to DHL, which took over on 14 February 2018. DHL's model consolidated fresh-chicken distribution into one depot in Rugby instead of the six warehouses Bidvest had used. On paper that network was simpler and cheaper.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" class="faq-btn" aria-expanded="false" aria-controls="case-faq-a2">
+                <span class="faq-question">Q2. How many KFC restaurants closed, and for how long?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="faq-content" id="case-faq-a2" role="region">
+                <p class="faq-answer">Closures peaked on 18 February 2018, when 646 of about 900 restaurants in the UK and Ireland were shut. About 575 were still closed on 19 February and about 470 on 20 February, as deliveries slowly recovered.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" class="faq-btn" aria-expanded="false" aria-controls="case-faq-a3">
+                <span class="faq-question">Q3. Why did one depot cause a nationwide failure?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="faq-content" id="case-faq-a3" role="region">
+                <p class="faq-answer">With a single depot serving the whole country, a problem at Rugby became a problem in every restaurant, and there was no second site to reroute through. Fresh chicken has a short shelf life, so a depot that falls behind cannot catch up later by working through a backlog.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" class="faq-btn" aria-expanded="false" aria-controls="case-faq-a4">
+                <span class="faq-question">Q4. How should a company run a 3PL transition on a perishable network?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="faq-content" id="case-faq-a4" role="region">
+                <p class="faq-answer">Run the new provider in parallel with the incumbent for several weeks, cut over region by region rather than nationally, keep the incumbent on standby until the new network hits agreed fill-rate targets, and set go or no-go gates on staffing, system readiness and on-time delivery before each step.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" class="faq-btn" aria-expanded="false" aria-controls="case-faq-a5">
+                <span class="faq-question">Q5. Where do the closure figures come from?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="faq-content" id="case-faq-a5" role="region">
+                <p class="faq-answer">They are press counts, not company data: Retail Week and The Guardian for the 18 February peak, and Fortune for 19 and 20 February. Counts differ slightly by outlet and by whether Ireland is included, so each figure is shown with its source.</p>
+              </div>
+            </div>
+          </div>
+          <script>
+          (function () {
+            var btns = document.querySelectorAll('.case-faq .faq-btn');
+            btns.forEach(function (btn) {
+              btn.addEventListener('click', function () {
+                var open = btn.getAttribute('aria-expanded') === 'true';
+                btns.forEach(function (o) {
+                  o.setAttribute('aria-expanded', 'false');
+                  o.nextElementSibling.style.maxHeight = null;
+                  o.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+                });
+                if (!open) {
+                  btn.setAttribute('aria-expanded', 'true');
+                  btn.nextElementSibling.style.maxHeight = btn.nextElementSibling.scrollHeight + 'px';
+                  btn.querySelector('.faq-icon').style.transform = 'rotate(45deg)';
+                }
+              });
+            });
+          })();
+          </script>
+        </section>
+
         <p class="case-disclaimer">Disclaimer: Portfolio case study for academic and demonstrative purposes. This is an independent analysis, not affiliated with or endorsed by KFC, DHL or Bidvest. Facts and figures come from the public sources below; the recommendation is the author's view. All trademarks belong to their respective owners.</p>
         <div class="sources-block">
             <strong>Sources:</strong>
@@ -332,14 +407,15 @@
 </section>
 
 <footer class="site-footer" role="contentinfo">
-    <div class="footer-left">
-        <span class="ft-logo">MBA Candidate © 2026 · Broad College of Business</span>
-    </div>
-    <nav class="footer-links" aria-label="Footer links">
-        <a href="mailto:p.kokkalemada@gmail.com" class="ft-link">E-MAIL</a>
-        <a href="https://linkedin.com/in/prapanchkokkalemada/" class="ft-link" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
-        <button class="ft-top-btn" id="footer-top-btn" aria-label="Scroll to top of page" onclick="window.scrollTo(0,0)">↑ Top</button>
-    </nav>
+  <div class="footer-left">
+    <span class="ft-logo">ENGINEER 2020 | MBA 2026 </span>
+  </div>
+  <nav class="footer-links" aria-label="Footer links">
+    <a href="mailto:p.kokkalemada@gmail.com" class="ft-link">E-MAIL</a>
+    <a href="https://linkedin.com/in/prapanchkokkalemada/" class="ft-link" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+    <a href="https://broad.campusgroups.com/gscma/events/" class="ft-link" target="_blank" rel="noopener noreferrer">🏅&nbsp;GSCMA</a>
+    <button class="ft-top-btn" id="footer-top-btn" aria-label="Scroll to top of page" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ Top</button>
+  </nav>
 </footer>
 
 <script>

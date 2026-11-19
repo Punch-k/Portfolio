@@ -277,6 +277,72 @@
             </div>
         </section>
 
+        
+        <!-- FAQ (same accordion styling as the homepage) -->
+        <section class="case-faq" id="faq" aria-labelledby="case-faq-heading">
+          <style>.case-faq{margin:3rem 0 2.5rem}.case-faq .sec-num{margin-bottom:.4rem}.case-faq h3{font-family:var(--display);font-size:clamp(1.4rem,2.6vw,1.9rem);color:var(--fg);margin:0 0 1.2rem}.case-faq .faq-answer{line-height:1.65}@media (max-width:600px){.case-faq .faq-question{font-size:.98rem;padding-right:.8rem}}</style>
+          <p class="sec-num">FAQ</p>
+          <h3 id="case-faq-heading">Frequently Asked Questions</h3>
+          <div class="faq-wrapper">
+            <div class="faq-item">
+              <button type="button" class="faq-btn" aria-expanded="false" aria-controls="case-faq-a1">
+                <span class="faq-question">Q1. What makes Zara's supply chain different from other apparel brands?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="faq-content" id="case-faq-a1" role="region">
+                <p class="faq-answer">Vertical integration. Where most brands outsource design, manufacturing and logistics to separate vendors, Inditex controls most of it for Zara, coordinated by a central IT system that links store sales back to design and factory scheduling. It also keeps spare capacity in its own factories on purpose so it can react within days.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" class="faq-btn" aria-expanded="false" aria-controls="case-faq-a2">
+                <span class="faq-question">Q2. How fast can Zara get a new item into stores?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="faq-content" id="case-faq-a2" role="region">
+                <p class="faq-answer">In as little as two to three weeks from design to store, with stores restocked twice a week.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" class="faq-btn" aria-expanded="false" aria-controls="case-faq-a3">
+                <span class="faq-question">Q3. Why does Inditex produce close to Spain when far-shore sourcing is cheaper?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="faq-content" id="case-faq-a3" role="region">
+                <p class="faq-answer">Proximity cuts lead time from months to weeks, which keeps production close to real demand and reduces stockouts and end-of-season markdowns. At the end of 2023 about 48% of Inditex's suppliers were in Spain, Portugal, Morocco and Turkey.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" class="faq-btn" aria-expanded="false" aria-controls="case-faq-a4">
+                <span class="faq-question">Q4. How is Inditex performing financially?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="faq-content" id="case-faq-a4" role="region">
+                <p class="faq-answer">FY2025 brought record sales of EUR 39.9 billion and net income of EUR 6.2 billion, up from EUR 27.7 billion in sales in FY2021. Growth, though, has slowed from double digits to low single digits in euro terms.</p>
+              </div>
+            </div>
+          </div>
+          <script>
+          (function () {
+            var btns = document.querySelectorAll('.case-faq .faq-btn');
+            btns.forEach(function (btn) {
+              btn.addEventListener('click', function () {
+                var open = btn.getAttribute('aria-expanded') === 'true';
+                btns.forEach(function (o) {
+                  o.setAttribute('aria-expanded', 'false');
+                  o.nextElementSibling.style.maxHeight = null;
+                  o.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+                });
+                if (!open) {
+                  btn.setAttribute('aria-expanded', 'true');
+                  btn.nextElementSibling.style.maxHeight = btn.nextElementSibling.scrollHeight + 'px';
+                  btn.querySelector('.faq-icon').style.transform = 'rotate(45deg)';
+                }
+              });
+            });
+          })();
+          </script>
+        </section>
+
         <p class="case-disclaimer">Disclaimer: Portfolio case study for academic and demonstrative purposes. This is an independent analysis, not affiliated with or endorsed by Inditex or Zara. Facts and figures come from the public sources below; the recommendation is the author's view. All trademarks belong to their respective owners.</p>
         <div class="sources-block">
             <strong>Sources:</strong>
@@ -324,14 +390,15 @@
 </section>
 
 <footer class="site-footer" role="contentinfo">
-    <div class="footer-left">
-        <span class="ft-logo">MBA Candidate © 2026 · Broad College of Business</span>
-    </div>
-    <nav class="footer-links" aria-label="Footer links">
-        <a href="mailto:p.kokkalemada@gmail.com" class="ft-link">E-MAIL</a>
-        <a href="https://linkedin.com/in/prapanchkokkalemada/" class="ft-link" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
-        <button class="ft-top-btn" id="footer-top-btn" aria-label="Scroll to top of page" onclick="window.scrollTo(0,0)">↑ Top</button>
-    </nav>
+  <div class="footer-left">
+    <span class="ft-logo">ENGINEER 2020 | MBA 2026 </span>
+  </div>
+  <nav class="footer-links" aria-label="Footer links">
+    <a href="mailto:p.kokkalemada@gmail.com" class="ft-link">E-MAIL</a>
+    <a href="https://linkedin.com/in/prapanchkokkalemada/" class="ft-link" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+    <a href="https://broad.campusgroups.com/gscma/events/" class="ft-link" target="_blank" rel="noopener noreferrer">🏅&nbsp;GSCMA</a>
+    <button class="ft-top-btn" id="footer-top-btn" aria-label="Scroll to top of page" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ Top</button>
+  </nav>
 </footer>
 
 <script>
