@@ -858,3 +858,7 @@ body::after { content: ''; position: fixed; inset: -100%; width: 300%; height: 3
    card view already carries this caveat, but a reader landing on the page
    itself (search, shared link, the simulator deep-links) never saw it before. */
 .case-disclaimer { font-size: .78rem; color: rgba(237,233,224,.4); line-height: 1.7; font-style: italic; margin-bottom: 1.2rem; }
+
+/* In-text links to Tableau views, simulators, models and code (replaced the "Explore the data" banners) */
+a.word-link { color: var(--gold); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; text-decoration-color: rgba(201,168,76,.55); transition: color .2s ease, text-decoration-color .2s ease; }
+a.word-link:hover, a.word-link:focus-visible { color: var(--fg); text-decoration-color: var(--gold); }
