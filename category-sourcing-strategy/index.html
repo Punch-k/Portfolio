@@ -15,7 +15,7 @@
     <link rel="canonical" href="https://punch-k.github.io/Portfolio/category-sourcing-strategy/">
 
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/style.css?v=10">
+    <link rel="stylesheet" href="../assets/css/style.css?v=11">
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -57,7 +57,7 @@
         .print-btn { background: none; border: 1px solid var(--line); color: var(--fg); padding: 0.5rem 1rem; cursor: pointer; font-family: var(--sans); font-size: 0.8rem; transition: all 0.3s; margin-top: 1rem; width: 100%; text-align: left; }
         .print-btn:hover { border-color: var(--gold); color: var(--gold); }
         @media (max-width: 900px) { .case-layout { grid-template-columns: 1fr; } .case-sidebar { display: none; } }
-        .article-body h2 { font-family: var(--display); font-size: clamp(1.9rem, 7vw, 2.8rem); color: var(--fg); margin-top: 0; margin-bottom: 1.5rem; line-height: 1.15; position: relative; padding-top: 4rem; }
+        .article-body h2 { font-family: var(--display); font-size: clamp(1.9rem, 7vw, 2.8rem); color: var(--fg); margin-top: 0; margin-bottom: 1.5rem; line-height: 1.15; position: relative; padding-top: 2.25rem; }
         .article-body p { font-size: 1.15rem; color: rgba(237,233,224,0.8); line-height: 1.8; margin-bottom: 2rem; font-weight: 300; }
         .article-body a { color: var(--gold); }
         .gsap-reveal { opacity: 0; transform: translateY(40px); }
@@ -69,20 +69,21 @@
         .comp-panel { display: none; animation: fadeIn 0.5s ease; }
         .comp-panel.active { display: block; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        .pull-quote { margin: 4rem 0; padding: 3rem; border: 1px solid var(--line); text-align: center; background: rgba(255,255,255,0.02); }
+        .pull-quote { margin: 2.5rem 0; padding: 3rem; border: 1px solid var(--line); text-align: center; background: rgba(255,255,255,0.02); }
         .pull-quote p { font-family: var(--display); font-size: 2rem; color: var(--gold); line-height: 1.3; margin: 0 0 1rem 0; font-style: italic; }
         .pull-quote span { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.1em; color: rgba(237,233,224,0.5); }
-        .stat-banner { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 2rem; background: rgba(255,255,255,0.02); border: 1px solid var(--line); padding: 3rem; border-radius: 8px; margin: 4rem 0; }
+        .stat-banner { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 2rem; background: rgba(255,255,255,0.02); border: 1px solid var(--line); padding: 3rem; border-radius: 8px; margin: 2.5rem 0; }
         .stat-num { font-family: var(--display); font-size: 4rem; color: var(--gold); line-height: 1; }
         .stat-label { font-size: 0.85rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(237,233,224,0.6); margin-top: 0.5rem; }
         .sources-block { font-size: 0.85rem; color: rgba(237,233,224,0.55); line-height: 1.9; border-top: 1px solid var(--line); padding-top: 2rem; margin-top: 3rem; }
         .sources-block strong { color: var(--gold); }
         .sources-block ol { padding-left: 1.2rem; margin: 0.75rem 0 0; }
-        .next-project { margin-top: 8rem; border-top: 1px solid var(--line); padding: 6rem 2rem; text-align: center; background: linear-gradient(180deg, transparent, rgba(201,168,76,0.03)); transition: background 0.4s; display: block; text-decoration: none; }
-        .next-project:hover { background: rgba(201,168,76,0.08); }
-        .next-project span { display: block; font-size: 0.85rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(237,233,224,0.6); margin-bottom: 1rem; }
-        .next-project h2 { font-family: var(--display); font-size: clamp(3rem, 5vw, 5rem); color: var(--gold); margin: 0; transition: transform 0.4s; }
-        .next-project:hover h2 { transform: translateY(-10px); }
+        /* Next case: compact button, label with the case title right below it */
+        .next-project { display: flex; flex-direction: column; align-items: flex-start; gap: .35rem; width: fit-content; max-width: calc(100% - 2.4rem); margin: 4.5rem auto 3.5rem; padding: 1rem 1.5rem 1.1rem; border: 1px solid rgba(201,168,76,.45); border-radius: 8px; background: rgba(237,233,224,.04); text-decoration: none; transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease, background .28s ease; }
+        .next-project:hover, .next-project:focus-visible { transform: translateY(-4px); border-color: var(--gold); background: rgba(201,168,76,.08); box-shadow: 0 8px 22px rgba(201,168,76,.25), 0 0 0 1px rgba(201,168,76,.45); outline: none; }
+        .next-project span { display: block; font-size: .7rem; letter-spacing: .2em; text-transform: uppercase; color: rgba(237,233,224,.6); margin: 0; }
+        .next-project h2 { font-family: var(--display); font-size: clamp(1.15rem, 2vw, 1.5rem); line-height: 1.25; color: var(--gold); margin: 0; }
+        @media (prefers-reduced-motion: reduce) { .next-project, .next-project:hover { transition: none; transform: none; } }
         @media (max-width: 600px) {
             .case-layout { padding: 0 1.2rem 4rem; }
             .exec-summary { padding: 1.5rem; margin: -2rem 1rem 3rem; }
@@ -152,11 +153,11 @@
         html, body { overflow-x: clip !important; }
         /* Sourcing page: long contents list, so let the sticky sidebar scroll on its own */
         .case-sidebar { max-height: calc(100vh - 140px); overflow-y: auto; scrollbar-width: thin; }
-        .article-body .proj-section { padding-top: 3.5rem; }
+        .article-body .proj-section { padding-top: 2.25rem; }
         .article-body .proj-stats { margin-bottom: 1rem; }
         @media (max-width: 600px) { .tableau-frame-sm { height: 980px; } .article-body table.ssens-table { display: block; overflow-x: auto; max-width: 100%; } }
     </style>
-    <link rel="stylesheet" href="styles.css?v=2">
+    <link rel="stylesheet" href="styles.css?v=3">
 
 </head>
 <body>
@@ -206,13 +207,6 @@
     </div>
 </div>
 
-<div class="sim-link-banner gsap-reveal">
-    <p class="sim-link-banner-text"><strong>Explore the model.</strong> Tableau view of the cost drivers, plus the code and data behind every tool on this page.</p>
-    <div class="banner-btns">
-        <a href="https://public.tableau.com/app/profile/prapanch.kokkalemada/viz/CorrugatedPackagingCostDrivers2010-2026/BoxPricesHitaRecordWhileFibreCostsFell" class="sim-link-banner-btn" target="_blank" rel="noopener noreferrer">Tableau ↗</a>
-        <a href="https://github.com/Punch-k/Portfolio/tree/main/category-sourcing-strategy" class="sim-link-banner-btn banner-btn-ghost" target="_blank" rel="noopener noreferrer">Code and data ↗</a>
-    </div>
-</div>
 
 <div class="case-layout">
     <aside class="case-sidebar">
@@ -431,7 +425,7 @@
         
         <section id="the-dashboard" class="scroll-section gsap-reveal">
             <h2>09. THE DASHBOARD</h2>
-            <p>The Tableau view tracks the main cost drivers behind a corrugated box, each indexed to January 2015 = 100, from the same BLS and EIA series the should-cost model uses. Use the Driver filter to compare any input with the box price, and hover over a line to see the monthly value.</p>
+            <p>The <a class="word-link" href="https://public.tableau.com/app/profile/prapanch.kokkalemada/viz/CorrugatedPackagingCostDrivers2010-2026/BoxPricesHitaRecordWhileFibreCostsFell" target="_blank" rel="noopener noreferrer">Tableau view</a> tracks the main cost drivers behind a corrugated box, each indexed to January 2015 = 100, from the same BLS and EIA series the should-cost model uses. Use the Driver filter to compare any input with the box price, and hover over a line to see the monthly value.</p>
             <div class="tableau-frame tableau-frame-sm">
                 <iframe src="https://public.tableau.com/views/CorrugatedPackagingCostDrivers2010-2026/BoxPricesHitaRecordWhileFibreCostsFell?:showVizHome=no&amp;:embed=true&amp;:toolbar=bottom&amp;:tabs=no" title="Corrugated packaging cost drivers, Tableau Public" loading="lazy" allowfullscreen></iframe>
             </div>
@@ -456,11 +450,31 @@
             <div class="sim-section-head"><p class="sec-num">Data and Method</p><h3>Sources and assumptions</h3></div>
             <ol class="src-list" id="src-list"></ol>
             
+
+        <p class="case-disclaimer">This is a portfolio case study, not work done for an employer. The only employment figures are the two marked Verified. All corrugated volumes, prices, bids, supplier profiles and invoices are assumptions built to show <a class="word-link" href="https://github.com/Punch-k/Portfolio/tree/main/category-sourcing-strategy" target="_blank" rel="noopener noreferrer">the method</a>. Suppliers are anonymous archetypes, not real companies.</p>
+        </section>
+    
+    </main>
+</div>
+
+<a href="../kfc-logistics-failure-case.html" class="next-project">
+    <span>Next Case</span>
+    <h2>KFC's Logistics Failure →</h2>
+</a>
+
+<section id="section-get-in-touch" class="contact-section-shell" aria-labelledby="contact-heading">
+    <div class="connect-grid">
+        <div class="ct-content gsap-reveal">
+            <div class="sec-eyebrow-row">
+                <span class="sec-eyebrow-label">Let's Connect</span>
+                <div class="sec-eyebrow-line"></div>
+            </div>
+            <h2 class="contact-display-heading" id="contact-heading">
+                Initiate<br><em class="contact-display-em">Dialogue.</em>
+            </h2>
         <!-- FAQ (same accordion styling as the homepage) -->
-        <section class="case-faq" id="faq" aria-labelledby="case-faq-heading">
-          <style>.case-faq{margin:3rem 0 2.5rem}.case-faq .sec-num{margin-bottom:.4rem}.case-faq h3{font-family:var(--display);font-size:clamp(1.4rem,2.6vw,1.9rem);color:var(--fg);margin:0 0 1.2rem}.case-faq .faq-answer{line-height:1.65}@media (max-width:600px){.case-faq .faq-question{font-size:.98rem;padding-right:.8rem}}</style>
-          <p class="sec-num">FAQ</p>
-          <h3 id="case-faq-heading">Frequently Asked Questions</h3>
+        <section class="case-faq" id="faq" aria-label="Frequently asked questions">
+          <style>.case-faq{margin:2rem 0 0}.case-faq .faq-answer{line-height:1.65}@media (max-width:600px){.case-faq .faq-question{font-size:.98rem;padding-right:.8rem}}</style>
           <div class="faq-wrapper">
             <div class="faq-item">
               <button type="button" class="faq-btn" aria-expanded="false" aria-controls="case-faq-a1">
@@ -520,28 +534,6 @@
           })();
           </script>
         </section>
-
-        <p class="case-disclaimer">This is a portfolio case study, not work done for an employer. The only employment figures are the two marked Verified. All corrugated volumes, prices, bids, supplier profiles and invoices are assumptions built to show the method. Suppliers are anonymous archetypes, not real companies.</p>
-        </section>
-    
-    </main>
-</div>
-
-<a href="../kfc-logistics-failure-case.html" class="next-project">
-    <span>Next Case Study</span>
-    <h2>KFC's Logistics Failure →</h2>
-</a>
-
-<section id="section-get-in-touch" class="contact-section-shell" aria-labelledby="contact-heading">
-    <div class="connect-grid">
-        <div class="ct-content gsap-reveal">
-            <div class="sec-eyebrow-row">
-                <span class="sec-eyebrow-label">Let's Connect</span>
-                <div class="sec-eyebrow-line"></div>
-            </div>
-            <h2 class="contact-display-heading" id="contact-heading">
-                Initiate<br><em class="contact-display-em">Dialogue.</em>
-            </h2>
         </div>
         <div class="ct-visual gsap-reveal">
             <div class="photo-portrait-frame">
