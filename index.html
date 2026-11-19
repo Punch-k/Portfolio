@@ -121,9 +121,32 @@
     .cc-q { display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; gap: .6rem; min-height: 7.25rem; padding: .85rem .9rem .95rem; font-family: var(--sans); font-size: .95rem; font-weight: 500; letter-spacing: .01em; line-height: 1.25; text-align: left; border: 1px solid rgba(255,255,255,.55); border-radius: 8px; background: linear-gradient(160deg, #ECEAE5 0%, #D9D6CF 100%); color: #1B1A18; cursor: pointer; transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease; }
     .cc-q-num { font-family: var(--display); font-style: italic; font-size: .95rem; line-height: 1; color: #9A7A2E; letter-spacing: .04em; }
     .cc-q-label { display: block; }
+    .cc-q-top { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+    .cc-q-ico { width: 22px; height: 22px; color: #9A7A2E; flex-shrink: 0; transition: color .28s ease; }
+    .cc-q:hover .cc-q-ico, .cc-q:focus-visible .cc-q-ico { color: #7A5E1C; }
+    @media (max-width: 600px) { .cc-q-ico { width: 18px; height: 18px; } }
     .cc-q:hover, .cc-q:focus-visible { transform: translateY(-4px); border-color: var(--gold); box-shadow: 0 8px 22px rgba(201,168,76,.32), 0 0 0 1px rgba(201,168,76,.55); outline: none; }
     @media (max-width: 600px) { .cc-quick { gap: .4rem; } .cc-q { min-height: 5.6rem; padding: .7rem .6rem .75rem; font-size: .8rem; gap: .4rem; } .cc-q-num { font-size: .8rem; } }
     @media (prefers-reduced-motion: reduce) { .cc-q, .cc-q:hover, .cc-q:focus-visible { transition: none; transform: none; } }
+    /* About: education and certification badges beside the "I. About" label */
+    .about-head-row { position: relative; z-index: 5; display: flex; align-items: center; flex-wrap: wrap; gap: .9rem 1.4rem; margin-bottom: 2.8rem; }
+    .about-head-row .sec-num { margin-bottom: 0; }
+    .edu-badges { display: flex; flex-wrap: wrap; gap: .6rem; list-style: none; margin: 0; padding: 0; }
+    .edu-badges li { position: relative; }
+    .edu-badge { display: block; width: 44px; height: 44px; border-radius: 50%; border: 2px solid #fff; background: #fff; overflow: visible; position: relative; box-shadow: 0 2px 8px rgba(0,0,0,.35); transition: transform .25s ease, box-shadow .25s ease; }
+    .edu-badge img { display: block; width: 100%; height: 100%; border-radius: 50%; object-fit: contain; }
+    .edu-badge:hover, .edu-badge:focus-visible { transform: translateY(-3px); box-shadow: 0 6px 16px rgba(201,168,76,.35), 0 0 0 1px rgba(201,168,76,.6); outline: none; }
+    .edu-tip { position: absolute; top: calc(100% + 10px); left: 50%; transform: translate(-50%, -4px); width: max-content; max-width: 230px; padding: .6rem .75rem; border: 1px solid rgba(201,168,76,.45); border-radius: 6px; background: #111; color: var(--fg); font-family: var(--sans); text-align: left; line-height: 1.35; opacity: 0; pointer-events: none; transition: opacity .2s ease, transform .2s ease; z-index: 20; box-shadow: 0 8px 24px rgba(0,0,0,.5); }
+    .edu-tip strong { display: block; font-size: .8rem; font-weight: 600; color: var(--gold); }
+    .edu-tip em { display: block; font-style: normal; font-size: .72rem; color: rgba(237,233,224,.75); margin-top: .15rem; }
+    .edu-tip .edu-date { display: block; font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; color: rgba(237,233,224,.55); margin-top: .35rem; }
+    .edu-badge:hover .edu-tip, .edu-badge:focus-visible .edu-tip, .edu-badge.tip-open .edu-tip { opacity: 1; transform: translate(-50%, 0); }
+    .edu-badges li:first-child .edu-tip { left: 0; transform: translate(0, -4px); }
+    .edu-badges li:first-child .edu-badge:hover .edu-tip, .edu-badges li:first-child .edu-badge:focus-visible .edu-tip, .edu-badges li:first-child .edu-badge.tip-open .edu-tip { transform: translate(0, 0); }
+    .edu-badges li:last-child .edu-tip { left: auto; right: 0; transform: translate(0, -4px); }
+    .edu-badges li:last-child .edu-badge:hover .edu-tip, .edu-badges li:last-child .edu-badge:focus-visible .edu-tip, .edu-badges li:last-child .edu-badge.tip-open .edu-tip { transform: translate(0, 0); }
+    @media (max-width: 600px) { .edu-badge { width: 38px; height: 38px; } .edu-tip { max-width: 200px; } }
+    @media (prefers-reduced-motion: reduce) { .edu-badge, .edu-tip { transition: none; } .edu-badge:hover { transform: none; } }
     /* Dashboards and Code: short industry phrase under each project title (same look as the case-card subtitles) */
     .dash-table .dash-sub { display: block; margin-top: .2rem; font-family: var(--display); font-style: italic; font-size: .98rem; line-height: 1.3; color: var(--gold); }
   </style>
@@ -236,7 +259,17 @@
 <div class="intro-copy" id="scrub-section">
   <div class="scrub-layout">
     <div class="scrub-text-col">
+      <div class="about-head-row">
       <p class="sec-num" data-a="up" style="font-size: .97rem; color: rgba(237,233,224,.48); line-height: 1.82;">I. About</p>
+      <!-- Education and certification badges. Edit the title, school and date in each .edu-tip. To link a badge, add href="https://..." target="_blank" rel="noopener noreferrer" to its <a>. Images live in assets/img/badges/ (128px squares). -->
+      <ul class="edu-badges" aria-label="Education and certifications" data-a="up">
+        <li><a class="edu-badge" tabindex="0" aria-label="MBA, Supply Chain Management, Michigan State University Broad College of Business, May 2026"><img src="assets/img/badges/msu-broad.png" alt="" width="44" height="44" loading="lazy"><span class="edu-tip" role="tooltip"><strong>MBA, Supply Chain Management</strong><em>MSU Broad College of Business</em><span class="edu-date">May 2026</span></span></a></li>
+        <li><a class="edu-badge" tabindex="0" aria-label="B.Eng. Civil Engineering, The National Institute of Engineering, May 2020"><img src="assets/img/badges/nie.png" alt="" width="44" height="44" loading="lazy"><span class="edu-tip" role="tooltip"><strong>B.Eng., Civil Engineering</strong><em>The National Institute of Engineering (NIE)</em><span class="edu-date">May 2020</span></span></a></li>
+        <li><a class="edu-badge" tabindex="0" aria-label="Sales and Distribution Management, Symbiosis Centre for Distance Learning"><img src="assets/img/badges/scdl.png" alt="" width="44" height="44" loading="lazy"><span class="edu-tip" role="tooltip"><strong>Sales &amp; Distribution Management</strong><em>Symbiosis Centre for Distance Learning (SCDL)</em><span class="edu-date">Date to confirm</span></span></a></li>
+        <li><a class="edu-badge" tabindex="0" aria-label="Lean Six Sigma, IASSC"><img src="assets/img/badges/iassc.png" alt="" width="44" height="44" loading="lazy"><span class="edu-tip" role="tooltip"><strong>Lean Six Sigma</strong><em>IASSC</em><span class="edu-date">Date to confirm</span></span></a></li>
+        <li><a class="edu-badge" tabindex="0" aria-label="IBM Data Analyst Professional Certificate, Coursera"><img src="assets/img/badges/ibm.png" alt="" width="44" height="44" loading="lazy"><span class="edu-tip" role="tooltip"><strong>IBM Data Analyst</strong><em>Professional Certificate, Coursera</em><span class="edu-date">Date to confirm</span></span></a></li>
+      </ul>
+      </div>
      <p class="body-xl scrub-text" id="scrub-text" data-a="up" data-delay="100">
        Engineer and Supply Chain MBA with experience in automotive supplier/ vendor relations and account management, 
        to align technical logistical operations with strategic business goals.
@@ -272,9 +305,9 @@
     <!-- CORE COMPETENCIES (dropdown accordion, replaces the game) -->
     <div class="core-comp" data-a="up" data-delay="200">
       <div class="cc-quick" role="group" aria-label="Focus areas">
-        <button type="button" class="cc-q"><span class="cc-q-num" aria-hidden="true">01</span><span class="cc-q-label">Product Development</span></button>
-        <button type="button" class="cc-q"><span class="cc-q-num" aria-hidden="true">02</span><span class="cc-q-label">Process Design</span></button>
-        <button type="button" class="cc-q"><span class="cc-q-num" aria-hidden="true">03</span><span class="cc-q-label">Supply Planning</span></button>
+        <button type="button" class="cc-q"><span class="cc-q-top"><span class="cc-q-num" aria-hidden="true">01</span><svg class="cc-q-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 12l9 4 9-4"/><path d="M3 17l9 4 9-4"/></svg></span><span class="cc-q-label">Supply Planning</span></button>
+        <button type="button" class="cc-q"><span class="cc-q-top"><span class="cc-q-num" aria-hidden="true">02</span><svg class="cc-q-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="6" r="2.2"/><circle cx="19" cy="6" r="2.2"/><circle cx="12" cy="18" r="2.2"/><path d="M7.2 6h9.6"/><path d="M6.2 7.9l4.6 8.2"/><path d="M17.8 7.9l-4.6 8.2"/></svg></span><span class="cc-q-label">Process Design</span></button>
+        <button type="button" class="cc-q"><span class="cc-q-top"><span class="cc-q-num" aria-hidden="true">03</span><svg class="cc-q-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-3.6 10.8c.7.6 1.1 1.3 1.1 2.2h5c0-.9.4-1.6 1.1-2.2A6 6 0 0 0 12 3z"/></svg></span><span class="cc-q-label">Product Development</span></button>
       </div>
       <div class="cc-acc" id="cc-acc">
         <button type="button" class="cc-tab" id="cc-t0" aria-controls="cc-p0" aria-expanded="false">Operations Excellence</button><ul class="cc-panel" id="cc-p0" role="region" aria-labelledby="cc-t0" hidden><li>Process Excellence &amp; Continuous Improvement</li><li>SOP and Workflow Design</li><li>Root-Cause Analysis &amp; Corrective Action</li><li>Productivity, Serviceability &amp; SLA Improvement</li></ul>
@@ -1065,6 +1098,19 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="assets/js/script.js"></script>
 <script>
+/* Education badges: tap toggles the tooltip on touch screens; badges without an href are placeholders */
+(function () {
+  var badges = document.querySelectorAll('.edu-badge');
+  badges.forEach(function (b) {
+    b.addEventListener('click', function (e) {
+      if (!b.getAttribute('href')) { e.preventDefault(); }
+      var open = !b.classList.contains('tip-open');
+      badges.forEach(function (o) { o.classList.remove('tip-open'); });
+      if (open && !b.getAttribute('href')) b.classList.add('tip-open');
+    });
+  });
+  document.addEventListener('click', function (e) { if (!e.target.closest('.edu-badge')) badges.forEach(function (o) { o.classList.remove('tip-open'); }); });
+})();
 /* Core competencies tabs */
 (function () {
   var main = document.getElementById('cc-main');
