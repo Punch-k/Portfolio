@@ -244,6 +244,8 @@ body::after { content: ''; position: fixed; inset: -100%; width: 300%; height: 3
 /* ─── SCRUB TYPOGRAPHY ────────────────────────────────────── */
 .intro-copy { padding: clamp(2rem, 6vw, 3.5rem) clamp(1.2rem, 5vw, 2rem) 1rem; min-height: auto; max-width: 1400px; margin: 0 auto; }
 .scrub-layout { display: flex; flex-wrap: wrap; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+/* Align About with Case Studies, Skills and Contact: same 1200px column and the same inner side padding they get from their section shells */
+.scrub-layout { box-sizing: content-box; max-width: 1200px; margin-left: auto; margin-right: auto; padding-left: clamp(1.2rem, 3vw, 2rem); padding-right: clamp(1.2rem, 3vw, 2rem); }
 .scrub-text-col { flex: 1 1 500px; max-width: 100%; }
 .scrub-heading { margin-bottom: 1rem; font-size: clamp(2.5rem,6vw,5rem); font-family: var(--display); color: var(--gold); letter-spacing: .1em; line-height: 1; }
 .ai-vibecode {font-family: var(--display); color: var(--gold); font-size: clamp(1.2rem, 3vw, 1.5rem); display: inline-block; margin-top: 10px; }
@@ -659,6 +661,9 @@ body::after { content: ''; position: fixed; inset: -100%; width: 300%; height: 3
 
 /* ─── CONTACT ─────────────────────────────────────────────── */
 .contact-section-shell { padding: clamp(2.5rem, 5vw, 3.5rem) clamp(1.2rem, 3vw, 2rem); border-top: 1px solid var(--line); position: relative; overflow: hidden; background: var(--bg); }
+/* Outside the homepage the contact block is not inside .intro-copy, so add that outer padding too and its title lines up with the nav and page content as it does on the homepage */
+.contact-section-shell { padding-left: calc(clamp(1.2rem, 3vw, 2rem) + clamp(1.2rem, 5vw, 2rem)); padding-right: calc(clamp(1.2rem, 3vw, 2rem) + clamp(1.2rem, 5vw, 2rem)); }
+.intro-copy .contact-section-shell { padding-left: clamp(1.2rem, 3vw, 2rem); padding-right: clamp(1.2rem, 3vw, 2rem); }
 .connect-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr clamp(300px,35vw,400px); gap: clamp(2rem, 5vw, 6rem); align-items: flex-start; position: relative; z-index: 2; }
 .sec-eyebrow-row { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
 .sec-eyebrow-label { font-size: .6rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); }
