@@ -15,7 +15,7 @@
     <link rel="canonical" href="https://punch-k.github.io/Portfolio/kfc-logistics-failure-case.html">
 
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css?v=10">
+    <link rel="stylesheet" href="assets/css/style.css?v=11">
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -57,7 +57,7 @@
         .print-btn { background: none; border: 1px solid var(--line); color: var(--fg); padding: 0.5rem 1rem; cursor: pointer; font-family: var(--sans); font-size: 0.8rem; transition: all 0.3s; margin-top: 1rem; width: 100%; text-align: left; }
         .print-btn:hover { border-color: var(--gold); color: var(--gold); }
         @media (max-width: 900px) { .case-layout { grid-template-columns: 1fr; } .case-sidebar { display: none; } }
-        .article-body h2 { font-family: var(--display); font-size: clamp(1.9rem, 7vw, 2.8rem); color: var(--fg); margin-top: 0; margin-bottom: 1.5rem; line-height: 1.15; position: relative; padding-top: 4rem; }
+        .article-body h2 { font-family: var(--display); font-size: clamp(1.9rem, 7vw, 2.8rem); color: var(--fg); margin-top: 0; margin-bottom: 1.5rem; line-height: 1.15; position: relative; padding-top: 2.25rem; }
         .article-body p { font-size: 1.15rem; color: rgba(237,233,224,0.8); line-height: 1.8; margin-bottom: 2rem; font-weight: 300; }
         .article-body a { color: var(--gold); }
         .gsap-reveal { opacity: 0; transform: translateY(40px); }
@@ -69,20 +69,21 @@
         .comp-panel { display: none; animation: fadeIn 0.5s ease; }
         .comp-panel.active { display: block; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        .pull-quote { margin: 4rem 0; padding: 3rem; border: 1px solid var(--line); text-align: center; background: rgba(255,255,255,0.02); }
+        .pull-quote { margin: 2.5rem 0; padding: 3rem; border: 1px solid var(--line); text-align: center; background: rgba(255,255,255,0.02); }
         .pull-quote p { font-family: var(--display); font-size: 2rem; color: var(--gold); line-height: 1.3; margin: 0 0 1rem 0; font-style: italic; }
         .pull-quote span { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.1em; color: rgba(237,233,224,0.5); }
-        .stat-banner { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 2rem; background: rgba(255,255,255,0.02); border: 1px solid var(--line); padding: 3rem; border-radius: 8px; margin: 4rem 0; }
+        .stat-banner { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 2rem; background: rgba(255,255,255,0.02); border: 1px solid var(--line); padding: 3rem; border-radius: 8px; margin: 2.5rem 0; }
         .stat-num { font-family: var(--display); font-size: 4rem; color: var(--gold); line-height: 1; }
         .stat-label { font-size: 0.85rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(237,233,224,0.6); margin-top: 0.5rem; }
         .sources-block { font-size: 0.85rem; color: rgba(237,233,224,0.55); line-height: 1.9; border-top: 1px solid var(--line); padding-top: 2rem; margin-top: 3rem; }
         .sources-block strong { color: var(--gold); }
         .sources-block ol { padding-left: 1.2rem; margin: 0.75rem 0 0; }
-        .next-project { margin-top: 8rem; border-top: 1px solid var(--line); padding: 6rem 2rem; text-align: center; background: linear-gradient(180deg, transparent, rgba(201,168,76,0.03)); transition: background 0.4s; display: block; text-decoration: none; }
-        .next-project:hover { background: rgba(201,168,76,0.08); }
-        .next-project span { display: block; font-size: 0.85rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(237,233,224,0.6); margin-bottom: 1rem; }
-        .next-project h2 { font-family: var(--display); font-size: clamp(3rem, 5vw, 5rem); color: var(--gold); margin: 0; transition: transform 0.4s; }
-        .next-project:hover h2 { transform: translateY(-10px); }
+        /* Next case: compact button, label with the case title right below it */
+        .next-project { display: flex; flex-direction: column; align-items: flex-start; gap: .35rem; width: fit-content; max-width: calc(100% - 2.4rem); margin: 4.5rem auto 3.5rem; padding: 1rem 1.5rem 1.1rem; border: 1px solid rgba(201,168,76,.45); border-radius: 8px; background: rgba(237,233,224,.04); text-decoration: none; transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease, background .28s ease; }
+        .next-project:hover, .next-project:focus-visible { transform: translateY(-4px); border-color: var(--gold); background: rgba(201,168,76,.08); box-shadow: 0 8px 22px rgba(201,168,76,.25), 0 0 0 1px rgba(201,168,76,.45); outline: none; }
+        .next-project span { display: block; font-size: .7rem; letter-spacing: .2em; text-transform: uppercase; color: rgba(237,233,224,.6); margin: 0; }
+        .next-project h2 { font-family: var(--display); font-size: clamp(1.15rem, 2vw, 1.5rem); line-height: 1.25; color: var(--gold); margin: 0; }
+        @media (prefers-reduced-motion: reduce) { .next-project, .next-project:hover { transition: none; transform: none; } }
         @media (max-width: 600px) {
             .case-layout { padding: 0 1.2rem 4rem; }
             .exec-summary { padding: 1.5rem; margin: -2rem 1rem 3rem; }
@@ -196,13 +197,6 @@
     <div class="bluf-grid"><div class="bluf-item"><span class="bluf-label">The problem</span><p>KFC switched its UK logistics contract to DHL, which ran fresh-chicken distribution through one depot in Rugby instead of the six Bidvest had used. The new operation could not handle the volume from day one, and deliveries were missed or incomplete.</p></div><div class="bluf-item"><span class="bluf-label">Why solve it</span><p>With no backup depot, every failure at Rugby reached the restaurants directly. On 18 February, 646 of about 900 restaurants were closed, and 470 were still closed on 20 February. Each closed day lost sales and spoiled fresh stock.</p></div><div class="bluf-item"><span class="bluf-label">The answer</span><p>Treat any 3PL switch for a perishable network as a resilience test, not a cost exercise. Run old and new networks in parallel, cut over region by region, keep the incumbent on standby, and set go or no-go gates on staffing and fill rate before each step.</p></div></div>
 </div>
 
-<div class="sim-link-banner gsap-reveal">
-    <p class="sim-link-banner-text"><strong>Explore the data.</strong> Tableau view of KFC restaurants closed on 18, 19 and 20 February 2018.</p>
-    <div class="banner-btns">
-        <a href="https://public.tableau.com/app/profile/prapanch.kokkalemada/viz/KFCUK2018DistributionFailure/604of870KFCsClosedWhenOneDepotFails" class="sim-link-banner-btn" target="_blank" rel="noopener noreferrer">Tableau ↗</a>
-        <a href="simulators.html#queue-staffing-lab" class="sim-link-banner-btn banner-btn-ghost">Queue &amp; Staffing Lab ↗</a>
-    </div>
-</div>
 
 <div class="case-layout">
     <aside class="case-sidebar">
@@ -244,7 +238,7 @@
                 <button class="comp-tab active" onclick="openTab(event, 'tab-ops')">Operational Failure</button>
                 <button class="comp-tab" onclick="openTab(event, 'tab-cascade')">Cascading Impact</button>
             </div>
-            <div id="tab-ops" class="comp-panel active"><p><strong>A go-live problem.</strong> DHL said operational issues meant a number of deliveries had been incomplete or delayed.<sup><a href="#src-5">5</a></sup> Fresh chicken has a short shelf life, so a depot that falls behind cannot catch up by working through a backlog later.</p></div>
+            <div id="tab-ops" class="comp-panel active"><p><strong>A go-live problem.</strong> DHL said operational issues meant a number of deliveries had been incomplete or delayed.<sup><a href="#src-5">5</a></sup> Fresh chicken has a short shelf life, so a depot that falls behind cannot catch up by <a class="word-link" href="simulators.html#queue-staffing-lab">working through a backlog</a> later.</p></div>
             <div id="tab-cascade" class="comp-panel"><p><strong>No reroute available.</strong> With one depot serving the whole country, a problem at Rugby became a problem in every restaurant. Under the old six-depot network, a failure at one site could have been covered by the others.<sup><a href="#src-2">2</a></sup><sup><a href="#src-3">3</a></sup></p></div>
         </section>
 
@@ -269,7 +263,7 @@
 
         <section id="the-dashboard" class="scroll-section gsap-reveal">
             <h2>IV. THE DASHBOARD</h2>
-            <p>The dashboard shows how many of about 900 KFC UK and Ireland restaurants were closed on each of the three worst days after the 14 February 2018 go-live, with the key insights and press sources alongside. Hover over a bar to see its value.</p>
+            <p>The <a class="word-link" href="https://public.tableau.com/app/profile/prapanch.kokkalemada/viz/KFCUK2018DistributionFailure/604of870KFCsClosedWhenOneDepotFails" target="_blank" rel="noopener noreferrer">dashboard</a> shows how many of about 900 KFC UK and Ireland restaurants were closed on each of the three worst days after the 14 February 2018 go-live, with the key insights and press sources alongside. Hover over a bar to see its value.</p>
             <div class="tableau-frame tableau-frame-sm">
                 <iframe src="https://public.tableau.com/views/KFCUK2018DistributionFailure/604of870KFCsClosedWhenOneDepotFails?:showVizHome=no&amp;:embed=true&amp;:toolbar=bottom&amp;:tabs=no" title="Kfc'S Logistics Failure, Tableau Public dashboard" loading="lazy" allowfullscreen></iframe>
             </div>
@@ -286,11 +280,33 @@
         </section>
 
         
+
+        <p class="case-disclaimer">Disclaimer: Portfolio case study for academic and demonstrative purposes. This is an independent analysis, not affiliated with or endorsed by KFC, DHL or Bidvest. Facts and figures come from the public sources below; the recommendation is the author's view. All trademarks belong to their respective owners.</p>
+        <div class="sources-block">
+            <strong>Sources:</strong>
+            <ol><li id="src-1"><a href="https://www.supplychaindive.com/news/chicken-shortage-KFC-closures-UK-DHL-suppliers-logistics/517636/" target="_blank" rel="noopener noreferrer">Supply Chain Dive, "Did too many chickens cross the road? KFC stores close following shortage"</a></li><li id="src-2"><a href="https://supplychaingamechanger.com/kfc-ran-out-of-chicken-what-supply-chain-lessons-can-we-learn/" target="_blank" rel="noopener noreferrer">Supply Chain Game Changer, "KFC Ran Out of Chicken! What Supply Chain Lessons Can We Learn?"</a></li><li id="src-3"><a href="https://supplychainnuggets.com/lessons-from-kfcs-supplier-change-issues-in-the-uk/" target="_blank" rel="noopener noreferrer">Supply Chain Nuggets, "Why KFC's Supplier Change Failed in The UK"</a></li><li id="src-4"><a href="https://gulfnews.com/business/retail/chicken-shortage-shuts-hundreds-of-kfc-stores-in-uk-1.2176434" target="_blank" rel="noopener noreferrer">Gulf News, "Chicken shortage shuts hundreds of KFC stores in UK"</a></li><li id="src-5"><a href="https://www.retail-week.com/supply-chain/the-kfc-chicken-crisis-what-can-retailers-learn/7028550.article" target="_blank" rel="noopener noreferrer">Retail Week, "The KFC chicken crisis: what can retailers learn?" (Mar 6, 2018)</a></li><li id="src-6"><a href="https://fortune.com/2018/02/20/kfc-still-shut-uk/" target="_blank" rel="noopener noreferrer">Fortune, KFC restaurants still shut in the UK (Feb 20, 2018)</a></li><li id="src-7"><a href="https://www.euronews.com/2018/02/20/chicken-shortage-forces-kfc-to-close-over-half-its-uk-restaurants" target="_blank" rel="noopener noreferrer">Euronews, "Chicken shortage forces KFC to close over half its UK restaurants" (Feb 20, 2018)</a></li><li id="src-8"><a href="https://www.foodingredientsfirst.com/news/uk-chicken-chaos-sweeps-across-kfc.html" target="_blank" rel="noopener noreferrer">Food Ingredients First, "UK chicken chaos sweeps across KFC", citing The Guardian (Feb 20, 2018)</a></li></ol>
+        </div>
+    </main>
+</div>
+
+<a href="scopsim.html" class="next-project">
+    <span>Next Case</span>
+    <h2>SCOPSim: Supply Chain Operations Simulation →</h2>
+</a>
+
+<section id="section-get-in-touch" class="contact-section-shell" aria-labelledby="contact-heading">
+    <div class="connect-grid">
+        <div class="ct-content gsap-reveal">
+            <div class="sec-eyebrow-row">
+                <span class="sec-eyebrow-label">Let's Connect</span>
+                <div class="sec-eyebrow-line"></div>
+            </div>
+            <h2 class="contact-display-heading" id="contact-heading">
+                Initiate<br><em class="contact-display-em">Dialogue.</em>
+            </h2>
         <!-- FAQ (same accordion styling as the homepage) -->
-        <section class="case-faq" id="faq" aria-labelledby="case-faq-heading">
-          <style>.case-faq{margin:3rem 0 2.5rem}.case-faq .sec-num{margin-bottom:.4rem}.case-faq h3{font-family:var(--display);font-size:clamp(1.4rem,2.6vw,1.9rem);color:var(--fg);margin:0 0 1.2rem}.case-faq .faq-answer{line-height:1.65}@media (max-width:600px){.case-faq .faq-question{font-size:.98rem;padding-right:.8rem}}</style>
-          <p class="sec-num">FAQ</p>
-          <h3 id="case-faq-heading">Frequently Asked Questions</h3>
+        <section class="case-faq" id="faq" aria-label="Frequently asked questions">
+          <style>.case-faq{margin:2rem 0 0}.case-faq .faq-answer{line-height:1.65}@media (max-width:600px){.case-faq .faq-question{font-size:.98rem;padding-right:.8rem}}</style>
           <div class="faq-wrapper">
             <div class="faq-item">
               <button type="button" class="faq-btn" aria-expanded="false" aria-controls="case-faq-a1">
@@ -359,30 +375,6 @@
           })();
           </script>
         </section>
-
-        <p class="case-disclaimer">Disclaimer: Portfolio case study for academic and demonstrative purposes. This is an independent analysis, not affiliated with or endorsed by KFC, DHL or Bidvest. Facts and figures come from the public sources below; the recommendation is the author's view. All trademarks belong to their respective owners.</p>
-        <div class="sources-block">
-            <strong>Sources:</strong>
-            <ol><li id="src-1"><a href="https://www.supplychaindive.com/news/chicken-shortage-KFC-closures-UK-DHL-suppliers-logistics/517636/" target="_blank" rel="noopener noreferrer">Supply Chain Dive, "Did too many chickens cross the road? KFC stores close following shortage"</a></li><li id="src-2"><a href="https://supplychaingamechanger.com/kfc-ran-out-of-chicken-what-supply-chain-lessons-can-we-learn/" target="_blank" rel="noopener noreferrer">Supply Chain Game Changer, "KFC Ran Out of Chicken! What Supply Chain Lessons Can We Learn?"</a></li><li id="src-3"><a href="https://supplychainnuggets.com/lessons-from-kfcs-supplier-change-issues-in-the-uk/" target="_blank" rel="noopener noreferrer">Supply Chain Nuggets, "Why KFC's Supplier Change Failed in The UK"</a></li><li id="src-4"><a href="https://gulfnews.com/business/retail/chicken-shortage-shuts-hundreds-of-kfc-stores-in-uk-1.2176434" target="_blank" rel="noopener noreferrer">Gulf News, "Chicken shortage shuts hundreds of KFC stores in UK"</a></li><li id="src-5"><a href="https://www.retail-week.com/supply-chain/the-kfc-chicken-crisis-what-can-retailers-learn/7028550.article" target="_blank" rel="noopener noreferrer">Retail Week, "The KFC chicken crisis: what can retailers learn?" (Mar 6, 2018)</a></li><li id="src-6"><a href="https://fortune.com/2018/02/20/kfc-still-shut-uk/" target="_blank" rel="noopener noreferrer">Fortune, KFC restaurants still shut in the UK (Feb 20, 2018)</a></li><li id="src-7"><a href="https://www.euronews.com/2018/02/20/chicken-shortage-forces-kfc-to-close-over-half-its-uk-restaurants" target="_blank" rel="noopener noreferrer">Euronews, "Chicken shortage forces KFC to close over half its UK restaurants" (Feb 20, 2018)</a></li><li id="src-8"><a href="https://www.foodingredientsfirst.com/news/uk-chicken-chaos-sweeps-across-kfc.html" target="_blank" rel="noopener noreferrer">Food Ingredients First, "UK chicken chaos sweeps across KFC", citing The Guardian (Feb 20, 2018)</a></li></ol>
-        </div>
-    </main>
-</div>
-
-<a href="scopsim.html" class="next-project">
-    <span>Next Case Study</span>
-    <h2>SCOPSim: Supply Chain Operations Simulation →</h2>
-</a>
-
-<section id="section-get-in-touch" class="contact-section-shell" aria-labelledby="contact-heading">
-    <div class="connect-grid">
-        <div class="ct-content gsap-reveal">
-            <div class="sec-eyebrow-row">
-                <span class="sec-eyebrow-label">Let's Connect</span>
-                <div class="sec-eyebrow-line"></div>
-            </div>
-            <h2 class="contact-display-heading" id="contact-heading">
-                Initiate<br><em class="contact-display-em">Dialogue.</em>
-            </h2>
         </div>
         <div class="ct-visual gsap-reveal">
             <div class="photo-portrait-frame">

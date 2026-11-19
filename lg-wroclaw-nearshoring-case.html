@@ -15,7 +15,7 @@
     <link rel="canonical" href="https://punch-k.github.io/Portfolio/lg-wroclaw-nearshoring-case.html">
 
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css?v=10">
+    <link rel="stylesheet" href="assets/css/style.css?v=11">
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -57,7 +57,7 @@
         .print-btn { background: none; border: 1px solid var(--line); color: var(--fg); padding: 0.5rem 1rem; cursor: pointer; font-family: var(--sans); font-size: 0.8rem; transition: all 0.3s; margin-top: 1rem; width: 100%; text-align: left; }
         .print-btn:hover { border-color: var(--gold); color: var(--gold); }
         @media (max-width: 900px) { .case-layout { grid-template-columns: 1fr; } .case-sidebar { display: none; } }
-        .article-body h2 { font-family: var(--display); font-size: clamp(1.9rem, 7vw, 2.8rem); color: var(--fg); margin-top: 0; margin-bottom: 1.5rem; line-height: 1.15; position: relative; padding-top: 4rem; }
+        .article-body h2 { font-family: var(--display); font-size: clamp(1.9rem, 7vw, 2.8rem); color: var(--fg); margin-top: 0; margin-bottom: 1.5rem; line-height: 1.15; position: relative; padding-top: 2.25rem; }
         .article-body p { font-size: 1.15rem; color: rgba(237,233,224,0.8); line-height: 1.8; margin-bottom: 2rem; font-weight: 300; }
         .article-body a { color: var(--gold); }
         .gsap-reveal { opacity: 0; transform: translateY(40px); }
@@ -69,20 +69,21 @@
         .comp-panel { display: none; animation: fadeIn 0.5s ease; }
         .comp-panel.active { display: block; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        .pull-quote { margin: 4rem 0; padding: 3rem; border: 1px solid var(--line); text-align: center; background: rgba(255,255,255,0.02); }
+        .pull-quote { margin: 2.5rem 0; padding: 3rem; border: 1px solid var(--line); text-align: center; background: rgba(255,255,255,0.02); }
         .pull-quote p { font-family: var(--display); font-size: 2rem; color: var(--gold); line-height: 1.3; margin: 0 0 1rem 0; font-style: italic; }
         .pull-quote span { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.1em; color: rgba(237,233,224,0.5); }
-        .stat-banner { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 2rem; background: rgba(255,255,255,0.02); border: 1px solid var(--line); padding: 3rem; border-radius: 8px; margin: 4rem 0; }
+        .stat-banner { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 2rem; background: rgba(255,255,255,0.02); border: 1px solid var(--line); padding: 3rem; border-radius: 8px; margin: 2.5rem 0; }
         .stat-num { font-family: var(--display); font-size: 4rem; color: var(--gold); line-height: 1; }
         .stat-label { font-size: 0.85rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(237,233,224,0.6); margin-top: 0.5rem; }
         .sources-block { font-size: 0.85rem; color: rgba(237,233,224,0.55); line-height: 1.9; border-top: 1px solid var(--line); padding-top: 2rem; margin-top: 3rem; }
         .sources-block strong { color: var(--gold); }
         .sources-block ol { padding-left: 1.2rem; margin: 0.75rem 0 0; }
-        .next-project { margin-top: 8rem; border-top: 1px solid var(--line); padding: 6rem 2rem; text-align: center; background: linear-gradient(180deg, transparent, rgba(201,168,76,0.03)); transition: background 0.4s; display: block; text-decoration: none; }
-        .next-project:hover { background: rgba(201,168,76,0.08); }
-        .next-project span { display: block; font-size: 0.85rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(237,233,224,0.6); margin-bottom: 1rem; }
-        .next-project h2 { font-family: var(--display); font-size: clamp(3rem, 5vw, 5rem); color: var(--gold); margin: 0; transition: transform 0.4s; }
-        .next-project:hover h2 { transform: translateY(-10px); }
+        /* Next case: compact button, label with the case title right below it */
+        .next-project { display: flex; flex-direction: column; align-items: flex-start; gap: .35rem; width: fit-content; max-width: calc(100% - 2.4rem); margin: 4.5rem auto 3.5rem; padding: 1rem 1.5rem 1.1rem; border: 1px solid rgba(201,168,76,.45); border-radius: 8px; background: rgba(237,233,224,.04); text-decoration: none; transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease, background .28s ease; }
+        .next-project:hover, .next-project:focus-visible { transform: translateY(-4px); border-color: var(--gold); background: rgba(201,168,76,.08); box-shadow: 0 8px 22px rgba(201,168,76,.25), 0 0 0 1px rgba(201,168,76,.45); outline: none; }
+        .next-project span { display: block; font-size: .7rem; letter-spacing: .2em; text-transform: uppercase; color: rgba(237,233,224,.6); margin: 0; }
+        .next-project h2 { font-family: var(--display); font-size: clamp(1.15rem, 2vw, 1.5rem); line-height: 1.25; color: var(--gold); margin: 0; }
+        @media (prefers-reduced-motion: reduce) { .next-project, .next-project:hover { transition: none; transform: none; } }
         @media (max-width: 600px) {
             .case-layout { padding: 0 1.2rem 4rem; }
             .exec-summary { padding: 1.5rem; margin: -2rem 1rem 3rem; }
@@ -196,13 +197,6 @@
     <div class="bluf-grid"><div class="bluf-item"><span class="bluf-label">The problem</span><p>European automakers need very large volumes of EV batteries. Importing cells from Asia means long lead times, costly freight for a heavy and hazardous product, and weaker alignment with EU content rules.</p></div><div class="bluf-item"><span class="bluf-label">Why solve it</span><p>The battery is the most expensive part of an EV. A supplier that cannot deliver reliably and close to the assembly line puts the whole vehicle program at risk.</p></div><div class="bluf-item"><span class="bluf-label">The answer</span><p>Build where the customers are. LG put a fully integrated battery complex near Wroclaw, Poland: more than €3 billion invested on about 100 hectares, with more than 9,500 employees and capacity reported between 70 and 86 GWh, scaling toward 100 GWh.</p></div></div>
 </div>
 
-<div class="sim-link-banner gsap-reveal">
-    <p class="sim-link-banner-text"><strong>Explore the data.</strong> Tableau map of the Wroclaw plant, the headquarters of its automaker customers and LG's home plant in Korea.</p>
-    <div class="banner-btns">
-        <a href="https://public.tableau.com/app/profile/prapanch.kokkalemada/viz/LGWroclawEVBatteryNearshoring/611kmvs8146kmWhyLGBuildsBatteriesinPoland" class="sim-link-banner-btn" target="_blank" rel="noopener noreferrer">Tableau ↗</a>
-        <a href="simulators.html#financial-dcf-lab" class="sim-link-banner-btn banner-btn-ghost">Financial &amp; DCF Lab ↗</a>
-    </div>
-</div>
 
 <div class="case-layout">
     <aside class="case-sidebar">
@@ -239,7 +233,7 @@
                 <button class="comp-tab active" onclick="openTab(event, 'tab-cap')">Capacity &amp; Scale</button>
                 <button class="comp-tab" onclick="openTab(event, 'tab-mix')">Product Mix</button>
             </div>
-            <div id="tab-cap" class="comp-panel active"><p><strong>Built in stages.</strong> Reported capacity varies by date and source, from about 70 GWh to about 86 GWh, with a stated target of 100 GWh once the latest expansion stage is complete.<sup><a href="#src-5">5</a></sup><sup><a href="#src-6">6</a></sup> Building in phases ties each investment to confirmed automaker demand rather than one large bet.</p></div>
+            <div id="tab-cap" class="comp-panel active"><p><strong>Built in stages.</strong> Reported capacity varies by date and source, from about 70 GWh to about 86 GWh, with a stated target of 100 GWh once the latest expansion stage is complete.<sup><a href="#src-5">5</a></sup><sup><a href="#src-6">6</a></sup> Building in phases ties <a class="word-link" href="simulators.html#financial-dcf-lab">each investment</a> to confirmed automaker demand rather than one large bet.</p></div>
             <div id="tab-mix" class="comp-panel"><p><strong>Beyond passenger EVs.</strong> The plant has added batteries for electric buses and energy storage, spreading its demand across more than one market.<sup><a href="#src-3">3</a></sup></p></div>
         </section>
 
@@ -261,7 +255,7 @@
 
         <section id="the-dashboard" class="scroll-section gsap-reveal">
             <h2>IV. THE DASHBOARD</h2>
-            <p>The dashboard maps the Wroclaw plant, the head offices of its European automaker customers and LG’s home plant in Korea, and ranks each by distance: six customers sit 448 to 951 km away, against 8,146 km to Ochang. Hover over a point or bar for details.</p>
+            <p>The <a class="word-link" href="https://public.tableau.com/app/profile/prapanch.kokkalemada/viz/LGWroclawEVBatteryNearshoring/611kmvs8146kmWhyLGBuildsBatteriesinPoland" target="_blank" rel="noopener noreferrer">dashboard</a> maps the Wroclaw plant, the head offices of its European automaker customers and LG’s home plant in Korea, and ranks each by distance: six customers sit 448 to 951 km away, against 8,146 km to Ochang. Hover over a point or bar for details.</p>
             <div class="tableau-frame tableau-frame-sm">
                 <iframe src="https://public.tableau.com/views/LGWroclawEVBatteryNearshoring/611kmvs8146kmWhyLGBuildsBatteriesinPoland?:showVizHome=no&amp;:embed=true&amp;:toolbar=bottom&amp;:tabs=no" title="Lg Wroclaw, Tableau Public dashboard" loading="lazy" allowfullscreen></iframe>
             </div>
@@ -278,11 +272,33 @@
         </section>
 
         
+
+        <p class="case-disclaimer">Disclaimer: Portfolio case study for academic and demonstrative purposes. This is an independent analysis, not affiliated with or endorsed by LG Energy Solution or any automaker named. Facts and figures come from the public sources below; the recommendation is the author's view. All trademarks belong to their respective owners.</p>
+        <div class="sources-block">
+            <strong>Sources:</strong>
+            <ol><li id="src-1"><a href="https://www.lgcorp.com/media/release/8357" target="_blank" rel="noopener noreferrer">LG Corp, "LG Chem Starts Construction of an Electric Vehicle Battery Plant in Poland"</a></li><li id="src-2"><a href="https://invest-in-wroclaw.pl/5-years-of-lg-energy-solution-wroclaw-the-largest-investment-in-the-region" target="_blank" rel="noopener noreferrer">Invest in Wroclaw, "5 years of LG Energy Solution Wroclaw, the largest investment in the region"</a></li><li id="src-3"><a href="https://chargedevs.com/newswire/a-look-inside-lg-energy-solutions-massive-polish-battery-plant/" target="_blank" rel="noopener noreferrer">Charged EVs, "A look inside LG Energy Solution's massive Polish battery plant"</a></li><li id="src-4"><a href="https://insideevs.com/news/576028/lges-ev-battery-gigafactory-poland/" target="_blank" rel="noopener noreferrer">InsideEVs, "Check Out Europe's Largest EV Battery Gigafactory In Poland"</a></li><li id="src-5"><a href="https://news.lgensol.com/insights/from-our-experts/3071/" target="_blank" rel="noopener noreferrer">LG Energy Solution, "LG Energy Solution Wroclaw Shows No Signs of Slowing Down"</a></li><li id="src-6"><a href="https://invest-in-wroclaw.pl/the-largest-ev-battery-factory-in-the-world-in-lg-energy-solution-is-building-near-wroclaw" target="_blank" rel="noopener noreferrer">Invest in Wroclaw, "The largest EV battery factory... is building near Wroclaw"</a></li></ol>
+        </div>
+    </main>
+</div>
+
+<a href="aldi-walmart-case.html" class="next-project">
+    <span>Next Case</span>
+    <h2>Aldi vs. Walmart →</h2>
+</a>
+
+<section id="section-get-in-touch" class="contact-section-shell" aria-labelledby="contact-heading">
+    <div class="connect-grid">
+        <div class="ct-content gsap-reveal">
+            <div class="sec-eyebrow-row">
+                <span class="sec-eyebrow-label">Let's Connect</span>
+                <div class="sec-eyebrow-line"></div>
+            </div>
+            <h2 class="contact-display-heading" id="contact-heading">
+                Initiate<br><em class="contact-display-em">Dialogue.</em>
+            </h2>
         <!-- FAQ (same accordion styling as the homepage) -->
-        <section class="case-faq" id="faq" aria-labelledby="case-faq-heading">
-          <style>.case-faq{margin:3rem 0 2.5rem}.case-faq .sec-num{margin-bottom:.4rem}.case-faq h3{font-family:var(--display);font-size:clamp(1.4rem,2.6vw,1.9rem);color:var(--fg);margin:0 0 1.2rem}.case-faq .faq-answer{line-height:1.65}@media (max-width:600px){.case-faq .faq-question{font-size:.98rem;padding-right:.8rem}}</style>
-          <p class="sec-num">FAQ</p>
-          <h3 id="case-faq-heading">Frequently Asked Questions</h3>
+        <section class="case-faq" id="faq" aria-label="Frequently asked questions">
+          <style>.case-faq{margin:2rem 0 0}.case-faq .faq-answer{line-height:1.65}@media (max-width:600px){.case-faq .faq-question{font-size:.98rem;padding-right:.8rem}}</style>
           <div class="faq-wrapper">
             <div class="faq-item">
               <button type="button" class="faq-btn" aria-expanded="false" aria-controls="case-faq-a1">
@@ -351,30 +367,6 @@
           })();
           </script>
         </section>
-
-        <p class="case-disclaimer">Disclaimer: Portfolio case study for academic and demonstrative purposes. This is an independent analysis, not affiliated with or endorsed by LG Energy Solution or any automaker named. Facts and figures come from the public sources below; the recommendation is the author's view. All trademarks belong to their respective owners.</p>
-        <div class="sources-block">
-            <strong>Sources:</strong>
-            <ol><li id="src-1"><a href="https://www.lgcorp.com/media/release/8357" target="_blank" rel="noopener noreferrer">LG Corp, "LG Chem Starts Construction of an Electric Vehicle Battery Plant in Poland"</a></li><li id="src-2"><a href="https://invest-in-wroclaw.pl/5-years-of-lg-energy-solution-wroclaw-the-largest-investment-in-the-region" target="_blank" rel="noopener noreferrer">Invest in Wroclaw, "5 years of LG Energy Solution Wroclaw, the largest investment in the region"</a></li><li id="src-3"><a href="https://chargedevs.com/newswire/a-look-inside-lg-energy-solutions-massive-polish-battery-plant/" target="_blank" rel="noopener noreferrer">Charged EVs, "A look inside LG Energy Solution's massive Polish battery plant"</a></li><li id="src-4"><a href="https://insideevs.com/news/576028/lges-ev-battery-gigafactory-poland/" target="_blank" rel="noopener noreferrer">InsideEVs, "Check Out Europe's Largest EV Battery Gigafactory In Poland"</a></li><li id="src-5"><a href="https://news.lgensol.com/insights/from-our-experts/3071/" target="_blank" rel="noopener noreferrer">LG Energy Solution, "LG Energy Solution Wroclaw Shows No Signs of Slowing Down"</a></li><li id="src-6"><a href="https://invest-in-wroclaw.pl/the-largest-ev-battery-factory-in-the-world-in-lg-energy-solution-is-building-near-wroclaw" target="_blank" rel="noopener noreferrer">Invest in Wroclaw, "The largest EV battery factory... is building near Wroclaw"</a></li></ol>
-        </div>
-    </main>
-</div>
-
-<a href="aldi-walmart-case.html" class="next-project">
-    <span>Next Case Study</span>
-    <h2>Aldi vs. Walmart →</h2>
-</a>
-
-<section id="section-get-in-touch" class="contact-section-shell" aria-labelledby="contact-heading">
-    <div class="connect-grid">
-        <div class="ct-content gsap-reveal">
-            <div class="sec-eyebrow-row">
-                <span class="sec-eyebrow-label">Let's Connect</span>
-                <div class="sec-eyebrow-line"></div>
-            </div>
-            <h2 class="contact-display-heading" id="contact-heading">
-                Initiate<br><em class="contact-display-em">Dialogue.</em>
-            </h2>
         </div>
         <div class="ct-visual gsap-reveal">
             <div class="photo-portrait-frame">

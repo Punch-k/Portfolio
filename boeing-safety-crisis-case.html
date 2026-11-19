@@ -15,7 +15,7 @@
     <link rel="canonical" href="https://punch-k.github.io/Portfolio/boeing-safety-crisis-case.html">
 
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css?v=10">
+    <link rel="stylesheet" href="assets/css/style.css?v=11">
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -57,7 +57,7 @@
         .print-btn { background: none; border: 1px solid var(--line); color: var(--fg); padding: 0.5rem 1rem; cursor: pointer; font-family: var(--sans); font-size: 0.8rem; transition: all 0.3s; margin-top: 1rem; width: 100%; text-align: left; }
         .print-btn:hover { border-color: var(--gold); color: var(--gold); }
         @media (max-width: 900px) { .case-layout { grid-template-columns: 1fr; } .case-sidebar { display: none; } }
-        .article-body h2 { font-family: var(--display); font-size: clamp(1.9rem, 7vw, 2.8rem); color: var(--fg); margin-top: 0; margin-bottom: 1.5rem; line-height: 1.15; position: relative; padding-top: 4rem; }
+        .article-body h2 { font-family: var(--display); font-size: clamp(1.9rem, 7vw, 2.8rem); color: var(--fg); margin-top: 0; margin-bottom: 1.5rem; line-height: 1.15; position: relative; padding-top: 2.25rem; }
         .article-body p { font-size: 1.15rem; color: rgba(237,233,224,0.8); line-height: 1.8; margin-bottom: 2rem; font-weight: 300; }
         .article-body a { color: var(--gold); }
         .gsap-reveal { opacity: 0; transform: translateY(40px); }
@@ -69,20 +69,21 @@
         .comp-panel { display: none; animation: fadeIn 0.5s ease; }
         .comp-panel.active { display: block; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        .pull-quote { margin: 4rem 0; padding: 3rem; border: 1px solid var(--line); text-align: center; background: rgba(255,255,255,0.02); }
+        .pull-quote { margin: 2.5rem 0; padding: 3rem; border: 1px solid var(--line); text-align: center; background: rgba(255,255,255,0.02); }
         .pull-quote p { font-family: var(--display); font-size: 2rem; color: var(--gold); line-height: 1.3; margin: 0 0 1rem 0; font-style: italic; }
         .pull-quote span { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.1em; color: rgba(237,233,224,0.5); }
-        .stat-banner { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 2rem; background: rgba(255,255,255,0.02); border: 1px solid var(--line); padding: 3rem; border-radius: 8px; margin: 4rem 0; }
+        .stat-banner { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 2rem; background: rgba(255,255,255,0.02); border: 1px solid var(--line); padding: 3rem; border-radius: 8px; margin: 2.5rem 0; }
         .stat-num { font-family: var(--display); font-size: 4rem; color: var(--gold); line-height: 1; }
         .stat-label { font-size: 0.85rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(237,233,224,0.6); margin-top: 0.5rem; }
         .sources-block { font-size: 0.85rem; color: rgba(237,233,224,0.55); line-height: 1.9; border-top: 1px solid var(--line); padding-top: 2rem; margin-top: 3rem; }
         .sources-block strong { color: var(--gold); }
         .sources-block ol { padding-left: 1.2rem; margin: 0.75rem 0 0; }
-        .next-project { margin-top: 8rem; border-top: 1px solid var(--line); padding: 6rem 2rem; text-align: center; background: linear-gradient(180deg, transparent, rgba(201,168,76,0.03)); transition: background 0.4s; display: block; text-decoration: none; }
-        .next-project:hover { background: rgba(201,168,76,0.08); }
-        .next-project span { display: block; font-size: 0.85rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(237,233,224,0.6); margin-bottom: 1rem; }
-        .next-project h2 { font-family: var(--display); font-size: clamp(3rem, 5vw, 5rem); color: var(--gold); margin: 0; transition: transform 0.4s; }
-        .next-project:hover h2 { transform: translateY(-10px); }
+        /* Next case: compact button, label with the case title right below it */
+        .next-project { display: flex; flex-direction: column; align-items: flex-start; gap: .35rem; width: fit-content; max-width: calc(100% - 2.4rem); margin: 4.5rem auto 3.5rem; padding: 1rem 1.5rem 1.1rem; border: 1px solid rgba(201,168,76,.45); border-radius: 8px; background: rgba(237,233,224,.04); text-decoration: none; transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease, background .28s ease; }
+        .next-project:hover, .next-project:focus-visible { transform: translateY(-4px); border-color: var(--gold); background: rgba(201,168,76,.08); box-shadow: 0 8px 22px rgba(201,168,76,.25), 0 0 0 1px rgba(201,168,76,.45); outline: none; }
+        .next-project span { display: block; font-size: .7rem; letter-spacing: .2em; text-transform: uppercase; color: rgba(237,233,224,.6); margin: 0; }
+        .next-project h2 { font-family: var(--display); font-size: clamp(1.15rem, 2vw, 1.5rem); line-height: 1.25; color: var(--gold); margin: 0; }
+        @media (prefers-reduced-motion: reduce) { .next-project, .next-project:hover { transition: none; transform: none; } }
         @media (max-width: 600px) {
             .case-layout { padding: 0 1.2rem 4rem; }
             .exec-summary { padding: 1.5rem; margin: -2rem 1rem 3rem; }
@@ -196,13 +197,6 @@
     <div class="bluf-grid"><div class="bluf-item"><span class="bluf-label">The problem</span><p>Two 737 MAX crashes in October 2018 and March 2019 led to a worldwide grounding. Then on January 5, 2024 a door plug blew out of an Alaska Airlines 737 MAX 9; four bolts meant to hold it were missing when the jet left the factory. A follow-up FAA audit found failures in manufacturing process control, parts handling and storage, and product control.</p></div><div class="bluf-item"><span class="bluf-label">Why solve it</span><p>Quality failures became capacity limits. Deliveries fell from 806 in 2018 to 157 in 2020, recovered to 528 in 2023, then dropped to 348 in 2024 after the FAA capped 737 MAX output at 38 a month. Every month spent below the cap is revenue and airline trust that competitors collect.</p></div><div class="bluf-item"><span class="bluf-label">The answer</span><p>Make verified process control the gate for every rate increase. Put safety on the board agenda, trace every flight-critical step on the line, and raise output only once process capability is proven. That is the path the FAA took when it allowed 42 a month in October 2025.</p></div></div>
 </div>
 
-<div class="sim-link-banner gsap-reveal">
-    <p class="sim-link-banner-text"><strong>Explore the data.</strong> Tableau view of Boeing commercial deliveries, total and 737, from 2018 to 2025.</p>
-    <div class="banner-btns">
-        <a href="https://public.tableau.com/app/profile/prapanch.kokkalemada/viz/BoeingNarrowbodyCrisis2015-2026/806to157HowBoeingLosttheNarrowbodyRace" class="sim-link-banner-btn" target="_blank" rel="noopener noreferrer">Tableau ↗</a>
-        <a href="simulators.html#financial-dcf-lab" class="sim-link-banner-btn banner-btn-ghost">Financial &amp; DCF Lab ↗</a>
-    </div>
-</div>
 
 <div class="case-layout">
     <aside class="case-sidebar">
@@ -258,7 +252,7 @@
 
         <section id="output" class="scroll-section gsap-reveal">
             <h2>III. THE OUTPUT COST</h2>
-            <p>Delivery counts show what the crisis cost. Boeing has not matched its 2018 total in any year since. 2025 was its best year since then, with 600 deliveries, 447 of them 737s.<sup><a href="#src-5">5</a></sup></p>
+            <p>Delivery counts show <a class="word-link" href="simulators.html#financial-dcf-lab">what the crisis cost</a>. Boeing has not matched its 2018 total in any year since. 2025 was its best year since then, with 600 deliveries, 447 of them 737s.<sup><a href="#src-5">5</a></sup></p>
             <div class="chart-box"><canvas id="deliveriesChart" aria-label="Boeing commercial deliveries, total and 737, 2018 to 2025"></canvas></div>
             <p class="chart-note">737 counts for 2020 and 2021 are not shown because no source we used states them directly.</p>
             <div class="table-wrap"><table class="data-table">
@@ -277,7 +271,7 @@
 
         <section id="the-dashboard" class="scroll-section gsap-reveal">
             <h2>IV. THE DASHBOARD</h2>
-            <p>The dashboard tracks every Boeing delivery by month and program from 2015 to October 2026, set against Airbus, quarterly free cash flow, orders and cancellations, and a map of customer countries. Use the Program filter to isolate the 737, and hover any mark for its value.</p>
+            <p>The <a class="word-link" href="https://public.tableau.com/app/profile/prapanch.kokkalemada/viz/BoeingNarrowbodyCrisis2015-2026/806to157HowBoeingLosttheNarrowbodyRace" target="_blank" rel="noopener noreferrer">dashboard</a> tracks every Boeing delivery by month and program from 2015 to October 2026, set against Airbus, quarterly free cash flow, orders and cancellations, and a map of customer countries. Use the Program filter to isolate the 737, and hover any mark for its value.</p>
             <div class="tableau-frame">
                 <iframe src="https://public.tableau.com/views/BoeingNarrowbodyCrisis2015-2026/806to157HowBoeingLosttheNarrowbodyRace?:showVizHome=no&amp;:embed=true&amp;:toolbar=bottom&amp;:tabs=no" title="Boeing: Safety Crisis, Tableau Public dashboard" loading="lazy" allowfullscreen></iframe>
             </div>
@@ -294,11 +288,33 @@
         </section>
 
         
+
+        <p class="case-disclaimer">Disclaimer: Portfolio case study for academic and demonstrative purposes. This is an independent analysis, not affiliated with or endorsed by Boeing, the FAA or any airline. Facts and figures come from the public sources below; the recommendation is the author's view. All trademarks belong to their respective owners.</p>
+        <div class="sources-block">
+            <strong>Sources:</strong>
+            <ol><li id="src-1"><a href="https://corpgov.law.harvard.edu/2024/06/06/boeing-737-max/" target="_blank" rel="noopener noreferrer">Harvard Law School Forum on Corporate Governance, "Boeing 737 MAX" (June 2024)</a></li><li id="src-2"><a href="https://www.transportation.gov/faa-oversight-boeings-broken-safety-culture-0" target="_blank" rel="noopener noreferrer">U.S. Department of Transportation, "FAA Oversight of Boeing's Broken Safety Culture"</a></li><li id="src-3"><a href="https://www.npr.org/2024/03/04/1235826355/faa-audit-boeing-737-max-8-9-quality-control-failures" target="_blank" rel="noopener noreferrer">NPR, "FAA audit faults Boeing for quality control 737 Max failures" (Mar 2024)</a></li><li id="src-4"><a href="https://www.faa.gov/newsroom/faa-continues-hold-boeing-accountable-implementing-safety-and-production-quality-fixes" target="_blank" rel="noopener noreferrer">FAA Newsroom, safety and production quality fixes at Boeing</a></li><li id="src-5"><a href="https://www.manufacturingdive.com/news/boeing-deliveries-q4-full-year-2025-commercial-airbus/809504/" target="_blank" rel="noopener noreferrer">Manufacturing Dive, "Boeing delivered 600 commercial aircraft in 2025"</a></li><li id="src-6"><a href="https://simpleflying.com/how-many-737s-boeing-delivered-5-years/" target="_blank" rel="noopener noreferrer">SimpleFlying, "How Many 737s Has Boeing Delivered Over The Past 5 Years?"</a></li><li id="src-7"><a href="https://www.aviationtoday.com/2022/01/12/airbus-boeing-report-2021-commercial-aircraft-deliveries/" target="_blank" rel="noopener noreferrer">Aviation Today, "Airbus, Boeing Report 2021 Commercial Aircraft Deliveries" (Jan 2022)</a></li><li id="src-8"><a href="https://www.wsls.com/business/2025/10/17/faa-allows-boeing-to-increase-737-max-production-nearly-two-years-after-door-plug-flew-off-plane/" target="_blank" rel="noopener noreferrer">Associated Press via WSLS, "FAA allows Boeing to increase 737 Max production" (Oct 2025)</a></li><li id="src-9"><a href="https://www.cnbc.com/2024/01/09/boeing-hits-2023-jet-delivery-goal-in-blockbuster-sales-year-.html" target="_blank" rel="noopener noreferrer">CNBC, "Boeing hits 2023 jet delivery goal" (Jan 2024)</a></li><li id="src-10"><a href="https://investors.boeing.com/investors/news/press-release-details/2025/Boeing-Reports-Fourth-Quarter-Results/default.aspx" target="_blank" rel="noopener noreferrer">Boeing, "Boeing Reports Fourth Quarter Results" (Jan 28, 2025)</a></li></ol>
+        </div>
+    </main>
+</div>
+
+<a href="category-sourcing-strategy/" class="next-project">
+    <span>Next Case</span>
+    <h2>Category Sourcing Strategy →</h2>
+</a>
+
+<section id="section-get-in-touch" class="contact-section-shell" aria-labelledby="contact-heading">
+    <div class="connect-grid">
+        <div class="ct-content gsap-reveal">
+            <div class="sec-eyebrow-row">
+                <span class="sec-eyebrow-label">Let's Connect</span>
+                <div class="sec-eyebrow-line"></div>
+            </div>
+            <h2 class="contact-display-heading" id="contact-heading">
+                Initiate<br><em class="contact-display-em">Dialogue.</em>
+            </h2>
         <!-- FAQ (same accordion styling as the homepage) -->
-        <section class="case-faq" id="faq" aria-labelledby="case-faq-heading">
-          <style>.case-faq{margin:3rem 0 2.5rem}.case-faq .sec-num{margin-bottom:.4rem}.case-faq h3{font-family:var(--display);font-size:clamp(1.4rem,2.6vw,1.9rem);color:var(--fg);margin:0 0 1.2rem}.case-faq .faq-answer{line-height:1.65}@media (max-width:600px){.case-faq .faq-question{font-size:.98rem;padding-right:.8rem}}</style>
-          <p class="sec-num">FAQ</p>
-          <h3 id="case-faq-heading">Frequently Asked Questions</h3>
+        <section class="case-faq" id="faq" aria-label="Frequently asked questions">
+          <style>.case-faq{margin:2rem 0 0}.case-faq .faq-answer{line-height:1.65}@media (max-width:600px){.case-faq .faq-question{font-size:.98rem;padding-right:.8rem}}</style>
           <div class="faq-wrapper">
             <div class="faq-item">
               <button type="button" class="faq-btn" aria-expanded="false" aria-controls="case-faq-a1">
@@ -358,30 +374,6 @@
           })();
           </script>
         </section>
-
-        <p class="case-disclaimer">Disclaimer: Portfolio case study for academic and demonstrative purposes. This is an independent analysis, not affiliated with or endorsed by Boeing, the FAA or any airline. Facts and figures come from the public sources below; the recommendation is the author's view. All trademarks belong to their respective owners.</p>
-        <div class="sources-block">
-            <strong>Sources:</strong>
-            <ol><li id="src-1"><a href="https://corpgov.law.harvard.edu/2024/06/06/boeing-737-max/" target="_blank" rel="noopener noreferrer">Harvard Law School Forum on Corporate Governance, "Boeing 737 MAX" (June 2024)</a></li><li id="src-2"><a href="https://www.transportation.gov/faa-oversight-boeings-broken-safety-culture-0" target="_blank" rel="noopener noreferrer">U.S. Department of Transportation, "FAA Oversight of Boeing's Broken Safety Culture"</a></li><li id="src-3"><a href="https://www.npr.org/2024/03/04/1235826355/faa-audit-boeing-737-max-8-9-quality-control-failures" target="_blank" rel="noopener noreferrer">NPR, "FAA audit faults Boeing for quality control 737 Max failures" (Mar 2024)</a></li><li id="src-4"><a href="https://www.faa.gov/newsroom/faa-continues-hold-boeing-accountable-implementing-safety-and-production-quality-fixes" target="_blank" rel="noopener noreferrer">FAA Newsroom, safety and production quality fixes at Boeing</a></li><li id="src-5"><a href="https://www.manufacturingdive.com/news/boeing-deliveries-q4-full-year-2025-commercial-airbus/809504/" target="_blank" rel="noopener noreferrer">Manufacturing Dive, "Boeing delivered 600 commercial aircraft in 2025"</a></li><li id="src-6"><a href="https://simpleflying.com/how-many-737s-boeing-delivered-5-years/" target="_blank" rel="noopener noreferrer">SimpleFlying, "How Many 737s Has Boeing Delivered Over The Past 5 Years?"</a></li><li id="src-7"><a href="https://www.aviationtoday.com/2022/01/12/airbus-boeing-report-2021-commercial-aircraft-deliveries/" target="_blank" rel="noopener noreferrer">Aviation Today, "Airbus, Boeing Report 2021 Commercial Aircraft Deliveries" (Jan 2022)</a></li><li id="src-8"><a href="https://www.wsls.com/business/2025/10/17/faa-allows-boeing-to-increase-737-max-production-nearly-two-years-after-door-plug-flew-off-plane/" target="_blank" rel="noopener noreferrer">Associated Press via WSLS, "FAA allows Boeing to increase 737 Max production" (Oct 2025)</a></li><li id="src-9"><a href="https://www.cnbc.com/2024/01/09/boeing-hits-2023-jet-delivery-goal-in-blockbuster-sales-year-.html" target="_blank" rel="noopener noreferrer">CNBC, "Boeing hits 2023 jet delivery goal" (Jan 2024)</a></li><li id="src-10"><a href="https://investors.boeing.com/investors/news/press-release-details/2025/Boeing-Reports-Fourth-Quarter-Results/default.aspx" target="_blank" rel="noopener noreferrer">Boeing, "Boeing Reports Fourth Quarter Results" (Jan 28, 2025)</a></li></ol>
-        </div>
-    </main>
-</div>
-
-<a href="category-sourcing-strategy/" class="next-project">
-    <span>Next Case Study</span>
-    <h2>Category Sourcing Strategy →</h2>
-</a>
-
-<section id="section-get-in-touch" class="contact-section-shell" aria-labelledby="contact-heading">
-    <div class="connect-grid">
-        <div class="ct-content gsap-reveal">
-            <div class="sec-eyebrow-row">
-                <span class="sec-eyebrow-label">Let's Connect</span>
-                <div class="sec-eyebrow-line"></div>
-            </div>
-            <h2 class="contact-display-heading" id="contact-heading">
-                Initiate<br><em class="contact-display-em">Dialogue.</em>
-            </h2>
         </div>
         <div class="ct-visual gsap-reveal">
             <div class="photo-portrait-frame">

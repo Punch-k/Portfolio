@@ -15,7 +15,7 @@
     <link rel="canonical" href="https://punch-k.github.io/Portfolio/etracks-tire-management-case.html">
 
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css?v=10">
+    <link rel="stylesheet" href="assets/css/style.css?v=11">
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -57,7 +57,7 @@
         .print-btn { background: none; border: 1px solid var(--line); color: var(--fg); padding: 0.5rem 1rem; cursor: pointer; font-family: var(--sans); font-size: 0.8rem; transition: all 0.3s; margin-top: 1rem; width: 100%; text-align: left; }
         .print-btn:hover { border-color: var(--gold); color: var(--gold); }
         @media (max-width: 900px) { .case-layout { grid-template-columns: 1fr; } .case-sidebar { display: none; } }
-        .article-body h2 { font-family: var(--display); font-size: clamp(1.9rem, 7vw, 2.8rem); color: var(--fg); margin-top: 0; margin-bottom: 1.5rem; line-height: 1.15; position: relative; padding-top: 4rem; }
+        .article-body h2 { font-family: var(--display); font-size: clamp(1.9rem, 7vw, 2.8rem); color: var(--fg); margin-top: 0; margin-bottom: 1.5rem; line-height: 1.15; position: relative; padding-top: 2.25rem; }
         .article-body p { font-size: 1.15rem; color: rgba(237,233,224,0.8); line-height: 1.8; margin-bottom: 2rem; font-weight: 300; }
         .article-body a { color: var(--gold); }
         .gsap-reveal { opacity: 0; transform: translateY(40px); }
@@ -69,20 +69,21 @@
         .comp-panel { display: none; animation: fadeIn 0.5s ease; }
         .comp-panel.active { display: block; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        .pull-quote { margin: 4rem 0; padding: 3rem; border: 1px solid var(--line); text-align: center; background: rgba(255,255,255,0.02); }
+        .pull-quote { margin: 2.5rem 0; padding: 3rem; border: 1px solid var(--line); text-align: center; background: rgba(255,255,255,0.02); }
         .pull-quote p { font-family: var(--display); font-size: 2rem; color: var(--gold); line-height: 1.3; margin: 0 0 1rem 0; font-style: italic; }
         .pull-quote span { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.1em; color: rgba(237,233,224,0.5); }
-        .stat-banner { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 2rem; background: rgba(255,255,255,0.02); border: 1px solid var(--line); padding: 3rem; border-radius: 8px; margin: 4rem 0; }
+        .stat-banner { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 2rem; background: rgba(255,255,255,0.02); border: 1px solid var(--line); padding: 3rem; border-radius: 8px; margin: 2.5rem 0; }
         .stat-num { font-family: var(--display); font-size: 4rem; color: var(--gold); line-height: 1; }
         .stat-label { font-size: 0.85rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(237,233,224,0.6); margin-top: 0.5rem; }
         .sources-block { font-size: 0.85rem; color: rgba(237,233,224,0.55); line-height: 1.9; border-top: 1px solid var(--line); padding-top: 2rem; margin-top: 3rem; }
         .sources-block strong { color: var(--gold); }
         .sources-block ol { padding-left: 1.2rem; margin: 0.75rem 0 0; }
-        .next-project { margin-top: 8rem; border-top: 1px solid var(--line); padding: 6rem 2rem; text-align: center; background: linear-gradient(180deg, transparent, rgba(201,168,76,0.03)); transition: background 0.4s; display: block; text-decoration: none; }
-        .next-project:hover { background: rgba(201,168,76,0.08); }
-        .next-project span { display: block; font-size: 0.85rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(237,233,224,0.6); margin-bottom: 1rem; }
-        .next-project h2 { font-family: var(--display); font-size: clamp(3rem, 5vw, 5rem); color: var(--gold); margin: 0; transition: transform 0.4s; }
-        .next-project:hover h2 { transform: translateY(-10px); }
+        /* Next case: compact button, label with the case title right below it */
+        .next-project { display: flex; flex-direction: column; align-items: flex-start; gap: .35rem; width: fit-content; max-width: calc(100% - 2.4rem); margin: 4.5rem auto 3.5rem; padding: 1rem 1.5rem 1.1rem; border: 1px solid rgba(201,168,76,.45); border-radius: 8px; background: rgba(237,233,224,.04); text-decoration: none; transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease, background .28s ease; }
+        .next-project:hover, .next-project:focus-visible { transform: translateY(-4px); border-color: var(--gold); background: rgba(201,168,76,.08); box-shadow: 0 8px 22px rgba(201,168,76,.25), 0 0 0 1px rgba(201,168,76,.45); outline: none; }
+        .next-project span { display: block; font-size: .7rem; letter-spacing: .2em; text-transform: uppercase; color: rgba(237,233,224,.6); margin: 0; }
+        .next-project h2 { font-family: var(--display); font-size: clamp(1.15rem, 2vw, 1.5rem); line-height: 1.25; color: var(--gold); margin: 0; }
+        @media (prefers-reduced-motion: reduce) { .next-project, .next-project:hover { transition: none; transform: none; } }
         @media (max-width: 600px) {
             .case-layout { padding: 0 1.2rem 4rem; }
             .exec-summary { padding: 1.5rem; margin: -2rem 1rem 3rem; }
@@ -211,13 +212,6 @@
     </div>
 </div>
 
-<div class="sim-link-banner gsap-reveal">
-    <p class="sim-link-banner-text"><strong>Explore the model.</strong> Tableau dashboard of the three scenarios, plus the full Excel model with every assumption.</p>
-    <div class="banner-btns">
-        <a href="https://public.tableau.com/app/profile/prapanch.kokkalemada/viz/eTracksTireManagementModel/eTracksTireManagementModelFlatvsBalancedvsStresshypotheticalfigures" class="sim-link-banner-btn" target="_blank" rel="noopener noreferrer">Tableau ↗</a>
-        <a href="data/etracks-tire-management/eTracks_Supply_Chain_Model.xlsx" class="sim-link-banner-btn banner-btn-ghost" download>Excel model ↓</a>
-    </div>
-</div>
 
 <div class="case-layout">
     <aside class="case-sidebar">
@@ -252,7 +246,7 @@
                 <div class="tl-row"><span class="tl-date">Jul 2026</span><p>The Ontario Tire Dealers Association estimates 750,000 to 1 million tires waiting for collection across the province.<sup><a href="#src-3">3</a></sup></p></div>
                 <div class="tl-row"><span class="tl-date">Sep 2026</span><p>The amendments are finalized. The target rises to 80% for 2026 and every year after, with no pro-rating. Required sites rise from about 4,300 to about 6,500 from 2027, with 220 of the new sites in Northern Ontario. The $1 million cap on administrative penalties is removed.<sup><a href="#src-1">1</a></sup><sup><a href="#src-2">2</a></sup></p></div>
             </div>
-            <p>The question for a PRO is no longer whether the target is reasonable. The questions are how big the physical gap is, where in the network tires get lost, and which plan closes the gap at an acceptable cost. I built a 60-month model to answer all three.</p>
+            <p>The question for a PRO is no longer whether the target is reasonable. The questions are how big the physical gap is, where in the network tires get lost, and which plan closes the gap at an acceptable cost. I built a <a class="word-link" href="data/etracks-tire-management/eTracks_Supply_Chain_Model.xlsx" download>60-month model</a> to answer all three.</p>
         </section>
 
         <blockquote class="pull-quote gsap-reveal">
@@ -345,7 +339,7 @@
 
         <section id="the-dashboard" class="scroll-section gsap-reveal">
             <h2>V. THE DASHBOARD</h2>
-            <p>The Tableau dashboard is built from the model's 60-month output for all three scenarios: tires waiting by month, tonnes short of the target by year, and total cost split into operating cost and penalty. Hover over any mark to see its values.</p>
+            <p>The <a class="word-link" href="https://public.tableau.com/app/profile/prapanch.kokkalemada/viz/eTracksTireManagementModel/eTracksTireManagementModelFlatvsBalancedvsStresshypotheticalfigures" target="_blank" rel="noopener noreferrer">Tableau dashboard</a> is built from the model's 60-month output for all three scenarios: tires waiting by month, tonnes short of the target by year, and total cost split into operating cost and penalty. Hover over any mark to see its values.</p>
             <div class="tableau-frame">
                 <iframe src="https://public.tableau.com/views/eTracksTireManagementModel/eTracksTireManagementModelFlatvsBalancedvsStresshypotheticalfigures?:showVizHome=no&amp;:embed=true&amp;:toolbar=bottom&amp;:tabs=no" title="eTracks Tire Management Model, Tableau Public dashboard" loading="lazy" allowfullscreen></iframe>
             </div>
@@ -368,11 +362,40 @@
         </section>
 
         
+
+        <p class="case-disclaimer">Disclaimer: Portfolio case study for academic and demonstrative purposes. This is an independent analysis, not affiliated with or endorsed by eTracks Tire Management Systems or RPRA. Regulatory facts come from the public sources below. All model figures, including site counts, tonnages, costs, processor capacities, import shares and the penalty rate, are hypothetical assumptions for illustration. All trademarks belong to their respective owners.</p>
+        <div class="sources-block">
+            <strong>Sources:</strong> Regulation and market context from public reporting. Model built in Excel (download above).
+            <ol>
+                <li id="src-1"><a href="https://rpra.ca/2026/09/ontario-government-finalizes-amendments-to-tires-and-other-producer-responsibility-regulations/" target="_blank" rel="noopener noreferrer">RPRA, "Ontario Government finalizes amendments to Tires and other producer responsibility regulations" (Sep 22, 2026)</a></li>
+                <li id="src-2"><a href="https://www.blg.com/en/insights/2026/10/ontario-epr-updates-tire-rules-accelerate-and-1-million-penalty-cap-ends" target="_blank" rel="noopener noreferrer">BLG, "Ontario EPR updates: Tire rules accelerate and $1 million penalty cap ends" (Oct 15, 2026)</a></li>
+                <li id="src-3"><a href="https://www.trucknews.com/transportation/ontario-raises-tire-recycling-target-as-collection-backlog-persists/1003222859/" target="_blank" rel="noopener noreferrer">Truck News, "Ontario raises tire recycling target as collection backlog persists" (Oct 6, 2026)</a></li>
+                <li id="src-4"><a href="https://www.trucknews.com/transportation/tire-recycling-issues-resurface-in-ontario-as-regulatory-changes-processing-disputes-strain-the-system/1003211098" target="_blank" rel="noopener noreferrer">Truck News, "Tire recycling issues resurface in Ontario as regulatory changes, processing disputes strain the system" (Mar 16, 2026)</a></li>
+                <li id="src-5"><a href="https://kleanindustries.com/insights/market-analysis-reports/ontario-tire-management-target-and-collection-network/" target="_blank" rel="noopener noreferrer">Klean Industries, "Tire Recycling Regulation: Ontario Lifts Target to 80%" (Oct 14, 2026; vendor commentary)</a></li>
+                <li id="src-6"><a href="https://ero.ontario.ca/notice/026-0218" target="_blank" rel="noopener noreferrer">Environmental Registry of Ontario, notice 026-0218: Proposed Amendments to Tires and Other Producer Responsibility Regulations</a></li>
+            </ol>
+        </div>
+    </main>
+</div>
+
+<a href="lg-wroclaw-nearshoring-case.html" class="next-project">
+    <span>Next Case</span>
+    <h2>LG Wroclaw →</h2>
+</a>
+
+<section id="section-get-in-touch" class="contact-section-shell" aria-labelledby="contact-heading">
+    <div class="connect-grid">
+        <div class="ct-content gsap-reveal">
+            <div class="sec-eyebrow-row">
+                <span class="sec-eyebrow-label">Let's Connect</span>
+                <div class="sec-eyebrow-line"></div>
+            </div>
+            <h2 class="contact-display-heading" id="contact-heading">
+                Initiate<br><em class="contact-display-em">Dialogue.</em>
+            </h2>
         <!-- FAQ (same accordion styling as the homepage) -->
-        <section class="case-faq" id="faq" aria-labelledby="case-faq-heading">
-          <style>.case-faq{margin:3rem 0 2.5rem}.case-faq .sec-num{margin-bottom:.4rem}.case-faq h3{font-family:var(--display);font-size:clamp(1.4rem,2.6vw,1.9rem);color:var(--fg);margin:0 0 1.2rem}.case-faq .faq-answer{line-height:1.65}@media (max-width:600px){.case-faq .faq-question{font-size:.98rem;padding-right:.8rem}}</style>
-          <p class="sec-num">FAQ</p>
-          <h3 id="case-faq-heading">Frequently Asked Questions</h3>
+        <section class="case-faq" id="faq" aria-label="Frequently asked questions">
+          <style>.case-faq{margin:2rem 0 0}.case-faq .faq-answer{line-height:1.65}@media (max-width:600px){.case-faq .faq-question{font-size:.98rem;padding-right:.8rem}}</style>
           <div class="faq-wrapper">
             <div class="faq-item">
               <button type="button" class="faq-btn" aria-expanded="false" aria-controls="case-faq-a1">
@@ -441,37 +464,6 @@
           })();
           </script>
         </section>
-
-        <p class="case-disclaimer">Disclaimer: Portfolio case study for academic and demonstrative purposes. This is an independent analysis, not affiliated with or endorsed by eTracks Tire Management Systems or RPRA. Regulatory facts come from the public sources below. All model figures, including site counts, tonnages, costs, processor capacities, import shares and the penalty rate, are hypothetical assumptions for illustration. All trademarks belong to their respective owners.</p>
-        <div class="sources-block">
-            <strong>Sources:</strong> Regulation and market context from public reporting. Model built in Excel (download above).
-            <ol>
-                <li id="src-1"><a href="https://rpra.ca/2026/09/ontario-government-finalizes-amendments-to-tires-and-other-producer-responsibility-regulations/" target="_blank" rel="noopener noreferrer">RPRA, "Ontario Government finalizes amendments to Tires and other producer responsibility regulations" (Sep 22, 2026)</a></li>
-                <li id="src-2"><a href="https://www.blg.com/en/insights/2026/10/ontario-epr-updates-tire-rules-accelerate-and-1-million-penalty-cap-ends" target="_blank" rel="noopener noreferrer">BLG, "Ontario EPR updates: Tire rules accelerate and $1 million penalty cap ends" (Oct 15, 2026)</a></li>
-                <li id="src-3"><a href="https://www.trucknews.com/transportation/ontario-raises-tire-recycling-target-as-collection-backlog-persists/1003222859/" target="_blank" rel="noopener noreferrer">Truck News, "Ontario raises tire recycling target as collection backlog persists" (Oct 6, 2026)</a></li>
-                <li id="src-4"><a href="https://www.trucknews.com/transportation/tire-recycling-issues-resurface-in-ontario-as-regulatory-changes-processing-disputes-strain-the-system/1003211098" target="_blank" rel="noopener noreferrer">Truck News, "Tire recycling issues resurface in Ontario as regulatory changes, processing disputes strain the system" (Mar 16, 2026)</a></li>
-                <li id="src-5"><a href="https://kleanindustries.com/insights/market-analysis-reports/ontario-tire-management-target-and-collection-network/" target="_blank" rel="noopener noreferrer">Klean Industries, "Tire Recycling Regulation: Ontario Lifts Target to 80%" (Oct 14, 2026; vendor commentary)</a></li>
-                <li id="src-6"><a href="https://ero.ontario.ca/notice/026-0218" target="_blank" rel="noopener noreferrer">Environmental Registry of Ontario, notice 026-0218: Proposed Amendments to Tires and Other Producer Responsibility Regulations</a></li>
-            </ol>
-        </div>
-    </main>
-</div>
-
-<a href="lg-wroclaw-nearshoring-case.html" class="next-project">
-    <span>Next Case Study</span>
-    <h2>LG Wroclaw →</h2>
-</a>
-
-<section id="section-get-in-touch" class="contact-section-shell" aria-labelledby="contact-heading">
-    <div class="connect-grid">
-        <div class="ct-content gsap-reveal">
-            <div class="sec-eyebrow-row">
-                <span class="sec-eyebrow-label">Let's Connect</span>
-                <div class="sec-eyebrow-line"></div>
-            </div>
-            <h2 class="contact-display-heading" id="contact-heading">
-                Initiate<br><em class="contact-display-em">Dialogue.</em>
-            </h2>
         </div>
         <div class="ct-visual gsap-reveal">
             <div class="photo-portrait-frame">
