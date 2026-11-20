@@ -157,7 +157,7 @@ document.querySelectorAll('[data-count]').forEach(el => cntObs.observe(el));
 
 // 8. NAV STICKY & ACTIVE
 const mainnav = document.getElementById('mainnav');
-const navAs = document.querySelectorAll('.nav-links a');
+const navAs = document.querySelectorAll('.nav-links a[href^="#"]'); // in-page links only, so a page's own active link (e.g. Simulators) keeps its highlight
 const secs = document.querySelectorAll('section[id],div[id="scrub-section"]');
 const dots = document.querySelectorAll('.sdot');
 window.addEventListener('scroll', () => {
@@ -1482,6 +1482,13 @@ function closeMobileMenu() {
     document.getElementById('mobile-menu').classList.remove('open');
     document.body.style.overflow = '';
 }
+(function () {
+    const toggle = document.getElementById('nav-toggle');
+    const menu = document.getElementById('mobile-menu');
+    if (!toggle || !menu) return;
+    toggle.addEventListener('click', () => { toggleMobileMenu(); toggle.setAttribute('aria-expanded', menu.classList.contains('open') ? 'true' : 'false'); });
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { closeMobileMenu(); toggle.setAttribute('aria-expanded', 'false'); }));
+})();
 
 // 21. EXPERIENCE TIMELINE LINE
 const tlLine = document.getElementById('tlLine');
