@@ -149,7 +149,7 @@ input[type="range"]::-moz-range-thumb { width: 14px; height: 14px; border-radius
   .memo { padding: 1.4rem 1.2rem; }
 }
 @media (max-width: 600px) {
-  .proj-hero { padding: 6.5rem 1.1rem 1.5rem; }
+  .proj-hero { padding: 5.3rem 1.1rem 1.5rem; }
   .proj-wrap { padding: 1.5rem 1rem 3rem; }
   .proj-stats .stat-strip-item { padding: 1.2rem 1rem; }
   .chart-wrap, .chart-wrap.tall { height: 260px; min-width: 0; }
