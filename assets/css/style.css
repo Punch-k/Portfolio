@@ -872,7 +872,7 @@ a.word-link:hover, a.word-link:focus-visible { color: var(--fg); text-decoration
   /* Footer: compact two-line block, same look as the Gallery page */
   .site-footer { flex-direction: column; justify-content: center; align-items: center; gap: .55rem; padding: 1.4rem 1.2rem; text-align: center; }
   .ft-logo { line-height: 1.2; }
-  .footer-links { justify-content: center; gap: 1.4rem; }
+  .footer-links { justify-content: center; gap: .9rem; flex-wrap: nowrap; }
   .ft-top-btn { margin-top: 0; padding: .35rem .85rem; }
   /* Tab bars wrap onto two rows instead of hiding tabs off the right edge */
   .sim-tabs { flex-wrap: wrap; white-space: normal; overflow-x: visible; margin-bottom: 1.5rem; }
@@ -909,7 +909,7 @@ a.word-link:hover, a.word-link:focus-visible { color: var(--fg); text-decoration
 /* Tap targets on phones: ~36px touch areas without changing the layout
    (vertical padding on inline links grows the hit area, not the line) */
 @media (max-width: 768px) {
-  .ft-link { display: inline-block; padding: .55rem .3rem; }
+  .ft-link { display: inline-block; padding: .55rem .15rem; }
   .ft-top-btn { padding: .6rem 1rem; }
   .article-body sup a { padding: .55rem .35rem; }
   a.word-link, .chart-note a, .breadcrumbs a, .proj-breadcrumbs a, .proj-hero-note a { padding: .45rem 0; }
