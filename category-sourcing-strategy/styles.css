@@ -161,3 +161,28 @@ input[type="range"]::-moz-range-thumb { width: 14px; height: 14px; border-radius
   body { background: #fff; color: #000; }
   .memo { border: none; }
 }
+
+/* Mobile rhythm, same as the rest of the site: ~28px between sections */
+@media (max-width: 768px) {
+  .proj-section { padding-top: 1.75rem; }
+  .proj-section + .proj-section { margin-top: 1rem; }
+}
+
+/* ─── PHONE READABILITY + TAP TARGETS (2026-11-20) ───────────────
+   Floor of 11px for dashboard text on phones (was 8-10px), and bigger
+   touch areas for small links. !important because each page's own
+   component rules are loaded later and would otherwise win. */
+@media (max-width: 768px) {
+  /* tables */
+  .proj-section td, .proj-section th, .proj-section .num, .ssens-table th, .ssens-table td { font-size: 11.5px !important; }
+  /* control labels and notes */
+  .sim-field label, .sim-field label b, .ctl label, .ctl label b, .sim-field-note, .seg button, .sim-tab-btn { font-size: 11.5px !important; }
+  /* captions, pills, eyebrows */
+  .sm-label, .sm-sub, .assump, .verified, .pill, .sig-hint, .schart-sub, .ssens-header, .ssens-delta-neg, .ssens-delta-pos,
+  .table-note, .memo-meta, .case-badge, .ssc-eyebrow, .scom-eyebrow, .ssc-defaults, .stat-strip-l, .stat-strip-l em { font-size: 11px !important; }
+  /* small titles */
+  .schart-title, .sig-title, .pcard h6, .memo h5 { font-size: 12.5px !important; }
+  .ft-link, .ft-top-btn, .sim-carry-btn, .sim-reset-btn { font-size: 11px !important; }
+  /* checkboxes */
+  .chk input { width: 18px; height: 18px; }
+}
