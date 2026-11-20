@@ -862,3 +862,56 @@ body::after { content: ''; position: fixed; inset: -100%; width: 300%; height: 3
 /* In-text links to Tableau views, simulators, models and code (replaced the "Explore the data" banners) */
 a.word-link { color: var(--gold); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; text-decoration-color: rgba(201,168,76,.55); transition: color .2s ease, text-decoration-color .2s ease; }
 a.word-link:hover, a.word-link:focus-visible { color: var(--fg); text-decoration-color: var(--gold); }
+
+/* Phones: keep the name on one line so the header stays slim (was two lines, 95px tall) */
+@media (max-width: 480px) { #mainnav .nav-logo { font-size: 1.02rem; white-space: nowrap; letter-spacing: .03em; } }
+
+/* ─── MOBILE CONSISTENCY PASS (2026-11-20) ───────────────────────
+   One spacing rhythm on phones for every page that loads this file. */
+@media (max-width: 768px) {
+  /* Footer: compact two-line block, same look as the Gallery page */
+  .site-footer { flex-direction: column; justify-content: center; align-items: center; gap: .55rem; padding: 1.4rem 1.2rem; text-align: center; }
+  .ft-logo { line-height: 1.2; }
+  .footer-links { justify-content: center; gap: 1.4rem; }
+  .ft-top-btn { margin-top: 0; padding: .35rem .85rem; }
+  /* Tab bars wrap onto two rows instead of hiding tabs off the right edge */
+  .sim-tabs { flex-wrap: wrap; white-space: normal; overflow-x: visible; margin-bottom: 1.5rem; }
+  .sim-tab-btn { flex: 1 1 50%; padding: .75rem .6rem; text-align: left; }
+  /* Section rhythm: ~28px above and below each section */
+  .contact-section-shell { padding-top: 1.75rem; padding-bottom: 1.75rem; }
+  #gtm-simulators { padding-top: 1.75rem; padding-bottom: 2.5rem; }
+  /* Simulator labs: the empty "Model not yet run" box was ~480px tall on phones */
+  .sim-output-panel { min-height: 0; }
+  .sim-placeholder { min-height: 220px; padding: 1.75rem 1.25rem; gap: .8rem; }
+  .sim-section-head { margin-bottom: 1.4rem; }
+  .sim-tab-panel + .sim-tab-panel { margin-top: 2rem; padding-top: 1.75rem; } /* was 6rem + 5rem (176px) between labs */
+}
+
+/* ─── PHONE READABILITY + TAP TARGETS (2026-11-20) ───────────────
+   Floor of 11px for dashboard text on phones (was 8-10px), and bigger
+   touch areas for small links. !important because each page's own
+   component rules are loaded later and would otherwise win. */
+@media (max-width: 768px) {
+  /* tables */
+  .proj-section td, .proj-section th, .proj-section .num, .ssens-table th, .ssens-table td { font-size: 11.5px !important; }
+  /* control labels and notes */
+  .sim-field label, .sim-field label b, .ctl label, .ctl label b, .sim-field-note, .seg button, .sim-tab-btn { font-size: 11.5px !important; }
+  /* captions, pills, eyebrows */
+  .sm-label, .sm-sub, .assump, .verified, .pill, .sig-hint, .schart-sub, .ssens-header, .ssens-delta-neg, .ssens-delta-pos,
+  .table-note, .memo-meta, .case-badge, .ssc-eyebrow, .scom-eyebrow, .ssc-defaults, .stat-strip-l, .stat-strip-l em { font-size: 11px !important; }
+  /* small titles */
+  .schart-title, .sig-title, .pcard h6, .memo h5 { font-size: 12.5px !important; }
+  .ft-link, .ft-top-btn, .sim-carry-btn, .sim-reset-btn { font-size: 11px !important; }
+  /* checkboxes */
+  .chk input { width: 18px; height: 18px; }
+}
+
+/* Tap targets on phones: ~36px touch areas without changing the layout
+   (vertical padding on inline links grows the hit area, not the line) */
+@media (max-width: 768px) {
+  .ft-link { display: inline-block; padding: .55rem .3rem; }
+  .ft-top-btn { padding: .6rem 1rem; }
+  .article-body sup a { padding: .55rem .35rem; }
+  a.word-link, .chart-note a, .breadcrumbs a, .proj-breadcrumbs a, .proj-hero-note a { padding: .45rem 0; }
+  .dash-table td a { display: inline-block; padding: .45rem 0; }
+}

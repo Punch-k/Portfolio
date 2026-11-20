@@ -46,3 +46,17 @@
   .case-page .pull-quote p { font-size: 1.35rem; }
   .case-page .stat-banner { padding: 1.4rem 1.2rem; }
 }
+
+/* Disclaimer: small print, like the homepage one (it was inheriting full body size in italics) */
+.case-page .article-body p.case-disclaimer { font-size: .82rem; line-height: 1.6; color: rgba(237,233,224,.5); margin: 2rem 0 0; }
+
+/* Mobile rhythm, same as the homepage: ~28px between blocks, no stacked margins */
+@media (max-width: 768px) {
+  .case-page .exec-summary { margin-bottom: 1.75rem; }
+  .case-page .article-body h2 { padding-top: 1.25rem; }
+  .case-page .article-body .proj-section { padding-top: 1.75rem; }
+  .case-page .next-project { margin: 2.25rem auto 1.75rem; }
+  .case-page .sources-block { margin-top: 1.75rem; }
+  /* Breadcrumb wraps as a centred line instead of squeezing into a ragged stack */
+  .case-page .breadcrumbs { flex-wrap: nowrap; white-space: nowrap; justify-content: center; align-items: center; gap: .35rem; font-size: .6rem; letter-spacing: .08em; }
+}
