@@ -40,7 +40,7 @@
 .case-page .sources-block { color: rgba(237,233,224,.65); line-height: 1.7; margin-top: 2.25rem; padding-top: 1.5rem; }
 
 @media (max-width: 768px) {
-  .case-page .hero { min-height: 0; padding-top: 6.5rem; padding-bottom: 3.5rem; }
+  .case-page .hero { min-height: 0; padding-top: 5.3rem; padding-bottom: 3.5rem; }
   .case-page .article-body .scroll-section > p:not([class]) { font-size: 1.05rem; line-height: 1.65; }
   .case-page .pull-quote { padding: 1.4rem 1.2rem; }
   .case-page .pull-quote p { font-size: 1.35rem; }
