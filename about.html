@@ -53,21 +53,20 @@
     }
     a { text-decoration: none; color: inherit; }
 
-    /* ── SHARED SITE NAV (same markup/classes as index.html / simulators.html / case studies) ──
-       Uses px, not rem: this page sets html{font-size:.069vw} for its photo-grid scaling
-       system, which would otherwise shrink anything using rem units to almost nothing. */
-    .gallery-nav { position: fixed; top: 0; left: 0; width: 100%; padding: 24px 64px; display: flex; justify-content: space-between; align-items: center; background: rgba(10, 11, 13, 0.85); backdrop-filter: blur(12px); z-index: 100; border-bottom: 1px solid rgba(237,233,224,0.05); box-sizing: border-box; }
-    .gallery-nav .nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; width: 100%; }
-    .gallery-nav .nav-logo { font-family: 'Times New Roman', Times, serif !important; font-weight: 600 !important; font-size: 21px; letter-spacing: 0.05em !important; text-decoration: none; color: #fff; text-transform: uppercase; }
-    .gallery-nav .nav-logo span { color: var(--gold); }
-    .gallery-nav .nav-links { display: flex; gap: 32px; }
-    .gallery-nav .nav-links a { font-size: 10px !important; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; color: rgba(237,233,224,.35); transition: color 0.3s; }
-    .gallery-nav .nav-links a:hover, .gallery-nav .nav-links a.active { color: var(--gold); }
-    .gallery-nav .nav-connect { border: 1px solid var(--gold); color: var(--gold); padding: 10px 24px; border-radius: 50px; text-decoration: none; font-size: 14px; letter-spacing: 0.1em; transition: all 0.3s ease; }
-    .gallery-nav .nav-connect:hover { background: var(--gold); color: var(--bg); }
-    @media (max-width: 900px) { .gallery-nav .nav-links { display: none; } .gallery-nav { padding: 16px 24px; } #gallery-menu-toggle { display: block !important; } }
-    #gallery-menu-toggle { font-size: 24px !important; }
-    #gallery-mobile-menu a { font-size: 40px !important; }
+    /* Homepage header, restated in px: this page sets html{font-size:.069vw} (1px under 1024px)
+       for its photo grid, so the shared rem-based #mainnav rules would shrink to nothing here. */
+    #mainnav { padding: 26px 48px; background: rgba(10,11,13,.88); backdrop-filter: blur(20px); border-bottom: 1px solid var(--line); } /* the photo canvas never scrolls, so keep the dark bar on */
+    #mainnav.stk { padding: 16px 48px; }
+    #mainnav .nav-logo { font-size: 21px; }
+    #mainnav .nav-links { gap: 40px; margin: 0; padding: 0; }
+    #mainnav .nav-links a { font-size: 10.4px; }
+    #mainnav .nav-cta { font-size: 10.4px; padding: 8px 19px; }
+    #mobile-menu { padding: 96px 32px 48px; }
+    #mobile-menu a { font-size: clamp(35px, 9vw, 51px); padding: 9px 0; }
+    #mobile-menu .mob-cta { margin-top: 32px; font-size: 11px; padding: 14px 38px; }
+    @media (max-width: 900px) { #mainnav { padding: 18px 22px; } #mainnav.stk { padding: 13px 22px; } }
+    @media (max-width: 600px) { #mainnav { padding: 15px 18px; } }
+    @media (max-width: 480px) { #mainnav .nav-logo { font-size: 16px; } }
 
     /* This page is a fixed, non-scrolling drag canvas (html has overflow:hidden below),
        so the footer needs to be pinned like the nav rather than sitting in normal flow —
@@ -134,29 +133,29 @@
 </head>
 <body>
   <main id="main">
-    <nav class="gallery-nav">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">PRAPANCH <span>KOKKALEMADA</span></a>
-            <div class="nav-links">
-                <a href="index.html#section-intro">ABOUT</a>
-                <a href="index.html#section-cases">RESEARCH</a>
-                <a href="simulators.html">SIMULATORS</a>
-                <a href="index.html#section-skills">SKILLS</a>
-                <a href="about.html" class="active" style="color: var(--gold);">GALLERY</a>
-            </div>
-            <button id="gallery-menu-toggle" style="display:none; background:none; border:none; color:var(--fg); font-size:1.5rem; cursor:pointer;" aria-label="Open navigation">☰</button>
-            <a href="mailto:p.kokkalemada@gmail.com" class="nav-connect">LET'S CONNECT ↗</a>
-        </div>
-    </nav>
+    <nav id="mainnav" role="navigation" aria-label="Primary navigation">
+    <a class="nav-logo" href="index.html">PRAPANCH <span>KOKKALEMADA</span></a>
+    <ul class="nav-links">
+        <li><a href="index.html#section-intro">About</a></li>
+        <li><a href="index.html#section-cases">Research</a></li>
+        <li><a href="simulators.html">Simulators</a></li>
+        <li><a href="index.html#section-skills">Skills</a></li>
+        <li><a href="about.html" class="act">Gallery</a></li>
+    </ul>
+    <a class="nav-cta" href="index.html#section-get-in-touch"><span>Let's Connect ↗</span></a>
+    <button id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+<nav id="mobile-menu" role="navigation" aria-label="Mobile menu">
+    <a href="index.html#scrub-section">Home</a>
+    <a href="index.html#section-cases">Cases</a>
+    <a href="index.html#section-skills">Skills</a>
+    <a href="simulators.html">Simulators</a>
+    <a href="index.html#section-get-in-touch">Contact</a>
+    <a href="index.html#section-get-in-touch" class="mob-cta">Let's Connect ↗</a>
+</nav>
 
-    <div id="gallery-mobile-menu" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:var(--bg);z-index:200;flex-direction:column;align-items:center;justify-content:center;gap:2rem;">
-        <button onclick="document.getElementById('gallery-mobile-menu').style.display='none';" style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;color:var(--fg);font-size:2rem; cursor:pointer;">&times;</button>
-        <a href="index.html#section-intro" style="font-family:var(--display);font-size:2.5rem;color:var(--fg);text-decoration:none;">ABOUT</a>
-        <a href="index.html#section-cases" style="font-family:var(--display);font-size:2.5rem;color:var(--fg);text-decoration:none;">RESEARCH</a>
-        <a href="simulators.html" style="font-family:var(--display);font-size:2.5rem;color:var(--fg);text-decoration:none;">SIMULATORS</a>
-        <a href="index.html#section-skills" style="font-family:var(--display);font-size:2.5rem;color:var(--fg);text-decoration:none;">SKILLS</a>
-        <a href="about.html" style="font-family:var(--display);font-size:2.5rem;color:var(--gold);text-decoration:none;">GALLERY</a>
-    </div>
 
     <section id="hero">
       <div id="images"></div>
@@ -464,9 +463,15 @@
       new ms();
     });
 
-    document.getElementById('gallery-menu-toggle').addEventListener('click', () => {
-      document.getElementById('gallery-mobile-menu').style.display = 'flex';
-    });
+    /* Header: same behaviour as the homepage (darkens on scroll, hamburger menu on mobile) */
+    (function () {
+        var nav = document.getElementById('mainnav'), toggle = document.getElementById('nav-toggle'), menu = document.getElementById('mobile-menu');
+        window.addEventListener('scroll', function () { if (nav) nav.classList.toggle('stk', window.scrollY > 55); }, { passive: true });
+        if (!toggle || !menu) return;
+        function setOpen(open) { toggle.classList.toggle('open', open); menu.classList.toggle('open', open); toggle.setAttribute('aria-expanded', open ? 'true' : 'false'); document.body.style.overflow = open ? 'hidden' : ''; }
+        toggle.addEventListener('click', function () { setOpen(!menu.classList.contains('open')); });
+        menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setOpen(false); }); });
+    })();
   </script>
 </body>
 </html>

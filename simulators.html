@@ -30,16 +30,8 @@
 
     <style>
         body { background: var(--bg); color: var(--fg); font-family: var(--sans); margin: 0; padding: 0; overflow-x: hidden; }
-        .sim-page-nav { position: fixed; top: 0; left: 0; width: 100%; padding: 1.5rem 4rem; display: flex; justify-content: space-between; align-items: center; background: rgba(10, 11, 13, 0.85); backdrop-filter: blur(12px); z-index: 100; border-bottom: 1px solid rgba(237,233,224,0.05); box-sizing: border-box; }
-        .sim-page-nav .nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; width: 100%; }
-        /* .nav-logo styling now comes solely from the shared assets/css/style.css rule — no local
-           override here, so this page can't silently drift from the rest of the site again. */
-        .sim-page-nav .nav-links { display: flex; gap: 2rem; }
-        .sim-page-nav .nav-links a.active { color: var(--gold); }
-        .sim-page-nav .nav-connect { border: 1px solid var(--gold); color: var(--gold); padding: 0.6rem 1.5rem; border-radius: 50px; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; transition: all 0.3s ease; }
-        .sim-page-nav .nav-connect:hover { background: var(--gold); color: var(--bg); }
-        @media (max-width: 900px) { .sim-page-nav .nav-links { display: none; } .sim-page-nav { padding: 1rem 1.5rem; } }
         .sim-page-hero { padding: 10rem 2rem 3rem; max-width: 900px; margin: 0 auto; text-align: left; }
+        @media (max-width: 768px) { .sim-page-hero { padding: 6.5rem 1.4rem 1.5rem; } }
         .sim-page-breadcrumbs { display: flex; gap: 0.5rem; color: rgba(237,233,224,0.6); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1.5rem; }
         .sim-page-breadcrumbs a { color: var(--gold); text-decoration: none; }
         .sim-page-hero h1 { font-family: var(--display); font-size: clamp(2.5rem, 6vw, 4.5rem); color: var(--fg); margin: 0 0 1rem; line-height: 1.05; }
@@ -63,18 +55,27 @@
 <div id="cring" aria-hidden="true"></div>
 <div id="ctip" aria-hidden="true"></div>
 
-<nav class="sim-page-nav">
-    <div class="nav-container">
-        <a href="index.html" class="nav-logo">PRAPANCH <span>KOKKALEMADA</span></a>
-        <div class="nav-links">
-            <a href="index.html#section-intro">ABOUT</a>
-            <a href="index.html#section-cases">RESEARCH</a>
-            <a href="simulators.html" class="active">SIMULATORS</a>
-            <a href="index.html#section-skills">SKILLS</a>
-            <a href="about.html">GALLERY</a>
-        </div>
-        <a href="mailto:p.kokkalemada@gmail.com" class="nav-connect">LET'S CONNECT ↗</a>
-    </div>
+<nav id="mainnav" role="navigation" aria-label="Primary navigation">
+    <a class="nav-logo" href="index.html">PRAPANCH <span>KOKKALEMADA</span></a>
+    <ul class="nav-links">
+        <li><a href="index.html#section-intro">About</a></li>
+        <li><a href="index.html#section-cases">Research</a></li>
+        <li><a href="simulators.html" class="act">Simulators</a></li>
+        <li><a href="index.html#section-skills">Skills</a></li>
+        <li><a href="about.html">Gallery</a></li>
+    </ul>
+    <a class="nav-cta" href="index.html#section-get-in-touch"><span>Let's Connect ↗</span></a>
+    <button id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+<nav id="mobile-menu" role="navigation" aria-label="Mobile menu">
+    <a href="index.html#scrub-section">Home</a>
+    <a href="index.html#section-cases">Cases</a>
+    <a href="index.html#section-skills">Skills</a>
+    <a href="simulators.html">Simulators</a>
+    <a href="index.html#section-get-in-touch">Contact</a>
+    <a href="index.html#section-get-in-touch" class="mob-cta">Let's Connect ↗</a>
 </nav>
 
 <div class="sim-page-hero">
